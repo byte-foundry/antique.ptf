@@ -1,0 +1,4 @@
+# antique.ptf
+===========
+
+Prototypo antique
