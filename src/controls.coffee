@@ -18,9 +18,9 @@ exports.controls = [
 		min: -5
 		max: 150
 		step: 1
-		init: 80
-		minAdvised: 50
-		maxAdvised: 90
+		init: 40
+		minAdvised: 20
+		maxAdvised: 80
 		disabled: false
 	,
 		name: 'opticThickness'

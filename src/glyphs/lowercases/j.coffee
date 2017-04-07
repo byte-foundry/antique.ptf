@@ -3,13 +3,13 @@ exports.glyphs['j'] =
 	glyphName: 'j'
 	characterName: 'LATIN SMALL LETTER J'
 	ot:
-		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 54 + serifWidth
-		spacingRight: 50 * spacing + 53 + serifWidth
+		spacingLeft: 50 * spacing + 45
+		spacingRight: 50 * spacing + 35
 	tags: [
 		'all',
 		'latin',
@@ -21,57 +21,54 @@ exports.glyphs['j'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[0].x - 63
-					y: ( 230 / 250 ) * descender
-					dirOut: 32 + 'deg'
-					tensionOut: 1.4
-					expand: Object({
-						width: ( 18 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
-						distr: 0.75
-					})
-				1:
-					x: spacingLeft + (40/80) * thickness
-					y: 0 - (6)
-					type: 'smooth'
+					x: spacingLeft + (13/54) * thickness
+					y: xHeight
 					typeOut: 'line'
-					expand: Object({
-						width: ( 80.6 / 80 ) * thickness
-						angle: 8 + 'deg'
-						distr: 0.5
-					})
-				2:
-					x: contours[0].nodes[1].x
-					y: xHeight + overshoot - Math.max( 0, serifHeight * serifArc ) - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) )
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
-
+				1:
+					x: contours[0].nodes[0].x
+					y: contours[0].nodes[2].expandedTo[0].y + 48
+					dirOut: - 90 + 'deg'
+					expand: Object({
+						width: ( 55 / 54 ) * thickness
+						angle: 9 + 'deg'
+						distr: 0.25
+					})
+				2:
+					x: 0
+					y: contours[0].nodes[3].expandedTo[0].y
+					typeOut: 'line'
+					expand: Object({
+						width: Math.min(
+							( 48 / 54 ) * thickness,
+							- ( descender + 10 ) - 10
+						)
+						angle: - 82 + 'deg'
+						distr: 0
+					})
+				3:
+					x: - 22 * width
+					y: descender - 10
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: Math.min(
+							( 47 / 54 ) * thickness,
+							- ( descender + 10 ) - 10
+						)
+						angle: 180 + 90 + 'deg'
+						distr: 1
+					})
 	components:
 		0:
-			base: ['spur-vertical', 'none']
-			id: 'topleft'
+			base: ['dotaccent', 'dotaccent_rounded']
+			id: 'title'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[2].expandedTo[0].point
-					noneAnchor: contours[0].nodes[2].expandedTo[0].point
-					opposite: contours[0].nodes[2].expandedTo[1].point
-					reversed: true
-					rotate: -15 * spurHeight
-			transformOrigin: contours[0].nodes[2].expandedTo[0].point
-			transforms: Array(
-				[ 'scaleY', -1 ],
-				[ 'translateY', - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) ) ]
-			)
-			parentParameters:
-				serifHeight: Math.min( ( 85 / 50 ) * serifHeight, serifHeight + 35 )
-				serifMedian: Math.max( ( 0.20 ) * serifMedian, serifMedian - 0.8 )
-		1:
-			base: 'dotaccent'
-			parentAnchors:
-				0:
-					x: contours[0].nodes[1].x
-					y: xHeight + diacriticHeight
-					optical: 120
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
+					y: xHeight + ( 33 / 40 ) * diacriticHeight
+					optical: 58

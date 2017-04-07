@@ -3,13 +3,13 @@ exports.glyphs['s'] =
 	glyphName: 's'
 	characterName: 'LATIN SMALL LETTER S'
 	ot:
-		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 60
-		spacingRight: 50 * spacing + 70
+		spacingLeft: 50 * spacing + 20
+		spacingRight: 50 * spacing + 20
 	tags: [
 		'all',
 		'latin',
@@ -17,7 +17,7 @@ exports.glyphs['s'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[5].expandedTo[0].x
+			x: 0 # contours[0].nodes[5].expandedTo[0].x
 			y: xHeight + diacriticHeight
 	contours:
 		0:
@@ -25,161 +25,106 @@ exports.glyphs['s'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft
-					y: 25
-					dirOut: - 25 + 'deg'
+					x: spacingLeft + (13/54) * thickness
+					y: 195
+					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
-						angle: 89 + 'deg'
-						distr: 0.1
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].x ) * 0.5
-					y: - overshoot
+					x: contours[0].nodes[0].x
+					y: Math.max(
+						93,
+						contours[0].nodes[2].y + ( 47 / 54 ) * thickness * contrast + 10
+					)
+					dirOut: - 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+				2:
+					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 97 / 194 )
+					y: - overshoot - 5
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 36 / 80 ) * thickness
-						angle: 98 + 'deg'
+						width: ( 47 / 54 ) * thickness * contrast
+						angle: 90 + 'deg'
 						distr: 0
 					})
-				2:
+				3:
 					x: Math.max(
-						contours[0].nodes[0].x + 100 + 200 * width - (14),
-						contours[0].nodes[0].x + 0.25 * ( 75 / 80 ) * thickness + 10
+						contours[0].nodes[1].expandedTo[0].x + 100 * width + 94 - (15),
+						contours[0].nodes[1].expandedTo[1].x + 0.75 * thickness + 10
 					)
-					y: (contours[0].nodes[1].y + ( 36 / 80 ) * thickness) +
-						(
-							(
-								xHeight / 2 - Math.sin(
-									47 / 180 * Math.PI + Math.PI / 2 - ( 5 / 180 * Math.PI )
-								) * 0.5 * ( 88 / 80 ) * thickness
-							) -
-							(contours[0].nodes[1].y + ( 36 / 80 ) * thickness)
-						) * 0.5
-					dirOut: 90 + 'deg'
+					y: Math.max(
+						( 119 / 600 ) * xHeight - (2),
+						contours[0].nodes[2].y + ( 47 / 54 ) * thickness * contrast + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
+					)
+					dirIn: - 90 + 'deg'
 					type: 'smooth'
-					tensionOut: 1.2
 					expand: Object({
-						width: ( 75 / 80 ) * thickness
-						angle: - 160 + 'deg'
+						width: thickness
+						angle: - 170 + 'deg'
 						distr: 0.25
 					})
-				3:
-					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[4].expandedTo[1].x ) * ( 140 / 290 )
-					y: contours[0].nodes[2].expandedTo[0].y + ( contours[0].nodes[4].expandedTo[1].y - contours[0].nodes[2].expandedTo[0].y ) * ( 105 / 200 ) * crossbar
-					dirOut: Math.min(
-						Math.PI,
-						Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[1].point ) + ( 18 / 180 * Math.PI )
-					)
+				4:
+					x: contours[0].nodes[5].x + ( contours[0].nodes[3].x - contours[0].nodes[5].x ) * 0.5
+					y: contours[0].nodes[3].y + ( contours[0].nodes[5].y - contours[0].nodes[3].y ) * 0.5
+					dirOut: Utils.lineAngle( contours[0].nodes[3].expandedTo[0].point, contours[0].nodes[5].expandedTo[0].point ) + ( 18 / 180 * Math.PI )
 					type: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 88 / 80 ) * thickness
-						angle: Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[4].expandedTo[1].point ) + Math.PI / 2 - ( 5 / 180 * Math.PI )
+						width: ( 56 / 54 ) * thickness
+						angle: contours[0].nodes[4].dirOut + Math.PI / 2
 						distr: 0.5
 					})
-				4:
-					x: contours[0].nodes[0].x + 15 + (18/80) * thickness
-					y: (
-						xHeight / 2 + Math.sin(
-							47 / 180 * Math.PI + Math.PI / 2 - ( 5 / 180 * Math.PI )
-						) * 0.5 * ( 88 / 80 ) * thickness
-					) + ( contours[0].nodes[5].y - ( 39 / 80 ) * thickness -
-						(
-							xHeight / 2 + Math.sin(
-								47 / 180 * Math.PI + Math.PI / 2 - ( 5 / 180 * Math.PI )
-							) * 0.5 * ( 88 / 80 ) * thickness
-						)
-					) * 0.5
+				5:
+					x: contours[0].nodes[1].x + (1)
+					y: Math.min(
+						xHeight - ( 113 / 600 ) * xHeight - (0),
+						contours[0].nodes[6].y - ( 47 / 54 ) * thickness * contrast - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
+					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					tensionIn: 1.2
+					tensionIn: 1.1
 					expand: Object({
-						width: ( 77 / 80 ) * thickness
-						angle: 180 + 23 + 'deg'
+						width: ( 55 / 54 ) * thickness
+						angle: 180 + 9 + 'deg'
 						distr: 0.75
 					})
-				5:
-					x: contours[0].nodes[4].expandedTo[1].x + ( contours[0].nodes[6].expandedTo[0].x - contours[0].nodes[4].expandedTo[1].x ) * 0.5
-					y: xHeight + overshoot
+				6:
+					x: contours[0].nodes[5].expandedTo[1].x + ( contours[0].nodes[7].expandedTo[1].x - contours[0].nodes[5].expandedTo[1].x ) * ( 97 / 194 )
+					y: xHeight + overshoot + 5
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 39 / 80 ) * thickness
-						angle: 180 - 82 + 'deg'
+						width: ( 47 / 54 ) * thickness
+						angle: 180 - 90 + 'deg'
 						distr: 1
 					})
-				6:
-					x: contours[0].nodes[2].x
-					y: xHeight - 24 - (6)
-					dirIn: 150 + 'deg'
+				7:
+					x: contours[0].nodes[3].expandedTo[0].x - (13/54) * thickness
+					y: Math.min(
+						xHeight - 93,
+						contours[0].nodes[6].y - ( 47 / 54 ) * thickness * contrast - 10
+					)
+					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
-						angle: 180 - 91 + 'deg'
-						distr: 0.9
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.75
 					})
-	components:
-		0:
-			base: ['none', 'serif-curve-inside-auto']
-			id: 'toptop'
-			parentAnchors:
-				0:
-					baseWidth: contours[0].nodes[6].expandedTo[1]
-					baseHeight: contours[0].nodes[6].expandedTo[1].point
-					noneAnchor: contours[0].nodes[6].expandedTo[1].point
-					opposite: contours[0].nodes[6].expandedTo[0].point
-					curveEnd: contours[0].nodes[5].expandedTo[1]
-					rotationAngle: 15
-					rotationCenter: contours[0].nodes[6].expandedTo[1].point
-		1:
-			base: ['serif-curve-inside-auto', 'none']
-			id: 'topbottom'
-			parentAnchors:
-				0:
-					baseWidth: contours[0].nodes[6].expandedTo[0]
-					baseHeight: contours[0].nodes[6].expandedTo[1].point
-					noneAnchor: contours[0].nodes[6].expandedTo[0].point
-					opposite: contours[0].nodes[6].expandedTo[1].point
-					curveEnd: contours[0].nodes[5].expandedTo[0]
-					rotationAngle: 15
-					rotationCenter: contours[0].nodes[6].expandedTo[1].point
-					down: true
-					inverseOrder: true
-					reversed: true
-			parentParameters:
-				serifWidth: Math.min( ( 55 / 65 ) * serifWidth, serifWidth - 10 )
-				serifCurve: Math.max( serifCurve, 70 )
-		2:
-			base: ['none', 'serif-curve-inside-auto']
-			id: 'bottombottom'
-			parentAnchors:
-				0:
-					baseWidth: contours[0].nodes[0].expandedTo[0]
-					baseHeight: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					curveEnd: contours[0].nodes[1].expandedTo[0]
-					rotationAngle: 15
-					rotationCenter: contours[0].nodes[0].expandedTo[0].point
-					down: true
-					left: true
-		3:
-			base: ['serif-curve-inside-auto', 'none']
-			id: 'bottomtop'
-			parentAnchors:
-				0:
-					baseWidth: contours[0].nodes[0].expandedTo[1]
-					baseHeight: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					curveEnd: contours[0].nodes[1].expandedTo[1]
-					rotationAngle: 15
-					rotationCenter: contours[0].nodes[0].expandedTo[0].point
-					left: true
-					inverseOrder: true
-			parentParameters:
-				serifHeight: Math.max( ( 62 / 50 ) * serifHeight, serifHeight + 12 )
-				serifCurve: Math.max( serifCurve, 50 )
-				serifMedian: Math.max( 0.23 * serifMedian, serifMedian - 0.12 )
+				8:
+					x: contours[0].nodes[7].x
+					y: contours[0].nodes[7].y - 93
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
