@@ -1,8 +1,8 @@
-# TODO: contrast
-exports.glyphs['v'] =
-	unicode: 'v'
-	glyphName: 'v'
-	characterName: 'LATIN SMALL LETTER V'
+exports.glyphs['y_alt'] =
+	unicode: 'y'
+	glyphName: 'y'
+	characterName: 'LATIN SMALL LETTER Y'
+	altImg: 'antique-v-like-y.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -16,6 +16,10 @@ exports.glyphs['v'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) * 0.5
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
@@ -56,9 +60,24 @@ exports.glyphs['v'] =
 					})
 				1:
 					x: contours[0].nodes[1].x + 0.75 * ( 47 / 54 ) * thickness
-					y: 0
+					y: Math.min(
+						( 60 / 600 ) * xHeight,
+						thickness
+					)
+					typeOut: 'line'
 					expand: Object({
 						width: ( 45 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
+					})
+				2:
+					x: Utils.onLine({
+						y: ( 110 / 90 ) * descender
+						on: [ contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ]
+					})
+					y: ( 110 / 90 ) * descender
+					expand: Object({
+						width: ( 45 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 1
 					})

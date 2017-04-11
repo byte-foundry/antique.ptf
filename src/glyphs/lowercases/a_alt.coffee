@@ -1,7 +1,8 @@
-exports.glyphs['u'] =
-	unicode: 'u'
-	glyphName: 'u'
-	characterName: 'LATIN SMALL LETTER U'
+exports.glyphs['a_alt'] =
+	unicode: 'a'
+	glyphName: 'a'
+	characterName: 'LATIN SMALL LETTER A'
+	altImg: 'antique-single-story-a.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
@@ -17,8 +18,8 @@ exports.glyphs['u'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: xHeight + diacriticHeight
+			x: contours[0].nodes[2].expandedTo[1].x + thickness + 90 + (20)
+			y: ascenderHeight
 	contours:
 		0:
 			skeleton: true
@@ -55,7 +56,6 @@ exports.glyphs['u'] =
 					)
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
-					typeOut: 'line'
 					expand: Object({
 						width: ( 55 / 54 ) * thickness
 						angle: 13 + 'deg'
@@ -63,13 +63,40 @@ exports.glyphs['u'] =
 					})
 				3:
 					x: contours[0].nodes[2].x
-					y: xHeight
+					y: Math.min(
+						xHeight - 98,
+						contours[0].nodes[4].y - ( 47 / 54 ) * thickness - 10
+					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 2 + 'deg'
 						distr: 0.25
+					})
+				4:
+					x: contours[0].nodes[1].x
+					y: xHeight + overshoot
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 51 / 54 ) * thickness
+						angle: - 67 + 'deg'
+						distr: 0
+					})
+				5:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: Math.max(
+						# contours[0].nodes[4].y - ( Math.sin( ( 68 / 180 * Math.PI ) ) * ( 51 / 54 ) * thickness ) - 10,
+						contours[0].nodes[3].expandedTo[1].y,
+						xHeight / 2 + 10
+					)
+					dirIn: 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 12 / 54 ) * thickness
+						angle: 180 - 28 + 'deg'
+						distr: 1
 					})
 		1:
 			skeleton: true

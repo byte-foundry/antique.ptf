@@ -1,8 +1,8 @@
-exports.glyphs['t'] =
+exports.glyphs['t_alt'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
-	altImg: 'antique-default-t-extremity.svg'
+	altImg: 'antique-straight-t-extremity.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -104,44 +104,10 @@ exports.glyphs['t'] =
 					})
 				4:
 					x: contours[1].nodes[3].x
-					y: xHeight + ( 40 / 600 ) * xHeight
+					y: xHeight + ( Math.min( 110, (thickness + 56) ) / 600 ) * xHeight
 					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
-				5:
-					x: contours[1].nodes[4].expandedTo[1].x
-					y: contours[1].nodes[4].expandedTo[1].y
-					typeOut: 'line'
-					expand: Object({
-						width: contours[1].nodes[6].expand.width
-						angle: contours[1].nodes[6].expand.angle
-						distr: contours[1].nodes[6].expand.distr
-					})
-				6:
-					x: contours[1].nodes[4].expandedTo[1].x
-					y: contours[1].nodes[4].expandedTo[1].y + ( Math.min( 70, (thickness + 16) ) / 600 ) * xHeight
-					typeOut: 'line'
-					expand: Object({
-						width: ( 17 / 54 ) * thickness
-						angle: 0 + 'deg'
-						distr: 1
-					})
-		2:
-			skeleton: false
-			closed: true
-			nodes:
-				0:
-					x: contours[1].nodes[6].expandedTo[1].x
-					y: contours[1].nodes[4].expandedTo[0].y
-					typeIn: 'line'
-				1:
-					x: contours[1].nodes[4].expandedTo[0].x
-					y: contours[1].nodes[4].expandedTo[0].y
-					dirIn: 18 + 'deg'
-				2:
-					x: contours[1].nodes[6].expandedTo[0].x
-					y: contours[1].nodes[6].expandedTo[0].y
-					dirIn: - 90 + 'deg'

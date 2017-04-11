@@ -139,7 +139,10 @@ exports.glyphs['g'] =
 					})
 				3:
 					x: contours[1].nodes[4].x - 0.25 * thickness
-					y: contours[1].nodes[2].y + ( 47 / 54 ) * thickness + 56
+					y: Math.min(
+						contours[0].nodes[1].y - 20,
+						contours[1].nodes[2].y + ( 47 / 54 ) * thickness + 56
+					)
 					type: 'line'
 					dirIn: - 90 + 'deg'
 					expand: Object({
