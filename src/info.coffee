@@ -13,6 +13,7 @@ exports.fontinfo =
 		'smallcap'
 	]
 	defaultAlts: {
+		# TODO:
 		# 97: 'a',
 		# 99: 'c',
 		# 105: 'i',
@@ -33,9 +34,9 @@ exports.fontinfo =
 		# 299: 'i_macron',
 		# 301: 'i_breve'
 	}
-	ascender: Math.max( ascenderHeight, capHeight ) * 1.3
+	ascender: Math.max( ascenderHeight, capHeight ) + 50
 	descender: descender - 50
-	'cap-height': Math.max( ascenderHeight, capHeight ) * 1.3
+	'cap-height': Math.max( ascenderHeight, capHeight ) + 50
 	'descendent-height': descender - 50
 	'glyph-order':
 		'a': 'a'

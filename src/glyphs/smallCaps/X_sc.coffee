@@ -3,7 +3,11 @@ exports.glyphs['X_sc'] =
 	# TODO:
 	# LATIN LETTER SMALL CAPITAL X have no unicode for now…
 	#
-	unicode: 'x'
+	unicode: '§'
+	#
+	# TODO:
+	# LATIN LETTER SMALL CAPITAL X have no unicode for now…
+	#
 	glyphName: 'xsmall'
 	characterName: 'LATIN LETTER SMALL CAPITAL X'
 	base: 'X_cap'

@@ -1,4 +1,5 @@
 # TODO: xHeight and crossbar
+# TODO: contrast and contours[0].nodes[0].x
 exports.glyphs['e'] =
 	unicode: 'e'
 	glyphName: 'e'
