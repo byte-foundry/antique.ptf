@@ -8,8 +8,8 @@ exports.glyphs['B_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 65 + ( 80 / 65 ) * serifWidth
-		spacingRight: 50 * spacing + 50
+		spacingLeft: 50 * spacing + 40
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -21,19 +21,19 @@ exports.glyphs['B_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (22/80) * thickness * opticThickness
-					y: Math.max( 0, serifHeight * serifArc )
+					x: spacingLeft + (14/54) * thickness * opticThickness
+					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					y: capHeight
 					expand: Object({
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -42,124 +42,150 @@ exports.glyphs['B_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x - ( 45 / 80 ) * thickness * opticThickness
-					y: contours[0].nodes[1].y
-					typeOut: 'line'
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					dirOut: 0 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[1].nodes[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 145 / 367 )
-					y: contours[0].nodes[1].y
+					x: Math.max(
+						contours[0].nodes[1].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) * ( 39 / 84 ),
+						contours[0].nodes[1].expandedTo[1].x
+					)
+					y: capHeight
 					dirOut: 0 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 60 / 80 ) * thickness * opticThickness * contrast
-						angle: - 112 + 'deg'
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
+						angle: - 90 + 'deg'
 						distr: 0
 					})
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 204 + 200 * width - (23),
-						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 97 / 80 ) * thickness * opticThickness
+						contours[0].nodes[1].expandedTo[0].x + 100 * width + 98 - (14),
+						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 10
 					)
-					y: contours[1].nodes[3].expandedTo[0].y + ( contours[1].nodes[0].expandedTo[0].y - contours[1].nodes[3].expandedTo[0].y ) * ( 164 / 312 ) - (5)
+					y: Math.min(
+						contours[1].nodes[1].y - ( 50 / 54 ) * thickness * opticThickness * contrast - 10,
+						capHeight - ( 105 / 700 ) * capHeight
+					)
 					dirIn: 90 + 'deg'
 					type: 'smooth'
+					typeOut: 'line'
 					expand: Object({
-						width: ( 97 / 80 ) * thickness * opticThickness
-						angle: - 165 + 'deg'
+						width: ( 57 / 54 ) * thickness * opticThickness
+						angle: 182 + 'deg'
 						distr: 0.25
 					})
 				3:
-					x: contours[2].nodes[1].expandedTo[0].x - (36)
-					y: contours[2].nodes[0].expandedTo[0].y
-					dirIn: 0 + 'deg'
+					x: contours[1].nodes[2].x
+					y: Math.max(
+						contours[1].nodes[4].y + ( 36 / 54 ) * thickness * opticThickness * contrast + Math.cos( (165 - 90) / 180 * Math.PI ) * ( 59 / 54 ) * thickness * opticThickness + 10,
+						capHeight / 2 + ( 105 / 700 ) * capHeight
+					)
+					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 25 / 80 ) * thickness * opticThickness * contrast
-						angle: 63 + 'deg'
-						distr: 1
+						width: ( 59 / 54 ) * thickness * opticThickness
+						angle: - 165 + 'deg'
+						distr: 0.25
+					})
+				4:
+					x: contours[1].nodes[1].x
+					y: ( 370 / 600 ) * xHeight * crossbar
+					dirIn: 0 + 'deg'
+					type: 'smooth'
+					typeOut: 'line'
+					expand: Object({
+						width: ( 36 / 54 ) * thickness * opticThickness * contrast
+						angle: 90 + 'deg'
+						distr: 0.5
+					})
+				5:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[4].y
+					expand: Object({
+						width: ( 36 / 54 ) * thickness * opticThickness * contrast
+						angle: 90 + 'deg'
+						distr: 0.5
 					})
 		2:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x - ( 45 / 80 ) * thickness * opticThickness
-					y: ( 313 / 660 ) * capHeight * crossbar + (27)
-					typeOut: 'line'
+					x: contours[1].nodes[0].x
+					y: contours[1].nodes[5].expandedTo[1].y
+					dirOut: 0 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
-						distr: 0.5
+						distr: 0
 					})
 				1:
-					x: contours[2].nodes[0].x + ( contours[2].nodes[2].expandedTo[0].x - contours[2].nodes[0].x ) * ( 145 / 415 ) + 40
-					y: contours[2].nodes[0].expandedTo[1].y
+					x: Math.max(
+						contours[0].nodes[1].expandedTo[1].x + ( contours[2].nodes[2].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) * ( 50 / 91 ),
+						contours[0].nodes[1].expandedTo[1].x
+					)
+					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 64 / 80 ) * thickness * opticThickness * contrast
-						angle: 180 + 120 + 'deg'
-						distr: 1
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
+						angle: - 90 + 'deg'
+						distr: 0
 					})
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 260 + 200 * width - (22),
-						contours[0].nodes[0].expandedTo[1].x + 0.25 * ( 94 / 80 ) * thickness * opticThickness
+						contours[0].nodes[1].expandedTo[0].x + 100 * width + 105 - (14),
+						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 10
 					)
-					y: contours[2].nodes[4].expandedTo[0].y + ( contours[2].nodes[0].expandedTo[0].y - contours[2].nodes[4].expandedTo[0].y ) * ( 192 / 368 )
+					y: Math.min(
+						contours[2].nodes[1].y - ( 50 / 54 ) * thickness * opticThickness * contrast - 10,
+						contours[2].nodes[0].y - ( 98 / 700 ) * capHeight
+					)
 					dirIn: 90 + 'deg'
 					type: 'smooth'
+					typeOut: 'line'
 					expand: Object({
-						width: ( 94 / 80 ) * thickness * opticThickness
-						angle: - 175 + 'deg'
+						width: ( 57 / 54 ) * thickness * opticThickness
+						angle: 182 + 'deg'
 						distr: 0.25
 					})
 				3:
-					x: contours[1].nodes[0].x + ( contours[2].nodes[2].expandedTo[0].x - contours[1].nodes[0].x ) * ( 145 / 367 )
-					y: 0
-					dirIn: 0 + 'deg'
-					typeOut: 'line'
+					x: contours[2].nodes[2].x
+					y: Math.max(
+						( 50 / 54 ) * thickness * opticThickness * contrast + 10,
+						( 105 / 700 ) * capHeight
+					)
+					dirOut: - 90 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
-						distr: 0
+						width: ( 57 / 54 ) * thickness * opticThickness
+						angle: 180 + 'deg'
+						distr: 0.25
 					})
 				4:
-					x: contours[0].nodes[0].expandedTo[1].x - ( 45 / 80 ) * thickness * opticThickness
+					x: contours[2].nodes[1].x
 					y: 0
+					dirIn: 0 + 'deg'
+					type: 'smooth'
+					typeOut: 'line'
 					expand: Object({
-						width: ( 55 / 80 ) * thickness * opticThickness * contrast
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
-	components:
-		0:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
-		1:
-			base: ['serif-vertical', 'none']
-			id: 'topleft'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
-					reversed: true
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
+				5:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[0].y
+					expand: Object({
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
+						angle: 90 + 'deg'
+						distr: 0
+					})

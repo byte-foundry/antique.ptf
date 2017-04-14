@@ -45,7 +45,6 @@ exports.glyphs['w'] =
 						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					x: contours[0].nodes[0].expandedTo[0].x + 40
 					y: 0
 					expand: Object({
@@ -67,7 +66,6 @@ exports.glyphs['w'] =
 						distr: 0.5
 					})
 				1:
-					x: contours[0].nodes[1].x
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].y
 					expand: Object({
@@ -89,7 +87,6 @@ exports.glyphs['w'] =
 						distr: 0.5
 					})
 				1:
-					x: contours[2].nodes[0].expandedTo[0].x + ( contours[3].nodes[0].expandedTo[1].x - contours[2].nodes[0].expandedTo[0].x ) * 0.5
 					x: contours[3].nodes[1].expandedTo[0].x
 					y: contours[3].nodes[1].y
 					expand: Object({
@@ -114,7 +111,6 @@ exports.glyphs['w'] =
 						distr: 0.75
 					})
 				1:
-					x: contours[2].nodes[1].x
 					x: contours[3].nodes[0].expandedTo[1].x - 40
 					y: 0
 					expand: Object({
