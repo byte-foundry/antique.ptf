@@ -10,8 +10,8 @@ exports.glyphs['one_alt'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 90 + ( 120 / 65 ) * serifWidth
-		spacingRight: 50 * spacing + 90 + ( 120 / 65 ) * serifWidth
+		spacingLeft: 50 * spacing + 4
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -23,75 +23,43 @@ exports.glyphs['one_alt'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (42/80) * thickness
-					y: 0 + Math.max( 0, serifHeight * serifArc )
+					x: spacingLeft + 72 * width + (14/54) * thickness
+					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: ( 85 / 80 ) * thickness * opticThickness
+						width: ( 58 / 54 ) * thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ( 530 / 660 ) * capHeight - Math.max( 0, serifHeight * serifArc )
+					y: capHeight
 					expand: Object({
-						width: ( 85 / 80 ) * thickness * opticThickness
+						width: ( 58 / 54 ) * thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
-	components:
-		0:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-			parentParameters:
-				serifWidth: Math.min( ( 120 / 65 ) * serifWidth, serifWidth + 55 )
 		1:
-			base: ['serif-vertical', 'none']
-			id: 'bottomright'
-			parentAnchors:
+			skeleton: true
+			closed: false
+			nodes:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
-			parentParameters:
-				serifWidth: Math.min( ( 120 / 65 ) * serifWidth, serifWidth + 55 )
-		2:
-			base: ['serif-vertical', 'none']
-			id: 'topleft'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
-					reversed: true
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
-			parentParameters:
-				serifWidth: Math.min( ( 120 / 65 ) * serifWidth, serifWidth + 55 )
-		3:
-			base: ['serif-vertical', 'none']
-			id: 'topright'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[1].point
-					noneAnchor: contours[0].nodes[1].expandedTo[1].point
-					opposite: contours[0].nodes[1].expandedTo[0].point
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
-			parentParameters:
-				serifWidth: Math.min( ( 120 / 65 ) * serifWidth, serifWidth + 55 )
+					x: spacingLeft
+					y: capHeight - 75
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 47 / 54 ) * thickness
+						angle: - 90 + 'deg'
+						distr: 0
+					})
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: capHeight
+					dirIn: - 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.15
+					})

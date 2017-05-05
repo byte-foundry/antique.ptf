@@ -10,8 +10,8 @@ exports.glyphs['one'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70
-		spacingRight: 50 * spacing + 90 + ( 80 / 65 ) * serifWidth
+		spacingLeft: 50 * spacing + 4
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -23,33 +23,21 @@ exports.glyphs['one'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].x + 115 + 60 * width + (42/80) * thickness
-					y: 0 + Math.max( 0, serifHeight * serifArc )
+					x: spacingLeft + 72 * width + (14/54) * thickness
+					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: ( 85 / 80 ) * thickness * opticThickness
+						width: ( 58 / 54 ) * thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: Utils.onLine({
-						x: contours[0].nodes[0].expandedTo[0].x
-						on: [ contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ]
-					})
-					typeOut: 'line'
-					expand: Object({
-						width: ( 85 / 80 ) * thickness * opticThickness
-						angle: 0 + 'deg'
-						distr: 0
-					})
-				2:
-					x: contours[0].nodes[0].expandedTo[1].x
+					x: contours[0].nodes[0].x
 					y: capHeight
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * opticThickness
+						width: ( 58 / 54 ) * thickness
 						angle: 0 + 'deg'
-						distr: 1
+						distr: 0.25
 					})
 		1:
 			skeleton: true
@@ -57,45 +45,34 @@ exports.glyphs['one'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: capHeight - 150 - (17)
-					typeOut: 'line'
+					y: capHeight - 198
+					dirOut: Math.max(
+						50 - ( 23 * width ),
+						0
+					) + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 35 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
-						distr: 0.5
-					})
-				1:
-					x: contours[0].nodes[2].expandedTo[0].x
-					y: contours[0].nodes[2].expandedTo[0].y
-					typeOut: 'line'
-					expand: Object({
-						width: ( 65 / 80 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						width: ( 7 / 54 ) * thickness
+						angle: - 60 + 'deg'
 						distr: 0
 					})
-	components:
-		0:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-			parentParameters:
-				serifWidth: Math.min( ( 90 / 65 ) * serifWidth, serifWidth + 25 )
-		1:
-			base: ['serif-vertical', 'none']
-			id: 'bottomright'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
+				1:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: capHeight - 75
+					dirIn: - 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 40 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.15
+					})
+				2:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].y
+					dirIn: - 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 40 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.15
+					})
