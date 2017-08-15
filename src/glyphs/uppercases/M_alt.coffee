@@ -1,9 +1,9 @@
 # TODO: all alt images
-exports.glyphs['M'] =
+exports.glyphs['M_alt'] =
 	unicode: 'M'
 	glyphName: 'M'
 	characterName: 'LATIN CAPITAL LETTER M'
-	altImg: 'antique-with-apex-M.svg'
+	altImg: 'antique-no-apex-M.svg'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -17,20 +17,6 @@ exports.glyphs['M'] =
 		'latin',
 		'uppercase'
 	]
-	anchors:
-		0:
-			intersection: Utils.lineLineIntersection(
-				contours[2].nodes[0].expandedTo[1].point,
-				contours[2].nodes[0].expandedTo[0].point,
-				contours[3].nodes[0].expandedTo[1].point,
-				contours[3].nodes[0].expandedTo[0].point
-			)
-			apex: Utils.lineLineIntersection(
-				contours[2].nodes[0].expandedTo[0].point,
-				contours[2].nodes[1].expandedTo[0].point,
-				contours[3].nodes[0].expandedTo[1].point,
-				contours[3].nodes[1].expandedTo[1].point
-			)
 	contours:
 		0:
 			skeleton: true
@@ -137,33 +123,14 @@ exports.glyphs['M'] =
 					y: contours[2].nodes[0].expandedTo[0].y
 					typeOut: 'line'
 				1:
-					x: Math.min(
-						Utils.onLine({
-							y: contours[4].nodes[1].y
-							on: [ contours[2].nodes[1].expandedTo[0].point, contours[2].nodes[0].expandedTo[0].point ]
-						}),
-						( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
-					)
-					y: Math.max(
-						0,
-						anchors[0].apex[1]
-					)
+					x: contours[3].nodes[0].expandedTo[0].x
+					y: contours[3].nodes[0].expandedTo[0].y
 					typeOut: 'line'
 				2:
-					x: Math.max(
-						Utils.onLine({
-							y: contours[4].nodes[1].y
-							on: [ contours[3].nodes[0].expandedTo[1].point, contours[3].nodes[1].expandedTo[1].point ]
-						}),
-						( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
-					)
-					y: contours[4].nodes[1].y
+					x: contours[2].nodes[0].expandedTo[1].x
+					y: contours[2].nodes[0].expandedTo[1].y
 					typeOut: 'line'
 				3:
 					x: contours[3].nodes[0].expandedTo[1].x
 					y: contours[3].nodes[0].expandedTo[1].y
-					typeOut: 'line'
-				4:
-					x: anchors[0].intersection[0]
-					y: anchors[0].intersection[1]
 					typeOut: 'line'

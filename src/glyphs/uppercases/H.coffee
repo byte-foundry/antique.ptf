@@ -44,7 +44,7 @@ exports.glyphs['H'] =
 				0:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 105 - (14),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 10
 					)
 					y: 0
 					typeOut: 'line'
