@@ -21,19 +21,19 @@ exports.glyphs['parenleft'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x + Math.max( 30, ( 30 / 80 ) * thickness ) + 70 * width
+					x: contours[0].nodes[1].expandedTo[1].x + Math.max( 30, ( 30 / 54 ) * thickness ) + 70 * width
 					y: capHeight + 80
 					# dirOut: - 130 + 'deg'
 					dirOut: Math.min(
 						Math.max(
-							- 80 - ( 40 / 80 ) * thickness,
+							- 80 - ( 40 / 54 ) * thickness,
 							- 150
 						),
 						- 130 - 10 * width + 10
 					) + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 25 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 25 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0
 					})
@@ -45,7 +45,7 @@ exports.glyphs['parenleft'] =
 					tensionIn: 1.3
 					tensionOut: 1.3
 					expand: Object({
-						width: ( 67 / 80 ) * thickness
+						width: ( 67 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -55,14 +55,14 @@ exports.glyphs['parenleft'] =
 					# dirIn: 130 + 'deg'
 					dirIn: Math.max(
 						Math.min(
-							80 + ( 40 / 80 ) * thickness,
+							80 + ( 40 / 54 ) * thickness,
 							150
 						),
 						130 + 10 * width - 10
 					) + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 25 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 25 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0
 					})

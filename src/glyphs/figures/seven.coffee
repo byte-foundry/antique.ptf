@@ -26,7 +26,7 @@ exports.glyphs['seven'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 77 / 80 ) * thickness * opticThickness
+						width: ( 77 / 54 ) * thickness * opticThickness
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -41,7 +41,7 @@ exports.glyphs['seven'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 77 / 80 ) * thickness * opticThickness
+						width: ( 77 / 54 ) * thickness * opticThickness
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -49,7 +49,7 @@ exports.glyphs['seven'] =
 					x: contours[0].nodes[0].x + 210 + 200 * width
 					y: capHeight
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 20 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -63,7 +63,7 @@ exports.glyphs['seven'] =
 					dirOut: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ) - (2 / 180 * Math.PI)
 					type: 'smooth'
 					expand: Object({
-						width: ( 38 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 38 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Math.acos( Math.min(1, contours[0].nodes[2].expand.width / contours[1].nodes[0].expand.width )) + Math.PI / 2
 						distr: 0
 					})
@@ -73,7 +73,7 @@ exports.glyphs['seven'] =
 					type: 'smooth'
 					dirIn: 100 - 10 * width + 'deg'
 					expand: Object({
-						width: ( 112 / 80 ) * thickness * opticThickness
+						width: ( 112 / 54 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

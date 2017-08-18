@@ -26,7 +26,7 @@ exports.glyphs['three'] =
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 90 / 54 ) * thickness * opticThickness
 						angle: 7 + 'deg'
 						distr: 0.25
 					})
@@ -36,20 +36,20 @@ exports.glyphs['three'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness * opticThickness * contrast
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 115 + 'deg'
 						distr: 0
 					})
 				2:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 190 + 200 * width - (23),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 97 / 80 ) * thickness * opticThickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 97 / 54 ) * thickness * opticThickness + 10
 					)
-					y: ( contours[0].nodes[3].y + ( 20 / 80 ) * thickness * opticThickness ) + ( ( capHeight + overshoot - ( Math.sin( 57 / 180 * Math.PI ) * ( 56 / 80 ) * thickness * opticThickness * contrast ) ) - ( contours[0].nodes[3].y + ( 20 / 80 ) * thickness * opticThickness ) ) * ( 165 / 278 )
+					y: ( contours[0].nodes[3].y + ( 20 / 54 ) * thickness * opticThickness ) + ( ( capHeight + overshoot - ( Math.sin( 57 / 180 * Math.PI ) * ( 56 / 54 ) * thickness * opticThickness * contrast ) ) - ( contours[0].nodes[3].y + ( 20 / 54 ) * thickness * opticThickness ) ) * ( 165 / 278 )
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 97 / 80 ) * thickness * opticThickness
+						width: ( 97 / 54 ) * thickness * opticThickness
 						angle: - 175 + 'deg'
 						distr: 0.25
 					})
@@ -60,7 +60,7 @@ exports.glyphs['three'] =
 					tensionIn: 1.1
 					type: 'smooth'
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * opticThickness * contrast
+						width: ( 20 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.25
 					})
@@ -75,7 +75,7 @@ exports.glyphs['three'] =
 					type: 'smooth'
 					tensionOut: 1.1
 					expand: Object({
-						width: ( 44 / 80 ) * thickness * opticThickness * contrast
+						width: ( 44 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -89,7 +89,7 @@ exports.glyphs['three'] =
 					type: 'smooth'
 					tensionIn: 1.1
 					expand: Object({
-						width: ( 96 / 80 ) * thickness * opticThickness
+						width: ( 96 / 54 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.3
 					})
@@ -99,7 +99,7 @@ exports.glyphs['three'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 45 / 80 ) * thickness * opticThickness * contrast
+						width: ( 45 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -109,7 +109,7 @@ exports.glyphs['three'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 90 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -123,11 +123,11 @@ exports.glyphs['three'] =
 					dirOut: - 90 + 'deg'
 				1:
 					x: contours[2].nodes[0].x + ( contours[2].nodes[4].x - contours[2].nodes[0].x ) * ( 40 / 90 )
-					y: contours[0].nodes[0].expandedTo[0].y - ( 35 / 80 ) * thickness * opticThickness
+					y: contours[0].nodes[0].expandedTo[0].y - ( 35 / 54 ) * thickness * opticThickness
 					typeOut: 'line'
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[1].x - ( 8 / 80 ) * thickness,
+						contours[0].nodes[0].expandedTo[1].x - ( 8 / 54 ) * thickness,
 						contours[0].nodes[0].expandedTo[0].x
 					)
 					y: contours[2].nodes[1].y
@@ -135,7 +135,7 @@ exports.glyphs['three'] =
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: Math.min(
-						contours[2].nodes[2].y + ( 8 / 80 ) * thickness,
+						contours[2].nodes[2].y + ( 8 / 54 ) * thickness,
 						contours[0].nodes[0].expandedTo[1].y
 					)
 					typeOut: 'line'
@@ -153,11 +153,11 @@ exports.glyphs['three'] =
 					dirOut: 90 + 'deg'
 				1:
 					x: contours[3].nodes[0].x + ( contours[3].nodes[4].x - contours[3].nodes[0].x ) * ( 35 / 90 )
-					y: contours[1].nodes[3].expandedTo[0].y + ( 35 / 80 ) * thickness * opticThickness
+					y: contours[1].nodes[3].expandedTo[0].y + ( 35 / 54 ) * thickness * opticThickness
 					typeOut: 'line'
 				2:
 					x: Math.max(
-						contours[1].nodes[3].expandedTo[1].x - ( 8 / 80 ) * thickness,
+						contours[1].nodes[3].expandedTo[1].x - ( 8 / 54 ) * thickness,
 						contours[1].nodes[3].expandedTo[0].x
 					)
 					y: contours[3].nodes[1].y
@@ -165,7 +165,7 @@ exports.glyphs['three'] =
 				3:
 					x: contours[1].nodes[3].expandedTo[1].x
 					y: Math.max(
-						contours[3].nodes[2].y - ( 8 / 80 ) * thickness,
+						contours[3].nodes[2].y - ( 8 / 54 ) * thickness,
 						contours[1].nodes[3].expandedTo[1].y
 					)
 					typeOut: 'line'

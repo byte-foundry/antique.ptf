@@ -19,7 +19,7 @@ exports.glyphs['macron'] =
 					y: anchors[0].y + (5)
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.1
 					})
@@ -28,7 +28,7 @@ exports.glyphs['macron'] =
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.1
 					})

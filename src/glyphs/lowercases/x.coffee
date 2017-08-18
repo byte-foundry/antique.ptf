@@ -31,7 +31,10 @@ exports.glyphs['x'] =
 						distr: 0.75
 					})
 				1:
-					x: contours[0].nodes[0].x - 17 + 100 * width + 115 - (37)
+					x: Math.max(
+						contours[0].nodes[0].x - 0.25 * (55/54) * thickness + 100 * width + 115 - (37/54) * thickness,
+						contours[0].nodes[0].x + 0.75 * (55/54) + thickness
+					)
 					y: 0
 					expand: Object({
 						width: ( ( 53 / 54 ) * thickness ) / Math.sin( Utils.lineAngle( { x: spacingLeft - (0.25 * thickness), y: xHeight }, contours[0].nodes[1].point ) )
@@ -43,11 +46,11 @@ exports.glyphs['x'] =
 			closed: false
 			nodes:
 				0:
-					x: Utils.onLine({
-						y: xHeight / 2 - ( 8 / 54 ) * thickness
-						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[0].point ]
-					})
-					y: xHeight / 2 - ( 8 / 54 ) * thickness
+					# x: Utils.onLine({
+					# 	y: xHeight / 2 - ( 8 / 54 ) * thickness
+					# 	on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[0].point ]
+					# })
+					# y: xHeight / 2 - ( 8 / 54 ) * thickness
 					x: Utils.onLine({
 						y: xHeight / 2
 						on: [ contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ]
@@ -72,11 +75,11 @@ exports.glyphs['x'] =
 			closed: false
 			nodes:
 				0:
-					x: Utils.onLine({
-						y: xHeight / 2 + ( 11 / 54 ) * thickness
-						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[0].point ]
-					})
-					y: xHeight / 2 + ( 11 / 54 ) * thickness
+					# x: Utils.onLine({
+					# 	y: xHeight / 2 + ( 11 / 54 ) * thickness
+					# 	on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[0].point ]
+					# })
+					# y: xHeight / 2 + ( 11 / 54 ) * thickness
 					x: Utils.onLine({
 						y: xHeight / 2
 						on: [ contours[0].nodes[0].expandedTo[1].point, contours[0].nodes[1].expandedTo[1].point ]

@@ -48,7 +48,7 @@ exports.glyphs['comma'] =
 					dirIn: Utils.lineAngle( contours[0].nodes[2].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ) - ( 25 / 180 * Math.PI )
 					type: 'smooth'
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 20 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})

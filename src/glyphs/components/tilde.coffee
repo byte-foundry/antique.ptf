@@ -19,7 +19,7 @@ exports.glyphs['tilde'] =
 					y: anchors[0].y
 					dirOut: 72 + 'deg'
 					expand: Object({
-						width: ( 13 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 13 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.75
 					})
@@ -30,7 +30,7 @@ exports.glyphs['tilde'] =
 					type: 'smooth'
 					tensionIn: 1.5
 					expand: Object({
-						width: ( 63 / 80 ) * thickness
+						width: ( 63 / 54 ) * thickness
 						angle: 180 - 90 - 22 + 'deg'
 						distr: 0.6
 					})
@@ -41,16 +41,16 @@ exports.glyphs['tilde'] =
 					type: 'smooth'
 					tensionOut: 1.5
 					expand: Object({
-						width: ( 63 / 80 ) * thickness
+						width: ( 63 / 54 ) * thickness
 						angle: 180 - 90 - 22 + 'deg'
 						distr: 0.4
 					})
 				3:
 					x: anchors[0].x + 67 + 85 * width - (3)
-					y: contours[0].nodes[0].expandedTo[0].y + 100 + Math.min( 25, ( 25 / 80 ) * thickness )
+					y: contours[0].nodes[0].expandedTo[0].y + 100 + Math.min( 25, ( 25 / 54 ) * thickness )
 					dirIn: - 90 - 18 + 'deg'
 					expand: Object({
-						width: ( 13 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 13 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

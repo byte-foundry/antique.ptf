@@ -3,7 +3,7 @@ exports.glyphs['H'] =
 	glyphName: 'H'
 	characterName: 'LATIN CAPITAL LETTER H'
 	ot:
-		advanceWidth: contours[2].nodes[0].expandedTo[0].x + spacingRight
+		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)

@@ -26,16 +26,16 @@ exports.glyphs['two'] =
 					x: contours[0].nodes[2].x + 200 + 200 * width
 					y: 0
 					expand: Object({
-						width: ( 82 / 80 ) * thickness * opticThickness
+						width: ( 82 / 54 ) * thickness * opticThickness
 						angle: 90 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[1].nodes[3].expandedTo[0].x + ( ( ( 82 / 80 ) * thickness * opticThickness ) / Math.tan( Utils.lineAngle( contours[0].nodes[2].expandedTo[1].point, contours[1].nodes[2].expandedTo[0].point ) )  )
+					x: contours[1].nodes[3].expandedTo[0].x + ( ( ( 82 / 54 ) * thickness * opticThickness ) / Math.tan( Utils.lineAngle( contours[0].nodes[2].expandedTo[1].point, contours[1].nodes[2].expandedTo[0].point ) )  )
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: ( 82 / 80 ) * thickness * opticThickness
+						width: ( 82 / 54 ) * thickness * opticThickness
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -44,7 +44,7 @@ exports.glyphs['two'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: ( 25 / 80 ) * thickness * opticThickness
+						width: ( 25 / 54 ) * thickness * opticThickness
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -58,7 +58,7 @@ exports.glyphs['two'] =
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 92 / 80 ) * thickness * opticThickness
+						width: ( 92 / 54 ) * thickness * opticThickness
 						angle: 10 + 'deg'
 						distr: 0.25
 					})
@@ -68,21 +68,21 @@ exports.glyphs['two'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 56 / 80 ) * thickness * opticThickness * contrast
+						width: ( 56 / 54 ) * thickness * opticThickness * contrast
 						angle: - 123 + 'deg'
 						distr: 0
 					})
 				2:
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 206 + 200 * width - (23),
-						contours[1].nodes[0].expandedTo[1].x + 0.25 * ( 97 / 80 ) * thickness * opticThickness + 10
+						contours[1].nodes[0].expandedTo[1].x + 0.25 * ( 97 / 54 ) * thickness * opticThickness + 10
 					)
-					y: contours[0].nodes[0].expandedTo[1].y + ( ( capHeight + overshoot - ( Math.sin( 57 / 180 * Math.PI ) * ( 56 / 80 ) * thickness * opticThickness * contrast ) ) - contours[0].nodes[0].expandedTo[1].y ) * ( 411 / 541 )
+					y: contours[0].nodes[0].expandedTo[1].y + ( ( capHeight + overshoot - ( Math.sin( 57 / 180 * Math.PI ) * ( 56 / 54 ) * thickness * opticThickness * contrast ) ) - contours[0].nodes[0].expandedTo[1].y ) * ( 411 / 541 )
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					tensionOut: 2
 					expand: Object({
-						width: ( 97 / 80 ) * thickness * opticThickness
+						width: ( 97 / 54 ) * thickness * opticThickness
 						angle: - 179 + 'deg'
 						distr: 0.25
 					})
@@ -93,8 +93,8 @@ exports.glyphs['two'] =
 					type: 'smooth'
 					tensionIn: 1.2
 					expand: Object({
-						width: ( 50 / 80 ) * thickness * opticThickness * contrast
-						angle: (Math.PI / 2) + Math.acos( Math.min( 1, (contours[0].nodes[2].expandedTo[1].y) / (( 50 / 80 ) * thickness * opticThickness * contrast) ) ),
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
+						angle: (Math.PI / 2) + Math.acos( Math.min( 1, (contours[0].nodes[2].expandedTo[1].y) / (( 50 / 54 ) * thickness * opticThickness * contrast) ) ),
 						distr: 1
 					})
 		2:
@@ -107,7 +107,7 @@ exports.glyphs['two'] =
 					dirOut: - 90 + 'deg'
 				1:
 					x: contours[2].nodes[0].x + ( contours[2].nodes[4].x - contours[2].nodes[0].x ) * ( 40 / 90 )
-					y: contours[1].nodes[0].expandedTo[0].y - ( 42 / 80 ) * thickness
+					y: contours[1].nodes[0].expandedTo[0].y - ( 42 / 54 ) * thickness
 					typeOut: 'line'
 				2:
 					x: contours[1].nodes[0].expandedTo[1].x - 5
@@ -135,7 +135,7 @@ exports.glyphs['two'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'translateX', - ( Math.tan( (- (5 * 2) * Math.max( serifRotate, serifRotate + 1 )) / 180 * Math.PI ) * ( ( 50 / 80 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
+				[ 'translateX', - ( Math.tan( (- (5 * 2) * Math.max( serifRotate, serifRotate + 1 )) / 180 * Math.PI ) * ( ( 50 / 54 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
 			)
 			parentParameters:
 				serifWidth: Math.min( ( 105 / 65 ) * serifWidth, serifWidth + 35 )
@@ -151,5 +151,5 @@ exports.glyphs['two'] =
 					rotate: 5 * Math.max( serifRotate, serifRotate + 1 )
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
 			transforms: Array(
-				[ 'translateX', ( Math.tan( ((5 * 2) * Math.max( serifRotate, serifRotate + 1 )) / 180 * Math.PI ) * ( ( 50 / 80 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
+				[ 'translateX', ( Math.tan( ((5 * 2) * Math.max( serifRotate, serifRotate + 1 )) / 180 * Math.PI ) * ( ( 50 / 54 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
 			)

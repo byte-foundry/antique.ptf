@@ -26,7 +26,7 @@ exports.glyphs['equal'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.5
 					})
@@ -36,7 +36,7 @@ exports.glyphs['equal'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.5
 					})
@@ -50,7 +50,7 @@ exports.glyphs['equal'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.5
 					})
@@ -60,7 +60,7 @@ exports.glyphs['equal'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.5
 					})

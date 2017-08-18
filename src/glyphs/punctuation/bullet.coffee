@@ -24,7 +24,7 @@ exports.glyphs['bullet'] =
 					thickness * ( 120 / 80 )
 				)
 			)
-			y: ( (200 - ( 50 / 80 ) * thickness ) / 450 ) * xHeight
+			y: ( (200 - ( 50 / 54 ) * thickness ) / 450 ) * xHeight
 	contours:
 		0:
 			skeleton: false

@@ -24,16 +24,16 @@ exports.glyphs['quotesingle'] =
 					y: capHeight + 80
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 80 ) * thickness
+						width: ( 90 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[0].nodes[0].y - 100 - Math.min( 150, ( 150 / 80 ) * thickness )
+					y: contours[0].nodes[0].y - 100 - Math.min( 150, ( 150 / 54 ) * thickness )
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 20 / 80 ) * thickness
+						width: ( 20 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})

@@ -100,7 +100,7 @@ exports.glyphs['w'] =
 			nodes:
 				0:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 100 * width + 238 - (12),
+						contours[0].nodes[0].expandedTo[0].x + 100 * width + 200 + ( 38 / 54 ) * thickness - (12),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness + 15
 					)
 					y: xHeight

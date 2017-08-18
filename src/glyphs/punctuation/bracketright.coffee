@@ -25,7 +25,7 @@ exports.glyphs['bracketright'] =
 					y: capHeight + ( 80 / 660 ) * capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 62 / 80 ) * thickness
+						width: ( 62 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -34,7 +34,7 @@ exports.glyphs['bracketright'] =
 					y: ( 150 / 250 ) * descender
 					typeOut: 'line'
 					expand: Object({
-						width: ( 62 / 80 ) * thickness
+						width: ( 62 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -47,7 +47,7 @@ exports.glyphs['bracketright'] =
 					y: contours[0].nodes[0].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 80 ) * thickness
+						width: ( 23 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -56,7 +56,7 @@ exports.glyphs['bracketright'] =
 					y: contours[1].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 80 ) * thickness
+						width: ( 23 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -69,7 +69,7 @@ exports.glyphs['bracketright'] =
 					y: contours[0].nodes[1].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 80 ) * thickness
+						width: ( 23 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 1
 					})
@@ -78,7 +78,7 @@ exports.glyphs['bracketright'] =
 					y: contours[2].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 80 ) * thickness
+						width: ( 23 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 1
 					})

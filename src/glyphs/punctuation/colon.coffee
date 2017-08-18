@@ -50,7 +50,7 @@ exports.glyphs['colon'] =
 					y: Math.min(
 						xHeight,
 						Math.max(
-							( 450 / 80 ) * thickness,
+							( 450 / 54 ) * thickness,
 							xHeight / 2
 						)
 					)

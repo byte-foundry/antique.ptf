@@ -23,7 +23,7 @@ exports.glyphs['caronSlovak'] =
 					y: anchors[0].y
 					type: 'smooth'
 					expand: Object({
-						width: ( 75 / 80 ) * thickness
+						width: ( 75 / 54 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.75
 					})
@@ -33,7 +33,7 @@ exports.glyphs['caronSlovak'] =
 					type: 'smooth'
 					typeOut: 'line'
 					expand: Object({
-						width: ( (Math.max( 91 * contrast, 75 )) / 80 ) * thickness
+						width: ( (Math.max( 91 * contrast, 75 )) / 54 ) * thickness
 						angle: 180 - Math.max( 46 * contrast, 0 ) + 'deg'
 						distr: 1
 					})
@@ -42,7 +42,7 @@ exports.glyphs['caronSlovak'] =
 					y: contours[0].nodes[0].expandedTo[1].y - 187
 					typeIn: 'line'
 					expand: Object({
-						width: ( 12 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.75
 					})

@@ -26,7 +26,7 @@ exports.glyphs['six'] =
 					y: capHeight + overshoot
 					dirOut: 195 + 10 - 10 * width + 'deg'
 					expand: Object({
-						width: ( 30 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 30 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -36,7 +36,7 @@ exports.glyphs['six'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 95 / 80 ) * thickness * opticThickness
+						width: ( 95 / 54 ) * thickness * opticThickness
 						angle: 6 + 'deg'
 						distr: 0.25
 					})
@@ -46,20 +46,20 @@ exports.glyphs['six'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 46 / 80 ) * thickness * opticThickness * contrast
+						width: ( 46 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
 				3:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 235 + 200 * width - (24),
-						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 94 / 80 ) * thickness * opticThickness
+						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 94 / 54 ) * thickness * opticThickness
 					)
 					y: 196
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 94 / 80 ) * thickness * opticThickness
+						width: ( 94 / 54 ) * thickness * opticThickness
 						angle: - 167 + 'deg'
 						distr: 0.25
 					})
@@ -69,7 +69,7 @@ exports.glyphs['six'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 78 / 80 ) * thickness * opticThickness * contrast
+						width: ( 78 / 54 ) * thickness * opticThickness * contrast
 						angle: - 120 + 'deg'
 						distr: 0
 					})
@@ -78,7 +78,7 @@ exports.glyphs['six'] =
 					y: contours[0].nodes[1].y
 					dirIn: 77 / 180 * Math.PI
 					expand: Object({
-						width: ( 30 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 30 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: contours[0].nodes[5].dirIn - Math.PI / 2
 						distr: 1
 					})

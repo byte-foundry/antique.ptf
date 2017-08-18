@@ -15,15 +15,15 @@ exports.glyphs['breve'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x - 126 * width - ( 20 / 80 ) * thickness
+					x: anchors[0].x - 126 * width - ( 20 / 54 ) * thickness
 					y: Math.min(
 						contours[0].nodes[1].expandedTo[0].y + 100,
-						contours[0].nodes[1].expandedTo[1].y + ( 157 + ( 10 / 80 ) * thickness )
+						contours[0].nodes[1].expandedTo[1].y + ( 157 + ( 10 / 54 ) * thickness )
 					)
 					dirOut: - 90 + Math.max( 0, Math.min( 25, 18 * width ) ) + 'deg'
 					tensionOut: 1.2
 					expand: Object({
-						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 14 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.75
 					})
@@ -35,7 +35,7 @@ exports.glyphs['breve'] =
 					tensionIn: 1.2
 					tensionOut: 1.2
 					expand: Object({
-						width: ( 67 / 80 ) * thickness
+						width: ( 67 / 54 ) * thickness
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})
@@ -45,7 +45,7 @@ exports.glyphs['breve'] =
 					dirIn: - 90 - Math.max( 0, Math.min( 25, 18 * width ) ) + 'deg'
 					tensionIn: 1.2
 					expand: Object({
-						width: ( 14 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 14 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 1
 					})

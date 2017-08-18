@@ -26,7 +26,7 @@ exports.glyphs['eight'] =
 					y: contours[0].nodes[4].y
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 35 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 35 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Utils.lineAngle( contours[0].nodes[4].expandedTo[0].point, contours[0].nodes[4].expandedTo[1].point ) + Math.PI / 2
 						distr: 0.2
 					})
@@ -36,7 +36,7 @@ exports.glyphs['eight'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 94 / 80 ) * thickness * opticThickness * contrast
+						width: ( 94 / 54 ) * thickness * opticThickness * contrast
 						angle: 15 + 'deg'
 						distr: 0.25
 					})
@@ -46,7 +46,7 @@ exports.glyphs['eight'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 43 / 80 ) * thickness * opticThickness * contrast
+						width: ( 43 / 54 ) * thickness * opticThickness * contrast
 						angle: 82 + 'deg'
 						distr: 0
 					})
@@ -56,7 +56,7 @@ exports.glyphs['eight'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 88 / 80 ) * thickness * opticThickness
+						width: ( 88 / 54 ) * thickness * opticThickness
 						angle: - 160 + 'deg'
 						distr: 0.25
 					})
@@ -65,7 +65,7 @@ exports.glyphs['eight'] =
 					y: contours[0].nodes[5].expandedTo[1].y + ( contours[0].nodes[3].expandedTo[0].y - contours[0].nodes[5].expandedTo[1].y ) * 0.5
 					dirOut: ( Math.max(
 						Math.min(
-							180 - ( 25 / 80 ) * thickness * opticThickness + 10 * width - 10,
+							180 - ( 25 / 54 ) * thickness * opticThickness + 10 * width - 10,
 							180
 						),
 						155
@@ -74,7 +74,7 @@ exports.glyphs['eight'] =
 					tensionIn: 1.1
 					tensionOut: 1.2
 					expand: Object({
-						width: ( 93 / 80 ) * thickness * opticThickness
+						width: ( 93 / 54 ) * thickness * opticThickness
 						angle: contours[0].nodes[4].dirOut + Math.PI / 2
 						distr: 0.5
 					})
@@ -84,7 +84,7 @@ exports.glyphs['eight'] =
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 94 / 80 ) * thickness * opticThickness
+						width: ( 94 / 54 ) * thickness * opticThickness
 						angle: 180 + 19 + 'deg'
 						distr: 0.75
 					})
@@ -94,7 +94,7 @@ exports.glyphs['eight'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 80 ) * thickness * opticThickness * contrast
+						width: ( 47 / 54 ) * thickness * opticThickness * contrast
 						angle: 180 - 102 + 'deg'
 						distr: 1
 					})
@@ -104,7 +104,7 @@ exports.glyphs['eight'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 87 / 80 ) * thickness * opticThickness * contrast
+						width: ( 87 / 54 ) * thickness * opticThickness * contrast
 						angle: 180 - 176 + 'deg'
 						distr: 0.75
 					})
@@ -113,7 +113,7 @@ exports.glyphs['eight'] =
 					y: contours[0].nodes[0].expandedTo[0].y
 					dirIn: 0 + 'deg'
 					expand: Object({
-						width: ( 37 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 37 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: Utils.lineAngle( contours[0].nodes[4].expandedTo[0].point, contours[0].nodes[4].expandedTo[1].point ) + Math.PI / 2
 						distr: 1
 					})

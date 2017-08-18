@@ -25,7 +25,7 @@ exports.glyphs['hyphen'] =
 					y: xHeight * ( 280 / 500 ) * crossbar
 					typeOut: 'line'
 					expand: Object({
-						width: ( 70 / 80 ) * thickness
+						width: ( 70 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})
@@ -33,7 +33,7 @@ exports.glyphs['hyphen'] =
 					x: contours[0].nodes[0].x + 75 + 200 * width
 					y: contours[0].nodes[0].y
 					expand: Object({
-						width: ( 70 / 80 ) * thickness
+						width: ( 70 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})

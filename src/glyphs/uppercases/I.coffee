@@ -8,8 +8,8 @@ exports.glyphs['I'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 70 + ( 80 / 65 ) * serifWidth
-		spacingRight: 50 * spacing + 70 + ( 80 / 65 ) * serifWidth
+		spacingLeft: 50 * spacing + 40
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -18,18 +18,18 @@ exports.glyphs['I'] =
 	anchors:
 		0:
 			x: contours[0].nodes[0].x
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			y: capHeight + ( 45 / 54 ) * diacriticHeight
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (45/80) * thickness * opticThickness
+					x: spacingLeft + (28/54) * thickness * opticThickness
 					y: Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -37,13 +37,13 @@ exports.glyphs['I'] =
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					expand: Object({
-						width: ( 90 / 80 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
 	components:
 		0:
-			base: ['serif-vertical', 'none']
+			base: ['none', 'serif-vertical']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
@@ -54,7 +54,7 @@ exports.glyphs['I'] =
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		1:
-			base: ['serif-vertical', 'none']
+			base: ['none', 'serif-vertical']
 			id: 'bottomright'
 			parentAnchors:
 				0:
@@ -70,7 +70,7 @@ exports.glyphs['I'] =
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		2:
-			base: ['serif-vertical', 'none']
+			base: ['none', 'serif-vertical']
 			id: 'topleft'
 			parentAnchors:
 				0:
@@ -86,7 +86,7 @@ exports.glyphs['I'] =
 				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
 				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		3:
-			base: ['serif-vertical', 'none']
+			base: ['none', 'serif-vertical']
 			id: 'topright'
 			parentAnchors:
 				0:

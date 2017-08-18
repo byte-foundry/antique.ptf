@@ -1,3 +1,4 @@
+# TODO: capHeight
 exports.glyphs['B_cap'] =
 	unicode: 'B'
 	glyphName: 'B'
@@ -70,7 +71,10 @@ exports.glyphs['B_cap'] =
 						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 10
 					)
 					y: Math.min(
-						contours[1].nodes[1].y - ( 50 / 54 ) * thickness * opticThickness * contrast - 10,
+						Math.max(
+							contours[1].nodes[1].y - ( 50 / 54 ) * thickness * opticThickness * contrast - 10,
+							( capHeight + ( 370 / 700 ) * capHeight * crossbar + 0.5 * contours[1].nodes[4].expand.width ) / 2
+						),
 						capHeight - ( 105 / 700 ) * capHeight
 					)
 					dirIn: 90 + 'deg'
@@ -84,7 +88,10 @@ exports.glyphs['B_cap'] =
 				3:
 					x: contours[1].nodes[2].x
 					y: Math.max(
-						contours[1].nodes[4].y + ( 36 / 54 ) * thickness * opticThickness * contrast + Math.cos( (165 - 90) / 180 * Math.PI ) * ( 59 / 54 ) * thickness * opticThickness + 10,
+						Math.min(
+							contours[1].nodes[4].y + ( 36 / 54 ) * thickness * opticThickness * contrast + Math.cos( (165 - 90) / 180 * Math.PI ) * ( 59 / 54 ) * thickness * opticThickness + 10,
+							( capHeight + ( 370 / 700 ) * capHeight * crossbar + 0.5 * contours[1].nodes[4].expand.width ) / 2
+						),
 						capHeight / 2 + ( 105 / 700 ) * capHeight
 					)
 					dirOut: - 90 + 'deg'
@@ -96,7 +103,7 @@ exports.glyphs['B_cap'] =
 					})
 				4:
 					x: contours[1].nodes[1].x
-					y: ( 370 / 600 ) * xHeight * crossbar
+					y: ( 370 / 700 ) * capHeight * crossbar
 					dirIn: 0 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'

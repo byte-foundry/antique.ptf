@@ -26,7 +26,7 @@ exports.glyphs['guillemotleft'] =
 					y: xHeight - ( 25 / 450 ) * xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
+						width: ( 11 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
 					})
@@ -36,7 +36,7 @@ exports.glyphs['guillemotleft'] =
 					typeOut: 'line'
 					type: 'smooth'
 					expand: Object({
-						width: ( 100 / 80 ) * thickness * Math.sqrt( width )
+						width: ( 100 / 54 ) * thickness * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -44,7 +44,7 @@ exports.glyphs['guillemotleft'] =
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: ( 70 / 450 ) * xHeight
 					expand: Object({
-						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
+						width: ( 11 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
 					})
@@ -60,7 +60,7 @@ exports.glyphs['guillemotleft'] =
 					y: xHeight - ( 25 / 450 ) * xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
+						width: ( 11 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
 					})
@@ -70,7 +70,7 @@ exports.glyphs['guillemotleft'] =
 					typeOut: 'line'
 					type: 'smooth'
 					expand: Object({
-						width: ( 100 / 80 ) * thickness * Math.sqrt( width )
+						width: ( 100 / 54 ) * thickness * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -78,7 +78,7 @@ exports.glyphs['guillemotleft'] =
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: ( 70 / 450 ) * xHeight
 					expand: Object({
-						width: ( 11 / 80 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
+						width: ( 11 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
 					})

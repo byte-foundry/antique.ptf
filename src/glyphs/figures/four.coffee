@@ -25,7 +25,7 @@ exports.glyphs['four'] =
 					y: contours[0].nodes[2].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * opticThickness * contrast
+						width: ( 20 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -37,7 +37,7 @@ exports.glyphs['four'] =
 					y: contours[0].nodes[2].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 67 / 80 ) * thickness * opticThickness * contrast
+						width: ( 67 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -46,7 +46,7 @@ exports.glyphs['four'] =
 					y: ( 193 / 660 ) * capHeight * crossbar + (17)
 					typeOut: 'line'
 					expand: Object({
-						width: ( 67 / 80 ) * thickness * opticThickness * contrast
+						width: ( 67 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.25
 					})
@@ -59,7 +59,7 @@ exports.glyphs['four'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * opticThickness
+						width: ( 20 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 1
 					})
@@ -71,7 +71,7 @@ exports.glyphs['four'] =
 					})
 					typeOut: 'line'
 					expand: Object({
-						width: ( 85 / 80 ) * thickness * opticThickness
+						width: ( 85 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0
 					})
@@ -80,7 +80,7 @@ exports.glyphs['four'] =
 					y: 0 + Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
-						width: ( 85 / 80 ) * thickness * opticThickness
+						width: ( 85 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -93,7 +93,7 @@ exports.glyphs['four'] =
 					y: contours[1].nodes[1].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 40 / 80 ) * thickness
+						width: ( 40 / 54 ) * thickness
 						angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[1].point, contours[1].nodes[0].expandedTo[0].point ) - Math.PI / 2
 						distr: 0
 					})
@@ -102,7 +102,7 @@ exports.glyphs['four'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[1].point, contours[1].nodes[0].expandedTo[0].point ) - Math.PI / 2
 						distr: 0
 					})
@@ -145,7 +145,7 @@ exports.glyphs['four'] =
 			parentParameters:
 				serifWidth: Math.max( ( 55 / 65 ) * serifWidth, serifWidth - 10 )
 			transforms: Array(
-				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( ( 67 / 80 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
+				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( ( 67 / 54 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
 			)
 		3:
 			base: ['none', 'serif-horizontal', 'serif-horizontal-fake']
@@ -160,5 +160,5 @@ exports.glyphs['four'] =
 			transformOrigin: contours[0].nodes[2].expandedTo[1].point
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( ( 67 / 80 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
+				[ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( ( 67 / 54 ) * thickness * opticThickness * contrast * 0.5 ) ) ]
 			)

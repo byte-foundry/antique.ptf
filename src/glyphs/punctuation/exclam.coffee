@@ -21,7 +21,7 @@ exports.glyphs['exclam'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 5 + ( 55 / 80 ) * thickness
+					x: spacingLeft + 5 + ( 55 / 54 ) * thickness
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
@@ -39,7 +39,7 @@ exports.glyphs['exclam'] =
 						)
 					) + ( 80 / 660 ) * capHeight
 					expand: Object({
-						width: ( 20 / 80 ) * thickness * contrast * contrastExtremity
+						width: ( 20 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.5
 					})

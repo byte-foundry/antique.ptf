@@ -30,20 +30,20 @@ exports.glyphs['nine'] =
 					) + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 30 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 30 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})
 				1:
 					x: Math.max(
 						contours[0].nodes[3].expandedTo[0].x + 235 + 200 * width - (25),
-						contours[0].nodes[3].expandedTo[1].x + 0.75 * ( 95 / 80 ) * thickness * opticThickness + 10
+						contours[0].nodes[3].expandedTo[1].x + 0.75 * ( 95 / 54 ) * thickness * opticThickness + 10
 					)
 					y: contours[0].nodes[0].y + ( contours[0].nodes[2].y - contours[0].nodes[0].y ) * ( 435 / 680 )
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 95 / 80 ) * thickness * opticThickness
+						width: ( 95 / 54 ) * thickness * opticThickness
 						angle: - 174 + 'deg'
 						distr: 0.25
 					})
@@ -53,7 +53,7 @@ exports.glyphs['nine'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 46 / 80 ) * thickness * opticThickness * contrast
+						width: ( 46 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -64,7 +64,7 @@ exports.glyphs['nine'] =
 					type: 'smooth'
 					tensionIn: 1.1
 					expand: Object({
-						width: ( 95 / 80 ) * thickness * opticThickness
+						width: ( 95 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -74,7 +74,7 @@ exports.glyphs['nine'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 77 / 80 ) * thickness * opticThickness * contrast
+						width: ( 77 / 54 ) * thickness * opticThickness * contrast
 						angle: 60 + 'deg'
 						distr: 0.1
 					})
@@ -83,7 +83,7 @@ exports.glyphs['nine'] =
 					y: contours[0].nodes[1].y
 					dirIn: (- 90 - 17) / 180 * Math.PI
 					expand: Object({
-						width: ( 30 / 80 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 30 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: contours[0].nodes[5].dirIn - Math.PI / 2
 						distr: 1
 					})

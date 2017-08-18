@@ -25,7 +25,7 @@ exports.glyphs['emdash'] =
 					y: xHeight * ( 297 / 500 ) * crossbar
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})
@@ -33,7 +33,7 @@ exports.glyphs['emdash'] =
 					x: contours[0].nodes[0].x + 700 + 200 * width
 					y: contours[0].nodes[0].y
 					expand: Object({
-						width: ( 50 / 80 ) * thickness
+						width: ( 50 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})
