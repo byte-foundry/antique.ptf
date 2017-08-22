@@ -116,16 +116,13 @@ exports.glyphs['e'] =
 						contours[0].nodes[6].expandedTo[0].y - 189,
 						xHeight / 2 + 10
 					)
+					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
-		1:
-			skeleton: true
-			closed: false
-			nodes:
-				0:
+				8:
 					x: contours[0].nodes[7].expandedTo[0].x
 					y: contours[0].nodes[7].expandedTo[0].y + 0.25 * Math.min(
 						( 47 / 54 ) * thickness * contrast,
@@ -140,11 +137,14 @@ exports.glyphs['e'] =
 						angle: 90 + 'deg'
 						distr: 0.25
 					})
-				1:
+				9:
 					x: contours[0].nodes[3].x
-					y: contours[1].nodes[0].expandedTo[0].y
+					y: contours[0].nodes[8].expandedTo[0].y
 					expand: Object({
-						width: contours[1].nodes[0].expand.width * contrastExtremity
+						width: Math.min(
+							( 47 / 54 ) * thickness * contrast,
+							contours[0].nodes[6].expandedTo[0].y - contours[0].nodes[7].expandedTo[0].y - ( 50 / 600 ) * xHeight
+						) * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})
