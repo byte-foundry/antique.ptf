@@ -1,4 +1,4 @@
-exports.glyphs['five'] =
+exports.glyphs['five_alt'] =
 	unicode: '5'
 	glyphName: 'five'
 	characterName: 'DIGIT FIVE'
@@ -142,34 +142,21 @@ exports.glyphs['five'] =
 			nodes:
 				0:
 					x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[1].nodes[0].expandedTo[1].y
-					dirOut: - 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
-						width: ( 15 / 54 ) * thickness * contrast
-						angle: 0 + 'deg'
-						distr: 1
-					})
-				1:
-					x: ( contours[2].nodes[0].expandedTo[0].x + contours[2].nodes[2].expandedTo[0].x ) * ( 61 / 137 )
-					y: capHeight - 43 + (0)
-					dirOut: 0 + 'deg'
-					type: 'smooth'
+					y: capHeight
+					typeOut: 'line'
 					expand: Object({
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 180 - 77 + 'deg'
-						distr: 0.9
+						angle: - 90 + 'deg'
+						distr: 0
 					})
-				2:
+				1:
 					x: Math.max(
 						contours[2].nodes[0].expandedTo[0].x + 100 * width + 37 - (22),
 						contours[0].nodes[4].expandedTo[0].x - 11
 					)
 					y: capHeight
-					dirIn: - 90 + 'deg'
-					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
-						angle: 180 + 'deg'
-						distr: 0.25
+						width: ( 50 / 54 ) * thickness * contrast
+						angle: - 90 + 'deg'
+						distr: 0
 					})

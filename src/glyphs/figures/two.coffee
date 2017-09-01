@@ -34,14 +34,13 @@ exports.glyphs['two'] =
 					y: Math.min(
 						capHeight - 92,
 						# contours[0].nodes[2].y - contours[0].nodes[2].expand.width - ( Math.sin( contours[0].nodes[1].expand.angle ) * (( 1 - contours[0].nodes[1].expand.distr ) * contours[0].nodes[1].expand.width) ) - 10
-						contours[0].nodes[2].y - ( 47 / 54 ) * thickness - ( Math.sin( 8 / 180 * Math.PI ) * ( 0.75 * ( 55 / 54 ) * thickness ) ) - 10
+						contours[0].nodes[2].y - ( 47 / 54 ) * thickness - ( Math.sin( 2 / 180 * Math.PI ) * ( 0.75 * ( 55 / 54 ) * thickness ) ) - 10
 					)
-					y: 605
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
 						width: ( 57 / 54 ) * thickness
-						angle: 1 / 180 * Math.PI
+						angle: 2 / 180 * Math.PI
 						distr: 0.25
 					})
 				2:
