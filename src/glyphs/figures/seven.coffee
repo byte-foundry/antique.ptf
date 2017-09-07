@@ -4,13 +4,13 @@ exports.glyphs['seven'] =
 	glyphName: 'seven'
 	characterName: 'DIGIT SEVEN'
 	ot:
-		advanceWidth: contours[0].nodes[2].x + spacingRight
+		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 50
-		spacingRight: 50 * spacing + 40
+		spacingLeft: 50 * spacing + 20
+		spacingRight: 50 * spacing + 20
 	tags: [
 		'all',
 		'latin',
@@ -26,30 +26,18 @@ exports.glyphs['seven'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 77 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness
 						angle: - 90 + 'deg'
 						distr: 0
 					})
 				1:
-					x: Math.min(
-						Utils.onLine({
-							y: capHeight
-							on: [ contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ]
-						}),
-						contours[0].nodes[2].x - thickness / 2
+					x: Math.max(
+						contours[0].nodes[0].x + 60 + Math.max( 46, ( 46 / 54 ) * thickness ) + 100 * width,
+						contours[1].nodes[1].x + 175
 					)
 					y: capHeight
-					typeOut: 'line'
 					expand: Object({
-						width: ( 77 / 54 ) * thickness * opticThickness
-						angle: - 90 + 'deg'
-						distr: 0
-					})
-				2:
-					x: contours[0].nodes[0].x + 210 + 200 * width
-					y: capHeight
-					expand: Object({
-						width: ( 20 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -58,22 +46,19 @@ exports.glyphs['seven'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[2].expandedTo[1].x
-					y: contours[0].nodes[2].expandedTo[1].y
-					dirOut: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ) - (2 / 180 * Math.PI)
-					type: 'smooth'
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					typeOut: 'line'
 					expand: Object({
-						width: ( 38 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: Math.acos( Math.min(1, contours[0].nodes[2].expand.width / contours[1].nodes[0].expand.width )) + Math.PI / 2
+						width: ( 52 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
+						angle: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].expandedTo[1].point ) - Math.PI / 2
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].x + 30 * width + (87/80) * thickness
+					x: contours[0].nodes[0] .x + 31 * width
 					y: 0
-					type: 'smooth'
-					dirIn: 100 - 10 * width + 'deg'
 					expand: Object({
-						width: ( 112 / 54 ) * thickness * opticThickness
-						angle: 180 + 'deg'
-						distr: 0.25
+						width: thickness / Math.sin( Utils.lineAngle( contours[1].nodes[0].point, { x: contours[1].nodes[1].x + thickness, y: contours[1].nodes[1].y } ) )
+						angle: 0 + 'deg'
+						distr: 1
 					})

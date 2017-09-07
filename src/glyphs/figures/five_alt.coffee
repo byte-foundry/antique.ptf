@@ -1,3 +1,4 @@
+# TODO: extralight could explose
 exports.glyphs['five_alt'] =
 	unicode: '5'
 	glyphName: 'five'
@@ -45,7 +46,7 @@ exports.glyphs['five_alt'] =
 					})
 				2:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[3].expandedTo[0].x ) * ( 98 / 196 )
-					y: - overshoot * 2
+					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({

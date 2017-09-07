@@ -38,7 +38,7 @@ exports.glyphs['zero'] =
 					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 98 / 197 )
-					y: - ( 8 / 5 ) * overshoot
+					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
@@ -72,7 +72,7 @@ exports.glyphs['zero'] =
 					})
 				4:
 					x: contours[0].nodes[1].x
-					y: capHeight + ( 8 / 5 ) * overshoot
+					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({

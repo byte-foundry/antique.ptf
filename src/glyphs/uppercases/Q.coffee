@@ -39,7 +39,7 @@ exports.glyphs['Q'] =
 					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 97 / 194 )
-					y: - overshoot * 2
+					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
@@ -73,7 +73,7 @@ exports.glyphs['Q'] =
 					})
 				4:
 					x: contours[0].nodes[1].x
-					y: capHeight + overshoot * 2
+					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
