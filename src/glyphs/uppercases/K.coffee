@@ -31,7 +31,7 @@ exports.glyphs['K'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight
+					y: capHeight
 					typeOut: 'line'
 					expand: Object({
 						width: ( 57 / 54 ) * thickness * opticThickness

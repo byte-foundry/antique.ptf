@@ -23,7 +23,7 @@ exports.glyphs['two'] =
 				0:
 					x: spacingLeft + (14/54) * thickness
 					y: contours[0].nodes[1].y - Math.min( 31, ( 31 / 700 ) * capHeight )
-					tyeOut: 'line'
+					typeOut: 'line'
 					expand: Object({
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'

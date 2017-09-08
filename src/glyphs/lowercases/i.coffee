@@ -8,8 +8,8 @@ exports.glyphs['i'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 35
-		spacingRight: 50 * spacing + 35
+		spacingLeft: 50 * spacing + 35 + serifWidth
+		spacingRight: 50 * spacing + 35 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -46,3 +46,50 @@ exports.glyphs['i'] =
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: xHeight + ( 33 / 40 ) * diacriticHeight
 					optical: 58
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+		2:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		3:
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					reversed: true
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+			transformOrigin: contours[0].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		4:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[1].point
+			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

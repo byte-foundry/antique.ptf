@@ -295,7 +295,7 @@ exports.controls = [
 		min: 0.001
 		max: 100
 		step: 1
-		init: 2
+		init: 5
 		minAdvised: 0
 		maxAdvised: 80
 		disabled: false
@@ -306,7 +306,7 @@ exports.controls = [
 		min: 0.2
 		max: 1.5
 		step: 0.01
-		init: 0.35
+		init: 1
 		minAdvised: 0
 		maxAdvised: 1.3
 		disabled: false

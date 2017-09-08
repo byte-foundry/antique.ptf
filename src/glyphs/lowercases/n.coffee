@@ -8,8 +8,8 @@ exports.glyphs['n'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 35
-		spacingRight: 50 * spacing + 35
+		spacingLeft: 50 * spacing + 35 + serifWidth
+		spacingRight: 50 * spacing + 35 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -93,3 +93,69 @@ exports.glyphs['n'] =
 						angle: 180 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 5
+				)
+		2:
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					reversed: true
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+			transformOrigin: contours[0].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+					noneAnchor: contours[1].nodes[0].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 5
+				)
+		4:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)

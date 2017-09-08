@@ -8,8 +8,8 @@ exports.glyphs['f'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 8
-		spacingRight: 50 * spacing + 15
+		spacingLeft: 50 * spacing + 8 + serifWidth
+		spacingRight: 50 * spacing + 15 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -79,7 +79,7 @@ exports.glyphs['f'] =
 							distr: 0
 						})
 				3:
-					x: contours[0].nodes[1].x
+					x: contours[0].nodes[1].x + Math.max( serifHeight, 0 )
 					y: ascenderHeight
 					expand: Object({
 						width: Math.min(
@@ -89,3 +89,38 @@ exports.glyphs['f'] =
 						angle: - 90 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+					noneAnchor: contours[1].nodes[0].expandedTo[0].point
+		2:
+			base: ['none', 'serif-horizontal']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[3].expandedTo[1].point
+					noneAnchor: contours[1].nodes[3].expandedTo[1].point
+					opposite: contours[1].nodes[3].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[1].nodes[3].expandedTo[1].y - contours[0].nodes[1].expandedTo[0].y - 10
+				)

@@ -11,7 +11,7 @@ exports.glyphs['e'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 35
-		spacingRight: 50 * spacing + 35
+		spacingRight: 50 * spacing + 35 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -148,3 +148,43 @@ exports.glyphs['e'] =
 						angle: 90 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: ['none', 'serif-vertical']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		1:
+			base: ['none', 'serif-vertical']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		2:
+			base: ['serif-vertical', 'none']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[7].expandedTo[0].point
+					opposite: contours[0].nodes[7].expandedTo[1].point
+					noneAnchor: contours[0].nodes[7].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[7].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)

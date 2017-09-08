@@ -9,7 +9,7 @@ exports.glyphs['d'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 35
-		spacingRight: 50 * spacing + 35
+		spacingRight: 50 * spacing + 35 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -121,3 +121,44 @@ exports.glyphs['d'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					reversed: true
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

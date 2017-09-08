@@ -11,7 +11,7 @@ exports.glyphs['a'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
-		spacingRight: 50 * spacing + 35
+		spacingRight: 50 * spacing + 35 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -29,7 +29,7 @@ exports.glyphs['a'] =
 				0:
 					x: contours[1].nodes[3].expandedTo[0].x + 10 + (13/80) * thickness
 					y: contours[0].nodes[1].y - Math.min( 110, ( 110 / 600 ) * xHeight )
-					tyeOut: 'line'
+					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
@@ -157,3 +157,39 @@ exports.glyphs['a'] =
 						angle: 0 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[4].expandedTo[0].point
+					noneAnchor: contours[0].nodes[4].expandedTo[0].point
+					opposite: contours[0].nodes[4].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[4].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		1:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
