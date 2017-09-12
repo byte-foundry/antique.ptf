@@ -190,6 +190,10 @@ exports.glyphs['g'] =
 					serifHeight,
 					contours[1].nodes[4].y - contours[1].nodes[3].y
 				)
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[1].nodes[0].expandedTo[1].x - contours[1].nodes[4].expandedTo[1].x ) - 10
+				)
 		2:
 			base: ['none', 'serif-vertical']
 			id: 'bottomleft'

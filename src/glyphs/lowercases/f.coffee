@@ -124,3 +124,7 @@ exports.glyphs['f'] =
 					serifWidth,
 					contours[1].nodes[3].expandedTo[1].y - contours[0].nodes[1].expandedTo[0].y - 10
 				)
+				serifCurve: Math.min(
+					serifCurve,
+					contours[1].nodes[3].x - contours[1].nodes[2].x
+				)

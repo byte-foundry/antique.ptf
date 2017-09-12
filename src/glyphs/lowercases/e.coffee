@@ -11,7 +11,7 @@ exports.glyphs['e'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 35
-		spacingRight: 50 * spacing + 35 + serifWidth
+		spacingRight: 50 * spacing + 35
 	tags: [
 		'all',
 		'latin',
@@ -176,7 +176,7 @@ exports.glyphs['e'] =
 				[ 'scaleY', -1 ]
 			)
 		2:
-			base: ['serif-vertical', 'none']
+			base: ['none', 'serif-vertical']
 			id: 'topright'
 			parentAnchors:
 				0:
