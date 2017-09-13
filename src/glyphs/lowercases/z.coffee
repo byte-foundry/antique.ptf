@@ -1,3 +1,4 @@
+# TODO: rotation serifs
 exports.glyphs['z'] =
 	unicode: 'z'
 	glyphName: 'z'

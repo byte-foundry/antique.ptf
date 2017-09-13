@@ -186,13 +186,21 @@ exports.glyphs['g'] =
 				[ 'scaleY', -1 ]
 			)
 			parentParameters:
-				serifHeight: Math.min(
-					serifHeight,
-					contours[1].nodes[4].y - contours[1].nodes[3].y
-				)
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[1].nodes[4].expandedTo[1].x ) - 10
+				)
+				serifHeight: Math.min(
+					serifHeight,
+					if serifHeight + serifCurve > ( contours[1].nodes[4].y - contours[1].nodes[3].expandedTo[1].y )
+					then (contours[1].nodes[4].y - contours[1].nodes[3].y) / 2
+					else serifHeight
+				)
+				serifCurve: Math.min(
+					serifCurve,
+					if serifHeight + serifCurve > ( contours[1].nodes[4].y - contours[1].nodes[3].expandedTo[1].y )
+					then (contours[1].nodes[4].y - contours[1].nodes[3].y) / 2
+					else serifCurve
 				)
 		2:
 			base: ['none', 'serif-vertical']
@@ -210,5 +218,13 @@ exports.glyphs['g'] =
 			parentParameters:
 				serifHeight: Math.min(
 					serifHeight,
-					contours[1].nodes[4].y - contours[1].nodes[3].y
+					if serifHeight + serifCurve > ( contours[1].nodes[4].y - contours[1].nodes[3].expandedTo[0].y )
+					then (contours[1].nodes[4].y - contours[1].nodes[3].y) / 2
+					else serifHeight
+				)
+				serifCurve: Math.min(
+					serifCurve,
+					if serifHeight + serifCurve > ( contours[1].nodes[4].y - contours[1].nodes[3].expandedTo[0].y )
+					then (contours[1].nodes[4].y - contours[1].nodes[3].y) / 2
+					else serifCurve
 				)

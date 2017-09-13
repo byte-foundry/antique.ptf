@@ -1,3 +1,4 @@
+# TODO: curved serifs
 exports.glyphs['G_cap'] =
 	unicode: 'G'
 	glyphName: 'G'

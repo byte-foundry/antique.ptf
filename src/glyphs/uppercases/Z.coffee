@@ -1,3 +1,4 @@
+# TODO: rotation serifs
 exports.glyphs['Z'] =
 	unicode: 'Z'
 	glyphName: 'Z'
@@ -118,3 +119,51 @@ exports.glyphs['Z'] =
 						)
 						distr: 1
 					})
+	components:
+		0:
+			base: ['none', 'serif-horizontal']
+			id: 'toptop'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+			transformOrigin: contours[1].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		1:
+			base: ['serif-horizontal', 'none']
+			id: 'topbottom'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1].point
+					noneAnchor: contours[1].nodes[0].expandedTo[1].point
+					opposite: contours[1].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		2:
+			base: ['serif-horizontal', 'none']
+			id: 'bottomtop'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: ['none', 'serif-horizontal']
+			id: 'bottombottom'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point

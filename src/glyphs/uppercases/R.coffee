@@ -8,8 +8,8 @@ exports.glyphs['R'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 40
-		spacingRight: 50 * spacing + 40
+		spacingLeft: 50 * spacing + 40 + serifWidth
+		spacingRight: 50 * spacing + 40 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -162,7 +162,7 @@ exports.glyphs['R'] =
 					)
 					dirIn: 90 + 'deg'
 					type: 'smooth'
-					# typeOut: 'line'
+					typeOut: 'line'
 					expand: Object({
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 182 + 'deg'
@@ -176,3 +176,68 @@ exports.glyphs['R'] =
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[2].nodes[3].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
+				)
+		2:
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					reversed: true
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+			transformOrigin: contours[0].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'bottomright2'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[3].expandedTo[0].point
+					noneAnchor: contours[2].nodes[3].expandedTo[0].point
+					opposite: contours[2].nodes[3].expandedTo[1].point
+					obliqueEndPoint: contours[2].nodes[2].expandedTo[0].point
+					reversed: true
+					scaleX: -1
+		4:
+			base: ['serif-oblique-acute', 'none']
+			id: 'bottomleft2'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[3].expandedTo[1].point
+					noneAnchor: contours[2].nodes[3].expandedTo[1].point
+					opposite: contours[2].nodes[3].expandedTo[0].point
+					obliqueEndPoint: contours[2].nodes[2].expandedTo[1].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[2].nodes[3].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
+				)

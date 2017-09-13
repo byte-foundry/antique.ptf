@@ -10,8 +10,8 @@ exports.glyphs['M_alt'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 40
-		spacingRight: 50 * spacing + 40
+		spacingLeft: 50 * spacing + 40 + serifWidth
+		spacingRight: 50 * spacing + 40 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -134,3 +134,124 @@ exports.glyphs['M_alt'] =
 					x: contours[3].nodes[0].expandedTo[1].x
 					y: contours[3].nodes[0].expandedTo[1].y
 					typeOut: 'line'
+	components:
+		0:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+		1:
+			base: ['serif-oblique-acute', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
+					scaleX: -1
+					reversed: true
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[2].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) - 10
+				)
+		2:
+			base: ['serif-oblique-acute', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[0].nodes[0].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[0].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		3:
+			base: ['none', 'serif-oblique-acute']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[1].expandedTo[1].point
+					noneAnchor: contours[2].nodes[1].expandedTo[1].point
+					opposite: contours[2].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[2].nodes[0].expandedTo[1].point
+			transformOrigin: contours[2].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[3].nodes[1].expandedTo[0].x - contours[2].nodes[1].expandedTo[1].x ) / 2 - 10
+				)
+		4:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'bottomleft2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[1].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[1].nodes[1].expandedTo[1].x - contours[3].nodes[0].expandedTo[1].x ) - 10
+				)
+		5:
+			base: ['serif-oblique-acute', 'none']
+			id: 'bottomright2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+		6:
+			base: ['none', 'serif-oblique-acute']
+			id: 'topleft2'
+			parentAnchors:
+				0:
+					base: contours[3].nodes[1].expandedTo[0].point
+					noneAnchor: contours[3].nodes[1].expandedTo[0].point
+					opposite: contours[3].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[3].nodes[0].expandedTo[0].point
+					scaleX: -1
+					reversed: true
+			transformOrigin: contours[3].nodes[1].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[3].nodes[1].expandedTo[0].x - contours[2].nodes[1].expandedTo[1].x ) / 2 - 10
+				)
+		7:
+			base: ['serif-oblique-acute', 'none']
+			id: 'topright2'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0].point
+					noneAnchor: contours[1].nodes[0].expandedTo[0].point
+					opposite: contours[1].nodes[0].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[1].expandedTo[0].point
+			transformOrigin: contours[1].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)

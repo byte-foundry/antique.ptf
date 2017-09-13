@@ -8,8 +8,8 @@ exports.glyphs['I'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 40
-		spacingRight: 50 * spacing + 40
+		spacingLeft: 50 * spacing + 40 + serifWidth
+		spacingRight: 50 * spacing + 40 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -43,18 +43,15 @@ exports.glyphs['I'] =
 					})
 	components:
 		0:
-			base: ['none', 'serif-vertical']
+			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
 					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		1:
-			base: ['none', 'serif-vertical']
+			base: ['serif-vertical', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
@@ -66,11 +63,8 @@ exports.glyphs['I'] =
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		2:
-			base: ['none', 'serif-vertical']
+			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
@@ -82,11 +76,8 @@ exports.glyphs['I'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
 		3:
-			base: ['none', 'serif-vertical']
+			base: ['serif-vertical', 'none']
 			id: 'topright'
 			parentAnchors:
 				0:
@@ -98,6 +89,4 @@ exports.glyphs['I'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
-				serifWidth: Math.min( ( 80 / 65 ) * serifWidth, serifWidth + 15 )
-				serifHeight: Math.min( ( 55 / 50 ) * serifHeight, serifHeight + 5 )
+			

@@ -9,7 +9,7 @@ exports.glyphs['J'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 10
-		spacingRight: 50 * spacing + 40
+		spacingRight: 50 * spacing + 40 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -80,3 +80,86 @@ exports.glyphs['J'] =
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[4].expandedTo[0].point
+					noneAnchor: contours[0].nodes[4].expandedTo[0].point
+					opposite: contours[0].nodes[4].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[4].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+			parentParameters:
+				serifHeight: Math.min(
+					serifHeight,
+					if serifHeight + serifCurve > ( contours[0].nodes[4].y - contours[0].nodes[3].expandedTo[1].y )
+					then (contours[0].nodes[4].y - contours[0].nodes[3].y) / 2
+					else serifHeight
+				)
+				serifCurve: Math.min(
+					serifCurve,
+					if serifHeight + serifCurve > ( contours[0].nodes[4].y - contours[0].nodes[3].expandedTo[1].y )
+					then (contours[0].nodes[4].y - contours[0].nodes[3].y) / 2
+					else serifCurve
+				)
+		3:
+			base: ['none', 'serif-vertical']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[4].expandedTo[1].point
+					noneAnchor: contours[0].nodes[4].expandedTo[1].point
+					opposite: contours[0].nodes[4].expandedTo[0].point
+			transformOrigin: contours[0].nodes[4].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+			parentParameters:
+				serifHeight: Math.min(
+					serifHeight,
+					if serifHeight + serifCurve > ( contours[0].nodes[4].y - contours[0].nodes[3].expandedTo[0].y )
+					then (contours[0].nodes[4].y - contours[0].nodes[3].y) / 2
+					else serifHeight
+				)
+				serifCurve: Math.min(
+					serifCurve,
+					if serifHeight + serifCurve > ( contours[0].nodes[4].y - contours[0].nodes[3].expandedTo[0].y )
+					then (contours[0].nodes[4].y - contours[0].nodes[3].y) / 2
+					else serifCurve
+				)
+				serifWidth: Math.min(
+					serifWidth,
+					( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) - 10
+				)
