@@ -22,23 +22,23 @@ exports.glyphs['equal'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 272 / 450 ) * xHeight + 77 + (25/80) * thickness
+					y: ( 240 / 480 ) * xHeight + 41 + (13)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 37 / 54 ) * thickness
 						angle: - 90 + 'deg'
-						distr: 0.5
+						distr: 0.75
 					})
 				1:
-					x: contours[0].nodes[0].x + 200 * width + 220
+					x: contours[0].nodes[0].x + 100 * width + 90 + Math.max( 17, ( 17 / 54 ) * thickness )
 					y: contours[0].nodes[0].y
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 37 / 54 ) * thickness
 						angle: - 90 + 'deg'
-						distr: 0.5
+						distr: 0.75
 					})
 		1:
 			skeleton: true
@@ -46,13 +46,13 @@ exports.glyphs['equal'] =
 			nodes:
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: ( 272 / 450 ) * xHeight - 77 - (25/80) * thickness
+					y: ( 240 / 480 ) * xHeight - 41 - (13)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 37 / 54 ) * thickness
 						angle: - 90 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[1].x
@@ -60,7 +60,7 @@ exports.glyphs['equal'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 37 / 54 ) * thickness
 						angle: - 90 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})

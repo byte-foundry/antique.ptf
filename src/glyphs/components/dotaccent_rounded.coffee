@@ -4,8 +4,8 @@ exports.glyphs['dotaccent_rounded'] =
 	anchors:
 		0:
 			x: parentAnchors[0].x
-			y: parentAnchors[0].y
-			optical: 100 # if typeof parentAnchors[0].optical != 'undefined' then parentAnchors[0].optical else thickness
+			y: parentAnchors[0].y - overshoot
+			optical: if typeof parentAnchors[0].optical != 'undefined' then parentAnchors[0].optical else thickness
 	tags: [
 		'component',
 		'diacritic'
@@ -25,14 +25,14 @@ exports.glyphs['dotaccent_rounded'] =
 						15,
 						Math.min(
 							180,
-							thickness * ( anchors[0].optical / 80 )
+							thickness * ( anchors[0].optical / 54 )
 						)
 					) / 2
 					y: anchors[0].y + Math.max(
 						15,
 						Math.min(
 							180,
-							thickness * ( anchors[0].optical / 80 )
+							thickness * ( anchors[0].optical / 54 )
 						)
 					) / 2
 					dirOut: 90 + 'deg'
@@ -43,7 +43,7 @@ exports.glyphs['dotaccent_rounded'] =
 						15,
 						Math.min(
 							180,
-							thickness * ( anchors[0].optical / 80 )
+							thickness * ( anchors[0].optical / 54 )
 						)
 					)
 					dirOut: 0 + 'deg'
@@ -53,14 +53,14 @@ exports.glyphs['dotaccent_rounded'] =
 						15,
 						Math.min(
 							180,
-							thickness * ( anchors[0].optical / 80 )
+							thickness * ( anchors[0].optical / 54 )
 						)
 					) / 2
 					y: anchors[0].y + Math.max(
 						15,
 						Math.min(
 							180,
-							thickness * ( anchors[0].optical / 80 )
+							thickness * ( anchors[0].optical / 54 )
 						)
 					) / 2
 					dirOut: - 90 + 'deg'

@@ -8,8 +8,8 @@ exports.glyphs['bracketleft'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 65
-		spacingRight: 50 * spacing + 5
+		spacingLeft: 50 * spacing + 40
+		spacingRight: 50 * spacing + 10
 	tags: [
 		'all',
 		'latin',
@@ -21,20 +21,20 @@ exports.glyphs['bracketleft'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (17/80) * thickness
-					y: capHeight + ( 80 / 660 ) * capHeight
+					x: spacingLeft + (17/54) * thickness
+					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 62 / 54 ) * thickness
+						width: ( 35 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ( 150 / 250 ) * descender
+					y: ( 73 / 90 ) * descender
 					typeOut: 'line'
 					expand: Object({
-						width: ( 62 / 54 ) * thickness
+						width: ( 35 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -47,16 +47,16 @@ exports.glyphs['bracketleft'] =
 					y: contours[0].nodes[0].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[1].nodes[0].x + 100 + 16 * width
+					x: contours[1].nodes[0].x + 50 + 22 * width
 					y: contours[1].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -69,16 +69,16 @@ exports.glyphs['bracketleft'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[2].nodes[0].x + 100 + 16 * width
+					x: contours[2].nodes[0].x + 50 + 22 * width
 					y: contours[2].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})

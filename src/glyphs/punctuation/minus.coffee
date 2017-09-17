@@ -1,7 +1,8 @@
-exports.glyphs['hyphen'] =
-	unicode: '-'
-	glyphName: 'hyphen'
-	characterName: 'HYPHEN-MINUS'
+# TODO: minus and hyphen-minus have the same unicode
+exports.glyphs['minus'] =
+	unicode: '−'
+	glyphName: 'minus'
+	characterName: 'MINUS SIGN'
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
@@ -22,18 +23,18 @@ exports.glyphs['hyphen'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: xHeight * ( 335 / 500 ) * crossbar
+					y: ( 240 / 480 ) * xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 46 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})
 				1:
-					x: contours[0].nodes[0].x + 50 + 100 * width
+					x: contours[0].nodes[0].x + 240 + 100 * width
 					y: contours[0].nodes[0].y
 					expand: Object({
-						width: ( 46 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})

@@ -1,8 +1,8 @@
-# TODO: curved serifs
-exports.glyphs['c'] =
-	unicode: 'c'
-	glyphName: 'c'
-	characterName: 'LATIN SMALL LETTER C'
+exports.glyphs['cent_alt'] =
+	unicode: '¢'
+	glyphName: 'cent'
+	characterName: 'CENT SIGN'
+	altImg: ''
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -11,15 +11,12 @@ exports.glyphs['c'] =
 	parameters:
 		spacingLeft: 50 * spacing + 35
 		spacingRight: 50 * spacing + 35 + serifWidth
+		thickness: ( 47 / 54 ) * thickness
 	tags: [
 		'all',
 		'latin',
-		'lowercase'
+		'punctuation'
 	]
-	anchors:
-		0:
-			x: contours[0].nodes[5].expandedTo[0].x
-			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
@@ -120,51 +117,47 @@ exports.glyphs['c'] =
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
-	components:
-		0:
-			base: ['none', 'serif-vertical']
-			id: 'bottomright'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-			transformOrigin: contours[0].nodes[0].expandedTo[0].point
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
 		1:
-			base: ['none', 'serif-vertical']
-			id: 'bottomleft'
-			parentAnchors:
+			skeleton: true
+			closed: false
+			nodes:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
+					x: contours[0].nodes[5].expandedTo[0].x
+					y: xHeight - ( 47 / 54 ) / 2 * contrast
+					typeOut: 'line'
+					expand: Object({
+						width: ( 30 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
+				1:
+					x: contours[1].nodes[0].x
+					y: xHeight + 45
+					typeOut: 'line'
+					expand: Object({
+						width: ( 30 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
 		2:
-			base: ['none', 'serif-vertical']
-			id: 'topright'
-			parentAnchors:
+			skeleton: true
+			closed: false
+			nodes:
 				0:
-					base: contours[0].nodes[7].expandedTo[0].point
-					opposite: contours[0].nodes[7].expandedTo[1].point
-					noneAnchor: contours[0].nodes[7].expandedTo[0].point
-					reversed: true
-			transformOrigin: contours[0].nodes[7].expandedTo[0].point
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
-		3:
-			base: ['none', 'serif-vertical']
-			id: 'topleft'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[7].expandedTo[1].point
-					opposite: contours[0].nodes[7].expandedTo[0].point
-					noneAnchor: contours[0].nodes[7].expandedTo[1].point
+					x: contours[1].nodes[0].x
+					y: - 50
+					typeOut: 'line'
+					expand: Object({
+						width: ( 30 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
+				1:
+					x: contours[1].nodes[0].x
+					y: ( 47 / 54 ) / 2 * contrast
+					typeOut: 'line'
+					expand: Object({
+						width: ( 30 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})

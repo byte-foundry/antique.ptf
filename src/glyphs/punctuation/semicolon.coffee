@@ -1,3 +1,4 @@
+# TODO: thickness and height
 exports.glyphs['semicolon'] =
 	unicode: ';'
 	glyphName: 'semicolon'
@@ -17,7 +18,7 @@ exports.glyphs['semicolon'] =
 	]
 	components:
 		0:
-			base: ['dot']
+			base: ['dotaccent', 'dotaccent_rounded']
 			id: 'top'
 			parentAnchors:
 				0:
@@ -25,17 +26,18 @@ exports.glyphs['semicolon'] =
 					y: Math.min(
 						xHeight,
 						Math.max(
-							( 450 / 54 ) * thickness,
-							xHeight / 2
+							( 265 / 54 ) * thickness,
+							xHeight - xHeight / 3
 						)
 					)
+					optical: 60
 			transformOrigin: { x: 0, y: 0 }
 			transforms: Array(
 				[ 'translateY', - Math.max(
 					40,
 					Math.min(
 						160,
-						thickness * ( 120 / 80 )
+						( 60 / 54 ) * thickness
 					)
 				)]
 			)

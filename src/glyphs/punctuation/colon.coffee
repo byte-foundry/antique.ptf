@@ -1,3 +1,4 @@
+# TODO: thickness and height
 exports.glyphs['colon'] =
 	unicode: ':'
 	glyphName: 'colon'
@@ -7,7 +8,7 @@ exports.glyphs['colon'] =
 			40,
 			Math.min(
 				160,
-				thickness * ( 120 / 80 )
+				( 60 / 54 ) * thickness
 			)
 		) + spacingRight
 	transforms: Array(
@@ -23,7 +24,7 @@ exports.glyphs['colon'] =
 	]
 	components:
 		0:
-			base: ['dot']
+			base: ['dot', 'dotaccent_rounded']
 			id: 'bottom'
 			parentAnchors:
 				0:
@@ -31,12 +32,13 @@ exports.glyphs['colon'] =
 						40,
 						Math.min(
 							160,
-							thickness * ( 120 / 80 )
+							( 60 / 54 ) * thickness
 						)
 					) + spacingRight ) / 2
-					y: - overshoot
+					y: 0
+					optical: 60
 		1:
-			base: ['dot']
+			base: ['dot', 'dotaccent_rounded']
 			id: 'top'
 			parentAnchors:
 				0:
@@ -44,23 +46,24 @@ exports.glyphs['colon'] =
 						40,
 						Math.min(
 							160,
-							thickness * ( 120 / 80 )
+							( 60 / 54 ) * thickness
 						)
 					) + spacingRight ) / 2
 					y: Math.min(
 						xHeight,
 						Math.max(
-							( 450 / 54 ) * thickness,
-							xHeight / 2
+							( 265 / 54 ) * thickness,
+							xHeight - xHeight / 3
 						)
 					)
+					optical: 60
 			transformOrigin: { x: 0, y: 0 }
 			transforms: Array(
 				[ 'translateY', - Math.max(
 					40,
 					Math.min(
 						160,
-						thickness * ( 120 / 80 )
+						( 60 / 54 ) * thickness
 					)
 				)]
 			)

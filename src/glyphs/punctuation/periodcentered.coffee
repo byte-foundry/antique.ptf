@@ -23,7 +23,7 @@ exports.glyphs['periodcentered'] =
 	]
 	components:
 		0:
-			base: ['dot']
+			base: ['dotaccent', 'dotaccent_rounded']
 			id: 'unique'
 			parentAnchors:
 				0:
@@ -35,3 +35,4 @@ exports.glyphs['periodcentered'] =
 						)
 					) + spacingRight ) / 2
 					y: ( 210 / 450 ) * xHeight
+					optical: ( 60 / 54 ) * thickness

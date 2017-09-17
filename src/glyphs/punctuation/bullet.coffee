@@ -3,80 +3,73 @@ exports.glyphs['bullet'] =
 	glyphName: 'bullet'
 	characterName: 'BULLET'
 	ot:
-		advanceWidth: contours[0].nodes[3].x + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 130
-		spacingRight: 50 * spacing + 130
+		spacingLeft: 50 * spacing + 18
+		spacingRight: 50 * spacing + 18
+		thickness: Math.max( 12, thickness )
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
-	anchors:
-		0:
-			x: spacingLeft + Math.max(
-				40,
-				Math.min(
-					160,
-					thickness * ( 120 / 80 )
-				)
-			)
-			y: ( (200 - ( 50 / 54 ) * thickness ) / 450 ) * xHeight
 	contours:
 		0:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: spacingLeft + (46/54) * thickness
+					y: ( 251 / 600 ) * xHeight
+					typeOut: 'line'
+					expand: Object({
+						width: ( 92 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x
+					y: Math.max(
+						xHeight - ( ( thickness + 195 ) / 600 ) * xHeight,
+						contours[0].nodes[0].y
+					)
+					expand: Object({
+						width: ( 92 / 54 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
+		1:
 			skeleton: false
 			closed: true
 			nodes:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y
-					dirOut: 180 + 'deg'
-					type: 'smooth'
-				1:
-					x: anchors[0].x - Math.max(
-						80,
-						Math.min(
-							320,
-							thickness * ( 240 / 80 )
-						)
-					) / 2
-					y: anchors[0].y + Math.max(
-						80,
-						Math.min(
-							320,
-							thickness * ( 240 / 80 )
-						)
-					) / 2
-					dirOut: 90 + 'deg'
-					type: 'smooth'
-				2:
-					x: anchors[0].x
-					y: anchors[0].y + Math.max(
-						80,
-						Math.min(
-							320,
-							thickness * ( 240 / 80 )
-						)
-					)
-					dirOut: 0 + 'deg'
-					type: 'smooth'
-				3:
-					x: anchors[0].x + Math.max(
-						80,
-						Math.min(
-							320,
-							thickness * ( 240 / 80 )
-						)
-					) / 2
-					y: anchors[0].y + Math.max(
-						80,
-						Math.min(
-							320,
-							thickness * ( 240 / 80 )
-						)
-					) / 2
+					x: contours[0].nodes[0].expandedTo[0].x
+					y: contours[0].nodes[0].expandedTo[0].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
+				1:
+					x: contours[0].nodes[0].x
+					y: contours[0].nodes[0].y - contours[0].nodes[0].expand.width / 2
+					dirOut: 180 + 'deg'
+				2:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: contours[0].nodes[0].expandedTo[1].y
+					dirIn: - 90 + 'deg'
+		2:
+			skeleton: false
+			closed: true
+			nodes:
+				0:
+					x: contours[0].nodes[1].expandedTo[0].x
+					y: contours[0].nodes[1].expandedTo[0].y
+					dirOut: 90 + 'deg'
+				1:
+					x: contours[0].nodes[1].x
+					y: contours[0].nodes[1].y + contours[0].nodes[1].expand.width / 2
+					dirOut: 0 + 'deg'
+				2:
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[0].nodes[1].expandedTo[1].y
+					dirIn: 90 + 'deg'

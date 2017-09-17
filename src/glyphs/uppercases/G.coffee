@@ -54,7 +54,7 @@ exports.glyphs['G_cap'] =
 					})
 				2:
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * ( 97 / 194 )
-					y: - overshoot - 5
+					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
@@ -91,7 +91,7 @@ exports.glyphs['G_cap'] =
 					})
 				5:
 					x: contours[0].nodes[2].x
-					y: capHeight + overshoot + 5
+					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({

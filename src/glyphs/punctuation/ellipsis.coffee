@@ -29,7 +29,7 @@ exports.glyphs['ellipsis'] =
 	]
 	components:
 		0:
-			base: ['dot']
+			base: ['dot', 'dotaccent_rounded']
 			id: 'first'
 			parentAnchors:
 				0:
@@ -42,7 +42,7 @@ exports.glyphs['ellipsis'] =
 					) + spacingRight ) / 2
 					y: - overshoot
 		1:
-			base: ['dot']
+			base: ['dot', 'dotaccent_rounded']
 			id: 'second'
 			parentAnchors:
 				0:
@@ -55,7 +55,7 @@ exports.glyphs['ellipsis'] =
 					) + spacingRight ) + 75
 					y: - overshoot
 		2:
-			base: ['dot']
+			base: ['dot', 'dotaccent_rounded']
 			id: 'third'
 			parentAnchors:
 				0:

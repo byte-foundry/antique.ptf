@@ -8,8 +8,8 @@ exports.glyphs['underscore'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 25
-		spacingRight: 50 * spacing + 25
+		spacingLeft: 50 * spacing + 10
+		spacingRight: 50 * spacing + 10
 	tags: [
 		'all',
 		'latin',
@@ -22,21 +22,21 @@ exports.glyphs['underscore'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: - 90 - (10)
+					y: - 60 - (6)
 					dirOut: 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 30 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.2
 					})
 				1:
-					x: contours[0].nodes[0].x + 250 + 200 * width
+					x: contours[0].nodes[0].x + 100 * width + 140
 					y: contours[0].nodes[0].y
 					dirOut: 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 30 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.2
 					})

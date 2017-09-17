@@ -8,8 +8,8 @@ exports.glyphs['bracketright'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 5
-		spacingRight: 50 * spacing + 65
+		spacingLeft: 50 * spacing + 10
+		spacingRight: 50 * spacing + 40
 	tags: [
 		'all',
 		'latin',
@@ -21,20 +21,20 @@ exports.glyphs['bracketright'] =
 			closed: false
 			nodes:
 				0:
-					x: 100 + 16 * width + (17/80) * thickness
-					y: capHeight + ( 80 / 660 ) * capHeight
+					x: 50 + 22 * width + (13/54) * thickness
+					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 62 / 54 ) * thickness
+						width: ( 35 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: ( 150 / 250 ) * descender
+					y: ( 73 / 90 ) * descender
 					typeOut: 'line'
 					expand: Object({
-						width: ( 62 / 54 ) * thickness
+						width: ( 35 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -47,7 +47,7 @@ exports.glyphs['bracketright'] =
 					y: contours[0].nodes[0].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -56,7 +56,7 @@ exports.glyphs['bracketright'] =
 					y: contours[1].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -69,7 +69,7 @@ exports.glyphs['bracketright'] =
 					y: contours[0].nodes[1].expandedTo[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})
@@ -78,7 +78,7 @@ exports.glyphs['bracketright'] =
 					y: contours[2].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 23 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})

@@ -8,8 +8,8 @@ exports.glyphs['endash'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 50
-		spacingRight: 50 * spacing + 50
+		spacingLeft: 50 * spacing + 10
+		spacingRight: 50 * spacing + 10
 	tags: [
 		'all',
 		'latin',
@@ -22,18 +22,18 @@ exports.glyphs['endash'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: xHeight * ( 297 / 500 ) * crossbar
+					y: xHeight * ( 351 / 500 ) * crossbar
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})
 				1:
-					x: contours[0].nodes[0].x + 200 + 200 * width
+					x: contours[0].nodes[0].x + 140 + 100 * width
 					y: contours[0].nodes[0].y
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 31 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})

@@ -3,7 +3,7 @@ exports.glyphs['slash'] =
 	glyphName: 'slash'
 	characterName: 'SOLIDUS'
 	ot:
-		advanceWidth: contours[0].nodes[1].expandedTo[1].x
+		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -13,8 +13,8 @@ exports.glyphs['slash'] =
 		'punctuation'
 	]
 	parameters:
-		spacingLeft: 50 * spacing + 0
-		spacingRight: 50 * spacing + 0
+		spacingLeft: 50 * spacing + 10
+		spacingRight: 50 * spacing + 10
 	contours:
 		0:
 			skeleton: true
@@ -22,21 +22,21 @@ exports.glyphs['slash'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 120 / 250 ) * descender
+					y: descender
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 28 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + 200
-					y: capHeight + 90
+					x: contours[0].nodes[0].expandedTo[0].x + 100
+					y: capHeight
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 28 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
 					})

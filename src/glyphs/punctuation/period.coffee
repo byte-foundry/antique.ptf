@@ -23,7 +23,7 @@ exports.glyphs['period'] =
 	]
 	components:
 		0:
-			base: ['dot']
+			base: ['dotaccent', 'dotaccent_rounded']
 			id: 'unique'
 			parentAnchors:
 				0:
@@ -34,4 +34,5 @@ exports.glyphs['period'] =
 							thickness * ( 120 / 80 )
 						)
 					) + spacingRight ) / 2
-					y: - overshoot
+					y: 0
+					optical: ( 60 / 54 ) * thickness
