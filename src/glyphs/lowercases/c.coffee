@@ -20,7 +20,7 @@ exports.glyphs['c'] =
 		0:
 			x: contours[0].nodes[5].expandedTo[0].x
 			y: xHeight + diacriticHeight
-		1: 
+		1:
 			x: contours[0].nodes[2].expandedTo[0].x
 			y: contours[0].nodes[2].expandedTo[0].y
 	contours:
@@ -107,6 +107,7 @@ exports.glyphs['c'] =
 					y: contours[0].nodes[4].expandedTo[0].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
+					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 180 + 'deg'
@@ -171,3 +172,36 @@ exports.glyphs['c'] =
 					base: contours[0].nodes[7].expandedTo[1].point
 					opposite: contours[0].nodes[7].expandedTo[0].point
 					noneAnchor: contours[0].nodes[7].expandedTo[1].point
+		4:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'top'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[6].expandedTo[0]
+					baseHeight: contours[0].nodes[6].expandedTo[0].point
+					noneAnchor: contours[0].nodes[6].expandedTo[0].point
+					opposite: contours[0].nodes[6].expandedTo[1].point
+					curveEnd: contours[0].nodes[5].expandedTo[0]
+					rotationAngle: -15
+					inverseOrder: true
+					rotationCenter: contours[0].nodes[6].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.max(
+					serifWidth,
+					contours[0].nodes[5].expandedTo[0].y - contours[0].nodes[6].expandedTo[0].y
+				)
+		5:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[1].expandedTo[0]
+					baseHeight: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					curveEnd: contours[0].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					# left: true
+					down: true
+					# inverseOrder: true
+					rotationCenter: contours[0].nodes[1].expandedTo[0].point

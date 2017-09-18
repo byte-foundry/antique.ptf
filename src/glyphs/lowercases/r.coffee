@@ -129,3 +129,16 @@ exports.glyphs['r'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
+		3:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'topright'
+			parentAnchors:
+				0:
+					baseWidth: contours[1].nodes[1].expandedTo[1]
+					baseHeight: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					curveEnd: contours[1].nodes[2].expandedTo[1]
+					rotationAngle: -15
+					inverseOrder: true
+					rotationCenter: contours[1].nodes[1].expandedTo[1].point
