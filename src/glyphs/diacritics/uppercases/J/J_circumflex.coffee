@@ -1,8 +1,8 @@
-exports.glyphs['L_acute'] =
-	unicode: 'Ĺ'
-	glyphName: 'Lacute'
-	characterName: 'LATIN CAPITAL LETTER L WITH ACUTE'
-	base: 'L'
+exports.glyphs['J_circumflex'] =
+	unicode: 'Ĵ'
+	glyphName: 'Jcircumflex'
+	characterName: 'LATIN CAPITAL LETTER J WITH CIRCUMFLEX'
+	base: 'J'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
