@@ -15,20 +15,20 @@ exports.glyphs['macron'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x - 33 - 100 * width
-					y: anchors[0].y + (5)
+					x: anchors[0].x - 74 * width
+					y: anchors[0].y + (4)
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 36 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.1
 					})
 				1:
-					x: anchors[0].x + 33 + 100 * width
+					x: anchors[0].x + 74 * width
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 36 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.1
 					})

@@ -19,7 +19,7 @@ exports.glyphs['e'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[4].expandedTo[0].x
+			x: contours[0].nodes[5].expandedTo[0].x
 			y: xHeight + diacriticHeight
 	contours:
 		0:

@@ -1,3 +1,4 @@
+# TODO: create diacritics for all alt glyphs
 exports.glyphs['grave'] =
 	glyphName: 'grave'
 	characterName: 'GRAVE ACCENT'
@@ -19,20 +20,20 @@ exports.glyphs['grave'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x + (9)
+					x: anchors[0].x + (3)
 					y: anchors[0].y
 					typeOut: 'line'
 					expand: Object({
 						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
-						distr: 0.25
+						angle: 0 + 'deg'
+						distr: 0.1
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x - 51 * width
+					x: contours[0].nodes[0].expandedTo[1].x - 28 * width
 					y: contours[0].nodes[0].expandedTo[0].y + 60
 					type: 'smooth'
 					expand: Object({
 						width: ( 58 / 54 ) * thickness
-						angle: 180 + 'deg'
-						distr: 0
+						angle: 0 + 'deg'
+						distr: 1
 					})

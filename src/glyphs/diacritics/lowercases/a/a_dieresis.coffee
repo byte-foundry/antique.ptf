@@ -1,3 +1,4 @@
+# TODO: center and make it work
 exports.glyphs['a_dieresis'] =
 	unicode: 'ä'
 	glyphName: 'adieresis'

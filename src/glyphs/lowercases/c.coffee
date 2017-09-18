@@ -20,6 +20,9 @@ exports.glyphs['c'] =
 		0:
 			x: contours[0].nodes[5].expandedTo[0].x
 			y: xHeight + diacriticHeight
+		1: 
+			x: contours[0].nodes[2].expandedTo[0].x
+			y: contours[0].nodes[2].expandedTo[0].y
 	contours:
 		0:
 			skeleton: true

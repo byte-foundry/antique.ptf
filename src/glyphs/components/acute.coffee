@@ -23,25 +23,16 @@ exports.glyphs['acute'] =
 					y: anchors[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.1
 					})
 				1:
-					x: contours[0].nodes[2].expandedTo[0].x
-					y: contours[0].nodes[2].expandedTo[0].y
+					x: contours[0].nodes[0].expandedTo[0].x + 28 * width
+					y: contours[0].nodes[0].expandedTo[0].y + 60
 					type: 'smooth'
 					expand: Object({
-						width: ( 80 / 54 ) * thickness
-						angle: - Math.max( 50 * contrast, 0 ) + 'deg'
-						distr: 0
-					})
-				2:
-					x: contours[0].nodes[0].expandedTo[0].x + 87 * width
-					y: contours[0].nodes[0].expandedTo[0].y + 177
-					type: 'smooth'
-					expand: Object({
-						width: ( 80 / 54 ) * thickness
+						width: ( 58 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
 					})

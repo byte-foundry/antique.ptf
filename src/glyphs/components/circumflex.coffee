@@ -4,7 +4,7 @@ exports.glyphs['circumflex'] =
 	anchors:
 		0:
 			x: parentAnchors[0].x
-			y: parentAnchors[0].y
+			y: parentAnchors[0].y + 30
 	tags: [
 		'component',
 		'diacritic'
@@ -15,60 +15,52 @@ exports.glyphs['circumflex'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x - Math.min(15, ( 15 / 54 ) * thickness * contrast )
-					y: anchors[0].y + 180 - (5)
+					x: anchors[0].x
+					y: contours[0].nodes[1].y + 60
 					typeOut: 'line'
 					expand: Object({
-						width: ( 77 / 54 ) * thickness * Math.min( 1, Math.sqrt( 80 / thickness ) )
-						angle: Utils.lineAngle( contours[0].nodes[0].point, contours[1].nodes[0].expandedTo[0].point )
-						distr: 0
+						width: Math.min(
+							( 57 / 54 ) * thickness,
+							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 20
+						)
+						angle: 180 + 'deg'
+						distr: 0.5
 					})
 				1:
-					x: anchors[0].x - 100 - ( 20 + (20 / 80 * thickness ) ) * width
+					x: anchors[0].x - (27) - 15 * width - Math.max( 30, ( 30 / 54 ) * thickness )
 					y: anchors[0].y
 					expand: Object({
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
-						distr: 0.25
+						width: Math.min(
+							( 36 / 54 ) * thickness * contrast * contrastExtremity,
+							anchors[0].x - contours[0].nodes[1].x
+						)
+						angle: 180 + 'deg'
+						distr: 0.75
 					})
 		1:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x + 100 + ( 20 + (20 / 80 * thickness ) ) * width + (5)
+					x: anchors[0].x + (27) + 15 * width + Math.max( 30, ( 30 / 54 ) * thickness )
 					y: anchors[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
-						distr: 0.25
+						width: Math.min(
+							( 36 / 54 ) * thickness * contrast * contrastExtremity,
+							anchors[0].x - contours[0].nodes[1].x
+						)
+						angle: 0 + 'deg'
+						distr: 0.75
 					})
 				1:
-					x: anchors[0].x + Math.min(15, ( 15 / 54 ) * thickness * contrast )
+					x: anchors[0].x
 					y: contours[0].nodes[0].y
 					expand: Object({
-						width: ( 77 / 54 ) * thickness * Math.min( 1, Math.sqrt( 80 / thickness ) )
-						angle: Utils.lineAngle( contours[1].nodes[1].point, contours[0].nodes[1].expandedTo[0].point )
-						distr: 0
+						width: Math.min(
+							( 57 / 54 ) * thickness,
+							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 20
+						)
+						angle: 0 + 'deg'
+						distr: 0.5
 					})
-		2:
-			skeleton: false
-			closed: true
-			nodes:
-				3:
-					x: contours[0].nodes[0].expandedTo[0].x
-					y: contours[0].nodes[0].expandedTo[0].y
-					typeOut: 'line'
-				2:
-					x: contours[1].nodes[1].expandedTo[0].x
-					y: contours[1].nodes[1].expandedTo[0].y
-					typeOut: 'line'
-				1:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].expandedTo[1].y
-					typeOut: 'line'
-				0:
-					x: contours[1].nodes[1].expandedTo[1].x
-					y: contours[1].nodes[1].expandedTo[1].y
-					typeOut: 'line'

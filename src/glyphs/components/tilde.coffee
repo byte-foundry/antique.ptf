@@ -1,10 +1,11 @@
+# TODO: thickness + width
 exports.glyphs['tilde'] =
-	glyphName: 'asciitilde'
-	characterName: 'TILDE'
+	glyphName: "asciitilde"
+	characterName: "TILDE"
 	anchors:
 		0:
 			x: parentAnchors[0].x
-			y: parentAnchors[0].y
+			y: parentAnchors[0].y - 10
 	tags: [
 		'component',
 		'diacritic'
@@ -15,42 +16,56 @@ exports.glyphs['tilde'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x - 67 - 85 * width + (3)
+					x: anchors[0].x - 44 * width - (7)
 					y: anchors[0].y
-					dirOut: 72 + 'deg'
+					dirOut: 100 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: ( 13 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						width: ( 27 / 54 ) * thickness
+						angle: 0 + 'deg'
 						distr: 0.75
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) * ( 95 / 305 ) - (9/80) * thickness
-					y: contours[0].nodes[3].y - (25)
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * ( 33 / 142 )
+					y: contours[0].nodes[4].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					tensionIn: 1.5
+					tensionOut: 1.2
 					expand: Object({
-						width: ( 63 / 54 ) * thickness
-						angle: 180 - 90 - 22 + 'deg'
-						distr: 0.6
+						width: ( 28 / 54 ) * thickness
+						angle: - 80 + 'deg'
+						distr: 0
 					})
 				2:
-					x: contours[0].nodes[3].expandedTo[0].x - ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) * ( 95 / 305 ) + (9/80) * thickness
-					y: contours[0].nodes[0].y + (23)
-					dirOut: 0 + 'deg'
+					x: anchors[0].x
+					y: ( contours[0].nodes[0].y + contours[0].nodes[4].y ) / 2
+					dirOut: Utils.lineAngle( contours[0].nodes[1].point, contours[0].nodes[2].point ) + ( 5 / 180 * Math.PI )
 					type: 'smooth'
-					tensionOut: 1.5
+					tensionIn: 0.9
+					tensionOut: 0.9
 					expand: Object({
-						width: ( 63 / 54 ) * thickness
-						angle: 180 - 90 - 22 + 'deg'
-						distr: 0.4
+						width: ( 27 / 54 ) * thickness
+						angle: Math.PI + Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[4].point ) + ( 25 / 180 * Math.PI )
+						distr: 0.5
 					})
 				3:
-					x: anchors[0].x + 67 + 85 * width - (3)
-					y: contours[0].nodes[0].expandedTo[0].y + 100 + Math.min( 25, ( 25 / 54 ) * thickness )
-					dirIn: - 90 - 18 + 'deg'
+					x: contours[0].nodes[4].expandedTo[1].x - ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * ( 33 / 142 )
+					y: contours[0].nodes[0].y
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+					tensionIn: 1.2
 					expand: Object({
-						width: ( 13 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						width: ( 28 / 54 ) * thickness
+						angle: 180 + 100 + 'deg'
+						distr: 1
+					})
+				4:
+					x: anchors[0].x + 44 * width + (7)
+					y: anchors[0].y + 60
+					dirIn: - 80 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: ( 27 / 54 ) * thickness
+						angle: 0 + 'deg'
 						distr: 0.25
 					})

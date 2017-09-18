@@ -8,8 +8,8 @@ exports.glyphs['dotlessi'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 54 + serifWidth
-		spacingRight: 50 * spacing + 53 + serifWidth
+		spacingLeft: 50 * spacing + 35 + serifWidth
+		spacingRight: 50 * spacing + 35 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -25,8 +25,8 @@ exports.glyphs['dotlessi'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (40/80) * thickness
-					y: Math.max( 0, serifHeight * serifArc )
+					x: spacingLeft + (27/54) * thickness
+					y: 0
 					typeOut: 'line'
 					expand: Object({
 						width: thickness
@@ -35,7 +35,7 @@ exports.glyphs['dotlessi'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight + overshoot - Math.max( 0, serifHeight * serifArc ) - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) )
+					y: xHeight
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
@@ -48,38 +48,44 @@ exports.glyphs['dotlessi'] =
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 					opposite: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					opposite: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
 					reversed: true
 			transformOrigin: contours[0].nodes[0].expandedTo[1].point
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
-			parentParameters:
-				serifWidth: Math.min( ( 70 / 65 ) * serifWidth, serifWidth + 5 )
 		2:
-			base: ['spur-vertical', 'none']
+			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
 					opposite: contours[0].nodes[1].expandedTo[1].point
 					reversed: true
-					rotate: -15 * spurHeight
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
 			transformOrigin: contours[0].nodes[1].expandedTo[0].point
 			transforms: Array(
-				[ 'scaleY', -1 ],
-				[ 'translateY', - ( Math.sin( (15 * spurHeight) / 180 * Math.PI ) * ( thickness ) ) ]
+				[ 'scaleY', -1 ]
 			)
-			parentParameters:
-				serifHeight: Math.min( ( 85 / 50 ) * serifHeight, serifHeight + 35 )
-				serifMedian: Math.max( ( 0.20 ) * serifMedian, serifMedian - 0.8 )
+		3:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[1].expandedTo[1].point
+					opposite: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[1].point
+			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
