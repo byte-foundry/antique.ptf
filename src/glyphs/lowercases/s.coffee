@@ -144,6 +144,11 @@ exports.glyphs['s'] =
 					curveEnd: contours[0].nodes[6].expandedTo[1]
 					rotationAngle: -15
 					rotationCenter: contours[0].nodes[7].expandedTo[1].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[6].expandedTo[1].y - contours[0].nodes[7].expandedTo[1].y + overshoot
+				)
 		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottom'
@@ -158,3 +163,8 @@ exports.glyphs['s'] =
 					left: true
 					down: true
 					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
+				)

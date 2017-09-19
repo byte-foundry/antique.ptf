@@ -138,3 +138,22 @@ exports.glyphs['six'] =
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'top'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[8].expandedTo[0]
+					baseHeight: contours[0].nodes[8].expandedTo[0].point
+					noneAnchor: contours[0].nodes[8].expandedTo[0].point
+					opposite: contours[0].nodes[8].expandedTo[1].point
+					curveEnd: contours[0].nodes[7].expandedTo[0]
+					rotationAngle: -15
+					inverseOrder: true
+					rotationCenter: contours[0].nodes[8].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[7].expandedTo[0].y - contours[0].nodes[8].expandedTo[0].y + overshoot
+				)

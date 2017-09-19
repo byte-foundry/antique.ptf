@@ -174,3 +174,38 @@ exports.glyphs['five'] =
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'topright'
+			parentAnchors:
+				0:
+					baseWidth: contours[2].nodes[2].expandedTo[0]
+					baseHeight: contours[2].nodes[2].expandedTo[0].point
+					noneAnchor: contours[2].nodes[2].expandedTo[0].point
+					opposite: contours[2].nodes[2].expandedTo[1].point
+					curveEnd: contours[2].nodes[1].expandedTo[0]
+					rotationAngle: -15
+					# left: true
+					down: true
+					inverseOrder: true
+					rotationCenter: contours[2].nodes[2].expandedTo[0].point
+		1:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[1].expandedTo[0]
+					baseHeight: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					curveEnd: contours[0].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					left: true
+					down: true
+					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
+				)

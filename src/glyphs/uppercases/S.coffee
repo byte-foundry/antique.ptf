@@ -131,3 +131,40 @@ exports.glyphs['S'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
+	components:
+		0:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'top'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[7].expandedTo[1]
+					baseHeight: contours[0].nodes[7].expandedTo[1].point
+					noneAnchor: contours[0].nodes[7].expandedTo[1].point
+					opposite: contours[0].nodes[7].expandedTo[0].point
+					curveEnd: contours[0].nodes[6].expandedTo[1]
+					rotationAngle: -15
+					rotationCenter: contours[0].nodes[7].expandedTo[1].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[6].expandedTo[1].y - contours[0].nodes[7].expandedTo[1].y + overshoot
+				)
+		1:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[1].expandedTo[0]
+					baseHeight: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					curveEnd: contours[0].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					left: true
+					down: true
+					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
+				)

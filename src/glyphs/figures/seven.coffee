@@ -62,3 +62,39 @@ exports.glyphs['seven'] =
 						angle: 0 + 'deg'
 						distr: 1
 					})
+	components:
+		0:
+			base: ['serif-horizontal', 'none']
+			id: 'toprightbottom'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
+		1:
+			base: ['serif-oblique-obtuse', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[1].point
+		2:
+			base: ['serif-oblique-acute', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
+					scaleX: -1
+					reversed: true

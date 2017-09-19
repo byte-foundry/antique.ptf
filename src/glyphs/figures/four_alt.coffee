@@ -10,7 +10,7 @@ exports.glyphs['four_alt'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 19
-		spacingRight: 50 * spacing + 14
+		spacingRight: 50 * spacing + 14 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -88,3 +88,61 @@ exports.glyphs['four_alt'] =
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[1].expandedTo[0].point
+					noneAnchor: contours[2].nodes[1].expandedTo[0].point
+					opposite: contours[2].nodes[1].expandedTo[1].point
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[2].nodes[1].expandedTo[1].point
+					noneAnchor: contours[2].nodes[1].expandedTo[1].point
+					opposite: contours[2].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[2].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		2:
+			base: ['serif-horizontal', 'none']
+			id: 'middletop'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+			parentParameters:
+				serifHeight: Math.min(
+					serifHeight,
+					contours[1].nodes[1].expandedTo[0].x - contours[2].nodes[0].expandedTo[1].x - 10
+				)
+		3:
+			base: ['serif-horizontal', 'none']
+			id: 'middlebottom'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+					scaleX: -1
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[1].nodes[1].expandedTo[0].y - serifHeight - 10
+				)
+				serifHeight: Math.min(
+					serifHeight,
+					contours[1].nodes[1].expandedTo[0].x - contours[2].nodes[0].expandedTo[1].x - 10
+				)

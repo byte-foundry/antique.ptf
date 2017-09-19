@@ -179,3 +179,43 @@ exports.glyphs['three'] =
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
+	components:
+		0:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[1].expandedTo[0]
+					baseHeight: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					curveEnd: contours[0].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					left: true
+					# down: true
+					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[2].expandedTo[0].y - contours[0].nodes[1].expandedTo[0].y + overshoot
+				)
+		1:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[1].nodes[5].expandedTo[0]
+					baseHeight: contours[1].nodes[5].expandedTo[0].point
+					noneAnchor: contours[1].nodes[5].expandedTo[0].point
+					opposite: contours[1].nodes[5].expandedTo[1].point
+					curveEnd: contours[1].nodes[4].expandedTo[0]
+					rotationAngle: -15
+					left: true
+					down: true
+					inverseOrder: true
+					rotationCenter: contours[1].nodes[5].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[1].nodes[5].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y + overshoot
+				)

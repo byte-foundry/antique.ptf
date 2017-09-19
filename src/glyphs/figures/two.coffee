@@ -115,3 +115,51 @@ exports.glyphs['two'] =
 						angle: 90 + 'deg'
 						distr: 0
 					})
+	components:
+		0:
+			base: ['serif-horizontal', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[1].point
+					noneAnchor: contours[1].nodes[1].expandedTo[1].point
+					opposite: contours[1].nodes[1].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
+		1:
+			base: ['none', 'serif-horizontal']
+			id: 'bottomrightbottom'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[1].expandedTo[0].point
+					noneAnchor: contours[1].nodes[1].expandedTo[0].point
+					opposite: contours[1].nodes[1].expandedTo[1].point
+			transformOrigin: contours[1].nodes[1].expandedTo[0].point
+			transforms: Array(
+				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
+		2:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'topleft'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[1].expandedTo[0]
+					baseHeight: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					curveEnd: contours[0].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					left: true
+					# down: true
+					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[2].expandedTo[0].y - contours[0].nodes[1].expandedTo[0].y + overshoot
+				)

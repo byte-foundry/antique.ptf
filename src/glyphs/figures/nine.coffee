@@ -132,3 +132,23 @@ exports.glyphs['nine'] =
 						angle: 180 + 'deg'
 						distr: 1
 					})
+	components:
+		0:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[0].nodes[1].expandedTo[0]
+					baseHeight: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0].point
+					opposite: contours[0].nodes[1].expandedTo[1].point
+					curveEnd: contours[0].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					left: true
+					down: true
+					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
+				)

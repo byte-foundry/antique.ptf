@@ -186,9 +186,9 @@ exports.glyphs['c'] =
 					inverseOrder: true
 					rotationCenter: contours[0].nodes[6].expandedTo[0].point
 			parentParameters:
-				serifWidth: Math.max(
+				serifWidth: Math.min(
 					serifWidth,
-					contours[0].nodes[5].expandedTo[0].y - contours[0].nodes[6].expandedTo[0].y
+					contours[0].nodes[5].expandedTo[0].y - contours[0].nodes[6].expandedTo[0].y + overshoot
 				)
 		5:
 			base: ['none', 'serif-curve-inside-auto']
@@ -205,3 +205,8 @@ exports.glyphs['c'] =
 					down: true
 					# inverseOrder: true
 					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+			parentParameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
+				)

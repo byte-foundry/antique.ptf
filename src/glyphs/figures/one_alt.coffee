@@ -11,7 +11,7 @@ exports.glyphs['one_alt'] =
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 4
-		spacingRight: 50 * spacing + 40
+		spacingRight: 50 * spacing + 40 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -63,3 +63,25 @@ exports.glyphs['one_alt'] =
 						angle: 0 + 'deg'
 						distr: 0.15
 					})
+	components:
+		0:
+			base: ['serif-vertical', 'none']
+			id: 'bottomleft'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+		1:
+			base: ['serif-vertical', 'none']
+			id: 'bottomright'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1].point
+					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					opposite: contours[0].nodes[0].expandedTo[0].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
