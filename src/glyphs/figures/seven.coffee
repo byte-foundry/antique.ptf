@@ -64,6 +64,22 @@ exports.glyphs['seven'] =
 					})
 	components:
 		0:
+			base: ['none', 'serif-horizontal']
+			id: 'toprighttop'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					opposite: contours[0].nodes[0].expandedTo[1].point
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
+			)
+		1:
 			base: ['serif-horizontal', 'none']
 			id: 'toprightbottom'
 			parentAnchors:
@@ -78,7 +94,7 @@ exports.glyphs['seven'] =
 				# [ 'skewX', - 10 * serifRotate + 'deg' ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-		1:
+		2:
 			base: ['serif-oblique-obtuse', 'none']
 			id: 'bottomleft'
 			parentAnchors:
@@ -87,7 +103,7 @@ exports.glyphs['seven'] =
 					noneAnchor: contours[1].nodes[1].expandedTo[1].point
 					opposite: contours[1].nodes[1].expandedTo[0].point
 					obliqueEndPoint: contours[1].nodes[0].expandedTo[1].point
-		2:
+		3:
 			base: ['serif-oblique-acute', 'none']
 			id: 'bottomright'
 			parentAnchors:
