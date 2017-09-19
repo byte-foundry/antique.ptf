@@ -15,7 +15,7 @@ exports.glyphs['macron'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x - 74 * width
+					x: anchors[0].x - 74 * width - (thickness - 54) / 2
 					y: anchors[0].y + (4)
 					typeOut: 'line'
 					expand: Object({
@@ -24,7 +24,7 @@ exports.glyphs['macron'] =
 						distr: 0.1
 					})
 				1:
-					x: anchors[0].x + 74 * width
+					x: anchors[0].x + 74 * width + (thickness - 54) / 2
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
 					expand: Object({

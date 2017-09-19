@@ -20,7 +20,7 @@ exports.glyphs['grave'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x + (3)
+					x: anchors[0].x - ( 35 / 54 ) * thickness * contrast * contrastExtremity * 0.4
 					y: anchors[0].y
 					typeOut: 'line'
 					expand: Object({

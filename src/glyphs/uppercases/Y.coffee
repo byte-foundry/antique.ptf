@@ -20,7 +20,7 @@ exports.glyphs['Y'] =
 	anchors:
 		0:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			y: capHeight
 	contours:
 		0:
 			skeleton: true
@@ -39,12 +39,12 @@ exports.glyphs['Y'] =
 						distr: 0.25
 					})
 				1:
-					x: contours[1].nodes[1].x
-					y: contours[2].nodes[0].y - Math.min( 52, ( 52 / 54 ) * thickness )
+					x: contours[2].nodes[0].expandedTo[0].x + ( 43 / 54 ) * thickness * opticThickness * ( 27 / 43 )
+					y: contours[2].nodes[0].y
 					expand: Object({
 						width: ( 43 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
-						distr: 1 - ( 16 / 43 ) * contrast
+						distr: 1 - ( 16 / 43 )
 					})
 		1:
 			skeleton: true
@@ -63,9 +63,8 @@ exports.glyphs['Y'] =
 						distr: 0.75
 					})
 				1:
-					x: ( spacingLeft + contours[0].nodes[0].expand.width ) + ( contours[1].nodes[0].expandedTo[0].x - ( spacingLeft + contours[0].nodes[0].expand.width ) ) * 0.51
-					# x: contours[1].nodes[0].expandedTo[1].x
-					y: contours[2].nodes[0].y - Math.min( 52, ( 52 / 54 ) * thickness )
+					x: contours[2].nodes[0].expandedTo[1].x - ( 41 / 54 ) * thickness * opticThickness * contrast * 27 / 41
+					y: contours[2].nodes[0].y
 					expand: Object({
 						width: ( 41 / 54 ) * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
@@ -76,8 +75,8 @@ exports.glyphs['Y'] =
 			closed: false
 			nodes:
 				0:
-					x: ( contours[0].nodes[1].expandedTo[0].x + contours[0].nodes[1].expandedTo[1].x ) / 2
-					y: ( 347 / 700 ) * capHeight
+					x: (contours[0].nodes[0].x + contours[1].nodes[0].x) / 2 + 1
+					y: ( 296 / 700 ) * capHeight + Math.max(0, -(thickness * 82 / 54) + 82)
 					typeOut: 'line'
 					expand: Object({
 						width: ( 57 / 54 ) * thickness

@@ -16,7 +16,7 @@ exports.glyphs['G_breve'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + (10)
+					x: anchors[0].x
 					y: anchors[0].y - (20/80) * diacriticHeight
 			transformOrigin: anchors[0].point
 			transforms: Array(

@@ -16,7 +16,7 @@ exports.glyphs['breve'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x - 75 * width - (9/54) * thickness
+					x: anchors[0].x - (45 * width + 116 - (14)) / 2
 					y: Math.max(
 						contours[0].nodes[1].expandedTo[0].y + 30,
 						contours[0].nodes[1].expandedTo[1].y + ( 50 + ( 10 / 54 ) * thickness )
@@ -30,7 +30,7 @@ exports.glyphs['breve'] =
 					})
 				1:
 					x: anchors[0].x
-					y: anchors[0].y + 30
+					y: anchors[0].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					tensionIn: 1.2
@@ -41,7 +41,7 @@ exports.glyphs['breve'] =
 						distr: 1
 					})
 				2:
-					x: anchors[0].x + ( anchors[0].x - contours[0].nodes[0].expandedTo[1].x )
+					x: anchors[0].x + (45 * width + 116 - (14)) / 2
 					y: contours[0].nodes[0].expandedTo[1].y
 					dirIn: - 90 + 'deg'
 					tensionIn: 1.2

@@ -24,16 +24,13 @@ exports.glyphs['dot'] =
 					typeOut: 'line'
 				1:
 					x: contours[0].nodes[0].x
-					y: Math.min(
-						ascenderHeight,
-						contours[0].nodes[0].y + Math.max(
+					y: 	contours[0].nodes[0].y + Math.max(
 							15,
 							Math.min(
 								180,
 								anchors[0].optical
 							)
 						)
-					)
 					typeOut: 'line'
 				2:
 					x: contours[0].nodes[1].x + Math.max(

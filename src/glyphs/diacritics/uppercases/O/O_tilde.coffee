@@ -16,9 +16,5 @@ exports.glyphs['O_tilde'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (15)
-					y: anchors[0].y + ( 25 / 80 ) * diacriticHeight
-			transformOrigin: anchors[0].point
-			transforms: Array(
-				['scaleY', 0.9 ]
-			)
+					x: anchors[0].x
+					y: anchors[0].y - (1/40) * diacriticHeight

@@ -4,7 +4,7 @@ exports.glyphs['circumflex'] =
 	anchors:
 		0:
 			x: parentAnchors[0].x
-			y: parentAnchors[0].y + 30
+			y: parentAnchors[0].y
 	tags: [
 		'component',
 		'diacritic'
@@ -27,7 +27,7 @@ exports.glyphs['circumflex'] =
 						distr: 0.5
 					})
 				1:
-					x: anchors[0].x - (27) - 15 * width - Math.max( 30, ( 30 / 54 ) * thickness )
+					x: anchors[0].x - (24) - 15 * width - Math.max( 30, ( 30 / 54 ) * thickness )
 					y: anchors[0].y
 					expand: Object({
 						width: Math.min(
@@ -42,7 +42,7 @@ exports.glyphs['circumflex'] =
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x + (27) + 15 * width + Math.max( 30, ( 30 / 54 ) * thickness )
+					x: anchors[0].x + (24) + 15 * width + Math.max( 30, ( 30 / 54 ) * thickness )
 					y: anchors[0].y
 					typeOut: 'line'
 					expand: Object({

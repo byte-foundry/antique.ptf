@@ -16,5 +16,5 @@ exports.glyphs['A_ring'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
-					y: anchors[0].y + (5/80) * diacriticHeight
+					x: anchors[0].x
+					y: anchors[0].y + (1/40) * diacriticHeight

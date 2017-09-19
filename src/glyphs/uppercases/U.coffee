@@ -18,7 +18,7 @@ exports.glyphs['U'] =
 	anchors:
 		0:
 			x: contours[0].nodes[4].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[4].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

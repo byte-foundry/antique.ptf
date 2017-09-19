@@ -4,8 +4,8 @@ exports.glyphs['dieresis'] =
 	characterName: 'DIAERESIS'
 	anchors:
 		0:
-			x: parentAnchors[0].x - (10/54) * thickness
-			y: parentAnchors[0].y + 30
+			x: parentAnchors[0].x
+			y: parentAnchors[0].y
 	tags: [
 		'component',
 		'diacritic'
@@ -16,7 +16,7 @@ exports.glyphs['dieresis'] =
 			id: 'left'
 			parentAnchors:
 				0:
-					x: anchors[0].x - ( 20 / 2 ) - Math.max(
+					x: anchors[0].x - ( 25 / 2 ) - Math.max(
 						40,
 						Math.min(
 							160,
@@ -24,12 +24,13 @@ exports.glyphs['dieresis'] =
 						)
 					) / 2
 					y: anchors[0].y
+					optical: 50
 		1:
 			base: ['dot']
 			id: 'right'
 			parentAnchors:
 				0:
-					x: anchors[0].x + ( 20 / 2 ) + Math.max(
+					x: anchors[0].x + ( 25 / 2 ) + Math.max(
 						40,
 						Math.min(
 							160,
@@ -37,3 +38,4 @@ exports.glyphs['dieresis'] =
 						)
 					) / 2
 					y: anchors[0].y
+					optical: 50
