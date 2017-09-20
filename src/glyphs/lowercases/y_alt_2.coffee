@@ -155,20 +155,17 @@ exports.glyphs['y_alt_2'] =
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
 				)
-		# 4:
-		# 	base: ['serif-curve-inside-auto', 'none']
-		# 	id: 'bottom'
-		# 	parentAnchors:
-		# 		0:
-		# 			baseWidth: contours[1].nodes[2].expandedTo[0]
-		# 			baseHeight: contours[1].nodes[2].expandedTo[0].point
-		# 			noneAnchor: contours[1].nodes[2].expandedTo[0].point
-		# 			opposite: contours[1].nodes[2].expandedTo[1].point
-		# 			curveEnd: contours[1].nodes[1].expandedTo[0]
-		# 			# rotationAngle: -15
-		# 			rotationCenter: contours[1].nodes[2].expandedTo[0].point
-		# 	transformOrigin: contours[1].nodes[2].expandedTo[0].point
-		# 	transforms: Array(
-		# 		[ 'scaleX', -1 ]
-		# 		# [ 'scaleY', -1 ]
-		# 	)
+		4:
+			base: ['serif-curve-inside-auto', 'none']
+			id: 'bottom'
+			parentAnchors:
+				0:
+					baseWidth: contours[1].nodes[2].expandedTo[0]
+					baseHeight: contours[1].nodes[2].expandedTo[0].point
+					noneAnchor: contours[1].nodes[2].expandedTo[0].point
+					opposite: contours[1].nodes[2].expandedTo[1].point
+					curveEnd: contours[1].nodes[1].expandedTo[0]
+					rotationAngle: -15
+					rotationCenter: contours[1].nodes[2].expandedTo[0].point
+					inverseOrder: true
+					left: true

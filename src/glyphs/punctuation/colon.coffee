@@ -1,4 +1,3 @@
-# TODO: thickness and height
 exports.glyphs['colon'] =
 	unicode: ':'
 	glyphName: 'colon'
@@ -49,21 +48,5 @@ exports.glyphs['colon'] =
 							( 60 / 54 ) * thickness
 						)
 					) + spacingRight ) / 2
-					y: Math.min(
-						xHeight,
-						Math.max(
-							( 265 / 54 ) * thickness,
-							xHeight - xHeight / 3
-						)
-					)
+					y: Math.max(363 / 600 * xHeight- 60 / 54 * thickness, 60 / 54 * thickness + 1 / 10 * xHeight)
 					optical: 60
-			transformOrigin: { x: 0, y: 0 }
-			transforms: Array(
-				[ 'translateY', - Math.max(
-					40,
-					Math.min(
-						160,
-						( 60 / 54 ) * thickness
-					)
-				)]
-			)

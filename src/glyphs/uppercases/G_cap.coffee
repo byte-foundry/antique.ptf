@@ -162,7 +162,7 @@ exports.glyphs['G_cap'] =
 				1:
 					x: contours[2].nodes[0].expandedTo[0].x + 15
 					y: - overshoot / 2
-					dirIn: Utils.lineAngle( contours[2].nodes[1].expandedTo[1].point, contours[2].nodes[0].expandedTo[0].point ) + ( 3 / 180 ) * thickness
+					dirIn: Math.min(Math.PI, Utils.lineAngle( contours[2].nodes[1].expandedTo[1].point, contours[2].nodes[0].expandedTo[0].point ) + ( 3 / 180 ) * thickness)
 					type: 'smooth'
 					expand: Object({
 						width: ( 7 / 54 ) * thickness * contrast * contrastExtremity

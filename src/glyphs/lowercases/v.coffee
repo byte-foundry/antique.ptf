@@ -1,4 +1,3 @@
-# TODO: contrast
 exports.glyphs['v'] =
 	unicode: 'v'
 	glyphName: 'v'
