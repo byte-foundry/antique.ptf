@@ -18,12 +18,8 @@ exports.glyphs['t'] =
 	]
 	anchors:
 		0:
-			x: Math.max(
-				contours[0].nodes[4].expandedTo[1].x + thickness + 90 + (20),
-				contours[1].nodes[2].expandedTo[0].x - 35
-			)
-			x: 0
-			y: ascenderHeight
+			x: contours[1].nodes[6].expandedTo[0].x + 49
+			y: contours[1].nodes[6].expandedTo[0].y + diacriticHeight
 	contours:
 		0:
 			skeleton: true

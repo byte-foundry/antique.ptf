@@ -12,13 +12,9 @@ exports.glyphs['J_circumflex'] =
 	]
 	components:
 		0:
-			base: 'acute'
+			base: 'circumflex'
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + (5)
+					x: anchors[0].x
 					y: anchors[0].y
-			transformOrigin: anchors[0].point
-			transforms: Array(
-				['scaleY', 0.9 ]
-			)

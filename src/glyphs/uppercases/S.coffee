@@ -19,7 +19,7 @@ exports.glyphs['S_cap'] =
 	anchors:
 		0:
 			x: ( contours[0].nodes[8].expandedTo[1].x + contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

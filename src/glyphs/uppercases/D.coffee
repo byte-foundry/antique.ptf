@@ -18,7 +18,7 @@ exports.glyphs['D_cap'] =
 	anchors:
 		0:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			y: capHeight + diacriticHeight
 		1:
 			x: contours[0].nodes[0].expandedTo[0].x - 23 * width - 10
 			y: capHeight / 2

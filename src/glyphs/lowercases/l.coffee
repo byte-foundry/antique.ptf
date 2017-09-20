@@ -18,9 +18,9 @@ exports.glyphs['l'] =
 	anchors:
 		0:
 			x: contours[0].nodes[0].x
-			y: ascenderHeight + ( 15 / 80 ) * diacriticHeight
+			y: ascenderHeight + diacriticHeight
 		1:
-			x: contours[0].nodes[1].expandedTo[1].x + thickness + 90 + (20)
+			x: contours[0].nodes[1].expandedTo[1].x + 48 / 40 * diacriticHeight
 			y: ascenderHeight
 	contours:
 		0:

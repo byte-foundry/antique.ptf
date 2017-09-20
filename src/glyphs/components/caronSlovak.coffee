@@ -9,40 +9,26 @@ exports.glyphs['caronSlovak'] =
 		'component',
 		'diacritic'
 	]
-	transformOrigin: contours[0].nodes[0].expandedTo[1].point
-	transforms: Array(
-		['translateX', - contours[0].nodes[0].expand.width ]
-	)
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y
-					type: 'smooth'
+					x: anchors[0].x + ( 28 / 54 ) * thickness * 0.25
+					y: contours[0].nodes[1].y - 97
+					typeOut: 'line'
 					expand: Object({
-						width: ( 75 / 54 ) * thickness
+						width: ( 28 / 54 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.75
 					})
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: contours[0].nodes[0].expandedTo[1].y
-					type: 'smooth'
-					typeOut: 'line'
-					expand: Object({
-						width: ( (Math.max( 91 * contrast, 75 )) / 54 ) * thickness
-						angle: 180 - Math.max( 46 * contrast, 0 ) + 'deg'
-						distr: 1
-					})
-				2:
-					x: contours[0].nodes[0].expandedTo[1].x - 21 * width
-					y: contours[0].nodes[0].expandedTo[1].y - 187
+					x: contours[0].nodes[0].x + 20 - ( 28 / 54 ) * thickness * 0.25
+					y: anchors[0].y
 					typeIn: 'line'
 					expand: Object({
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
+						width: 50 / 54 * thickness
 						angle: 180 + 'deg'
-						distr: 0.75
+						distr: 1
 					})

@@ -19,7 +19,7 @@ exports.glyphs['L_cap'] =
 	anchors: # TODO
 		0:
 			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			y: capHeight + diacriticHeight
 		1:
 			x: Math.max(
 				contours[1].nodes[0].expandedTo[1].x - (25),
