@@ -1,4 +1,4 @@
-exports.glyphs['O'] =
+exports.glyphs['O_cap'] =
 	unicode: 'O'
 	glyphName: 'O'
 	characterName: 'LATIN CAPITAL LETTER O'

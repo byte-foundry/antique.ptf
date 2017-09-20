@@ -1,4 +1,4 @@
-exports.glyphs['P'] =
+exports.glyphs['P_cap'] =
 	unicode: 'P'
 	glyphName: 'P'
 	characterName: 'LATIN CAPITAL LETTER P'

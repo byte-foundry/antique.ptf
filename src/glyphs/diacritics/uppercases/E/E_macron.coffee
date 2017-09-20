@@ -2,7 +2,7 @@ exports.glyphs['E_macron'] =
 	unicode: 'Ē'
 	glyphName: 'Emacron'
 	characterName: 'LATIN CAPITAL LETTER E WITH MACRON'
-	base: 'E'
+	base: 'E_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',
@@ -17,4 +17,4 @@ exports.glyphs['E_macron'] =
 			parentAnchors:
 				0:
 					x: anchors[0].x
-					y: anchors[0].y
+					y: anchors[0].y + 3/40 * diacriticHeight

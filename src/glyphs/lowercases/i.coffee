@@ -15,6 +15,10 @@ exports.glyphs['i'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: contours[0].nodes[0].x + 15 / 54 * thickness
+			y: 0
 	contours:
 		0:
 			skeleton: true

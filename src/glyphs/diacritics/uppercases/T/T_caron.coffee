@@ -2,7 +2,7 @@ exports.glyphs['T_caron'] =
 	unicode: 'Ť'
 	glyphName: 'Tcaron'
 	characterName: 'LATIN CAPITAL LETTER T WITH CARON'
-	base: 'T'
+	base: 'T_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

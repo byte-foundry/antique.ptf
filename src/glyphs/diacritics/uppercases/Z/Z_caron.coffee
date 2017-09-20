@@ -2,7 +2,7 @@ exports.glyphs['Z_caron'] =
 	unicode: 'Ž'
 	glyphName: 'Zcaron'
 	characterName: 'LATIN CAPITAL LETTER Z WITH ACUTE'
-	base: 'Z'
+	base: 'Z_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

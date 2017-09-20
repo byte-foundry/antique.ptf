@@ -2,7 +2,7 @@ exports.glyphs['U_ring'] =
 	unicode: 'Ů'
 	glyphName: 'Uring'
 	characterName: 'LATIN CAPITAL LETTER U WITH RING ABOVE'
-	base: 'U'
+	base: 'U_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

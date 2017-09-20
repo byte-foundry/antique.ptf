@@ -1,5 +1,5 @@
 # TODO: rotation serifs
-exports.glyphs['Z'] =
+exports.glyphs['Z_cap'] =
 	unicode: 'Z'
 	glyphName: 'Z'
 	characterName: 'LATIN CAPITAL LETTER Z'

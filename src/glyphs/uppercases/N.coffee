@@ -1,4 +1,4 @@
-exports.glyphs['N'] =
+exports.glyphs['N_cap'] =
 	unicode: 'N'
 	glyphName: 'N'
 	characterName: 'LATIN CAPITAL LETTER N'

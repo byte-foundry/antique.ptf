@@ -16,6 +16,6 @@ exports.glyphs['e_dotaccent'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + (20)
-					y: anchors[0].y - (27/80) * diacriticHeight
-					optical: 120
+					x: anchors[0].x
+					y: anchors[0].y - 11/40 * diacriticHeight
+					optical: 57

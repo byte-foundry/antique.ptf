@@ -1,4 +1,4 @@
-exports.glyphs['W'] =
+exports.glyphs['W_cap'] =
 	unicode: 'W'
 	glyphName: 'W'
 	characterName: 'LATIN CAPITAL LETTER W'

@@ -2,7 +2,7 @@ exports.glyphs['A_ring'] =
 	unicode: 'Å'
 	glyphName: 'Aring'
 	characterName: 'LATIN CAPITAL LETTER A WITH RING ABOVE'
-	base: 'A'
+	base: 'A_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

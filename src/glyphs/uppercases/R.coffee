@@ -1,4 +1,4 @@
-exports.glyphs['R'] =
+exports.glyphs['R_cap'] =
 	unicode: 'R'
 	glyphName: 'R'
 	characterName: 'LATIN CAPITAL LETTER R'

@@ -1,5 +1,5 @@
 # TODO: rotation serifs
-exports.glyphs['E'] =
+exports.glyphs['E_cap'] =
 	unicode: 'E'
 	glyphName: 'E'
 	characterName: 'LATIN CAPITAL LETTER E'
@@ -20,6 +20,9 @@ exports.glyphs['E'] =
 		0:
 			x: (contours[0].nodes[0].expandedTo[0].x + contours[3].nodes[1].expandedTo[1].x) * 0.5
 			y: capHeight + diacriticHeight
+		1:
+			x: contours[3].nodes[1].x - 10 - 19 * width
+			y: 0
 	contours:
 		0:
 			skeleton: true

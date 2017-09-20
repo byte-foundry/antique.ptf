@@ -16,5 +16,5 @@ exports.glyphs['u_macron'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
-					y: anchors[0].y + (65/80) * diacriticHeight
+					x: anchors[0].x
+					y: anchors[0].y + (3/40) * diacriticHeight

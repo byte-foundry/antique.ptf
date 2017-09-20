@@ -17,4 +17,4 @@ exports.glyphs['n_tilde'] =
 			parentAnchors:
 				0:
 					x: anchors[0].x
-					y: anchors[0].y + ( 25 / 80 ) * diacriticHeight
+					y: anchors[0].y + 1/40 * diacriticHeight

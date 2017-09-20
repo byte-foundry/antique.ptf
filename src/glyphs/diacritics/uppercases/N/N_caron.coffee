@@ -2,7 +2,7 @@ exports.glyphs['N_caron'] =
 	unicode: 'Ň'
 	glyphName: 'Ncaron'
 	characterName: 'LATIN CAPITAL LETTER N WITH CARON'
-	base: 'N'
+	base: 'N_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

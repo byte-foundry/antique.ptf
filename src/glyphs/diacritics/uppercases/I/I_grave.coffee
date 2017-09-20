@@ -2,7 +2,7 @@ exports.glyphs['I_grave'] =
 	unicode: 'Ì'
 	glyphName: 'Igrave'
 	characterName: 'LATIN CAPITAL LETTER I WITH GRAVE'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

@@ -1,4 +1,4 @@
-exports.glyphs['I'] =
+exports.glyphs['I_cap'] =
 	unicode: 'I'
 	glyphName: 'I'
 	characterName: 'LATIN CAPITAL LETTER I'
@@ -19,6 +19,9 @@ exports.glyphs['I'] =
 		0:
 			x: contours[0].nodes[0].x
 			y: capHeight + diacriticHeight
+		1:
+			x: contours[0].nodes[0].x + 15 / 54 * thickness
+			y: 0
 	contours:
 		0:
 			skeleton: true

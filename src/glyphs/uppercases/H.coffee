@@ -1,5 +1,5 @@
 # TODO: bug in merge
-exports.glyphs['H'] =
+exports.glyphs['H_cap'] =
 	unicode: 'H'
 	glyphName: 'H'
 	characterName: 'LATIN CAPITAL LETTER H'

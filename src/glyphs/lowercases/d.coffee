@@ -19,6 +19,9 @@ exports.glyphs['d'] =
 		0:
 			x: contours[0].nodes[2].expandedTo[1].x + thickness + 90 + (20)
 			y: ascenderHeight
+		1:
+			x: contours[1].nodes[1].expandedTo[0].x - 57 * width
+			y: ascenderHeight *  346 / 380
 	contours:
 		0:
 			skeleton: true

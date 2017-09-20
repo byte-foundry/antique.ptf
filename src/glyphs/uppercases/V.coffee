@@ -1,4 +1,4 @@
-exports.glyphs['V'] =
+exports.glyphs['V_cap'] =
 	unicode: 'V'
 	glyphName: 'V'
 	characterName: 'LATIN CAPITAL LETTER V'

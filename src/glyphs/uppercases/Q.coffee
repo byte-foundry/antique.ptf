@@ -1,4 +1,4 @@
-exports.glyphs['Q'] =
+exports.glyphs['Q_cap'] =
 	unicode: 'Q'
 	glyphName: 'Q'
 	characterName: 'LATIN CAPITAL LETTER Q'

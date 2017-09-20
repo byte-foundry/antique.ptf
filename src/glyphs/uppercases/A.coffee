@@ -1,5 +1,5 @@
 # TODO: contrast
-exports.glyphs['A'] =
+exports.glyphs['A_cap'] =
 	unicode: 'A'
 	glyphName: 'A'
 	characterName: 'LATIN CAPITAL LETTER A'
@@ -27,6 +27,9 @@ exports.glyphs['A'] =
 				contours[1].nodes[0].expandedTo[0].point,
 				contours[1].nodes[1].expandedTo[0].point
 			)
+		2:
+			x: (contours[1].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x) / 2 + 20 / 54 * thickness
+			y: 0
 	contours:
 		0:
 			skeleton: true

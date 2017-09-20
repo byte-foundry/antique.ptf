@@ -2,7 +2,7 @@ exports.glyphs['U_acute'] =
 	unicode: 'Ú'
 	glyphName: 'Uacute'
 	characterName: 'LATIN CAPITAL LETTER U WITH ACUTE'
-	base: 'U'
+	base: 'U_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

@@ -16,5 +16,5 @@ exports.glyphs['a_tilde'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (15)
-					y: anchors[0].y + ( 25 / 80 ) * diacriticHeight
+					x: anchors[0].x
+					y: anchors[0].y + ( 3 / 40 ) * diacriticHeight

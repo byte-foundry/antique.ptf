@@ -40,6 +40,7 @@ function jsufonify(/*prefixText*/free) {
 		font = sandbox.exports;
 
 		var charMap = {};
+		var altMap = {};
 
 		if (free) {
 			font.glyphs = _.mapValues(font.glyphs, (glyph) => {
@@ -64,6 +65,7 @@ function jsufonify(/*prefixText*/free) {
 
 		// WIP: convert ptf object to jsufon
 		_.forEach(font.glyphs, function( glyph, name ) {
+			altMap[name] = glyph;
 			if (glyph === undefined) {
 				delete font.glyphs[name];
 				return;
@@ -150,7 +152,7 @@ function jsufonify(/*prefixText*/free) {
 
 			// we'll save the diacritics sourcs, replace it with the base glyph
 			// source and then restore/merge the properties we're interested in
-			var glyph = _.clone( charMap[ _glyph.base.charCodeAt(0) ], true );
+			var glyph = _.clone( font.glyphs[ _glyph.base ], true );
 
 			glyph.name = _glyph.name;
 			glyph.unicode = _glyph.unicode;

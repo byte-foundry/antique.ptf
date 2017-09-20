@@ -1,4 +1,4 @@
-exports.glyphs['J'] =
+exports.glyphs['J_cap'] =
 	unicode: 'J'
 	glyphName: 'J'
 	characterName: 'LATIN CAPITAL LETTER J'

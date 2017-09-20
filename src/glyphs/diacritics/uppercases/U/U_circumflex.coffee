@@ -2,7 +2,7 @@ exports.glyphs['U_circumflex'] =
 	unicode: 'Û'
 	glyphName: 'Ucircumflex'
 	characterName: 'LATIN CAPITAL LETTER U WITH CIRCUMFLEX'
-	base: 'U'
+	base: 'U_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

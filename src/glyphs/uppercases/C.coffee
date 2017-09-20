@@ -1,5 +1,5 @@
 # TODO: curved serifs
-exports.glyphs['C'] =
+exports.glyphs['C_cap'] =
 	unicode: 'C'
 	glyphName: 'C'
 	characterName: 'LATIN CAPITAL LETTER C'

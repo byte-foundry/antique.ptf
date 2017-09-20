@@ -1,5 +1,5 @@
 # TODO: rotation serifs
-exports.glyphs['L'] =
+exports.glyphs['L_cap'] =
 	unicode: 'L'
 	glyphName: 'L'
 	characterName: 'LATIN CAPITAL LETTER L'

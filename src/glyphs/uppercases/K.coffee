@@ -1,4 +1,4 @@
-exports.glyphs['K'] =
+exports.glyphs['K_cap'] =
 	unicode: 'K'
 	glyphName: 'K'
 	characterName: 'LATIN CAPITAL LETTER K'

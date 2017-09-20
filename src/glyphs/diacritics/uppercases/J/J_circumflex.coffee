@@ -2,7 +2,7 @@ exports.glyphs['J_circumflex'] =
 	unicode: 'Ĵ'
 	glyphName: 'Jcircumflex'
 	characterName: 'LATIN CAPITAL LETTER J WITH CIRCUMFLEX'
-	base: 'J'
+	base: 'J_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

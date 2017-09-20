@@ -19,8 +19,11 @@ exports.glyphs['a'] =
 	]
 	anchors:
 		0:
-			x: ( contours[0].nodes[2].expandedTo[0].x + contours[1].nodes[0].expandedTo[1].x ) / 2
+			x: ( contours[0].nodes[3].expandedTo[0].x + contours[1].nodes[3].expandedTo[0].x ) / 2
 			y: xHeight + diacriticHeight
+		1:
+			x: (contours[0].nodes[4].expandedTo[0].x + contours[0].nodes[4].expandedTo[1].x ) / 2 + 15 / 54 * thickness
+			y: 0
 	contours:
 		0:
 			skeleton: true

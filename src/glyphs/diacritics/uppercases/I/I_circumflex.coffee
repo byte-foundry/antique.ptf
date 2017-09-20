@@ -2,7 +2,7 @@ exports.glyphs['I_circumflex'] =
 	unicode: 'Î'
 	glyphName: 'Icircumflex'
 	characterName: 'LATIN CAPITAL LETTER I WITH CIRCUMFLEX'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

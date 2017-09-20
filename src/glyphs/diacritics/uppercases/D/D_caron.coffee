@@ -2,7 +2,7 @@ exports.glyphs['D_caron'] =
 	unicode: 'Ď'
 	glyphName: 'Dcaron'
 	characterName: 'LATIN CAPITAL LETTER D WITH CARON'
-	base: 'D'
+	base: 'D_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

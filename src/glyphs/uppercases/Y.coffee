@@ -1,6 +1,6 @@
 # TODO: right oblic delay because copy from the left one
 # TODO: contrast
-exports.glyphs['Y'] =
+exports.glyphs['Y_cap'] =
 	unicode: 'Y'
 	glyphName: 'Y'
 	characterName: 'LATIN CAPITAL LETTER Y'

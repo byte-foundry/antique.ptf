@@ -2,7 +2,7 @@ exports.glyphs['S_caron'] =
 	unicode: 'Š'
 	glyphName: 'Scaron'
 	characterName: 'LATIN CAPITAL LETTER S WITH CARON'
-	base: 'S'
+	base: 'S_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

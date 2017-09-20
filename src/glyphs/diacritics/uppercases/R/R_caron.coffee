@@ -2,7 +2,7 @@ exports.glyphs['R_caron'] =
 	unicode: 'Ř'
 	glyphName: 'Rcaron'
 	characterName: 'LATIN CAPITAL LETTER R WITH CARON'
-	base: 'R'
+	base: 'R_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

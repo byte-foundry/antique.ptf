@@ -2,7 +2,7 @@ exports.glyphs['E_circumflex'] =
 	unicode: 'Ê'
 	glyphName: 'Ecircumflex'
 	characterName: 'LATIN CAPITAL LETTER E WITH CIRCUMFLEX'
-	base: 'E'
+	base: 'E_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

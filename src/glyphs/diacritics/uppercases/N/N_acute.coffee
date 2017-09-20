@@ -2,7 +2,7 @@ exports.glyphs['N_acute'] =
 	unicode: 'Ń'
 	glyphName: 'Nacute'
 	characterName: 'LATIN CAPITAL LETTER N WITH ACUTE'
-	base: 'N'
+	base: 'N_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

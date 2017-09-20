@@ -2,7 +2,7 @@ exports.glyphs['I_macron'] =
 	unicode: 'Ī'
 	glyphName: 'Imacron'
 	characterName: 'LATIN CAPITAL LETTER I WITH MACRON'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

@@ -2,7 +2,7 @@ exports.glyphs['I_dotaccent'] =
 	unicode: 'İ'
 	glyphName: 'Idotaccent'
 	characterName: 'LATIN CAPITAL LETTER I WITH DOT ABOVE'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

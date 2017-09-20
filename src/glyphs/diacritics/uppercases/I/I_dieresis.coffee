@@ -2,7 +2,7 @@ exports.glyphs['I_dieresis'] =
 	unicode: 'Ï'
 	glyphName: 'Idieresis'
 	characterName: 'LATIN CAPITAL LETTER I WITH DIAERESIS'
-	base: 'I'
+	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

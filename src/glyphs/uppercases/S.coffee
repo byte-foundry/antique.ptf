@@ -1,5 +1,5 @@
 # TODO: curved serifs
-exports.glyphs['S'] =
+exports.glyphs['S_cap'] =
 	unicode: 'S'
 	glyphName: 'S'
 	characterName: 'LATIN CAPITAL LETTER S'

@@ -1,6 +1,6 @@
 # TODO: all alt images
 # TODO: convert vertical serifs to oblic ones
-exports.glyphs['M'] =
+exports.glyphs['M_cap'] =
 	unicode: 'M'
 	glyphName: 'M'
 	characterName: 'LATIN CAPITAL LETTER M'

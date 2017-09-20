@@ -1,7 +1,7 @@
-exports.glyphs['u_circumflex'] =
-	unicode: 'û'
-	glyphName: 'ucircumflex'
-	characterName: 'LATIN SMALL LETTER U WITH CIRCUMFLEX'
+exports.glyphs['u_grave'] =
+	unicode: 'ù'
+	glyphName: 'ugrave'
+	characterName: 'LATIN SMALL LETTER U WITH GRAVE'
 	base: 'u'
 	advanceWidth: base.advanceWidth
 	tags: [
@@ -12,9 +12,9 @@ exports.glyphs['u_circumflex'] =
 	]
 	components:
 		0:
-			base: 'circumflex'
+			base: 'grave'
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x - (5)
+					x: anchors[0].x
 					y: anchors[0].y
