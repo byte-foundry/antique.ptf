@@ -20,7 +20,7 @@ exports.glyphs['l'] =
 			x: contours[0].nodes[0].x
 			y: ascenderHeight + diacriticHeight
 		1:
-			x: contours[0].nodes[1].expandedTo[1].x + 48 / 40 * diacriticHeight
+			x: contours[0].nodes[1].expandedTo[1].x + 48
 			y: ascenderHeight
 	contours:
 		0:
