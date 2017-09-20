@@ -55,7 +55,7 @@ exports.glyphs['cent'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -92,7 +92,7 @@ exports.glyphs['cent'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})

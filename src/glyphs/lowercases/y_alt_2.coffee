@@ -55,7 +55,7 @@ exports.glyphs['y_alt_2'] =
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -67,7 +67,7 @@ exports.glyphs['y_alt_2'] =
 					)
 					dirOut: Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point )
 					expand: Object({
-						width: ( 45 / 54 ) * thickness
+						width: ( 45 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -80,7 +80,7 @@ exports.glyphs['y_alt_2'] =
 						width: Math.min(
 							( 47 / 54 ) * thickness,
 							( contours[1].nodes[1].y + Math.abs( contours[1].nodes[2].y ) ) - 15
-						)
+						) * contrast * contrastExtremity
 						angle: 180 + 90 + 'deg'
 						distr: 1
 					})

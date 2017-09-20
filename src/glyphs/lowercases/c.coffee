@@ -41,7 +41,7 @@ exports.glyphs['c'] =
 					typeOut: 'line'
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -51,7 +51,7 @@ exports.glyphs['c'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast * contrastExtremity
 						angle: - 176 + 'deg'
 						distr: 0.25
 					})
@@ -61,7 +61,7 @@ exports.glyphs['c'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -98,7 +98,7 @@ exports.glyphs['c'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -109,7 +109,7 @@ exports.glyphs['c'] =
 					type: 'smooth'
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -120,7 +120,7 @@ exports.glyphs['c'] =
 						xHeight / 2 + 10
 					)
 					expand: Object({
-						width: thickness
+						width: thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

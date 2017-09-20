@@ -60,7 +60,7 @@ exports.glyphs['t'] =
 					typeOut: 'line'
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -70,7 +70,7 @@ exports.glyphs['t'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast * contrastExtremity
 						angle: - 176 + 'deg'
 						distr: 0.25
 					})
@@ -80,7 +80,7 @@ exports.glyphs['t'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})

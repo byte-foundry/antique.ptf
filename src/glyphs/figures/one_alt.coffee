@@ -49,7 +49,7 @@ exports.glyphs['one_alt'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -59,7 +59,7 @@ exports.glyphs['one_alt'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.15
 					})

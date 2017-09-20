@@ -31,7 +31,10 @@ exports.glyphs['j'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[0].nodes[2].expandedTo[0].y + 48
+					y: Math.min(
+						contours[0].nodes[2].expandedTo[0].y + 48,
+
+					)
 					dirOut: - 90 + 'deg'
 					expand: Object({
 						width: ( 55 / 54 ) * thickness
@@ -44,21 +47,21 @@ exports.glyphs['j'] =
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
-							( 48 / 54 ) * thickness,
-							- ( descender + 10 ) - 10
+							( 48 / 54 ) * thickness * contrast * contrastExtremity,
+							- ( ( 53 / 90 ) * descender + 10 ) - 10
 						)
 						angle: - 82 + 'deg'
 						distr: 0
 					})
 				3:
 					x: contours[0].nodes[2].expandedTo[1].x - 22 * width
-					y: descender - 10
+					y: ( 53 / 90 ) * descender - 10
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
 						width: Math.min(
-							( 47 / 54 ) * thickness,
-							- ( descender + 10 ) - 10
+							( 47 / 54 ) * thickness * contrast * contrastExtremity,
+							- ( ( 53 / 90 ) * descender + 10 ) - 10
 						)
 						angle: 180 + 90 + 'deg'
 						distr: 0

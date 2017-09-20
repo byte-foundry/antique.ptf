@@ -53,7 +53,7 @@ exports.glyphs['t_alt2'] =
 					dirOut: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) + ( 5 / 180 * Math.PI )
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 95 + 'deg'
 						distr: 0
 					})
@@ -63,7 +63,7 @@ exports.glyphs['t_alt2'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 90 + 'deg'
 						distr: 0
 					})

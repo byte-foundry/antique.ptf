@@ -60,7 +60,7 @@ exports.glyphs['W_cap'] =
 					y: capHeight - ( thickness / anchors[0].thickness ) * 50 + (54)
 					typeOut: 'line'
 					expand: Object({
-						width: anchors[0].thickness
+						width: anchors[0].thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -68,7 +68,7 @@ exports.glyphs['W_cap'] =
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].y
 					expand: Object({
-						width: anchors[1].thickness
+						width: anchors[1].thickness * contrast
 						angle: 0 + 'deg'
 						distr: ( 12 / 44 ) * contrast
 					})
@@ -105,7 +105,7 @@ exports.glyphs['W_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -113,7 +113,7 @@ exports.glyphs['W_cap'] =
 					x: contours[3].nodes[0].expandedTo[1].x - 40
 					y: 0
 					expand: Object({
-						width: anchors[1].thickness
+						width: anchors[1].thickness * contrast
 						angle: 0 + 'deg'
 						distr: 1
 					})

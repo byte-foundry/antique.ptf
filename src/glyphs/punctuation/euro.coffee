@@ -54,7 +54,7 @@ exports.glyphs['euro'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -91,7 +91,7 @@ exports.glyphs['euro'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -127,7 +127,7 @@ exports.glyphs['euro'] =
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
-							( 32 / 54 ) * thickness,
+							( 32 / 54 ) * thickness * contrast,
 							Math.max(
 								10,
 								contours[0].nodes[7].expandedTo[1].y - contours[1].nodes[0].y - 10
@@ -143,7 +143,7 @@ exports.glyphs['euro'] =
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
-							( 32 / 54 ) * thickness,
+							( 32 / 54 ) * thickness * contrast,
 							Math.max(
 								10,
 								contours[0].nodes[7].expandedTo[1].y - contours[1].nodes[0].y - 10
@@ -163,7 +163,7 @@ exports.glyphs['euro'] =
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
-							( 32 / 54 ) * thickness,
+							( 32 / 54 ) * thickness * contrast,
 							Math.max(
 								10,
 								contours[0].nodes[7].expandedTo[1].y - contours[1].nodes[0].y - 10
@@ -179,7 +179,7 @@ exports.glyphs['euro'] =
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
-							( 32 / 54 ) * thickness,
+							( 32 / 54 ) * thickness * contrast,
 							Math.max(
 								10,
 								contours[0].nodes[7].expandedTo[1].y - contours[1].nodes[0].y - 10

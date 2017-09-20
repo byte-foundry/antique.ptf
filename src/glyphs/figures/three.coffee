@@ -84,7 +84,7 @@ exports.glyphs['three'] =
 					dirIn: 0 + 'deg'
 					expand: Object({
 						width: Math.min(
-							( 36 / 54 ) * thickness * contrast,
+							( 36 / 54 ) * thickness * contrast * contrastExtremity,
 							contours[1].nodes[0].expand.width
 						)
 						angle: 90 + 'deg'
@@ -103,7 +103,7 @@ exports.glyphs['three'] =
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
-							( 50 / 54 ) * thickness * contrast,
+							( 50 / 54 ) * thickness * contrast * contrastExtremity,
 							Math.max(
 								contours[0].nodes[0].y - contours[1].nodes[6].y - 50,
 								4
@@ -118,7 +118,7 @@ exports.glyphs['three'] =
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: Math.min(
-							( 50 / 54 ) * thickness * contrast,
+							( 50 / 54 ) * thickness * contrast * contrastExtremity,
 							Math.max(
 								contours[0].nodes[0].y - contours[1].nodes[6].y - 50,
 								4

@@ -72,17 +72,17 @@ exports.glyphs['two'] =
 					dirIn: Utils.lineAngle( contours[0].nodes[5].expandedTo[1].point, contours[0].nodes[3].expandedTo[0].point ) - ( 8 / 180 * Math.PI )
 					type: 'smooth'
 					expand: Object({
-						width: ( 58 / 54 ) * thickness
+						width: ( 58 / 54 ) * thickness * contrast
 						angle: contours[0].nodes[4].dirIn + Math.PI / 2
 						distr: 0.5
 					})
 				5:
-					x: contours[0].nodes[0].expandedTo[0].x + (14/54) * thickness + 3
-					y: contours[1].nodes[0].y + ( 50 / 54 ) * thickness + Math.min( 58, ( 58 / 700 ) * capHeight)
+					x: contours[0].nodes[0].expandedTo[0].x + (14/54) * thickness * contrast + 3
+					y: contours[1].nodes[0].y + ( 50 / 54 ) * thickness + Math.min( 58, ( 58 / 700 ) * capHeight) * contrast
 					typeOut: 'line'
 					dirIn: 90 + 'deg'
 					expand: Object({
-						width: ( 57 / 54 ) * thickness
+						width: ( 57 / 54 ) * thickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.75
 					})
@@ -90,7 +90,7 @@ exports.glyphs['two'] =
 					x: contours[0].nodes[5].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y
 					expand: Object({
-						width: ( 57 / 54 ) * thickness
+						width: ( 57 / 54 ) * thickness * contrast
 						angle: 180 + 'deg'
 						distr: 1
 					})

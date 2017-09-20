@@ -54,7 +54,7 @@ exports.glyphs['y_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -66,7 +66,7 @@ exports.glyphs['y_alt'] =
 					)
 					typeOut: 'line'
 					expand: Object({
-						width: ( 45 / 54 ) * thickness
+						width: ( 45 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -77,7 +77,7 @@ exports.glyphs['y_alt'] =
 					})
 					y: ( 110 / 90 ) * descender
 					expand: Object({
-						width: ( 45 / 54 ) * thickness
+						width: ( 45 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 1
 					})

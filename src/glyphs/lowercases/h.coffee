@@ -72,7 +72,7 @@ exports.glyphs['h'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 51 / 54 ) * thickness
+						width: ( 51 / 54 ) * thickness * contrast
 						angle: 180 - 111 + 'deg'
 						distr: 1
 					})
@@ -85,7 +85,7 @@ exports.glyphs['h'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 15 / 54 ) * thickness
+						width: ( 15 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0
 					})

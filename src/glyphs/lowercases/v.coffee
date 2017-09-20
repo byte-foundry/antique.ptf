@@ -50,7 +50,7 @@ exports.glyphs['v'] =
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -58,7 +58,7 @@ exports.glyphs['v'] =
 					x: contours[0].nodes[1].x + 0.75 * ( 47 / 54 ) * thickness
 					y: 0
 					expand: Object({
-						width: ( 45 / 54 ) * thickness
+						width: ( 45 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})

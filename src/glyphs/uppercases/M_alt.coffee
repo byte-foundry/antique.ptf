@@ -48,7 +48,7 @@ exports.glyphs['M_alt'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -59,7 +59,7 @@ exports.glyphs['M_alt'] =
 					)
 					y: Math.max( 0, serifHeight * serifArc )
 					expand: Object({
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -75,7 +75,7 @@ exports.glyphs['M_alt'] =
 						width: Math.min(
 							( 43 / 54 ) * thickness * opticThickness,
 							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 60
-						)
+						) * contrast
 						angle: Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) + Math.PI / 2
 						distr: 0.6
 					})
@@ -83,9 +83,9 @@ exports.glyphs['M_alt'] =
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: capHeight
 					expand: Object({
-						width: ( 39 / 54 ) * thickness * opticThickness / Math.sin( Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) )
+						width: ( 39 / 54 ) * thickness * opticThickness * contrast / Math.sin( Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) )
 						angle: 0 + 'deg'
-						distr: Math.min( 1, Math.max( 0, ( 0.45 / 54 ) * thickness ))
+						distr: Math.min( 1, Math.max( 0, ( 0.45 / 54 ) * thickness * contrast ))
 					})
 		3:
 			skeleton: true

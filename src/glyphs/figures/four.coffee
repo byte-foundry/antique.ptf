@@ -37,7 +37,7 @@ exports.glyphs['four'] =
 					y: contours[1].nodes[2].expandedTo[1].y + ( 8 / 54 ) * thickness - Math.min( 12, ( 12 / 54 ) * thickness )
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 50 / 54 ) * thickness * contrast
 						angle: Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].point ) + Math.PI / 2
 						distr: 0
 					})
@@ -63,7 +63,7 @@ exports.glyphs['four'] =
 					)
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 50 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.75
 					})
@@ -71,7 +71,7 @@ exports.glyphs['four'] =
 					x: contours[0].nodes[1].x + 100 * width + 60 + Math.max( 67, ( 67 / 54 ) * thickness )
 					y: contours[1].nodes[1].y
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 50 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.75
 					})
@@ -87,7 +87,7 @@ exports.glyphs['four'] =
 					y: ( 522 / 700 ) * capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 10 / 54 ) * thickness
+						width: ( 10 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0
 					})

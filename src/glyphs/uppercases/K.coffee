@@ -50,7 +50,7 @@ exports.glyphs['K_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: (( 55 / 54 ) * thickness * opticThickness) / Math.sin( Math.PI - Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point ) )
+						width: (( 55 / 54 ) * thickness * opticThickness * contrast) / Math.sin( Math.PI - Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point ) )
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -64,7 +64,7 @@ exports.glyphs['K_cap'] =
 						)
 					)
 					expand: Object({
-						width: ( 45 / 54 ) * thickness * opticThickness
+						width: ( 45 / 54 ) * thickness * opticThickness * contrast
 						angle: Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point ) + Math.PI / 2
 						distr: 0
 					})

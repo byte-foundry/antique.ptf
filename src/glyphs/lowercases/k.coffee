@@ -51,7 +51,7 @@ exports.glyphs['k'] =
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: (( 51 / 54 ) * thickness) / Math.sin( Math.PI - Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point ) )
+						width: (( 51 / 54 ) * thickness * contrast) / Math.sin( Math.PI - Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point ) )
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -65,7 +65,7 @@ exports.glyphs['k'] =
 						)
 					)
 					expand: Object({
-						width: ( 45 / 54 ) * thickness
+						width: ( 45 / 54 ) * thickness * contrast
 						angle: Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point ) + Math.PI / 2
 						distr: 0
 					})
@@ -75,10 +75,10 @@ exports.glyphs['k'] =
 			nodes:
 				0:
 					x: Utils.onLine({
-						y: ( 344 /600 ) * xHeight
+						y: ( 344 / 600 ) * xHeight
 						on: [ contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point ]
 					})
-					y: ( 344 /600 ) * xHeight
+					y: ( 344 / 600 ) * xHeight
 					typeOut: 'line'
 					expand: Object({
 						width: ( 51 / 54 ) * thickness

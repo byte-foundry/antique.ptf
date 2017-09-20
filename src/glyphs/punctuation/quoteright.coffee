@@ -62,7 +62,7 @@ exports.glyphs['quoteright'] =
 					y: capHeight
 					dirIn: Utils.lineAngle( contours[0].nodes[4].point, contours[0].nodes[3].point ) - ( 50 / 180 * Math.PI )
 					expand: Object({
-						width: ( 28 / 54 ) * thickness
+						width: ( 28 / 54 ) * thickness * contrast
 						angle: Utils.lineAngle( contours[0].nodes[4].point, contours[0].nodes[3].point ) + Math.PI / 2 - ( 40 / 180 * Math.PI )
 						distr: 0
 					})

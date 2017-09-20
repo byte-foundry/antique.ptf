@@ -25,7 +25,7 @@ exports.glyphs['f'] =
 					y: xHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -36,7 +36,7 @@ exports.glyphs['f'] =
 					)
 					y: xHeight
 					expand: Object({
-						width: ( 50 / 54 ) * thickness
+						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -72,7 +72,7 @@ exports.glyphs['f'] =
 					typeOut: 'line'
 					expand: Object({
 							width: Math.min(
-								( 48 / 54 ) * thickness,
+								( 48 / 54 ) * thickness * contrast * contrastExtremity,
 								contours[1].nodes[3].y - contours[0].nodes[1].y - 10
 							)
 							angle: - 83 + 'deg'
@@ -83,7 +83,7 @@ exports.glyphs['f'] =
 					y: ascenderHeight
 					expand: Object({
 						width: Math.min(
-							( 47 / 54 ) * thickness,
+							( 47 / 54 ) * thickness * contrast * contrastExtremity,
 							contours[1].nodes[3].y - contours[0].nodes[1].y - 10
 						)
 						angle: - 90 + 'deg'

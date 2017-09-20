@@ -38,7 +38,7 @@ exports.glyphs['C_cap'] =
 					typeOut: 'line'
 					type: 'smooth'
 					expand: Object({
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -48,7 +48,7 @@ exports.glyphs['C_cap'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 173 + 'deg'
 						distr: 0.25
 					})
@@ -58,7 +58,7 @@ exports.glyphs['C_cap'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -95,7 +95,7 @@ exports.glyphs['C_cap'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -105,7 +105,7 @@ exports.glyphs['C_cap'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 58 / 54 ) * thickness * opticThickness
+						width: ( 58 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 171 + 'deg'
 						distr: 0.25
 					})
@@ -116,7 +116,7 @@ exports.glyphs['C_cap'] =
 						capHeight / 2 + 10
 					)
 					expand: Object({
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: ( 57 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

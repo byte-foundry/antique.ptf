@@ -37,7 +37,7 @@ exports.glyphs['a_alt'] =
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 12 / 54 ) * thickness
+						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 35 + 'deg'
 						distr: 1
 					})
@@ -47,7 +47,7 @@ exports.glyphs['a_alt'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 51 / 54 ) * thickness
+						width: ( 51 / 54 ) * thickness * contrast
 						angle: 68 + 'deg'
 						distr: 0
 					})
@@ -83,7 +83,7 @@ exports.glyphs['a_alt'] =
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 51 / 54 ) * thickness
+						width: ( 51 / 54 ) * thickness * contrast
 						angle: - 67 + 'deg'
 						distr: 0
 					})
@@ -97,7 +97,7 @@ exports.glyphs['a_alt'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: ( 12 / 54 ) * thickness
+						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 - 28 + 'deg'
 						distr: 1
 					})

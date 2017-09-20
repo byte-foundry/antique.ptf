@@ -25,7 +25,7 @@ exports.glyphs['backslash'] =
 					y: descender
 					typeOut: 'line'
 					expand: Object({
-						width: ( 28 / 54 ) * thickness
+						width: ( 28 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
 					})
@@ -34,7 +34,7 @@ exports.glyphs['backslash'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: ( 28 / 54 ) * thickness
+						width: ( 28 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
 					})

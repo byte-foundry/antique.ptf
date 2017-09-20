@@ -29,7 +29,7 @@ exports.glyphs['N_cap'] =
 					y: Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
-						width: ( 50 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -37,7 +37,7 @@ exports.glyphs['N_cap'] =
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					expand: Object({
-						width: ( 50 / 54 ) * thickness * opticThickness
+						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -50,7 +50,7 @@ exports.glyphs['N_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand: Object({
-						width: ( 49 / 54 ) * thickness * opticThickness
+						width: ( 49 / 54 ) * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -61,7 +61,7 @@ exports.glyphs['N_cap'] =
 					)
 					y: Math.max( 0, serifHeight * serifArc )
 					expand: Object({
-						width: ( 49 / 54 ) * thickness * opticThickness
+						width: ( 49 / 54 ) * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -76,7 +76,7 @@ exports.glyphs['N_cap'] =
 					expand: Object({
 						width: Math.min(
 							( 48 / 54 ) * thickness * opticThickness / Math.sin( Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) ),
-							contours[1].nodes[0].expand.width
+							( 49 / 54 ) * thickness * opticThickness
 						)
 						angle: 0 + 'deg'
 						distr: Math.min( 0.55, Math.max( 0, 1 - ( 0.45 / 54 ) * thickness ))
@@ -87,10 +87,10 @@ exports.glyphs['N_cap'] =
 					expand: Object({
 						width: Math.min(
 							( 48 / 54 ) * thickness * opticThickness / Math.sin( Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) ),
-							contours[0].nodes[0].expand.width
+							( 50 / 54 ) * thickness * opticThickness
 						)
 						angle: 0 + 'deg'
-						distr: Math.min( 1, Math.max( 0.45, ( 0.45 / 54 ) * thickness ))
+						distr: Math.min( 1, Math.max( 0.45, ( 0.45 / 54 ) * thickness * contrast ))
 					})
 	components:
 		0:
