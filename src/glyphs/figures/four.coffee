@@ -58,7 +58,7 @@ exports.glyphs['four'] =
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: Math.max(
-						( 226 / 700 ) * capHeight - (20),
+						( 226 / 700 ) * capHeight * crossbar - (20),
 						0.75 * ( 50 / 54 ) * thickness + 30
 					)
 					typeOut: 'line'

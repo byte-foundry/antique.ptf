@@ -31,7 +31,7 @@ exports.glyphs['G_cap_alt'] =
 						contours[0].nodes[3].expandedTo[1].x + 0.75 * thickness * opticThickness * Math.sin( ( Math.PI / 2 ) - ( 3 / 180 * Math.PI ) ) + 15 + (5)
 					)
 					y: Math.min(
-						( 338 / 700 ) * capHeight,
+						( 338 / 700 ) * capHeight * crossbar,
 						capHeight / 2 - 10
 					)
 					dirOut: - 90 + 'deg'

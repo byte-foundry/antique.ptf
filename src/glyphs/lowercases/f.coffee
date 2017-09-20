@@ -55,7 +55,7 @@ exports.glyphs['f'] =
 					})
 				1:
 					x: contours[1].nodes[0].x
-					y: xHeight - 3
+					y: contours[1].nodes[2].y - ( 103 / 700 ) * ascenderHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					expand: Object({

@@ -79,7 +79,7 @@ exports.glyphs['five'] =
 					})
 				5:
 					x: ( contours[0].nodes[6].expandedTo[0].x + contours[0].nodes[4].expandedTo[0].x ) * ( 67 / 145 )
-					y: ( 422 / 700 ) * capHeight - (0)
+					y: ( 422 / 700 ) * capHeight * crossbar - (0)
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
@@ -96,7 +96,7 @@ exports.glyphs['five'] =
 				6:
 					x: contours[1].nodes[2].expandedTo[1].x
 					y: Math.min(
-						( 326 / 700 ) * capHeight - Math.max( 25, ( 25 / 54 ) * thickness) + 25,
+						( 326 / 700 ) * capHeight * crossbar - Math.max( 25, ( 25 / 54 ) * thickness) + 25,
 						contours[0].nodes[5].y - Math.cos( contours[0].nodes[5].expand.angle + Math.PI / 2 ) * contours[0].nodes[5].expand.width - 10
 					)
 					dirIn: 90 + 'deg'

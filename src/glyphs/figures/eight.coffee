@@ -72,7 +72,7 @@ exports.glyphs['eight'] =
 					})
 				4:
 					x: contours[0].nodes[1].x
-					y: ( 385 / 700 ) * capHeight - (14)
+					y: ( 385 / 700 ) * capHeight * crossbar - (14)
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					expand: Object({

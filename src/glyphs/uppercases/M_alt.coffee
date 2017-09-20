@@ -94,7 +94,7 @@ exports.glyphs['M_alt'] =
 				0:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
 					y: Math.min(
-						( 148 / 700 ) * capHeight,
+						( 148 / 700 ) * capHeight * crossbar,
 						( 148 / 54 ) * thickness
 					)
 					typeOut: 'line'

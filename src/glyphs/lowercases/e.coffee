@@ -115,7 +115,7 @@ exports.glyphs['e'] =
 				7:
 					x: contours[0].nodes[6].x
 					y: Math.max(
-						contours[0].nodes[6].expandedTo[0].y - 189,
+						contours[0].nodes[6].expandedTo[0].y * crossbar - 189,
 						xHeight / 2 + 10
 					)
 					typeOut: 'line'

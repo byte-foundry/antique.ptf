@@ -122,7 +122,7 @@ exports.glyphs['a'] =
 					})
 				3:
 					x: spacingLeft + (13/54) * thickness
-					y: ( 217 / 600 ) * xHeight # TODO smaller xHeight
+					y: ( 217 / 600 ) * xHeight * crossbar # TODO smaller xHeight
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					# typeOut: 'line'
@@ -151,7 +151,7 @@ exports.glyphs['a'] =
 					x: contours[0].nodes[3].expandedTo[1].x
 					y: Math.min(
 						contours[0].nodes[0].y - 10,
-						xHeight - ( 202 / 600 ) * xHeight
+						( xHeight - ( 202 / 600 ) * xHeight ) * crossbar
 					)
 					dirIn: - 90 + 'deg'
 					tensionIn: 1.5

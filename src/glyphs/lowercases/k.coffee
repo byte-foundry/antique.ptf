@@ -59,7 +59,7 @@ exports.glyphs['k'] =
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: Math.max(
 						0,
-						( 250 / 600 ) * xHeight - Math.max(
+						( 250 / 600 ) * xHeight * crossbar - Math.max(
 							40,
 							( 40 / 54 ) * thickness
 						)
@@ -75,10 +75,10 @@ exports.glyphs['k'] =
 			nodes:
 				0:
 					x: Utils.onLine({
-						y: ( 344 / 600 ) * xHeight
+						y: ( 344 / 600 ) * xHeight * crossbar
 						on: [ contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point ]
 					})
-					y: ( 344 / 600 ) * xHeight
+					y: ( 344 / 600 ) * xHeight * crossbar
 					typeOut: 'line'
 					expand: Object({
 						width: ( 51 / 54 ) * thickness

@@ -58,7 +58,7 @@ exports.glyphs['four_alt'] =
 				1:
 					x: contours[0].nodes[1].x + 100 * width + 60 + Math.max( 67, ( 67 / 54 ) * thickness )
 					y: Math.max(
-						( 226 / 700 ) * capHeight - (20),
+						( 226 / 700 ) * capHeight * crossbar - (20),
 						0.75 * ( 50 / 54 ) * thickness + 30
 					)
 					expand: Object({

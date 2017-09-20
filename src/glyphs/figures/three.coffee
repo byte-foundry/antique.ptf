@@ -99,7 +99,7 @@ exports.glyphs['three'] =
 						contours[0].nodes[5].x - 52,
 						contours[0].nodes[0].x
 					)
-					y: contours[1].nodes[6].y + ( contours[0].nodes[0].y - contours[1].nodes[6].y ) * ( 239 / 447 )
+					y: contours[1].nodes[6].y + ( contours[0].nodes[0].y - contours[1].nodes[6].y ) * ( 239 / 447 ) * crossbar
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
