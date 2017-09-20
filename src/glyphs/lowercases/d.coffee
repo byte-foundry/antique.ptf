@@ -17,7 +17,7 @@ exports.glyphs['d'] =
 	]
 	anchors:
 		0:
-			x: contours[1].nodes[0].expandedTo[1].x
+			x: contours[1].nodes[0].expandedTo[1].x + 40
 			y: ascenderHeight
 		1:
 			x: contours[1].nodes[1].expandedTo[0].x - 57 * width

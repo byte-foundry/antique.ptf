@@ -16,17 +16,16 @@ exports.glyphs['stroke'] =
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * ( 30 / 90 )
-						angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) + Math.PI / 2
+						width: thickness * ( 25 / 54 )
+						angle: 0 + 'deg'
 						distr: 0.5
 					})
 				1:
 					x: anchors[0].right
 					y: xHeight + overshoot
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
+					typeIn: 'line'
 					expand: Object({
-						width: thickness * ( 30 / 90 )
-						angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) + Math.PI / 2
+						width: thickness * ( 25 / 54 )
+						angle: 0 + 'deg'
 						distr: 0.5
 					})
