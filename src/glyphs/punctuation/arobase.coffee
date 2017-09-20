@@ -127,8 +127,8 @@ exports.glyphs['arobase'] =
 				9:
 					x: contours[0].nodes[8].x
 					y: Math.max(
-						( 517 / 700 ) * capHeight + (7),
-						contours[0].nodes[10].y - 39
+						( 527 / 700 ) * capHeight - (2),
+						contours[0].nodes[10].y - 78 + (1)
 					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
@@ -139,7 +139,7 @@ exports.glyphs['arobase'] =
 					})
 				10:
 					x: contours[0].nodes[1].x
-					y: contours[0].nodes[4].expandedTo[1].y - 82 - (4) # TODO
+					y: contours[0].nodes[4].expandedTo[1].y - 82 - (8)
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
@@ -195,8 +195,10 @@ exports.glyphs['arobase'] =
 					})
 				2:
 					x: contours[0].nodes[12].expandedTo[1].x - 6
-					# y: contours[1].nodes[0].expandedTo[0].y - 10 + (0)
-					y: contours[0].nodes[8].expandedTo[0].y + 44
+					y: Math.max(
+						contours[0].nodes[0].y + 100,
+						contours[1].nodes[1].y + thickness * contrast
+					)
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
@@ -207,7 +209,10 @@ exports.glyphs['arobase'] =
 					})
 				3:
 					x: contours[1].nodes[2].expandedTo[0].x
-					y: contours[1].nodes[2].expandedTo[0].y + ( contours[1].nodes[5].expandedTo[0].y - contours[1].nodes[2].expandedTo[0].y ) * ( 99 / 232 )
+					y: Math.min(
+						contours[1].nodes[2].expandedTo[0].y + ( contours[1].nodes[5].expandedTo[0].y - contours[1].nodes[2].expandedTo[0].y ) * ( 99 / 232 ),
+						contours[1].nodes[5].expandedTo[0].y - 100
+					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
 					# tensionOut: 0

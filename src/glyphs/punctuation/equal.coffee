@@ -22,7 +22,7 @@ exports.glyphs['equal'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 240 / 480 ) * xHeight + 41 + (13)
+					y: ( 300 / 600 ) * xHeight + 41 + (13)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({
@@ -46,7 +46,7 @@ exports.glyphs['equal'] =
 			nodes:
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
-					y: ( 240 / 480 ) * xHeight - 41 - (13)
+					y: ( 300 / 600 ) * xHeight - 41 - (13)
 					dirOut: 0 + 'deg'
 					typeOut: 'line'
 					expand: Object({

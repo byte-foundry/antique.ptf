@@ -23,7 +23,7 @@ exports.glyphs['minus'] =
 			nodes:
 				0:
 					x: spacingLeft
-					y: ( 240 / 480 ) * xHeight
+					y: ( 300 / 600 ) * xHeight
 					typeOut: 'line'
 					expand: Object({
 						width: ( 31 / 54 ) * thickness

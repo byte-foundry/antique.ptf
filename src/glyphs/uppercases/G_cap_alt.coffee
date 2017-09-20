@@ -1,8 +1,8 @@
-exports.glyphs['G_cap'] =
+exports.glyphs['G_cap_alt'] =
 	unicode: 'G'
 	glyphName: 'G'
 	characterName: 'LATIN CAPITAL LETTER G'
-	altImg: 'antique-tailed-G.svg'
+	altImg: 'antique-no-tail-G.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
@@ -144,30 +144,6 @@ exports.glyphs['G_cap'] =
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
-		2:
-			skeleton: true
-			closed: false
-			nodes:
-				0:
-					x: contours[0].nodes[1].expandedTo[0].x
-					y: contours[0].nodes[1].expandedTo[0].y
-					dirOut: - 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
-						width: ( 50 / 54 ) * thickness
-						angle: Utils.lineAngle( contours[0].nodes[1].expandedTo[0].point, contours[0].nodes[2].expandedTo[0].point )
-						distr: 0
-					})
-				1:
-					x: contours[2].nodes[0].expandedTo[0].x + 15
-					y: - overshoot / 2
-					dirIn: Utils.lineAngle( contours[2].nodes[1].expandedTo[1].point, contours[2].nodes[0].expandedTo[0].point ) + ( 3 / 180 ) * thickness
-					type: 'smooth'
-					expand: Object({
-						width: ( 7 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 45 + 'deg'
-						distr: 0.75
 					})
 	components:
 		0:
