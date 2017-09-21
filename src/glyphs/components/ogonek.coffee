@@ -20,7 +20,7 @@ exports.glyphs['ogonek'] =
 					dirOut: 49 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: 25 / 54 * thickness
+						width: 25 / 54 * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 1
 					})
@@ -36,13 +36,13 @@ exports.glyphs['ogonek'] =
 					})
 				2:
 					x: (contours[0].nodes[1].x + contours[0].nodes[3].x ) / 2
-					y: contours[0].nodes[1].y - 22
+					y: contours[0].nodes[1].y - 22 + 22 * (contrast - 1)
 					dirOut: 0 + 'deg'
 					type: 'smooth'
 					tensionOut: 1.2
 					tensionIn: 1.1
 					expand: Object({
-						width: 20 / 54 * thickness
+						width: 20 / 54 * thickness * contrast
 						angle: 93 + 'deg'
 						distr: 1
 					})
