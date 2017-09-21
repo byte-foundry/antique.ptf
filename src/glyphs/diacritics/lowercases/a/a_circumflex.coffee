@@ -2,6 +2,7 @@ exports.glyphs['a_circumflex'] =
 	unicode: 'â'
 	glyphName: 'acircumflex'
 	characterName: 'LATIN SMALL LETTER A WITH CIRCUMFLEX'
+	altImg: 'alt-antique-a-0.svg'
 	base: 'a'
 	advanceWidth: base.advanceWidth
 	tags: [

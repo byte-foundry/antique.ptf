@@ -2,6 +2,7 @@ exports.glyphs['y_alt_dieresis'] =
 	unicode: 'ÿ'
 	glyphName: 'ydieresis'
 	characterName: 'LATIN SMALL LETTER Y WITH DIAERESIS'
+	altImg: 'alt-antique-y-1.svg'
 	base: 'y_alt'
 	advanceWidth: base.advanceWidth
 	tags: [

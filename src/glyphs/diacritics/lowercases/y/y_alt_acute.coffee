@@ -2,6 +2,7 @@ exports.glyphs['y_alt_acute'] =
 	unicode: 'ý'
 	glyphName: 'yacute'
 	characterName: 'LATIN SMALL LETTER Y WITH ACUTE'
+	altImg: 'alt-antique-y-0.svg'
 	base: 'y_alt'
 	advanceWidth: base.advanceWidth
 	tags: [

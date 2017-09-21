@@ -2,6 +2,7 @@ exports.glyphs['t_alt2_caron'] =
 	unicode: 'ť'
 	glyphName: 'tcaron'
 	characterName: 'LATIN SMALL LETTER T WITH CARON'
+	altImg: 'alt-antique-t-2.svg'
 	base: 't_alt2'
 	advanceWidth: base.advanceWidth
 	tags: [

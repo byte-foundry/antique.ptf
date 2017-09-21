@@ -2,6 +2,7 @@ exports.glyphs['a_breve'] =
 	unicode: 'ă'
 	glyphName: 'abreve'
 	characterName: 'LATIN SMALL LETTER A WITH BREVE'
+	altImg: 'alt-antique-a-0.svg'
 	base: 'a'
 	advanceWidth: base.advanceWidth
 	tags: [

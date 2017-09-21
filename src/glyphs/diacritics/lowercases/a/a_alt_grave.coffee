@@ -2,6 +2,7 @@ exports.glyphs['a_alt_grave'] =
 	unicode: 'à'
 	glyphName: 'agrave'
 	characterName: 'LATIN SMALL LETTER A WITH GRAVE'
+	altImg: 'alt-antique-a-1.svg'
 	base: 'a_alt'
 	advanceWidth: base.advanceWidth
 	tags: [

@@ -2,6 +2,7 @@ exports.glyphs['a_tilde'] =
 	unicode: 'ã'
 	glyphName: 'atilde'
 	characterName: 'LATIN SMALL LETTER A WITH TILDE'
+	altImg: 'alt-antique-a-0.svg'
 	base: 'a'
 	advanceWidth: base.advanceWidth
 	tags: [

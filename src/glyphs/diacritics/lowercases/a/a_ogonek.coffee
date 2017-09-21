@@ -2,6 +2,7 @@ exports.glyphs['a_ogonek'] =
 	unicode: 'ą'
 	glyphName: 'aogonek'
 	characterName: 'LATIN SMALL LETTER A WITH OGONEK'
+	altImg: 'alt-antique-a-0.svg'
 	base: 'a'
 	advanceWidth: base.advanceWidth
 	tags: [
