@@ -7,8 +7,7 @@ exports.glyphs['percent'] =
 	tags: [
 		'all',
 		'latin',
-		'lowercase',
-		'diacritic'
+		'punctuation'
 	]
 	components:
 		0:
