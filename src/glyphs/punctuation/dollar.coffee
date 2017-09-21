@@ -2,7 +2,7 @@ exports.glyphs['dollar'] =
 	unicode: '$'
 	glyphName: 'dollar'
 	characterName: 'DOLLAR SIGN'
-	altImg: ''
+	altImg: 'alt-antique-dollar-0.svg'
 	ot:
 		advanceWidth: contours[0].nodes[8].expandedTo[1].x + spacingRight
 	transforms: Array(

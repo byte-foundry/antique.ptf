@@ -1,9 +1,9 @@
-# TODO: all alt images
+# TODO: contrast + hight thickness
 exports.glyphs['M_alt'] =
 	unicode: 'M'
 	glyphName: 'M'
 	characterName: 'LATIN CAPITAL LETTER M'
-	altImg: 'antique-no-apex-M.svg'
+	altImg: 'alt-antique-M-1.svg'
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(

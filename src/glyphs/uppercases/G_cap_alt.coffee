@@ -2,7 +2,7 @@ exports.glyphs['G_cap_alt'] =
 	unicode: 'G'
 	glyphName: 'G'
 	characterName: 'LATIN CAPITAL LETTER G'
-	altImg: 'antique-no-tail-G.svg'
+	altImg: 'alt-antique-G-1.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

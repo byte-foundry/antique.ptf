@@ -1,4 +1,4 @@
-# TODO: thickness + contrast
+# TODO: contrast + hight thickness
 exports.glyphs['w'] =
 	unicode: 'w'
 	glyphName: 'w'

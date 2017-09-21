@@ -2,7 +2,7 @@ exports.glyphs['y'] =
 	unicode: 'y'
 	glyphName: 'y'
 	characterName: 'LATIN SMALL LETTER Y'
-	altImg: 'antique-g-like-y.svg'
+	altImg: 'alt-antique-y-0.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

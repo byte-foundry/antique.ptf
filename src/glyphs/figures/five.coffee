@@ -3,7 +3,7 @@ exports.glyphs['five'] =
 	unicode: '5'
 	glyphName: 'five'
 	characterName: 'DIGIT FIVE'
-	altImg: ''
+	altImg: 'alt-antique-5-0.svg'
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(

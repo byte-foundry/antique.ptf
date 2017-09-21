@@ -2,7 +2,7 @@ exports.glyphs['t'] =
 	unicode: 't'
 	glyphName: 't'
 	characterName: 'LATIN SMALL LETTER T'
-	altImg: 'antique-default-t-extremity.svg'
+	altImg: 'alt-antique-t-0.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

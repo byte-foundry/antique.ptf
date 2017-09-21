@@ -2,7 +2,7 @@ exports.glyphs['cent'] =
 	unicode: '¢'
 	glyphName: 'cent'
 	characterName: 'CENT SIGN'
-	altImg: ''
+	altImg: 'alt-antique-cent-0.svg'
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

@@ -1,3 +1,4 @@
+# TODO: contrast + hight thickness
 exports.glyphs['K_cap'] =
 	unicode: 'K'
 	glyphName: 'K'

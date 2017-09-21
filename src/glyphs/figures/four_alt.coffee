@@ -2,7 +2,7 @@ exports.glyphs['four_alt'] =
 	unicode: '4'
 	glyphName: 'four'
 	characterName: 'DIGIT FOUR'
-	altImg: ''
+	altImg: 'alt-antique-4-1.svg'
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(

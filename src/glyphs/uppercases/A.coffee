@@ -1,4 +1,4 @@
-# TODO: contrast
+# TODO: contrast + hight thickness
 exports.glyphs['A_cap'] =
 	unicode: 'A'
 	glyphName: 'A'

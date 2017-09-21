@@ -2,7 +2,7 @@ exports.glyphs['Q_alt'] =
 	unicode: 'Q'
 	glyphName: 'Q'
 	characterName: 'LATIN CAPITAL LETTER Q'
-	altImg: 'antique-more-classique-tail-Q.svg'
+	altImg: 'alt-antique-Q-1.svg'
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(

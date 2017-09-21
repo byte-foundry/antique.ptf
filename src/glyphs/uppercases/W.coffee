@@ -1,3 +1,4 @@
+# TODO: contrast + hight thickness
 exports.glyphs['W_cap'] =
 	unicode: 'W'
 	glyphName: 'W'
