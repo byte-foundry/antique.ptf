@@ -81,11 +81,8 @@ exports.glyphs['k'] =
 					y: ( 344 / 600 ) * xHeight * crossbar
 					typeOut: 'line'
 					expand: Object({
-						width: ( 51 / 54 ) * thickness
-						angle: Math.max(
-							Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) + Math.PI / 2,
-							Utils.lineAngle( { x: contours[1].nodes[0].x + 0.25 * ( 55 / 54 ) * thickness, y: contours[1].nodes[0].y }, contours[1].nodes[1].point )
-						)
+						width: ( 51 / 54 ) * thickness * opticThickness / -Math.cos(contours[2].nodes[0].expand.angle - Utils.lineAngle(contours[2].nodes[1].point, contours[2].nodes[0].point) + Math.PI / 2)
+						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point )
 						distr: 0
 					})
 				1:

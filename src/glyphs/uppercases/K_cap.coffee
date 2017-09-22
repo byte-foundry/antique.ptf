@@ -81,18 +81,15 @@ exports.glyphs['K_cap'] =
 					y: ( 401 / 700 ) * capHeight * crossbar
 					typeOut: 'line'
 					expand: Object({
-						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: Math.max(
-							Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) + Math.PI / 2,
-							Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point )
-						)
+						width: ( 56 / 54 ) * thickness * opticThickness / -Math.cos(contours[2].nodes[0].expand.angle - Utils.lineAngle(contours[2].nodes[1].point, contours[2].nodes[0].point) + Math.PI / 2)
+						angle: Utils.lineAngle( contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point )
 						distr: 0
 					})
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x + 1
 					y: 0
 					expand: Object({
-						width: ( 56 / 54 ) * thickness * opticThickness / Math.sin( Math.PI - Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) )
+						width: ( 58 / 54 ) * thickness * opticThickness / Math.sin( Math.PI - Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) )
 						angle: 180 + 'deg'
 						distr: 0
 					})
