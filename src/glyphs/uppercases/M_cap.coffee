@@ -32,6 +32,12 @@ exports.glyphs['M_cap'] =
 				contours[3].nodes[0].expandedTo[1].point,
 				contours[3].nodes[1].expandedTo[1].point
 			)
+		1:
+			x: ( contours[0].nodes[0].expandedTo[1].x + contours[1].nodes[1].expandedTo[1].x ) / 2
+			y: Math.min(
+				( 148 / 700 ) * capHeight,
+				( 148 / 54 ) * thickness
+			)
 	contours:
 		0:
 			skeleton: true
@@ -83,8 +89,8 @@ exports.glyphs['M_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: ( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
-					y: contours[3].nodes[0].y
+					x: anchors[1].x
+					y: anchors[1].y
 					typeOut: 'line'
 					expand: Object({
 						width: Math.min(
@@ -92,7 +98,7 @@ exports.glyphs['M_cap'] =
 							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 60
 						)
 						angle: Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) + Math.PI / 2
-						distr: 0.6
+						distr: 0.6 + 0.4 * (1 - contrast)
 					})
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -107,27 +113,21 @@ exports.glyphs['M_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: ( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
-					y: Math.min(
-						( 148 / 700 ) * capHeight,
-						( 148 / 54 ) * thickness
-					)
+					x: contours[2].nodes[0].x
+					y: contours[2].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: Math.min(
-							( 43 / 54 ) * thickness * opticThickness,
-							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 60
-						)
-						angle: Utils.lineAngle( contours[3].nodes[1].point, contours[3].nodes[0].point ) + Math.PI / 2
+						width: Math.min(( 43 / 54 ) * thickness * opticThickness, contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 70)/ Math.cos(Math.PI / 2 - contours[3].nodes[0].expand.angle + Utils.lineAngle( contours[3].nodes[1].point, contours[3].nodes[0].point))
+						angle: Utils.lineAngle(contours[2].nodes[1].point, contours[2].nodes[0].point)
 						distr: 0.4
 					})
 				1:
-					x: contours[1].nodes[0].expandedTo[1].x
+					x: contours[1].nodes[0].expandedTo[1].x - Math.max(0, contours[3].nodes[1].expand.width * (1 - contrast) * (1 - contours[3].nodes[1].expand.distr)) - (Math.min( 1, Math.max( 0, 1 - ( 0.45 / 54 ) * thickness )) - 0.4) * contours[3].nodes[1].expand.width
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					expand: Object({
-						width: ( 39 / 54 ) * thickness * opticThickness / Math.sin( Utils.lineAngle( contours[3].nodes[0].point, contours[3].nodes[1].point ) )
+						width: ( 39 / 54 ) * thickness * opticThickness / -Math.sin( Utils.lineAngle(contours[1].nodes[0].expandedTo[1].point, contours[2].nodes[0].point) )
 						angle: 0 + 'deg'
-						distr: Math.min( 1, Math.max( 0, 1 - ( 0.45 / 54 ) * thickness ))
+						distr: 0.4
 					})
 		4:
 			skeleton: false
@@ -138,26 +138,20 @@ exports.glyphs['M_cap'] =
 					y: contours[2].nodes[0].expandedTo[0].y
 					typeOut: 'line'
 				1:
-					x: Math.min(
-						Utils.onLine({
+					x: Utils.onLine({
 							y: contours[4].nodes[1].y
 							on: [ contours[2].nodes[1].expandedTo[0].point, contours[2].nodes[0].expandedTo[0].point ]
-						}),
-						( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
-					)
+						})
 					y: Math.max(
 						0,
 						anchors[0].apex[1]
 					)
 					typeOut: 'line'
 				2:
-					x: Math.max(
-						Utils.onLine({
+					x: Utils.onLine({
 							y: contours[4].nodes[1].y
 							on: [ contours[3].nodes[0].expandedTo[1].point, contours[3].nodes[1].expandedTo[1].point ]
-						}),
-						( contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[1].expandedTo[0].x ) / 2
-					)
+						})
 					y: contours[4].nodes[1].y
 					typeOut: 'line'
 				3:
@@ -166,7 +160,7 @@ exports.glyphs['M_cap'] =
 					typeOut: 'line'
 				4:
 					x: anchors[0].intersection[0]
-					y: anchors[0].intersection[1]
+					y: anchors[0].intersection[1] + 2
 					typeOut: 'line'
 	components:
 		0:
