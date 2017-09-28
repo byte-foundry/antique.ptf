@@ -35,4 +35,4 @@ exports.glyphs['periodcentered'] =
 						)
 					) + spacingRight ) / 2
 					y: ( 210 / 450 ) * xHeight
-					optical: ( 60 / 54 ) * thickness
+					optical: ( 57 / 54 ) * thickness

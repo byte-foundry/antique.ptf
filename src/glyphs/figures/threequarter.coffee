@@ -14,7 +14,7 @@ exports.glyphs['threequarters'] =
 			base: 'three_base'
 			transformOrigin: anchors[0].point
 			transforms: Array(
-				[ 'translateY', 340 - overshoot],
+				[ 'translateY', capHeight * 0.48 - overshoot],
 				[ 'translateX', 0.48 * (spacing * 50 + 10)],
 				[ 'scaleX', 0.52 ],
 				[ 'scaleY', 0.52 ]

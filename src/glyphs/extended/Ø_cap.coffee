@@ -1,8 +1,8 @@
-exports.glyphs['ø'] =
-	unicode: 'ø'
-	glyphName: 'oslash'
-	characterName: 'LATIN SMALL LETTER O WITH STROKE'
-	base: 'o'
+exports.glyphs['Ø'] =
+	unicode: 'Ø'
+	glyphName: 'Oslash'
+	characterName: 'LATIN CAPITAL LETTER O WITH STROKE'
+	base: 'O_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
 		'all',

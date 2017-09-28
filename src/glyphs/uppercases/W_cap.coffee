@@ -30,6 +30,9 @@ exports.glyphs['W_cap'] =
 				( 44 / 54 ) * thickness,
 				(( contours[3].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) - 40 * 2) / 3.5 - 5 * width
 			)
+		2:
+			x: (contours[3].nodes[0].expandedTo[1].x + contours[0].nodes[0].expandedTo[0].x) / 2
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -160,7 +160,8 @@ function jsufonify(/*prefixText*/free) {
 			glyph.glyphName = _glyph.glyphName;
 			glyph.characterName = _glyph.characterName;
 			// merge all parameters (diacritic will overwrite base parameters)
-			_.assign( glyph.parameter, _glyph.parameter );
+			_.assign( glyph.parameters, _glyph.parameters );
+			_.assign( glyph.transforms, _glyph.transforms );
 			// merge the two array of components
 			[].push.apply(glyph.outline.component, _glyph.outline.component );
 

@@ -17,5 +17,5 @@ exports.glyphs['Z_cap_dotaccent'] =
 			parentAnchors:
 				0:
 					x: anchors[0].x
-					y: anchors[0].y
-					optical: 120
+					y: anchors[0].y - 11/40 * diacriticHeight
+					optical: 57

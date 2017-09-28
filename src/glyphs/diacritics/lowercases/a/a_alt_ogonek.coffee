@@ -17,5 +17,5 @@ exports.glyphs['a_alt_ogonek'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[1].x + 10
+					x: anchors[1].x
 					y: anchors[1].y + 14
