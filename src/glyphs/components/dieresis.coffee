@@ -16,26 +16,26 @@ exports.glyphs['dieresis'] =
 			id: 'left'
 			parentAnchors:
 				0:
-					x: anchors[0].x - ( 25 / 2 ) - Math.max(
+					x: parentAnchors[0].x - ( 25 / 2 ) - Math.max(
 						40,
 						Math.min(
 							160,
 							thickness
 						)
 					) / 2
-					y: anchors[0].y
+					y: parentAnchors[0].y
 					optical: 50
 		1:
 			base: ['dot']
 			id: 'right'
 			parentAnchors:
 				0:
-					x: anchors[0].x + ( 25 / 2 ) + Math.max(
+					x: parentAnchors[0].x + ( 25 / 2 ) + Math.max(
 						40,
 						Math.min(
 							160,
 							thickness
 						)
 					) / 2
-					y: anchors[0].y
+					y: parentAnchors[0].y
 					optical: 50

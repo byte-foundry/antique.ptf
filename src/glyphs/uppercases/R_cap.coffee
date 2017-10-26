@@ -28,19 +28,17 @@ exports.glyphs['R_cap'] =
 					x: spacingLeft + (14/54) * thickness * opticThickness
 					y: 0
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -50,11 +48,10 @@ exports.glyphs['R_cap'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) * ( 49 / 91 ),
@@ -63,11 +60,10 @@ exports.glyphs['R_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 100 * width + 105 - (14),
@@ -83,11 +79,10 @@ exports.glyphs['R_cap'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 182 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[1].nodes[2].x
 					y: Math.max(
@@ -99,11 +94,10 @@ exports.glyphs['R_cap'] =
 					)
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: - 180 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[1].nodes[1].x
 					y: ( 330 / 700 ) * capHeight * crossbar + (25)
@@ -111,19 +105,17 @@ exports.glyphs['R_cap'] =
 					type: 'smooth'
 					typeOut: 'line'
 					# tensionIn: 0.8
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.75
-					})
 				5:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[1].nodes[4].y
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.75
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -133,11 +125,10 @@ exports.glyphs['R_cap'] =
 					y: contours[1].nodes[5].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[1].x + ( contours[2].nodes[2].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) * ( 50 / 91 ),
@@ -146,11 +137,10 @@ exports.glyphs['R_cap'] =
 					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 100 * width + 105 - (14),
@@ -163,38 +153,36 @@ exports.glyphs['R_cap'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 182 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[2].nodes[2].x
 					y: 0
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
@@ -208,11 +196,11 @@ exports.glyphs['R_cap'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
+					base: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
 					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-			transformOrigin: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
@@ -221,10 +209,10 @@ exports.glyphs['R_cap'] =
 			id: 'bottomright2'
 			parentAnchors:
 				0:
-					base: contours[2].nodes[3].expandedTo[0].point
-					noneAnchor: contours[2].nodes[3].expandedTo[0].point
-					opposite: contours[2].nodes[3].expandedTo[1].point
-					obliqueEndPoint: contours[2].nodes[2].expandedTo[0].point
+					base: contours[2].nodes[3].expandedTo[0]
+					noneAnchor: contours[2].nodes[3].expandedTo[0]
+					opposite: contours[2].nodes[3].expandedTo[1]
+					obliqueEndPoint: contours[2].nodes[2].expandedTo[0]
 					reversed: true
 					scaleX: -1
 		4:
@@ -232,10 +220,10 @@ exports.glyphs['R_cap'] =
 			id: 'bottomleft2'
 			parentAnchors:
 				0:
-					base: contours[2].nodes[3].expandedTo[1].point
-					noneAnchor: contours[2].nodes[3].expandedTo[1].point
-					opposite: contours[2].nodes[3].expandedTo[0].point
-					obliqueEndPoint: contours[2].nodes[2].expandedTo[1].point
+					base: contours[2].nodes[3].expandedTo[1]
+					noneAnchor: contours[2].nodes[3].expandedTo[1]
+					opposite: contours[2].nodes[3].expandedTo[0]
+					obliqueEndPoint: contours[2].nodes[2].expandedTo[1]
 			parentParameters:
 				serifWidth: Math.min(
 					serifWidth,

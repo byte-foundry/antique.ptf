@@ -7,6 +7,74 @@ var through = require('through2'),
 // consts
 const PLUGIN_NAME = 'gulp-jsufonify';
 
+function ufoToPtf( src ) {
+	if ( src.parameter ) {
+		src.parameters = src.parameter;
+		delete src.parameter;
+	}
+
+	if ( src.anchor ) {
+		src.anchors = src.anchor;
+		delete src.anchor;
+	}
+
+	if ( src.outline && src.outline.contour ) {
+		src.contours = src.outline.contour;
+		delete src.outline.contour;
+	}
+
+	if ( src.contours ) {
+		src.contours.forEach(function(contour) {
+			if ( contour.point ) {
+				contour.nodes = contour.point;
+				delete contour.point;
+			}
+		});
+	}
+
+	if ( src.outline && src.outline.component ) {
+		src.components = src.outline.component;
+
+		src.components.forEach(function(component) {
+			if ( component.anchor ) {
+				component.parentAnchors = component.anchor;
+				delete component.anchor;
+			}
+
+			if ( component.parameter ) {
+				component.parentParameters = component.parameter;
+				delete component.parameter;
+			}
+		});
+
+		delete src.outline.component;
+	}
+
+	delete src.outline;
+
+	if ( src.lib && src.lib.transforms ) {
+		src.transforms = src.lib.transforms;
+		delete src.lib.transforms;
+	}
+
+	if ( src.lib && src.lib.transformOrigin ) {
+		src.transformOrigin = src.lib.transformOrigin;
+		delete src.lib.transformOrigin;
+	}
+
+	if ( src.lib && src.lib.parameters ) {
+		src.parameters = src.lib.parameters;
+		delete src.lib.parameters;
+	}
+
+	if ( src.lib && src.lib.solvingOrder ) {
+		src.solvingOrder = src.lib.solvingOrder;
+		delete src.lib.solvingOrder;
+	}
+
+	return src;
+};
+
 function addComponents( glyph ) {
 	_(glyph.components).forEach(function( component, i ) {
 		glyph.outline.component[i] = component;
@@ -27,8 +95,38 @@ function addComponents( glyph ) {
 	});
 }
 
+function linkToRelatedGlyphs(glyph, glyphsByName) {
+	var base = glyphsByName[glyph.base];
+
+	console.log(glyph.name);
+	base.relatedGlyphs = base.relatedGlyphs || [];
+	glyph.relatedGlyphs = glyph.relatedGlyphs || [];
+
+	base.relatedGlyphs.forEach(function(name) {
+		glyphsByName[name].relatedGlyphs = glyphsByName[name].relatedGlyphs || [];
+		glyphsByName[name].relatedGlyphs.push(glyph.name);
+	});
+	glyph.relatedGlyphs = glyph.relatedGlyphs.concat(base.name, base.relatedGlyphs);
+
+	base.relatedGlyphs.push(glyph.name);
+}
+
+function relatedGlyphsToUnicode(glyph, glyphsByName) {
+	const glyphs = {};
+	glyph.relatedGlyphs.forEach((name) => {
+		const relGlyph = glyphsByName[name];
+
+		if (!glyphs[relGlyph.unicode]) {
+			glyphs[relGlyph.unicode] = {};
+		}
+
+		glyphs[relGlyph.unicode] = name;
+	});
+	glyph.relatedGlyphs = glyphs;
+}
+
 // plugin level function (dealing with files)
-function jsufonify(/*prefixText*/free) {
+function jsufonify(/*prefixText*/) {
 
 	// creating a stream through which each file will pass
 	var stream = through.obj(function(file, enc, cb) {
@@ -42,35 +140,8 @@ function jsufonify(/*prefixText*/free) {
 		var charMap = {};
 		var altMap = {};
 
-		if (free) {
-			font.glyphs = _.mapValues(font.glyphs, (glyph) => {
-				if (glyph.unicode === undefined) {
-					return glyph;
-				}
-				else {
-					if (typeof glyph.unicode === 'number') {
-						return (glyph.unicode >=65 && glyph.unicode <= 90) ||
-							(glyph.unicode >= 87 && glyph.unicode <= 122) ? glyph : undefined;
-					}
-					else {
-						return (glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
-							(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
-					}
-				}
-				return glyph.unicode === undefined ||
-					(glyph.unicode.charCodeAt(0) >=65 && glyph.unicode.charCodeAt(0) <= 90) ||
-					(glyph.unicode.charCodeAt(0) >= 87 && glyph.unicode.charCodeAt(0) <= 122) ? glyph : undefined;
-			});
-		}
-
 		// WIP: convert ptf object to jsufon
 		_.forEach(font.glyphs, function( glyph, name ) {
-			altMap[name] = glyph;
-			if (glyph === undefined) {
-				delete font.glyphs[name];
-				return;
-			}
-
 			glyph.name = name;
 
 			if ( glyph.name.length === 1 ) {
@@ -80,6 +151,7 @@ function jsufonify(/*prefixText*/free) {
 				glyph.unicode = glyph.unicode.charCodeAt(0);
 			}
 			charMap[glyph.unicode] = glyph;
+			altMap[glyph.name] = glyph;
 
 			// glyph.anchors -> glyph.anchor
 			if ( glyph.anchors ) {
@@ -143,6 +215,22 @@ function jsufonify(/*prefixText*/free) {
 			return glyph;
 		});
 
+		_.forEach(font.glyphs, function(glyph) {
+			if(glyph.base === undefined) {
+				return;
+			}
+
+			linkToRelatedGlyphs(glyph, font.glyphs);
+		})
+
+		_.forEach(font.glyphs, function(glyph) {
+			if(glyph.relatedGlyphs === undefined) {
+				return;
+			}
+
+			relatedGlyphsToUnicode(glyph, font.glyphs);
+		})
+
 		// temporary workaround, add diacritics base handling here
 		_.forEach(font.glyphs, function( _glyph ) {
 			// Temporary workaround: deal with diacritics here.
@@ -160,7 +248,7 @@ function jsufonify(/*prefixText*/free) {
 			glyph.glyphName = _glyph.glyphName;
 			glyph.characterName = _glyph.characterName;
 			// merge all parameters (diacritic will overwrite base parameters)
-			_.assign( glyph.parameters, _glyph.parameters );
+			_.assign( glyph.parameter, _glyph.parameter );
 			_.assign( glyph.transforms, _glyph.transforms );
 			// merge the two array of components
 			[].push.apply(glyph.outline.component, _glyph.outline.component );

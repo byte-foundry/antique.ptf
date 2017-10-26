@@ -34,31 +34,28 @@ exports.glyphs['cent'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[3].expandedTo[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: - 176 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 47 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				3:
 					x: spacingLeft + (13/54) * thickness
 					y: Math.max(
@@ -68,11 +65,10 @@ exports.glyphs['cent'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: - 3 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[3].x
 					y: Math.min(
@@ -81,42 +77,38 @@ exports.glyphs['cent'] =
 					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 2 + 'deg'
 						distr: 0.25
-					})
 				5:
 					x: contours[0].nodes[2].x
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 47 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				6:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[4].expandedTo[0].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				7:
 					x: contours[0].nodes[6].x
 					y: Math.max(
 						contours[0].nodes[6].expandedTo[0].y - 131,
 						xHeight / 2 + 10
 					)
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -125,17 +117,15 @@ exports.glyphs['cent'] =
 					x: contours[0].nodes[5].expandedTo[0].x
 					y: - 50
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[1].nodes[0].x
 					y: xHeight + 45
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})

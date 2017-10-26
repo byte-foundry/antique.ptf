@@ -24,11 +24,10 @@ exports.glyphs['question'] =
 					x: spacingLeft + (14/54) * thickness
 					y: contours[0].nodes[1].y - Math.min( 97, ( 97 / 700 ) * capHeight )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: Math.min(
@@ -38,21 +37,19 @@ exports.glyphs['question'] =
 					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 1 / 180 * Math.PI
 						distr: 0.25
-					})
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 98 / 196 )
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				3:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 100 * width + 96 - (14),
@@ -61,33 +58,30 @@ exports.glyphs['question'] =
 					y: contours[0].nodes[1].y - 25
 					dirIn: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 174 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[2].x - (5)
 					y: ( 370 / 700 ) * capHeight - (10)
-					dirIn: Utils.lineAngle( contours[0].nodes[3].expandedTo[0].point, contours[0].nodes[4].point ) - ( 10 / 180 * Math.PI )
+					dirIn: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[0].x, y: contours[0].nodes[3].expandedTo[0].y}, {x: contours[0].nodes[4].x, y: contours[0].nodes[4].y}) - (10 / 180 * Math.PI)
 					typeOut: 'line'
 					tensionIn: 1.5
-					expand: Object({
+					expand:
 						width: ( 48 / 54 ) * thickness * contrast
-						angle: Utils.lineAngle( contours[0].nodes[3].expandedTo[0].point, contours[0].nodes[4].point ) - Math.PI / 2
+						angle: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[0].x, y: contours[0].nodes[3].expandedTo[0].y}, {x: contours[0].nodes[4].x, y: contours[0].nodes[4].y}) - Math.PI / 2
 						distr: 0.5
-					})
 				5:
 					x: contours[0].nodes[4].expandedTo[1].x + 10
 					y: Math.max(
 						( 170 / 700 ) * capHeight,
 						thickness + 20
 					)
-					expand: Object({
+					expand:
 						width: ( 27 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 1
-					})
 	components:
 		0:
 			base: ['dot', 'dotaccent_rounded']

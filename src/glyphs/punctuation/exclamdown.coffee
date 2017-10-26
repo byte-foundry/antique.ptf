@@ -6,8 +6,8 @@ exports.glyphs['exclamdown'] =
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg'],
-		['scaleY', -1],
 		['translateY', - xHeight]
+		['scaleY', -1],
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
@@ -26,20 +26,19 @@ exports.glyphs['exclamdown'] =
 					x: spacingLeft + (28/54) * thickness
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 464 / 700 ) * capHeight
 					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				2:
 					x: contours[0].nodes[0].x
 					y: - overshoot + Math.max(
@@ -49,11 +48,11 @@ exports.glyphs['exclamdown'] =
 							thickness * ( 60 / 54 )
 						)
 					) + ( 106 / 700 ) * capHeight
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 27 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 	components:
 		0:
 			base: ['dot', 'dotaccent_rounded']

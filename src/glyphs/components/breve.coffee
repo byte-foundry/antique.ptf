@@ -23,11 +23,10 @@ exports.glyphs['breve'] =
 					)
 					dirOut: - 90 + 'deg'
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: anchors[0].x
 					y: anchors[0].y
@@ -35,18 +34,16 @@ exports.glyphs['breve'] =
 					type: 'smooth'
 					tensionIn: 1.2
 					tensionOut: 1.2
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 180 + 90 + 'deg'
 						distr: 1
-					})
 				2:
 					x: anchors[0].x + (45 * width + 116 - (14)) / 2
 					y: contours[0].nodes[0].expandedTo[1].y
 					dirIn: - 90 + 'deg'
 					tensionIn: 1.2
-					expand: Object({
+					expand:
 						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 1
-					})

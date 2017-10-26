@@ -23,10 +23,10 @@ exports.glyphs['twosuperior'] =
 			base: 'two_base'
 			transformOrigin: anchors[0].point
 			transforms: Array(
-				[ 'translateY', capHeight * 0.571],
-				[ 'translateX', 0.563 * (spacingLeft)],
 				[ 'scaleX', 0.437 ],
 				[ 'scaleY', 0.437 ]
+				[ 'translateY', capHeight * 0.571],
+				[ 'translateX', 0.563 * (spacingLeft)],
 			)
 			parentParameters:
 				thickness: 1.35 * thickness

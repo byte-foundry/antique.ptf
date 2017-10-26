@@ -37,31 +37,28 @@ exports.glyphs['G_cap'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[3].expandedTo[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: - 173 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				3:
 					x: spacingLeft + (14/54) * thickness * opticThickness
 					y: Math.max(
@@ -71,11 +68,10 @@ exports.glyphs['G_cap'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: - 9 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[3].x
 					y: Math.min(
@@ -84,42 +80,38 @@ exports.glyphs['G_cap'] =
 					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 9 + 'deg'
 						distr: 0.25
-					})
 				5:
 					x: contours[0].nodes[2].x
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				6:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[4].expandedTo[0].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: 171 + 'deg'
 						distr: 0.25
-					})
 				7:
 					x: contours[0].nodes[6].x
 					y: Math.max(
 						contours[0].nodes[6].expandedTo[0].y - 32,
 						capHeight / 2 + 10
 					)
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -131,20 +123,18 @@ exports.glyphs['G_cap'] =
 					)
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
-					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -153,22 +143,18 @@ exports.glyphs['G_cap'] =
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness
-						angle: Utils.lineAngle( contours[0].nodes[1].expandedTo[0].point, contours[0].nodes[2].expandedTo[0].point )
+						angle: Utils.lineAngle({x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y}, {x: contours[0].nodes[2].expandedTo[0].x, y: contours[0].nodes[2].expandedTo[0].y})
 						distr: 0
-					})
 				1:
 					x: contours[2].nodes[0].expandedTo[0].x + 15
 					y: - overshoot / 2
-					dirIn: Math.min(Math.PI, Utils.lineAngle( contours[2].nodes[1].expandedTo[1].point, contours[2].nodes[0].expandedTo[0].point ) + ( 3 / 180 ) * thickness)
-					type: 'smooth'
-					expand: Object({
+					dirIn: Math.min(Math.PI, Utils.lineAngle({x: contours[2].nodes[1].expandedTo[1].x, y: contours[2].nodes[1].expandedTo[1].y}, {x: contours[2].nodes[0].expandedTo[0].x, y: contours[2].nodes[0].expandedTo[0].y}) + (3 / 180) * thickness)
+					expand:
 						width: ( 7 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 180 + 45 + 'deg'
 						distr: 0.75
-					})
 	components:
 		0:
 			base: ['serif-curve-inside-auto', 'none']
@@ -176,13 +162,13 @@ exports.glyphs['G_cap'] =
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[6].expandedTo[0]
-					baseHeight: contours[0].nodes[6].expandedTo[0].point
-					noneAnchor: contours[0].nodes[6].expandedTo[0].point
-					opposite: contours[0].nodes[6].expandedTo[1].point
+					baseHeight: contours[0].nodes[6].expandedTo[0]
+					noneAnchor: contours[0].nodes[6].expandedTo[0]
+					opposite: contours[0].nodes[6].expandedTo[1]
 					curveEnd: contours[0].nodes[5].expandedTo[0]
 					rotationAngle: -15
 					inverseOrder: true
-					rotationCenter: contours[0].nodes[6].expandedTo[0].point
+					rotationCenter: contours[0].nodes[6].expandedTo[0]
 			parentParameters:
 				serifWidth: Math.min(
 					serifWidth,
@@ -194,13 +180,13 @@ exports.glyphs['G_cap'] =
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[1].expandedTo[0]
-					baseHeight: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
+					baseHeight: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
 					curveEnd: contours[0].nodes[2].expandedTo[0]
 					rotationAngle: -15
 					down: true
-					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+					rotationCenter: contours[0].nodes[1].expandedTo[0]
 			parentParameters:
 				serifWidth: Math.min(
 					serifWidth,

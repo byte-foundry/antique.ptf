@@ -25,16 +25,14 @@ exports.glyphs['minus'] =
 					x: spacingLeft
 					y: ( 300 / 600 ) * xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 31 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x + 240 + 100 * width
 					y: contours[0].nodes[0].y
-					expand: Object({
+					expand:
 						width: ( 31 / 54 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
-					})

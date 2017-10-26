@@ -24,19 +24,18 @@ exports.glyphs['v'] =
 					x: spacingLeft + (13/54) * thickness
 					y: xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: contours[1].nodes[1].expandedTo[0].y
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 47 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -48,32 +47,31 @@ exports.glyphs['v'] =
 					)
 					y: xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: contours[0].nodes[1].x + 0.75 * ( 47 / 54 ) * thickness
 					y: 0
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 45 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 	components:
 		0:
 			base: ['serif-oblique-obtuse', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0]
 					scaleX: -1
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -83,11 +81,11 @@ exports.glyphs['v'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[1]
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -102,11 +100,11 @@ exports.glyphs['v'] =
 			id: 'topright2'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[0].expandedTo[1].point
-					noneAnchor: contours[1].nodes[0].expandedTo[1].point
-					opposite: contours[1].nodes[0].expandedTo[0].point
-					obliqueEndPoint: contours[1].nodes[1].expandedTo[1].point
-			transformOrigin: contours[1].nodes[0].expandedTo[1].point
+					base: contours[1].nodes[0].expandedTo[1]
+					noneAnchor: contours[1].nodes[0].expandedTo[1]
+					opposite: contours[1].nodes[0].expandedTo[0]
+					obliqueEndPoint: contours[1].nodes[1].expandedTo[1]
+			transformOrigin: contours[1].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -117,13 +115,13 @@ exports.glyphs['v'] =
 			id: 'topleft2'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[0].expandedTo[0].point
-					noneAnchor: contours[1].nodes[0].expandedTo[0].point
-					opposite: contours[1].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[1].nodes[1].expandedTo[0].point
+					base: contours[1].nodes[0].expandedTo[0]
+					noneAnchor: contours[1].nodes[0].expandedTo[0]
+					opposite: contours[1].nodes[0].expandedTo[1]
+					obliqueEndPoint: contours[1].nodes[1].expandedTo[0]
 					scaleX: -1
 					reversed: true
-			transformOrigin: contours[1].nodes[0].expandedTo[0].point
+			transformOrigin: contours[1].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]

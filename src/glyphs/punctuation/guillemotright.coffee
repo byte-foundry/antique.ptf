@@ -21,11 +21,10 @@ exports.glyphs['guillemotright'] =
 					x: spacingLeft + (10/54) * thickness
 					y: xHeight - ( 65 / 600 ) * xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 42 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 3 - (10),
@@ -33,20 +32,19 @@ exports.glyphs['guillemotright'] =
 					)
 					y: contours[0].nodes[2].y + ( contours[0].nodes[0].y - contours[0].nodes[2].y ) * 0.5
 					typeOut: 'line'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 42 / 54 ) * thickness * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].y - ( 284 / 600 ) * xHeight
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 42 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -58,11 +56,10 @@ exports.glyphs['guillemotright'] =
 					)
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 42 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[1].nodes[0].expandedTo[0].x + 100 * width + 3 - (10),
@@ -70,17 +67,16 @@ exports.glyphs['guillemotright'] =
 					)
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 42 / 54 ) * thickness * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 				2:
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[2].y
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 42 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
 						angle: 0 + 'deg'
 						distr: 0
-					})

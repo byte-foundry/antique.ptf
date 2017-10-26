@@ -32,32 +32,29 @@ exports.glyphs['Q_cap'] =
 					) # TODO
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: - 170 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: spacingLeft + (13/54) * thickness * opticThickness
 					y: contours[0].nodes[0].y
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: - 10 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[2].x
 					y: Math.min(
@@ -66,32 +63,29 @@ exports.glyphs['Q_cap'] =
 					) # TODO
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: 10 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[1].x
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				5:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[3].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: 170 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -100,27 +94,24 @@ exports.glyphs['Q_cap'] =
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].expandedTo[0].y
 					dirOut: - 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 67 / 54 ) * thickness * contrast
 						angle: Math.min(
-							Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[0].point ) + (( 5 / 54 ) * thickness) / 180 * Math.PI,
-							Utils.lineAngle( contours[0].nodes[0].expandedTo[0].point, contours[0].nodes[1].expandedTo[1].point ) - ( 5 - 5 * width ) / 180 * Math.PI
+							Utils.lineAngle({x: contours[0].nodes[0].expandedTo[0].x, y: contours[0].nodes[0].expandedTo[0].y}, {x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y}) + ((5 / 54) * thickness) / 180 * Math.PI,
+							Utils.lineAngle({x: contours[0].nodes[0].expandedTo[0].x, y: contours[0].nodes[0].expandedTo[0].y}, {x: contours[0].nodes[1].expandedTo[1].x, y: contours[0].nodes[1].expandedTo[1].y}) - (5 - 5 * width) / 180 * Math.PI
 						)
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 20 * width
 					y: - ( 8 / 5 ) * overshoot
 					dirIn: Math.min(
-						Math.PI + Utils.lineAngle( contours[1].nodes[0].expandedTo[1].point, contours[1].nodes[1].expandedTo[1].point ) + ( 25 / 180 * Math.PI ),
+						Math.PI + Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y}) + (25 / 180 * Math.PI),
 						Math.PI
 					)
-					expand: Object({
+					expand:
 						width: ( 4 / 54 ) * thickness * contrast
 						angle: contours[1].nodes[0].expand.angle
 						distr: 0
-					})
 		2:
 			skeleton: false
 			closed: true
@@ -129,15 +120,17 @@ exports.glyphs['Q_cap'] =
 					x: contours[1].nodes[0].expandedTo[0].x
 					y: contours[1].nodes[0].expandedTo[0].y
 					dirOut: - 90 + 'deg'
+					typeIn: 'line'
 				1:
 					x: contours[1].nodes[1].expandedTo[0].x
 					y: contours[1].nodes[1].expandedTo[0].y
-					dirIn: Utils.lineAngle( contours[2].nodes[1].point, contours[2].nodes[0].point ) + ( 20 / 180 * Math.PI )
+					dirIn: Utils.lineAngle({x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}, {x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}) + (20 / 180 * Math.PI)
 					typeOut: 'line'
 				2:
 					x: contours[1].nodes[1].expandedTo[1].x
 					y: contours[1].nodes[1].expandedTo[1].y
 					dirOut: contours[1].nodes[1].dirIn
+					typeIn: 'smooth'
 				3:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].expandedTo[1].y

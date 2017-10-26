@@ -24,31 +24,28 @@ exports.glyphs['asciicircum'] =
 					x: spacingLeft + thickness * 40/54 * 0.25
 					y: contours[0].nodes[1].y - 223/700 * capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 40 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[3].expandedTo[0].x ) / 2
 					y: capHeight + overshoot / 2 - Math.sin(80 / 180 * Math.PI) * 63/54 * thickness
 					typeIn: 'line'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 62 / 54 ) * thickness
 						angle: -80 + 'deg'
 						distr: 1
-					})
 				2:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y
 					typeIn: 'line'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 62 / 54 ) * thickness
 						angle: -99 + 'deg'
 						distr: 1
-					})
 				3:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 149 - thickness * 40/54 * 0.25,
@@ -56,8 +53,7 @@ exports.glyphs['asciicircum'] =
 					)
 					y: contours[0].nodes[0].y
 					typeIn: 'line'
-					expand: Object({
+					expand:
 						width: ( 40 / 54 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})

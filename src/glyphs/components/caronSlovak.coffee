@@ -18,17 +18,15 @@ exports.glyphs['caronSlovak'] =
 					x: anchors[0].x + ( 28 / 54 ) * thickness * 0.25
 					y: contours[0].nodes[1].y - 97
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 28 / 54 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: contours[0].nodes[0].x + 20 - ( 28 / 54 ) * thickness * 0.25
 					y: anchors[0].y
 					typeIn: 'line'
-					expand: Object({
+					expand:
 						width: 50 / 54 * thickness
 						angle: 180 + 'deg'
 						distr: 1
-					})

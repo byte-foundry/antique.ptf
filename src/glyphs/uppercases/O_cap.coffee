@@ -37,32 +37,29 @@ exports.glyphs['O_cap'] =
 					) # TODO
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: - 170 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: spacingLeft + (13/54) * thickness * opticThickness
 					y: contours[0].nodes[0].y
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: - 10 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[2].x
 					y: Math.min(
@@ -71,29 +68,26 @@ exports.glyphs['O_cap'] =
 					) # TODO
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: 10 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[1].x
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				5:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[3].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
 						angle: 170 + 'deg'
 						distr: 0.25
-					})

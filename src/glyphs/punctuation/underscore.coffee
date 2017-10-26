@@ -25,18 +25,16 @@ exports.glyphs['underscore'] =
 					y: - 60 - (6)
 					dirOut: 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.2
-					})
 				1:
 					x: contours[0].nodes[0].x + 100 * width + 140
 					y: contours[0].nodes[0].y
 					dirOut: 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.2
-					})

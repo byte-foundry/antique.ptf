@@ -25,22 +25,20 @@ exports.glyphs['seven'] =
 					x: spacingLeft
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[0].x + 60 + Math.max( 46, ( 46 / 54 ) * thickness ) + 100 * width,
 						contours[1].nodes[1].x + 175
 					)
 					y: capHeight
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -49,30 +47,28 @@ exports.glyphs['seven'] =
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 52 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].expandedTo[1].point ) - Math.PI / 2
+						angle: Utils.lineAngle({x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y}) - Math.PI / 2
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0] .x + 31 * width
 					y: 0
-					expand: Object({
-						width: thickness / Math.sin( Utils.lineAngle( contours[1].nodes[0].point, { x: contours[1].nodes[1].x + thickness, y: contours[1].nodes[1].y } ) )
+					expand:
+						width: thickness / Math.sin( Utils.lineAngle( {x: contours[1].nodes[0].x , y: contours[1].nodes[0].y}, { x: contours[1].nodes[1].x + thickness, y: contours[1].nodes[1].y } ) )
 						angle: 0 + 'deg'
 						distr: 1
-					})
 	components:
 		0:
 			base: ['none', 'serif-horizontal']
 			id: 'toprighttop'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -84,11 +80,11 @@ exports.glyphs['seven'] =
 			id: 'toprightbottom'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				# [ 'skewX', - 10 * serifRotate + 'deg' ],
@@ -99,18 +95,18 @@ exports.glyphs['seven'] =
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[1].expandedTo[1].point
-					noneAnchor: contours[1].nodes[1].expandedTo[1].point
-					opposite: contours[1].nodes[1].expandedTo[0].point
-					obliqueEndPoint: contours[1].nodes[0].expandedTo[1].point
+					base: contours[1].nodes[1].expandedTo[1]
+					noneAnchor: contours[1].nodes[1].expandedTo[1]
+					opposite: contours[1].nodes[1].expandedTo[0]
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[1]
 		3:
 			base: ['serif-oblique-acute', 'none']
 			id: 'bottomright'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[1].expandedTo[0].point
-					noneAnchor: contours[1].nodes[1].expandedTo[0].point
-					opposite: contours[1].nodes[1].expandedTo[1].point
-					obliqueEndPoint: contours[1].nodes[0].expandedTo[0].point
+					base: contours[1].nodes[1].expandedTo[0]
+					noneAnchor: contours[1].nodes[1].expandedTo[0]
+					opposite: contours[1].nodes[1].expandedTo[1]
+					obliqueEndPoint: contours[1].nodes[0].expandedTo[0]
 					scaleX: -1
 					reversed: true

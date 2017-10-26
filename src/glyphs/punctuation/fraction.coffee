@@ -27,20 +27,16 @@ exports.glyphs['fraction'] =
 				0:
 					x: spacingLeft
 					y: 0
-					dirOut: 0 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 28 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 100 * width + 49 + Math.max(162, 1.8 * thickness) + (1 - contrast) * thickness * 0.5
 					y: capHeight
-					dirOut: 0 + 'deg'
-					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 28 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0
-					})

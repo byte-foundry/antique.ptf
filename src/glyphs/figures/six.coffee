@@ -24,28 +24,25 @@ exports.glyphs['six'] =
 					x: contours[0].nodes[5].expandedTo[1].x
 					y: contours[0].nodes[2].expandedTo[1].y
 					dirIn: 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 20 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 1
-					})
 				1:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[2].expandedTo[0].x ) * ( 77 / 157 )
 					y: ( 402 / 700 ) * capHeight - (0)
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 53 / 54 ) * thickness * contrast
 						angle: Math.PI / 2 + Math.acos( Math.max(
 							Math.min(
 								( ( ( contours[0].nodes[5].x - contours[0].nodes[6].expandedTo[1].x ) - ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[6].expandedTo[1].x ) * ( 41 / 82 ) ) ) / ( ( 53 / 54 ) * thickness ),
-								Utils.lineAngle( contours[0].nodes[5].point, contours[0].nodes[6].expandedTo[1].point )
+								Utils.lineAngle({x: contours[0].nodes[5].x, y: contours[0].nodes[5].y}, {x: contours[0].nodes[6].expandedTo[1].x, y: contours[0].nodes[6].expandedTo[1].y})
 							),
 							- 0.95
 						))
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[5].expandedTo[0].x + 100 * width + 94 - (13),
@@ -58,31 +55,28 @@ exports.glyphs['six'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: 170 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[5].expandedTo[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 53 / 54 ) * thickness
 						angle: - 171 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[5].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[5].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				5:
 					x: spacingLeft + (13/54) * thickness
 					y: Math.max(
@@ -92,11 +86,10 @@ exports.glyphs['six'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: - 8 + 'deg'
 						distr: 0.25
-					})
 				6:
 					x: contours[0].nodes[5].x
 					y: Math.min(
@@ -105,39 +98,35 @@ exports.glyphs['six'] =
 					)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 6 + 'deg'
 						distr: 0.25
-					})
 				7:
 					x: contours[0].nodes[4].x
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				8:
 					x: contours[0].nodes[2].x
 					y: contours[0].nodes[6].expandedTo[0].y
 					dirIn: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 173 + 'deg'
 						distr: 0.25
-					})
 				9:
 					x: contours[0].nodes[8].x
 					y: contours[0].nodes[8].expandedTo[0].y - Math.min( 32, ( 32 / 700 ) * capHeight )
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 	components:
 		0:
 			base: ['serif-curve-inside-auto', 'none']
@@ -145,13 +134,13 @@ exports.glyphs['six'] =
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[8].expandedTo[0]
-					baseHeight: contours[0].nodes[8].expandedTo[0].point
-					noneAnchor: contours[0].nodes[8].expandedTo[0].point
-					opposite: contours[0].nodes[8].expandedTo[1].point
+					baseHeight: contours[0].nodes[8].expandedTo[0]
+					noneAnchor: contours[0].nodes[8].expandedTo[0]
+					opposite: contours[0].nodes[8].expandedTo[1]
 					curveEnd: contours[0].nodes[7].expandedTo[0]
 					rotationAngle: -15
 					inverseOrder: true
-					rotationCenter: contours[0].nodes[8].expandedTo[0].point
+					rotationCenter: contours[0].nodes[8].expandedTo[0]
 			parentParameters:
 				serifWidth: Math.min(
 					serifWidth,

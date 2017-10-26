@@ -21,6 +21,6 @@ exports.glyphs['semicolon'] =
 			id: 'top'
 			parentAnchors:
 				0:
-					x: anchors[0].dot
+					x: parentAnchors[0].dot
 					y: Math.max(363 / 600 * xHeight- 60 / 54 * thickness, 60 / 54 * thickness + 1 / 10 * xHeight)
 					optical: 60

@@ -29,20 +29,18 @@ exports.glyphs['t'] =
 					x: spacingLeft
 					y: xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x - 32
 					y: xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -59,31 +57,28 @@ exports.glyphs['t'] =
 					dirOut: - 90 + 'deg'
 					typeOut: 'line'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness * contrast * contrastExtremity
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[1].nodes[0].x
 					y: contours[1].nodes[3].expandedTo[0].y
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: thickness * contrast * contrastExtremity
 						angle: - 176 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: contours[1].nodes[3].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[1].nodes[3].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 47 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				3:
 					x: contours[0].nodes[0].x + 45 * width + (13/54) * thickness
 					y: Math.max(
@@ -93,38 +88,34 @@ exports.glyphs['t'] =
 					dirIn: - 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: - 3 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[1].nodes[3].x
 					y: xHeight + ( 40 / 600 ) * xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				5:
 					x: contours[1].nodes[4].expandedTo[1].x
 					y: contours[1].nodes[4].expandedTo[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[1].nodes[6].expand.width
 						angle: contours[1].nodes[6].expand.angle
 						distr: contours[1].nodes[6].expand.distr
-					})
 				6:
 					x: contours[1].nodes[4].expandedTo[1].x
 					y: contours[1].nodes[4].expandedTo[1].y + ( Math.min( 70, (thickness + 16) ) / 600 ) * xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 17 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 1
-					})
 		2:
 			skeleton: false
 			closed: true

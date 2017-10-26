@@ -33,16 +33,15 @@ exports.glyphs['comma'] =
 						120
 					)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: spacingLeft + (9/54) * thickness
 					y: - 70
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 35 / 54 ) * thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
-					})

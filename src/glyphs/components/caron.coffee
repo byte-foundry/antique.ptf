@@ -14,7 +14,10 @@ exports.glyphs['caron'] =
 			base: 'circumflex'
 			parentAnchors:
 				0:
-					x: anchors[0].x
-					y: anchors[0].y
-			transformOrigin: anchors[0].point
-			transforms: Array( [ 'scaleY', -1 ], ['translateY', - 60] )
+					x: parentAnchors[0].x
+					y: parentAnchors[0].y
+			transformOrigin: Object({x: anchors[0].x, y: anchors[0].y})
+			transforms: Array(
+				['translateY', -60]
+				[ 'scaleY', -1 ],
+			)

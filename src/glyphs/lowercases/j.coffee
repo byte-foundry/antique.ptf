@@ -24,11 +24,10 @@ exports.glyphs['j'] =
 					x: spacingLeft + (13/54) * thickness
 					y: xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: Math.min(
@@ -36,36 +35,33 @@ exports.glyphs['j'] =
 
 					)
 					dirOut: - 90 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 55 / 54 ) * thickness
 						angle: 9 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x - 45
 					y: contours[0].nodes[3].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: Math.min(
 							( 48 / 54 ) * thickness * contrast * contrastExtremity,
 							- ( ( 53 / 90 ) * descender + 10 ) - 10
 						)
 						angle: - 82 + 'deg'
 						distr: 0
-					})
 				3:
 					x: contours[0].nodes[2].expandedTo[1].x - 22 * width
 					y: ( 53 / 90 ) * descender - 10
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: Math.min(
 							( 47 / 54 ) * thickness * contrast * contrastExtremity,
 							- ( ( 53 / 90 ) * descender + 10 ) - 10
 						)
 						angle: 180 + 90 + 'deg'
 						distr: 0
-					})
 	components:
 		0:
 			base: ['dotaccent', 'dotaccent_rounded']
@@ -80,11 +76,11 @@ exports.glyphs['j'] =
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
 					reversed: true
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
@@ -93,10 +89,10 @@ exports.glyphs['j'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -106,10 +102,10 @@ exports.glyphs['j'] =
 			id: 'bottom'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[3].expandedTo[0].point
-					noneAnchor: contours[0].nodes[3].expandedTo[0].point
-					opposite: contours[0].nodes[3].expandedTo[1].point
-			transformOrigin: contours[0].nodes[3].expandedTo[0].point
+					base: contours[0].nodes[3].expandedTo[0]
+					noneAnchor: contours[0].nodes[3].expandedTo[0]
+					opposite: contours[0].nodes[3].expandedTo[1]
+			transformOrigin: contours[0].nodes[3].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]

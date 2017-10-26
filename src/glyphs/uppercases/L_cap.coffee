@@ -32,19 +32,17 @@ exports.glyphs['L_cap'] =
 					x: spacingLeft + (14/54) * thickness * opticThickness
 					y: 0
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -54,11 +52,10 @@ exports.glyphs['L_cap'] =
 					y: contours[0].nodes[0].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 50,
@@ -67,30 +64,29 @@ exports.glyphs['L_cap'] =
 					y: 0
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
+					base: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
@@ -99,10 +95,10 @@ exports.glyphs['L_cap'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[1].point
-					noneAnchor: contours[0].nodes[1].expandedTo[1].point
-					opposite: contours[0].nodes[1].expandedTo[0].point
-			transformOrigin: contours[0].nodes[1].expandedTo[1].point
+					base: contours[0].nodes[1].expandedTo[1]
+					noneAnchor: contours[0].nodes[1].expandedTo[1]
+					opposite: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -112,11 +108,11 @@ exports.glyphs['L_cap'] =
 			id: 'bottomrighttop'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[1].expandedTo[1].point
-					noneAnchor: contours[1].nodes[1].expandedTo[1].point
-					opposite: contours[1].nodes[1].expandedTo[0].point
+					base: contours[1].nodes[1].expandedTo[1]
+					noneAnchor: contours[1].nodes[1].expandedTo[1]
+					opposite: contours[1].nodes[1].expandedTo[0]
 					reversed: true
-			transformOrigin: contours[1].nodes[1].expandedTo[1].point
+			transformOrigin: contours[1].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
 				# [ 'skewX', - 10 * serifRotate + 'deg' ],
@@ -140,10 +136,10 @@ exports.glyphs['L_cap'] =
 			id: 'bottomrightbottom'
 			parentAnchors:
 				0:
-					base: contours[1].nodes[1].expandedTo[0].point
-					noneAnchor: contours[1].nodes[1].expandedTo[0].point
-					opposite: contours[1].nodes[1].expandedTo[1].point
-			transformOrigin: contours[1].nodes[1].expandedTo[0].point
+					base: contours[1].nodes[1].expandedTo[0]
+					noneAnchor: contours[1].nodes[1].expandedTo[0]
+					opposite: contours[1].nodes[1].expandedTo[1]
+			transformOrigin: contours[1].nodes[1].expandedTo[0]
 			transforms: Array(
 				# [ 'skewX', - 10 * serifRotate + 'deg' ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]

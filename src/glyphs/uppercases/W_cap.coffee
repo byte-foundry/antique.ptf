@@ -42,19 +42,18 @@ exports.glyphs['W_cap'] =
 					x: spacingLeft + (14/54) * thickness
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 40
 					y: 0
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: anchors[1].thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -63,19 +62,18 @@ exports.glyphs['W_cap'] =
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[3].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5 - 0.25 * anchors[0].thickness
 					y: capHeight - ( thickness / anchors[0].thickness ) * 50 + (54)
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: anchors[0].thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].y
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: anchors[1].thickness * contrast
 						angle: 0 + 'deg'
 						distr: ( 12 / 44 ) * contrast
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -84,19 +82,18 @@ exports.glyphs['W_cap'] =
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: contours[1].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: anchors[0].thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[3].nodes[1].expandedTo[0].x
 					y: contours[3].nodes[1].y
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: anchors[1].thickness
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 		3:
 			skeleton: true
 			closed: false
@@ -108,32 +105,31 @@ exports.glyphs['W_cap'] =
 					)
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.75
-					})
 				1:
 					x: contours[3].nodes[0].expandedTo[1].x - 40
 					y: 0
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: anchors[1].thickness * contrast
 						angle: 0 + 'deg'
 						distr: 1
-					})
 	components:
 		0:
 			base: ['serif-oblique-obtuse', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[0]
 					scaleX: -1
 					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[0].point
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -143,11 +139,11 @@ exports.glyphs['W_cap'] =
 			id: 'topright'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[1].point
-					opposite: contours[0].nodes[0].expandedTo[0].point
-					obliqueEndPoint: contours[0].nodes[1].expandedTo[1].point
-			transformOrigin: contours[0].nodes[0].expandedTo[1].point
+					base: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					obliqueEndPoint: contours[0].nodes[1].expandedTo[1]
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -162,11 +158,11 @@ exports.glyphs['W_cap'] =
 			id: 'topright2'
 			parentAnchors:
 				0:
-					base: contours[3].nodes[0].expandedTo[1].point
-					noneAnchor: contours[3].nodes[0].expandedTo[1].point
-					opposite: contours[3].nodes[0].expandedTo[0].point
-					obliqueEndPoint: contours[3].nodes[1].expandedTo[1].point
-			transformOrigin: contours[3].nodes[0].expandedTo[1].point
+					base: contours[3].nodes[0].expandedTo[1]
+					noneAnchor: contours[3].nodes[0].expandedTo[1]
+					opposite: contours[3].nodes[0].expandedTo[0]
+					obliqueEndPoint: contours[3].nodes[1].expandedTo[1]
+			transformOrigin: contours[3].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
@@ -177,13 +173,13 @@ exports.glyphs['W_cap'] =
 			id: 'topleft2'
 			parentAnchors:
 				0:
-					base: contours[3].nodes[0].expandedTo[0].point
-					noneAnchor: contours[3].nodes[0].expandedTo[0].point
-					opposite: contours[3].nodes[0].expandedTo[1].point
-					obliqueEndPoint: contours[3].nodes[1].expandedTo[0].point
+					base: contours[3].nodes[0].expandedTo[0]
+					noneAnchor: contours[3].nodes[0].expandedTo[0]
+					opposite: contours[3].nodes[0].expandedTo[1]
+					obliqueEndPoint: contours[3].nodes[1].expandedTo[0]
 					scaleX: -1
 					reversed: true
-			transformOrigin: contours[3].nodes[0].expandedTo[0].point
+			transformOrigin: contours[3].nodes[0].expandedTo[0]
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]

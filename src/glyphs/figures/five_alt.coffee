@@ -26,11 +26,10 @@ exports.glyphs['five_alt'] =
 					x: spacingLeft + (14/ 54) * thickness
 					y: contours[0].nodes[1].y + Math.min( 31, ( 31 / 700 ) * capHeight )
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: Math.max(
@@ -39,21 +38,19 @@ exports.glyphs['five_alt'] =
 					)
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: - 8 + 'deg'
 						distr: 0.25
-					})
 				2:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[3].expandedTo[0].x ) * ( 98 / 196 )
 					y: - overshoot
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				3:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 96 - (14),
@@ -62,50 +59,46 @@ exports.glyphs['five_alt'] =
 					y: contours[0].nodes[1].y
 					dirIn: - 90 + 'deg'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: - 172 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[0].nodes[3].x
 					y: contours[0].nodes[6].y - (3)
 					dirOut: 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: 170 + 'deg'
 						distr: 0.25
-					})
 				5:
 					x: ( contours[0].nodes[6].expandedTo[0].x + contours[0].nodes[4].expandedTo[0].x ) * ( 67 / 145 )
 					y: ( 422 / 700 ) * capHeight * crossbar - (0)
 					dirOut: 180 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 51 / 54 ) * thickness * contrast
 						angle: Math.PI / 2 + Math.acos( Math.max(
 							Math.min(
 								( ( ( contours[0].nodes[5].x - contours[0].nodes[6].expandedTo[1].x ) - ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[6].expandedTo[1].x ) * ( 41 / 82 ) ) ) / ( ( 51 / 54 ) * thickness * contrast ),
-								Utils.lineAngle( contours[0].nodes[5].point, contours[0].nodes[6].expandedTo[1].point )
+								Utils.lineAngle({x: contours[0].nodes[5].x, y: contours[0].nodes[5].y}, {x: contours[0].nodes[6].expandedTo[1].x, y: contours[0].nodes[6].expandedTo[1].y})
 							),
 							- 0.95
 						))
 						distr: 0
-					})
 				6:
 					x: contours[1].nodes[2].expandedTo[1].x
 					y: Math.min(
 						( 326 / 700 ) * capHeight * crossbar - Math.max( 25, ( 25 / 54 ) * thickness) + 25,
-						contours[0].nodes[5].y - Math.cos( contours[0].nodes[5].expand.angle + Math.PI / 2 ) * contours[0].nodes[5].expand.width - 10
+						#contours[0].nodes[5].y - Math.cos( contours[0].nodes[5].expand.angle + Math.PI / 2 ) * contours[0].nodes[5].expand.width - 10
+						contours[0].nodes[5].y - 10
 					)
 					dirIn: 90 + 'deg'
-					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 6 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 1
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -114,29 +107,26 @@ exports.glyphs['five_alt'] =
 					x: contours[1].nodes[1].expandedTo[0].x
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x
 					y: contours[0].nodes[5].expandedTo[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + 11
 					y: contours[0].nodes[6].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 46 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -145,33 +135,31 @@ exports.glyphs['five_alt'] =
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[2].nodes[0].expandedTo[0].x + 100 * width + 37 - (22),
 						contours[0].nodes[4].expandedTo[0].x - 11
 					)
 					y: capHeight
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 	components:
 		0:
 			base: ['none', 'serif-horizontal']
 			id: 'toprighttop'
 			parentAnchors:
 				0:
-					base: contours[2].nodes[1].expandedTo[0].point
-					noneAnchor: contours[2].nodes[1].expandedTo[0].point
-					opposite: contours[2].nodes[1].expandedTo[1].point
+					base: contours[2].nodes[1].expandedTo[0]
+					noneAnchor: contours[2].nodes[1].expandedTo[0]
+					opposite: contours[2].nodes[1].expandedTo[1]
 					reversed: true
-			transformOrigin: contours[2].nodes[1].expandedTo[0].point
+			transformOrigin: contours[2].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ],
 				# [ 'skewX', - 10 * serifRotate + 'deg' ],
@@ -182,10 +170,10 @@ exports.glyphs['five_alt'] =
 			id: 'toprightbottom'
 			parentAnchors:
 				0:
-					base: contours[2].nodes[1].expandedTo[1].point
-					noneAnchor: contours[2].nodes[1].expandedTo[1].point
-					opposite: contours[2].nodes[1].expandedTo[0].point
-			transformOrigin: contours[2].nodes[1].expandedTo[1].point
+					base: contours[2].nodes[1].expandedTo[1]
+					noneAnchor: contours[2].nodes[1].expandedTo[1]
+					opposite: contours[2].nodes[1].expandedTo[0]
+			transformOrigin: contours[2].nodes[1].expandedTo[1]
 			transforms: Array(
 				# [ 'skewX', - 10 * serifRotate + 'deg' ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
@@ -196,14 +184,14 @@ exports.glyphs['five_alt'] =
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[1].expandedTo[0]
-					baseHeight: contours[0].nodes[1].expandedTo[0].point
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
+					baseHeight: contours[0].nodes[1].expandedTo[0]
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
 					curveEnd: contours[0].nodes[2].expandedTo[0]
 					rotationAngle: -15
 					left: true
 					down: true
-					rotationCenter: contours[0].nodes[1].expandedTo[0].point
+					rotationCenter: contours[0].nodes[1].expandedTo[0]
 			parentParameters:
 				serifWidth: Math.min(
 					serifWidth,

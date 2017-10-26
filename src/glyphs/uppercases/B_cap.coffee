@@ -25,19 +25,17 @@ exports.glyphs['B_cap'] =
 					x: spacingLeft + (14/54) * thickness * opticThickness
 					y: 0
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -47,11 +45,10 @@ exports.glyphs['B_cap'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) * ( 39 / 84 ),
@@ -60,11 +57,10 @@ exports.glyphs['B_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 100 * width + 98 - (14),
@@ -80,11 +76,10 @@ exports.glyphs['B_cap'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 182 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[1].nodes[2].x
 					y: Math.max(
@@ -96,30 +91,27 @@ exports.glyphs['B_cap'] =
 					)
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 59 / 54 ) * thickness * opticThickness
 						angle: - 165 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[1].nodes[1].x
 					y: ( 370 / 700 ) * capHeight * crossbar
 					dirIn: 0 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 36 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 				5:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[1].nodes[4].y
-					expand: Object({
+					expand:
 						width: ( 36 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.5
-					})
 		2:
 			skeleton: true
 			closed: false
@@ -129,11 +121,10 @@ exports.glyphs['B_cap'] =
 					y: contours[1].nodes[5].expandedTo[1].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				1:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[1].x + ( contours[2].nodes[2].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) * ( 50 / 91 ),
@@ -142,11 +133,10 @@ exports.glyphs['B_cap'] =
 					y: contours[2].nodes[0].y
 					dirOut: 0 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
-					})
 				2:
 					x: Math.max(
 						contours[0].nodes[1].expandedTo[0].x + 100 * width + 105 - (14),
@@ -159,11 +149,10 @@ exports.glyphs['B_cap'] =
 					dirIn: 90 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 182 + 'deg'
 						distr: 0.25
-					})
 				3:
 					x: contours[2].nodes[2].x
 					y: Math.max(
@@ -172,49 +161,46 @@ exports.glyphs['B_cap'] =
 					)
 					dirOut: - 90 + 'deg'
 					type: 'smooth'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 180 + 'deg'
 						distr: 0.25
-					})
 				4:
 					x: contours[2].nodes[1].x
 					y: 0
 					dirIn: 0 + 'deg'
 					type: 'smooth'
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 				5:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[0].y
-					expand: Object({
+					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
-					})
 	components:
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[0].expandedTo[0].point
-					opposite: contours[0].nodes[0].expandedTo[1].point
-					noneAnchor: contours[0].nodes[0].expandedTo[0].point
+					base: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
 			parentAnchors:
 				0:
-					base: contours[0].nodes[1].expandedTo[0].point
-					opposite: contours[0].nodes[1].expandedTo[1].point
+					base: contours[0].nodes[1].expandedTo[0]
+					opposite: contours[0].nodes[1].expandedTo[1]
 					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[0].point
-			transformOrigin: contours[0].nodes[1].expandedTo[0].point
+					noneAnchor: contours[0].nodes[1].expandedTo[0]
+			transformOrigin: contours[0].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)

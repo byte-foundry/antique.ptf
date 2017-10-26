@@ -13,14 +13,11 @@ exports.glyphs['ordmasculine'] =
 		'punctuation'
 	]
 	base: 'o'
-	transformOrigin:
-		x: 0
-		y: 0
 	transforms: Array(
-		[ 'translateY', capHeight * 0.565],
-		[ 'translateX', 0.496 * (spacingLeft)],
 		[ 'scaleX', 0.504 ],
 		[ 'scaleY', 0.504 ]
+		[ 'translateY', capHeight * 0.565],
+		[ 'translateX', 0.496 * (spacingLeft)],
 	)
 	components:
 		0:
@@ -28,7 +25,7 @@ exports.glyphs['ordmasculine'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + 5
+					x: parentAnchors[0].x + 5
 					y: -80
 			parentParameters:
 				width: 1.16 * width

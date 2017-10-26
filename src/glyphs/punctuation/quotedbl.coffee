@@ -25,20 +25,18 @@ exports.glyphs['quotedbl'] =
 					x: spacingLeft + (15/54) * thickness
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y - 100 - Math.min( 80, ( 80 / 54 ) * thickness )
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -47,17 +45,15 @@ exports.glyphs['quotedbl'] =
 					x: contours[0].nodes[0].expandedTo[1].x + 78
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[1].nodes[0].x
 					y: contours[1].nodes[0].y - 100 - Math.min( 80, ( 80 / 54 ) * thickness )
 					dirOut: 0 + 'deg'
-					expand: Object({
+					expand:
 						width: ( 30 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})

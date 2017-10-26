@@ -23,10 +23,10 @@ exports.glyphs['zerosuperior'] =
 			base: 'zero_base'
 			transformOrigin: anchors[0].point
 			transforms: Array(
-				[ 'translateY', capHeight * 0.564],
-				[ 'translateX', 0.556 * (spacingLeft)],
 				[ 'scaleX', 0.444 ],
 				[ 'scaleY', 0.444 ]
+				[ 'translateY', capHeight * 0.564],
+				[ 'translateX', 0.556 * (spacingLeft)],
 			)
 			parentParameters:
 				thickness: 1.35 * thickness

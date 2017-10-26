@@ -28,17 +28,15 @@ exports.glyphs['graveaccent'] =
 					x: contours[0].nodes[1].expandedTo[1].x - ( 35 / 54 ) * thickness * contrast * contrastExtremity * 0.4 + 28 * width
 					y: contours[0].nodes[1].expandedTo[1].y - 60
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.1
-					})
 				1:
 					x: spacingLeft
 					y: xHeight + diacriticHeight + 60
-					type: 'smooth'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 1
-					})

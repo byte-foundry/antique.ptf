@@ -25,22 +25,20 @@ exports.glyphs['bullet'] =
 					x: spacingLeft + (46/54) * thickness
 					y: ( 251 / 600 ) * xHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 92 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: Math.max(
 						xHeight - ( ( thickness + 195 ) / 600 ) * xHeight,
 						contours[0].nodes[0].y
 					)
-					expand: Object({
+					expand:
 						width: ( 92 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 		1:
 			skeleton: false
 			closed: true

@@ -24,20 +24,18 @@ exports.glyphs['asterisk'] =
 					x: spacingLeft + 53 + (thickness * ( 96 / 115 )) / 2
 					y: capHeight + (xHeight - 700) - 32
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * ( 31 / 54 )
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y + 68
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: thickness * ( 22 / 54 ) * contrast
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 		1:
 			skeleton: true
 			closed: false
@@ -46,21 +44,19 @@ exports.glyphs['asterisk'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[0].expand.width
 						angle: contours[0].nodes[0].expand.angle
 						distr: contours[0].nodes[0].expand.distr
-					})
 				1:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[1].expand.width
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
-					})
-			transformOrigin: Array( contours[0].nodes[1].x, contours[0].nodes[1].y )
+			transformOrigin: Object( {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y })
 			transforms: Array( [ 'rotate', 72 + 'deg' ] )
 		2:
 			skeleton: true
@@ -70,21 +66,19 @@ exports.glyphs['asterisk'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[0].expand.width
 						angle: contours[0].nodes[0].expand.angle
 						distr: contours[0].nodes[0].expand.distr
-					})
 				1:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[1].expand.width
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
-					})
-			transformOrigin: Array( contours[0].nodes[1].x, contours[0].nodes[1].y )
+			transformOrigin: Object({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} )
 			transforms: Array( [ 'rotate', 144 + 'deg' ] )
 		3:
 			skeleton: true
@@ -94,21 +88,19 @@ exports.glyphs['asterisk'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[0].expand.width
 						angle: contours[0].nodes[0].expand.angle
 						distr: contours[0].nodes[0].expand.distr
-					})
 				1:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[1].expand.width
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
-					})
-			transformOrigin: Array( contours[0].nodes[1].x, contours[0].nodes[1].y )
+			transformOrigin: Object({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} )
 			transforms: Array( [ 'rotate', 216 + 'deg' ] )
 		4:
 			skeleton: true
@@ -118,19 +110,17 @@ exports.glyphs['asterisk'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[0].expand.width
 						angle: contours[0].nodes[0].expand.angle
 						distr: contours[0].nodes[0].expand.distr
-					})
 				1:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: contours[0].nodes[1].expand.width
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
-					})
-			transformOrigin: Array( contours[0].nodes[1].x, contours[0].nodes[1].y )
+			transformOrigin: Object({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})
 			transforms: Array( [ 'rotate', 288 + 'deg' ] )

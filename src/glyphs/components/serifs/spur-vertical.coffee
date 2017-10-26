@@ -20,7 +20,6 @@ exports.glyphs['spur-vertical'] =
 		0:
 			x: parentAnchors[0].base.x
 			y: parentAnchors[0].base.y - Math.max( 0, serifArc * serifHeight )
-		1: parentAnchors[0].opposite.x - Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) * 0.2
 		# 1:
 		# 	if typeof parentAnchors[0].scale == 'undefined'
 		# 	then parentAnchors[0].opposite.x - Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) * 0.2
@@ -41,7 +40,7 @@ exports.glyphs['spur-vertical'] =
 					y: anchors[0].y + serifHeight + serifCurve
 					dirOut: - 90 + 'deg'
 					tensionOut: serifRoundness
-					transformOrigin: contours[0].nodes[7].point
+					transformOrigin: contours[0].nodes[7]
 					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
 				1:
 					x: anchors[0].x + Math.max(
@@ -49,10 +48,10 @@ exports.glyphs['spur-vertical'] =
 						- Math.abs( contours[0].nodes[0].y - ( anchors[0].y + serifHeight ) )
 					)
 					y: anchors[0].y + serifHeight - ( ( contours[0].nodes[1].x - anchors[0].x ) / (serifWidth || 0.01) ) * (serifMedian - 1) * serifHeight
-					dirIn: Utils.lineAngle( contours[0].nodes[1].point, contours[0].nodes[2].point )
+					dirIn: Utils.lineAngle({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}, {x: contours[0].nodes[2].x, y: contours[0].nodes[2].y})
 					typeOut: 'line'
 					tensionIn: serifRoundness
-					transformOrigin: contours[0].nodes[7].point
+					transformOrigin: contours[0].nodes[7]
 					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
 				2:
 					x: anchors[0].x - serifWidth
@@ -60,16 +59,16 @@ exports.glyphs['spur-vertical'] =
 					typeIn: 'line'
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
-					transformOrigin: contours[0].nodes[7].point
+					transformOrigin: contours[0].nodes[7]
 					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
 				3:
 					x: contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) ) * ( serifMedian - 1 ) ) - serifTerminal * serifHeight
 					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) ) * ( serifMedian - 1 ) )
-					dirOut: Utils.lineAngle( contours[0].nodes[2].point ,contours[0].nodes[4].point )
+					dirOut: Utils.lineAngle({x: contours[0].nodes[2].x, y: contours[0].nodes[2].y},{x: contours[0].nodes[4].x, y: contours[0].nodes[4].y})
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
 					tensionIn: serifTerminalCurve
-					transformOrigin: contours[0].nodes[7].point
+					transformOrigin: contours[0].nodes[7]
 					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
 				4:
 					x: anchors[0].x - serifWidth * midWidth
@@ -77,10 +76,9 @@ exports.glyphs['spur-vertical'] =
 					type: 'smooth'
 					tensionIn: serifTerminalCurve
 					dirOut: 0 + 'deg'
-					transformOrigin: contours[0].nodes[7].point
+					transformOrigin: contours[0].nodes[7]
 					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
 				5:
-					# x: anchors[1] - anchors[2].aperture
 					x: anchors[0].x + Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) * 0.8 - anchors[2].aperture
 					y: anchors[0].y + serifArc * serifHeight
 					dirIn: 180 + 'deg'

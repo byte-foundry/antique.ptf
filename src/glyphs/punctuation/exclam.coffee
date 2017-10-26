@@ -24,20 +24,19 @@ exports.glyphs['exclam'] =
 					x: spacingLeft + (28/54) * thickness
 					y: capHeight
 					typeOut: 'line'
-					expand: Object({
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				1:
 					x: contours[0].nodes[0].x
 					y: ( 464 / 700 ) * capHeight
 					typeOut: 'line'
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 				2:
 					x: contours[0].nodes[0].x
 					y: - overshoot + Math.max(
@@ -47,11 +46,11 @@ exports.glyphs['exclam'] =
 							thickness * ( 60 / 54 )
 						)
 					) + ( 106 / 700 ) * capHeight
-					expand: Object({
+					typeIn: 'line'
+					expand:
 						width: ( 27 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0 + 'deg'
 						distr: 0.5
-					})
 	components:
 		0:
 			base: ['dot', 'dotaccent_rounded']

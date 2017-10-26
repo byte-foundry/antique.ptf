@@ -17,5 +17,5 @@ exports.glyphs['a_alt_breve'] =
 			copy: true
 			parentAnchors:
 				0:
-					x: anchors[0].x + 3 + 2 * width
-					y: anchors[0].y
+					x: parentAnchors[0].x + 3 + 2 * width
+					y: parentAnchors[0].y
