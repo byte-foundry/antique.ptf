@@ -25,20 +25,17 @@ exports.glyphs['V_cap'] =
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
 					expand:
-						width: Math.max(
-							( 57 / 54 ) * thickness * opticThickness,
-							thickness * opticThickness / (- Math.sin(Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})))
-						)
+						width: ( 57 / 54 ) * thickness * opticThickness,
 						angle: 0 + 'deg'
 						distr: 0.25
 				1:
-					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
+					x: (contours[0].nodes[0].expandedTo[0].x + contours[1].nodes[0].expandedTo[0].x) * 0.5
 					y: 0
 					typeIn: 'line'
 					expand:
 						width: ( 48 / 54 ) * thickness * opticThickness
 						angle: 0 + 'deg'
-						distr: 1 - ( 8 / 49 ) * contrast
+						distr: ( 9 / 48 )
 		1:
 			skeleton: true
 			closed: false
@@ -47,7 +44,7 @@ exports.glyphs['V_cap'] =
 					x: Math.max(
 						spacingLeft + 115 + 100 * width - (13),
 						#spacingLeft + contours[0].nodes[0].expand.width + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 30
-						spacingLeft + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 30
+						contours[0].nodes[0].expandedTo[1].x + 0.75 *  (57 / 54) * thickness * opticThickness + 30
 					)
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
 					typeOut: 'line'
@@ -56,15 +53,14 @@ exports.glyphs['V_cap'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 				1:
-					x: ( spacingLeft + contours[0].nodes[0].expand.width ) + ( contours[1].nodes[0].expandedTo[0].x - ( spacingLeft + contours[0].nodes[0].expand.width ) ) * 0.51
-					x: contours[0].nodes[1].x +  0.75 * ( 57 / 54 ) * thickness * opticThickness
+					x: (contours[0].nodes[0].expandedTo[1].x + contours[1].nodes[0].expandedTo[1].x) * 0.5
 					# x: contours[1].nodes[0].expandedTo[1].x
 					y: 0
 					typeIn: 'line'
 					expand:
 						width: ( 48 / 54 ) * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
-						distr: ( 9 / 48 )
+						distr: 1 - ( 9 / 48 )
 	components:
 		0:
 			base: ['serif-oblique-obtuse', 'none']
