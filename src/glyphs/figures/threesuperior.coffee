@@ -5,10 +5,11 @@ exports.glyphs['threesuperior'] =
 	parameters:
 		spacingLeft: 50 * spacing + 28
 		spacingRight: 50 * spacing + 25
-	advanceWidth: spacingLeft + (Math.max(
-		(14/54) * thickness + 100 * width + 96 - (14),
-		(14/54) * thickness + 57/54 * thickness + 0.75 * ( 58 / 54 ) * thickness + 10
-	) + 3) * 0.444 + spacingRight
+	ot:
+		advanceWidth: spacingLeft + (Math.max(
+			(14/54) * thickness + 100 * width + 96 - (14),
+			(14/54) * thickness + 57/54 * thickness + 0.75 * ( 58 / 54 ) * thickness + 10
+		) + 3) * 0.444 + spacingRight
 	tags: [
 		'all',
 		'latin',
