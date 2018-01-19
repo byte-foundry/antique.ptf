@@ -5,7 +5,7 @@ exports.glyphs['comma'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 14
@@ -35,7 +35,7 @@ exports.glyphs['comma'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: spacingLeft + (9/54) * thickness
@@ -43,5 +43,5 @@ exports.glyphs['comma'] =
 					typeIn: 'line'
 					expand:
 						width: ( 35 / 54 ) * thickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25

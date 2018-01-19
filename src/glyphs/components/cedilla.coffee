@@ -20,7 +20,7 @@ exports.glyphs['cedilla'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 26 / 54 ) * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x - 27 + 0.25 * contours[0].nodes[1].expand.width
@@ -29,14 +29,14 @@ exports.glyphs['cedilla'] =
 					typeIn: 'line'
 					expand:
 						width: thickness * ( 23 / 54 ) * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeIn: 'line'
 					# dirOut: Utils.lineAngle({x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y}, {x: contours[0].nodes[3].expandedTo[0].x, y: contours[0].nodes[3].expandedTo[0].y}) + (20 / 180 * Math.PI)
-					dirOut: 37 + 'deg'
+					dirOut:( 37 ) / 180 * Math.PI
 					expand:
 						width: thickness * ( 17 / 54 ) * contrast
 						angle: Utils.lineAngle({x: contours[0].nodes[1].expandedTo[1].x, y: contours[0].nodes[1].expandedTo[1].y}, {x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y})
@@ -45,7 +45,7 @@ exports.glyphs['cedilla'] =
 				3:
 					x: contours[0].nodes[2].x * 18 / 40 + (contours[0].nodes[4].x - 0.25 * thickness * 26 / 54)  * 22 / 40
 					y: contours[0].nodes[2].y + 5 + Math.sin(contours[0].nodes[3].expand.angle) * contours[0].nodes[3].expand.width
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					tensionIn: 0.6
 					expand:
@@ -55,35 +55,35 @@ exports.glyphs['cedilla'] =
 				4:
 					x: contours[0].nodes[0].expandedTo[1].x + 34 * width - (8)
 					y: (contours[0].nodes[3].y + contours[0].nodes[6].y ) * 0.5 + 3
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					typeIn: 'smooth'
 					expand:
 						width: thickness * ( 26 / 54 )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				5:
 					x: contours[0].nodes[0].expandedTo[1].x + 34 * width - (8)
 					y: (contours[0].nodes[3].y + contours[0].nodes[6].y ) * 0.5 - 4
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					typeIn: 'smooth'
 					expand:
 						width: thickness * ( 26 / 54 )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				6:
 					x: contours[0].nodes[3].expandedTo[1].x - (9/54) * thickness
 					y: contours[0].nodes[3].y - 68
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					typeIn: 'smooth'
 					expand:
 						width: thickness * ( 19 / 54 )
-						angle: - 93 + 'deg'
+						angle:( - 93 ) / 180 * Math.PI
 						distr: 1
 				7:
 					x: contours[0].nodes[2].x - 3 - contours[0].nodes[7].expand.width * 0.5
 					y: ( contours[0].nodes[2].y + contours[0].nodes[6].expandedTo[0].y ) * 0.5
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					expand:
 						width: thickness * ( 27 / 54 ) * contrast
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.5

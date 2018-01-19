@@ -6,7 +6,7 @@ exports.glyphs['four_alt'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 19
@@ -25,11 +25,11 @@ exports.glyphs['four_alt'] =
 				0:
 					x: contours[0].nodes[1].x + 105
 					y: capHeight
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					tensionOut: 1.2
 					expand:
 						width: ( 48 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: spacingLeft
@@ -37,7 +37,7 @@ exports.glyphs['four_alt'] =
 					dirIn: Utils.lineAngle({x: contours[0].nodes[0].x, y: contours[0].nodes[0].y}, {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y}) - (10 / 180 * Math.PI)
 					expand:
 						width: ( 50 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 		1:
 			skeleton: true
@@ -50,7 +50,7 @@ exports.glyphs['four_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 				1:
 					x: contours[0].nodes[1].x + 100 * width + 60 + Math.max( 67, ( 67 / 54 ) * thickness )
@@ -60,7 +60,7 @@ exports.glyphs['four_alt'] =
 					)
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.75
 		2:
 			skeleton: true
@@ -72,7 +72,7 @@ exports.glyphs['four_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 56 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[2].nodes[0].x
@@ -80,7 +80,7 @@ exports.glyphs['four_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 56 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 	components:
 		0:

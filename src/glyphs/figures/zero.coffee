@@ -5,7 +5,7 @@ exports.glyphs['zero'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -29,30 +29,30 @@ exports.glyphs['zero'] =
 						96,
 						contours[0].nodes[1].y + ( 55 / 54 ) * thickness + 10
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: - 178 + 'deg'
+						angle:( - 178 ) / 180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 98 / 197 )
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 49 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: spacingLeft + (14/54) * thickness
 					y: contours[0].nodes[0].y
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: - 2 + 'deg'
+						angle:( - 2 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].x
@@ -60,28 +60,28 @@ exports.glyphs['zero'] =
 						capHeight - 96,
 						contours[0].nodes[4].y - ( 55 / 54 ) * thickness - 10
 					)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 3 + 'deg'
+						angle:( 3 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[1].x
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 49 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				5:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[3].y
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 178 + 'deg'
+						angle:( 178 ) / 180 * Math.PI
 						distr: 0.25

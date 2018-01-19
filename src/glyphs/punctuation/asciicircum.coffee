@@ -5,7 +5,7 @@ exports.glyphs['asciicircum'] =
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 20
@@ -26,7 +26,7 @@ exports.glyphs['asciicircum'] =
 					typeOut: 'line'
 					expand:
 						width: ( 40 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[3].expandedTo[0].x ) / 2
@@ -35,7 +35,7 @@ exports.glyphs['asciicircum'] =
 					typeOut: 'line'
 					expand:
 						width: ( 62 / 54 ) * thickness
-						angle: -80 + 'deg'
+						angle: -80 / 180 * Math.PI
 						distr: 1
 				2:
 					x: contours[0].nodes[1].x
@@ -44,7 +44,7 @@ exports.glyphs['asciicircum'] =
 					typeOut: 'line'
 					expand:
 						width: ( 62 / 54 ) * thickness
-						angle: -99 + 'deg'
+						angle:( -99 ) / 180 * Math.PI
 						distr: 1
 				3:
 					x: Math.max(
@@ -55,5 +55,5 @@ exports.glyphs['asciicircum'] =
 					typeIn: 'line'
 					expand:
 						width: ( 40 / 54 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25

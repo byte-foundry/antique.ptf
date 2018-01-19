@@ -6,7 +6,7 @@ exports.glyphs['one_alt'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 4
@@ -27,14 +27,14 @@ exports.glyphs['one_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -43,19 +43,19 @@ exports.glyphs['one_alt'] =
 				0:
 					x: spacingLeft
 					y: capHeight - 75
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: capHeight
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					expand:
 						width: thickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.15
 	components:
 		0:

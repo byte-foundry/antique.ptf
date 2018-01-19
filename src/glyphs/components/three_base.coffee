@@ -12,7 +12,7 @@ exports.glyphs['three_base'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -20,7 +20,7 @@ exports.glyphs['three_base'] =
 						capHeight - 98 + (4),
 						contours[0].nodes[2].y - ( 50 / 54 ) * thickness - ( Math.sin( 4 / 180 * Math.PI ) * ( 0.75 * ( 58 / 54 ) * thickness ) ) - 10
 					)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
@@ -29,11 +29,11 @@ exports.glyphs['three_base'] =
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 90 / 181 )
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				3:
 					x: Math.max(
@@ -42,11 +42,11 @@ exports.glyphs['three_base'] =
 					)
 					# y: contours[0].nodes[1].y - ( 21 / 700 ) * capHeight
 					y: contours[0].nodes[1].y
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					typeOut: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 173 + 'deg'
+						angle:( 173 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[3].x
@@ -54,21 +54,21 @@ exports.glyphs['three_base'] =
 						contours[0].nodes[5].expandedTo[1].y + 70,
 						contours[0].nodes[5].expandedTo[0].y + 10
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: - 170 + 'deg'
+						angle: - 170 / 180 * Math.PI
 						distr: 0.25
 				5:
 					x: contours[0].nodes[2].x
 					y: contours[1].nodes[0].expandedTo[0].y
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					expand:
 						width: Math.min(
 							( 36 / 54 ) * thickness * contrast * contrastExtremity,
 							contours[1].nodes[0].expand.width
 						)
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 		1:
 			skeleton: true
@@ -89,12 +89,12 @@ exports.glyphs['three_base'] =
 								4
 							)
 						)
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0.5
 				1:
 					x: contours[0].nodes[5].x
 					y: contours[1].nodes[0].expandedTo[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: Math.min(
 							( 50 / 54 ) * thickness * contrast * contrastExtremity,
@@ -103,35 +103,35 @@ exports.glyphs['three_base'] =
 								4
 							)
 						)
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				2:
 					x: contours[0].nodes[3].x
 					# y: contours[1].nodes[1].expandedTo[1].y - ( 55 / 700 ) * capHeight
 					y: contours[1].nodes[1].expandedTo[1].y - 55
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 175 + 'deg'
+						angle:( 175 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[2].x
 					y: contours[1].nodes[5].y
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: - 171 + 'deg'
+						angle:( - 171 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[1].nodes[6].expandedTo[0].x + ( contours[1].nodes[3].expandedTo[0].x - contours[1].nodes[6].expandedTo[0].x ) * ( 97 / 194)
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				5:
 					x: contours[0].nodes[0].x
@@ -140,17 +140,17 @@ exports.glyphs['three_base'] =
 						contours[1].nodes[4].y + ( 50 / 54 ) * thickness + 56
 					)
 					typeOut: 'line'
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: - 7 + 'deg'
+						angle:( - 7 ) / 180 * Math.PI
 						distr: 0.25
 				6:
 					x: contours[0].nodes[0].x
 					y: contours[1].nodes[5].y + Math.min( 31, ( 31 / 700 ) * capHeight )
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 	components:
 		0:

@@ -6,7 +6,7 @@ exports.glyphs['E_cap'] =
 	ot:
 		advanceWidth: contours[3].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40 + serifWidth
@@ -34,14 +34,14 @@ exports.glyphs['E_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -50,11 +50,11 @@ exports.glyphs['E_cap'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -62,11 +62,11 @@ exports.glyphs['E_cap'] =
 						contours[0].nodes[1].expandedTo[1].x + thickness
 					)
 					y: capHeight
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 		2:
 			skeleton: true
@@ -75,14 +75,14 @@ exports.glyphs['E_cap'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: ( 365 / 700 ) * capHeight * crossbar
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: Math.min(
 							( 53 / 54 ) * thickness * opticThickness * contrast,
 							contours[1].nodes[1].expandedTo[1].y - contours[3].nodes[1].expandedTo[1].y - 30
 						)
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: Math.max(
@@ -90,11 +90,11 @@ exports.glyphs['E_cap'] =
 						contours[0].nodes[0].x + thickness
 					)
 					y: contours[2].nodes[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: contours[2].nodes[0].expand.width
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 		3:
 			skeleton: true
@@ -103,11 +103,11 @@ exports.glyphs['E_cap'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: contours[0].nodes[0].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -115,11 +115,11 @@ exports.glyphs['E_cap'] =
 						contours[0].nodes[0].x + thickness
 					)
 					y: 0
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 	components:
 		0:
@@ -153,7 +153,7 @@ exports.glyphs['E_cap'] =
 					opposite: contours[1].nodes[1].expandedTo[0]
 			# transformOrigin: contours[1].nodes[1].expandedTo[1]
 			# transforms: Array(
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			# )
 			parentParameters:
@@ -181,7 +181,7 @@ exports.glyphs['E_cap'] =
 			transformOrigin: contours[1].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:
@@ -257,7 +257,7 @@ exports.glyphs['E_cap'] =
 			transformOrigin: contours[3].nodes[1].expandedTo[1]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:
@@ -284,7 +284,7 @@ exports.glyphs['E_cap'] =
 					reversed: true
 			transformOrigin: contours[3].nodes[1].expandedTo[0]
 			transforms: Array(
-				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:

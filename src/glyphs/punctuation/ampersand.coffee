@@ -5,7 +5,7 @@ exports.glyphs['ampersand'] =
 	ot:
 		advanceWidth: contours[0].nodes[7].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 19
@@ -26,31 +26,31 @@ exports.glyphs['ampersand'] =
 						contours[0].nodes[4].expandedTo[1].x + 0.75 * ( 48 / 54 ) * thickness
 					)
 					y: 397
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					expand:
 						width: ( 48 / 54 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 93 / 226 )
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					tensionIn: 1.3
 					tensionOut: 1.3
 					expand:
 						width: ( 49 / 54 ) * thickness
-						angle: 78 + 'deg'
+						angle:( 78 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (13/54) * thickness
 					y: 161 + (10)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					tensionOut: 1.3
 					expand:
 						width: ( 65 / 54 ) * thickness
-						angle: 36 + 'deg'
+						angle:( 36 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: Utils.onLine({
@@ -82,23 +82,23 @@ exports.glyphs['ampersand'] =
 						capHeight - ( 118 / 700 ) * capHeight,
 						contours[0].nodes[5].y - ( 50 / 54 ) * thickness - 10
 					)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeIn: 'smooth'
 					tensionIn: 1.3
 					expand:
 						width: ( 47 / 54 ) * thickness
-						angle: 180 - 174 + 'deg'
+						angle:( 180 - 174 ) / 180 * Math.PI
 						distr: 0.75
 				5:
 					x: contours[0].nodes[6].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[0].x - contours[0].nodes[6].expandedTo[0].x ) * ( 85 / 166 )
 					y: capHeight + overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					typeIn: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
 						width: ( 50 / 54 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 				6:
 					x: contours[0].nodes[2].expandedTo[0].x + 12 + (12/54) * thickness
@@ -106,11 +106,11 @@ exports.glyphs['ampersand'] =
 						capHeight - ( 129 / 700 ) * capHeight,
 						contours[0].nodes[5].y - ( 50 / 54 ) * thickness - 10
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					typeIn: 'smooth'
 					expand:
 						width: ( 47 / 54 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.75
 				7:
 					x: contours[0].nodes[0].expandedTo[1].x + ( 16 / 54 ) * thickness
@@ -119,5 +119,5 @@ exports.glyphs['ampersand'] =
 					tensionIn: 0.5
 					expand:
 						width: ( 59 / 54 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 1

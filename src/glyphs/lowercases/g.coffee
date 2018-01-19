@@ -6,7 +6,7 @@ exports.glyphs['g'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 35
@@ -31,19 +31,19 @@ exports.glyphs['g'] =
 						contours[0].nodes[2].expandedTo[1].y,
 						xHeight / 2 - 10
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					expand:
 						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 31 + 'deg'
+						angle: 211 / 180 * Math.PI
 						distr: 1
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 77 / 150 )
 					y: ( 53 / 600 ) * xHeight
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 51 / 54 ) * thickness * contrast
-						angle: 68 + 'deg'
+						angle: 68 / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (13/54) * thickness
@@ -51,11 +51,11 @@ exports.glyphs['g'] =
 						156,
 						contours[0].nodes[1].y + ( Math.cos( ( Math.PI / 2 ) - ( 68 / 180 * Math.PI ) ) * ( 51 / 54 ) * thickness ) + 10
 					)
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 55 / 54 ) * thickness
-						angle: 13 + 'deg'
+						angle: 13 / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].x
@@ -63,20 +63,20 @@ exports.glyphs['g'] =
 						xHeight - 98,
 						contours[0].nodes[4].y - ( 47 / 54 ) * thickness - 10
 					)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: thickness
-						angle: 2 + 'deg'
+						angle: 2 / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[1].x
 					y: xHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 51 / 54 ) * thickness * contrast
-						angle: - 67 + 'deg'
+						angle: - 67 / 180 * Math.PI
 						distr: 0
 				5:
 					x: contours[0].nodes[0].expandedTo[1].x
@@ -85,10 +85,10 @@ exports.glyphs['g'] =
 						contours[0].nodes[3].expandedTo[0].y,
 						xHeight / 2 + 10
 					)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					expand:
 						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 - 28 + 'deg'
+						angle: 208 / 180 * Math.PI
 						distr: 1
 		1:
 			skeleton: true
@@ -100,7 +100,7 @@ exports.glyphs['g'] =
 					typeOut: 'line'
 					expand:
 						width: ( 55 / 54 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				1:
 					x: Math.max(
@@ -108,23 +108,23 @@ exports.glyphs['g'] =
 						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( ( 55 / 54 ) * thickness ) * Math.cos( 13 / 180 * Math.PI ) + 20
 					)
 					y: contours[1].nodes[3].expandedTo[0].y
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: thickness
-						angle: 189 + 'deg'
+						angle: 189 / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[1].nodes[4].expandedTo[0].x + ( contours[1].nodes[1].expandedTo[0].x - contours[1].nodes[4].expandedTo[0].x ) * ( 97 / 194)
 					y: descender - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: Math.min(
 							( 47 / 54 ) * thickness * contrast,
 							- descender - overshoot - 10
 						)
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: contours[1].nodes[4].x
@@ -133,17 +133,17 @@ exports.glyphs['g'] =
 						contours[1].nodes[2].y + ( 47 / 54 ) * thickness * contrast + 56
 					)
 					typeOut: 'line'
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					expand:
 						width: ( 55 / 54 ) * thickness * contrast * contrastExtremity
-						angle: - 9 + 'deg'
+						angle: - 9 / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[3].expandedTo[0].x
 					y: contours[1].nodes[3].expandedTo[0].y + ( contours[0].nodes[1].expandedTo[0].y - contours[1].nodes[3].expandedTo[0].y ) * ( 22 / 53 )
 					expand:
 						width: thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 	components:
 		0:

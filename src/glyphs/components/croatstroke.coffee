@@ -20,7 +20,7 @@ exports.glyphs['croatstroke'] =
 					typeOut: 'line'
 					expand:
 						width: ( 33 / 54 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.1
 				1:
 					x: anchors[0].x + 139 * width + (thickness - 54) / 2
@@ -28,5 +28,5 @@ exports.glyphs['croatstroke'] =
 					typeOut: 'line'
 					expand:
 						width: ( 33 / 54 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.1

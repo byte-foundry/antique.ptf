@@ -6,7 +6,7 @@ exports.glyphs['t_alt2'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 5
@@ -31,7 +31,7 @@ exports.glyphs['t_alt2'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: contours[1].nodes[0].expandedTo[0].x - 32
@@ -39,7 +39,7 @@ exports.glyphs['t_alt2'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 		1:
 			skeleton: true
@@ -51,16 +51,16 @@ exports.glyphs['t_alt2'] =
 					dirOut: Utils.lineAngle({x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y}) + (5 / 180 * Math.PI)
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 95 + 'deg'
+						angle: 95 / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[1].nodes[2].expandedTo[0].x ) * ( 105 / 194 )
 					y: - overshoot / 2
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: contours[0].nodes[0].x + 45 * width + (13/54) * thickness
@@ -68,12 +68,12 @@ exports.glyphs['t_alt2'] =
 						98,
 						contours[1].nodes[1].y + ( 47 / 54 ) * thickness + 10
 					)
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: - 3 + 'deg'
+						angle: - 3 / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[2].x
@@ -81,5 +81,5 @@ exports.glyphs['t_alt2'] =
 					typeIn: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25

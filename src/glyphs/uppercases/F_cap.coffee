@@ -6,7 +6,7 @@ exports.glyphs['F_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40 + serifWidth
@@ -27,14 +27,14 @@ exports.glyphs['F_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -43,11 +43,11 @@ exports.glyphs['F_cap'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -55,11 +55,11 @@ exports.glyphs['F_cap'] =
 						contours[0].nodes[1].expandedTo[1].x + thickness
 					)
 					y: capHeight
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 		2:
 			skeleton: true
@@ -71,11 +71,11 @@ exports.glyphs['F_cap'] =
 						( 345 / 700 ) * capHeight * crossbar,
 						contours[1].nodes[1].expandedTo[1].y - ( 53 / 54 ) * thickness * opticThickness * contrast / 2 - 15
 					)
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: Math.max(
@@ -83,11 +83,11 @@ exports.glyphs['F_cap'] =
 						contours[0].nodes[0].x + thickness
 					)
 					y: contours[2].nodes[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 53 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 	components:
 		0:
@@ -134,7 +134,7 @@ exports.glyphs['F_cap'] =
 					opposite: contours[1].nodes[1].expandedTo[0]
 			# transformOrigin: contours[1].nodes[1].expandedTo[1]
 			# transforms: Array(
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			# )
 			parentParameters:
@@ -162,7 +162,7 @@ exports.glyphs['F_cap'] =
 			transformOrigin: contours[1].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:

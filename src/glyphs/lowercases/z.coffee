@@ -6,7 +6,7 @@ exports.glyphs['z'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 10
@@ -31,7 +31,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: spacingLeft + 3
@@ -40,7 +40,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: Utils.onLine({
@@ -51,7 +51,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 35 / 54 ) * thickness * contrast
-						angle: 180 - 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 		1:
 			skeleton: true
@@ -63,7 +63,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x - 4
@@ -72,7 +72,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				2:
 					x: contours[1].nodes[1].x + 3
@@ -86,7 +86,7 @@ exports.glyphs['z'] =
 					typeIn: 'line'
 					expand:
 						width: if contours[1].nodes[2].y > xHeight then 0 else xHeight - contours[1].nodes[2].y
-						angle: 180 + 90 + 'deg'
+						angle: 3 * Math.PI / 2
 						distr: 1
 		2:
 			skeleton: true

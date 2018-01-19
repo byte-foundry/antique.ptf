@@ -5,7 +5,7 @@ exports.glyphs['parenleft'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40
@@ -29,18 +29,18 @@ exports.glyphs['parenleft'] =
 					dirOut: Utils.lineAngle({x: contours[0].nodes[0].expandedTo[1].x, y: contours[0].nodes[0].expandedTo[1].y}, {x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y}) - (Math.max(10, (5 / 54) * thickness) / 180 * Math.PI)
 					expand:
 						width: ( 37 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: spacingLeft + (13/54) * thickness
 					y: ( contours[0].nodes[0].y + contours[0].nodes[2].y ) / 2
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					typeIn: 'smooth'
 					tensionIn: 1.3
 					tensionOut: 1.3
 					expand:
 						width: ( 35 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[0].x
@@ -48,5 +48,5 @@ exports.glyphs['parenleft'] =
 					dirIn: Utils.lineAngle({x: contours[0].nodes[2].expandedTo[1].x, y: contours[0].nodes[2].expandedTo[1].y}, {x: contours[0].nodes[1].expandedTo[0].x, y: contours[0].nodes[1].expandedTo[0].y}) + (Math.max(10, (5 / 54) * thickness) / 180 * Math.PI)
 					expand:
 						width: ( 37 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

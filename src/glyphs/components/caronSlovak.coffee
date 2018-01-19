@@ -20,7 +20,7 @@ exports.glyphs['caronSlovak'] =
 					typeOut: 'line'
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.75
 				1:
 					x: contours[0].nodes[0].x + 20 - ( 28 / 54 ) * thickness * 0.25
@@ -28,5 +28,5 @@ exports.glyphs['caronSlovak'] =
 					typeIn: 'line'
 					expand:
 						width: 50 / 54 * thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 1

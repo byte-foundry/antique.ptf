@@ -20,20 +20,20 @@ exports.glyphs['tildeaccent'] =
 				0:
 					x: spacingLeft + 33/54 * thickness * 0.75
 					y: xHeight / 2
-					dirOut: 100 + 'deg'
+					dirOut: 100 / 180 * Math.PI
 					expand:
 						width: ( 33 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * ( 33 / 142 )
 					y: contours[0].nodes[4].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					tensionOut: 1.2
 					expand:
 						width: ( 38 / 54 ) * thickness
-						angle: - 80 + 'deg'
+						angle: - 80 / 180 * Math.PI
 						distr: 0
 				2:
 					x: (contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[4].expandedTo[1].x) / 2
@@ -49,18 +49,18 @@ exports.glyphs['tildeaccent'] =
 				3:
 					x: contours[0].nodes[4].expandedTo[1].x - ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * ( 33 / 142 )
 					y: contours[0].nodes[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					tensionIn: 1.2
 					expand:
 						width: ( 38 / 54 ) * thickness
-						angle: 180 + 100 + 'deg'
+						angle: 280 / 180 * Math.PI
 						distr: 1
 				4:
 					x: spacingLeft + 100 * width + 101 - 33/54 * thickness * 1.5
 					y: xHeight / 2 + 90
-					dirIn: - 80 + 'deg'
+					dirIn: - 80 / 180 * Math.PI
 					expand:
 						width: ( 33 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25

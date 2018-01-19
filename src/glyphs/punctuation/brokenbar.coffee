@@ -5,7 +5,7 @@ exports.glyphs['brokenbar'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 60
@@ -26,7 +26,7 @@ exports.glyphs['brokenbar'] =
 					typeOut: 'line'
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['brokenbar'] =
 					typeOut: 'line'
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 		1:
 			skeleton: true
@@ -46,7 +46,7 @@ exports.glyphs['brokenbar'] =
 					typeOut: 'line'
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x
@@ -54,5 +54,5 @@ exports.glyphs['brokenbar'] =
 					typeOut: 'line'
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

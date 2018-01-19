@@ -26,7 +26,7 @@ exports.glyphs['less'] =
 					typeOut: 'line'
 					expand:
 						width: ( 48 / 54 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				1:
 					x: spacingLeft + contours[0].nodes[1].expand.width * 0.25 * Math.cos(14 / 180 * Math.PI)
@@ -35,7 +35,7 @@ exports.glyphs['less'] =
 					typeIn: 'line'
 					expand:
 						width: ( 45 / 54 ) * thickness + (width - 1) * 8
-						angle: 166 + 'deg'
+						angle:( 166 ) / 180 * Math.PI
 						distr: 0.75
 				2:
 					x: spacingLeft + contours[0].nodes[1].expand.width * 0.25 * Math.cos(14 / 180 * Math.PI)
@@ -44,7 +44,7 @@ exports.glyphs['less'] =
 					typeIn: 'line'
 					expand:
 						width: contours[0].nodes[1].expand.width
-						angle: 194 + 'deg'
+						angle:( 194 ) / 180 * Math.PI
 						distr: 0.75
 				3:
 					x: contours[0].nodes[0].expandedTo[0].x
@@ -52,5 +52,5 @@ exports.glyphs['less'] =
 					typeIn: 'line'
 					expand:
 						width: ( 48 / 54 ) * thickness
-						angle: 270 + 'deg'
+						angle: 270 / 180 * Math.PI
 						distr: 0

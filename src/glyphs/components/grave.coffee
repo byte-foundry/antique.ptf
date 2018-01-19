@@ -25,7 +25,7 @@ exports.glyphs['grave'] =
 					typeOut: 'line'
 					expand:
 						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.1
 				1:
 					x: contours[0].nodes[0].expandedTo[1].x - 28 * width
@@ -33,5 +33,5 @@ exports.glyphs['grave'] =
 					typeIn: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1

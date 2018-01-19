@@ -6,7 +6,7 @@ exports.glyphs['H_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40 + serifWidth
@@ -31,14 +31,14 @@ exports.glyphs['H_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -53,14 +53,14 @@ exports.glyphs['H_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: contours[1].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 		2:
 			skeleton: true
@@ -69,20 +69,20 @@ exports.glyphs['H_cap'] =
 				0:
 					x: contours[1].nodes[0].x
 					y: ( 364 / 700 ) * capHeight * crossbar
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[2].nodes[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 	components:
 		0:

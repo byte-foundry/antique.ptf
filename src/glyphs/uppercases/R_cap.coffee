@@ -5,7 +5,7 @@ exports.glyphs['R_cap'] =
 	ot:
 		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 40 + serifWidth
@@ -30,14 +30,14 @@ exports.glyphs['R_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -46,11 +46,11 @@ exports.glyphs['R_cap'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -58,11 +58,11 @@ exports.glyphs['R_cap'] =
 						contours[0].nodes[1].expandedTo[1].x
 					)
 					y: capHeight
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				2:
 					x: Math.max(
@@ -76,12 +76,12 @@ exports.glyphs['R_cap'] =
 						),
 						capHeight - ( 105 / 700 ) * capHeight
 					)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 182 + 'deg'
+						angle:( 182 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[1].nodes[2].x
@@ -92,29 +92,29 @@ exports.glyphs['R_cap'] =
 						),
 						contours[1].nodes[4].y + ( 105 / 700 ) * capHeight
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: - 180 + 'deg'
+						angle: - Math.PI
 						distr: 0.25
 				4:
 					x: contours[1].nodes[1].x
 					y: ( 330 / 700 ) * capHeight * crossbar + (25)
-					dirIn: 0 + 'deg'
+					dirIn: 0
 					type: 'smooth'
 					typeOut: 'line'
 					# tensionIn: 0.8
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.75
 				5:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[1].nodes[4].y
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.75
 		2:
 			skeleton: true
@@ -123,11 +123,11 @@ exports.glyphs['R_cap'] =
 				0:
 					x: contours[1].nodes[0].x
 					y: contours[1].nodes[5].expandedTo[1].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -135,11 +135,11 @@ exports.glyphs['R_cap'] =
 						contours[0].nodes[1].expandedTo[1].x
 					)
 					y: contours[2].nodes[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				2:
 					x: Math.max(
@@ -150,19 +150,19 @@ exports.glyphs['R_cap'] =
 						contours[2].nodes[1].y - ( 50 / 54 ) * thickness * opticThickness * contrast - 10,
 						contours[2].nodes[0].y - ( 98 / 700 ) * capHeight
 					)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 182 + 'deg'
+						angle:( 182 ) / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[2].nodes[2].x
 					y: 0
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 	components:
 		0:

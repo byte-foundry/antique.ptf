@@ -5,7 +5,7 @@ exports.glyphs['graveaccent'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -30,7 +30,7 @@ exports.glyphs['graveaccent'] =
 					typeOut: 'line'
 					expand:
 						width: ( 35 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.1
 				1:
 					x: spacingLeft
@@ -38,5 +38,5 @@ exports.glyphs['graveaccent'] =
 					typeIn: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1

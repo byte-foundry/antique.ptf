@@ -5,7 +5,7 @@ exports.glyphs['bullet'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 18
@@ -27,7 +27,7 @@ exports.glyphs['bullet'] =
 					typeOut: 'line'
 					expand:
 						width: ( 92 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -37,7 +37,7 @@ exports.glyphs['bullet'] =
 					)
 					expand:
 						width: ( 92 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		1:
 			skeleton: false
@@ -46,15 +46,15 @@ exports.glyphs['bullet'] =
 				0:
 					x: contours[0].nodes[0].expandedTo[0].x
 					y: contours[0].nodes[0].expandedTo[0].y
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y - contours[0].nodes[0].expand.width / 2
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 				2:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: contours[0].nodes[0].expandedTo[1].y
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 		2:
 			skeleton: false
 			closed: true
@@ -62,12 +62,12 @@ exports.glyphs['bullet'] =
 				0:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 				1:
 					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y + contours[0].nodes[1].expand.width / 2
-					dirOut: 0 + 'deg'
+					dirOut: 0
 				2:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2

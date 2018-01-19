@@ -5,7 +5,7 @@ exports.glyphs['underscore'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 10
@@ -23,18 +23,18 @@ exports.glyphs['underscore'] =
 				0:
 					x: spacingLeft
 					y: - 60 - (6)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeOut: 'line'
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0.2
 				1:
 					x: contours[0].nodes[0].x + 100 * width + 140
 					y: contours[0].nodes[0].y
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					typeOut: 'line'
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0.2

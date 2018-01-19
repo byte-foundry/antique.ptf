@@ -5,7 +5,7 @@ exports.glyphs['question'] =
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 15
@@ -26,7 +26,7 @@ exports.glyphs['question'] =
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -35,7 +35,7 @@ exports.glyphs['question'] =
 						# contours[0].nodes[2].y - contours[0].nodes[2].expand.width - ( Math.sin( contours[0].nodes[1].expand.angle ) * (( 1 - contours[0].nodes[1].expand.distr ) * contours[0].nodes[1].expand.width) ) - 10
 						contours[0].nodes[2].y - ( 50 / 54 ) * thickness - ( Math.sin( 1 / 180 * Math.PI ) * ( 0.75 * ( 57 / 54 ) * thickness ) ) - 10
 					)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 57 / 54 ) * thickness
@@ -44,11 +44,11 @@ exports.glyphs['question'] =
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 98 / 196 )
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				3:
 					x: Math.max(
@@ -56,11 +56,11 @@ exports.glyphs['question'] =
 						contours[0].nodes[1].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness + 10
 					)
 					y: contours[0].nodes[1].y - 25
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 174 + 'deg'
+						angle:( 174 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[2].x - (5)
@@ -80,7 +80,7 @@ exports.glyphs['question'] =
 					)
 					expand:
 						width: ( 27 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 1
 	components:
 		0:

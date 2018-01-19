@@ -6,7 +6,7 @@ exports.glyphs['T_cap'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 5
@@ -31,7 +31,7 @@ exports.glyphs['T_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -42,7 +42,7 @@ exports.glyphs['T_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 		1:
 			skeleton: true
@@ -53,7 +53,7 @@ exports.glyphs['T_cap'] =
 					y: Math.max( 0, serifHeight * serifArc )
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[1].nodes[0].x
@@ -61,7 +61,7 @@ exports.glyphs['T_cap'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 	components:
 		0:
@@ -97,7 +97,7 @@ exports.glyphs['T_cap'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ]
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:
@@ -125,7 +125,7 @@ exports.glyphs['T_cap'] =
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:
@@ -174,7 +174,7 @@ exports.glyphs['T_cap'] =
 			transformOrigin: contours[0].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ]
-			# 	[ 'skewX', - 15 * serifRotate + 'deg' ],
+			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 			parentParameters:

@@ -6,7 +6,7 @@ exports.glyphs['seven'] =
 	ot:
 		advanceWidth: contours[0].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 20
@@ -27,7 +27,7 @@ exports.glyphs['seven'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -37,7 +37,7 @@ exports.glyphs['seven'] =
 					y: capHeight
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast * contrastExtremity
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 		1:
 			skeleton: true
@@ -56,7 +56,7 @@ exports.glyphs['seven'] =
 					y: 0
 					expand:
 						width: thickness / Math.sin( Utils.lineAngle( {x: contours[1].nodes[0].x , y: contours[1].nodes[0].y}, { x: contours[1].nodes[1].x + thickness, y: contours[1].nodes[1].y } ) )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 	components:
 		0:
@@ -72,7 +72,7 @@ exports.glyphs['seven'] =
 			transforms: Array(
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
-				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		1:
@@ -87,7 +87,7 @@ exports.glyphs['seven'] =
 			transformOrigin: contours[0].nodes[0].expandedTo[1]
 			transforms: Array(
 				[ 'scaleX', -1 ],
-				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		2:

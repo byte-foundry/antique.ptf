@@ -18,14 +18,14 @@ exports.glyphs['one_base'] =
 					typeOut: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
@@ -37,29 +37,29 @@ exports.glyphs['one_base'] =
 					dirOut: Math.max(
 						50 - ( 23 * width ),
 						0
-					) + 'deg'
+					) / 180 * Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 7 / 54 ) * thickness * contrast * contrastExtremity
-						angle: - 60 + 'deg'
+						angle: - 60 / 180 * Math.PI
 						distr: 0
 				1:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: capHeight - 75
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 40 / 54 ) * thickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.15
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].y
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 40 / 54 ) * thickness * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.15
 	components:
 		0:

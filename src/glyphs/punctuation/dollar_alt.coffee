@@ -6,7 +6,7 @@ exports.glyphs['dollar_alt'] =
 	ot:
 		advanceWidth: contours[0].nodes[8].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 25
@@ -27,7 +27,7 @@ exports.glyphs['dollar_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 49 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -35,20 +35,20 @@ exports.glyphs['dollar_alt'] =
 						Math.min( 89, ( 89 / 700 ) * capHeight ),
 						contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast + 10
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 49 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 98 / 196 )
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 46 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: Math.max(
@@ -60,11 +60,11 @@ exports.glyphs['dollar_alt'] =
 						contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
 					)
 					# y: contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast + ( contours[0].nodes[4].y - contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast ) * ( ( 82 - (10) ) / 266 ) - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness
-						angle: - 170 + 'deg'
+						angle: - 170 / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[0].x + ( contours[0].nodes[7].x - contours[0].nodes[0].x ) * 0.5
@@ -84,21 +84,21 @@ exports.glyphs['dollar_alt'] =
 						contours[0].nodes[6].y - ( 46 / 54 ) * thickness * contrast - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
 					)
 					# y: contours[0].nodes[4].y + ( ( contours[0].nodes[6].y - ( 46 / 54 ) * thickness * contrast ) - contours[0].nodes[4].y ) * ( 184 / 260 ) + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					tensionIn: 1.1
 					expand:
 						width: ( 49 / 54 ) * thickness
-						angle: 180 + 9 + 'deg'
+						angle:( 180 + 9 ) / 180 * Math.PI
 						distr: 0.75
 				6:
 					x: contours[0].nodes[5].expandedTo[1].x + ( contours[0].nodes[7].expandedTo[1].x - contours[0].nodes[5].expandedTo[1].x ) * ( 98 / 196 )
 					y: capHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 46 / 54 ) * thickness * contrast
-						angle: 180 - 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 				7:
 					x: contours[0].nodes[3].expandedTo[0].x - (12/54) * thickness
@@ -109,14 +109,14 @@ exports.glyphs['dollar_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 49 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				8:
 					x: contours[0].nodes[7].x
 					y: contours[0].nodes[7].y - Math.min( 82, ( 82 / 700 ) * capHeight )
 					expand:
 						width: ( 49 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 		1:
 			skeleton: true
@@ -128,7 +128,7 @@ exports.glyphs['dollar_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 29 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[1].nodes[0].x
@@ -136,7 +136,7 @@ exports.glyphs['dollar_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 29 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		2:
 			skeleton: true
@@ -148,7 +148,7 @@ exports.glyphs['dollar_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 29 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[2].nodes[0].x
@@ -156,5 +156,5 @@ exports.glyphs['dollar_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 29 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

@@ -39,10 +39,10 @@ exports.glyphs['spur-vertical'] =
 				0:
 					x: anchors[0].x
 					y: anchors[0].y + serifHeight + serifCurve
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					tensionOut: serifRoundness
 					transformOrigin: contours[0].nodes[7]
-					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
+					transforms:Array([ 'skewY', (anchors[2].rotate ) / 180 * Math.PI ])
 				1:
 					x: anchors[0].x + Math.max(
 						( contours[0].nodes[2].x - anchors[0].x ) * 0.85,
@@ -53,7 +53,7 @@ exports.glyphs['spur-vertical'] =
 					typeOut: 'line'
 					tensionIn: serifRoundness
 					transformOrigin: contours[0].nodes[7]
-					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
+					transforms:Array([ 'skewY', (anchors[2].rotate ) / 180 * Math.PI ])
 				2:
 					x: anchors[0].x - serifWidth
 					y: anchors[0].y + serifHeight * serifMedian
@@ -61,7 +61,7 @@ exports.glyphs['spur-vertical'] =
 					type: 'smooth'
 					tensionOut: serifTerminalCurve
 					transformOrigin: contours[0].nodes[7]
-					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
+					transforms:Array([ 'skewY', (anchors[2].rotate ) / 180 * Math.PI ])
 				3:
 					x: contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) ) * ( serifMedian - 1 ) ) - serifTerminal * serifHeight
 					y: contours[0].nodes[4].y + ( contours[0].nodes[2].y - contours[0].nodes[4].y ) * 0.5 * ( 1 - ( ( contours[0].nodes[4].x + ( contours[0].nodes[2].x - contours[0].nodes[4].x ) * 0.5 - anchors[0].x ) / (serifWidth || 0.01) ) * ( serifMedian - 1 ) )
@@ -70,26 +70,26 @@ exports.glyphs['spur-vertical'] =
 					tensionOut: serifTerminalCurve
 					tensionIn: serifTerminalCurve
 					transformOrigin: contours[0].nodes[7]
-					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
+					transforms:Array([ 'skewY', (anchors[2].rotate ) / 180 * Math.PI ])
 				4:
 					x: anchors[0].x - serifWidth * midWidth
 					y: anchors[0].y
 					type: 'smooth'
 					tensionIn: serifTerminalCurve
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					transformOrigin: contours[0].nodes[7]
-					transforms: Array([ 'skewY', anchors[2].rotate + 'deg' ])
+					transforms:Array([ 'skewY', (anchors[2].rotate ) / 180 * Math.PI ])
 				5:
 					x: anchors[0].x + Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) * 0.8 - anchors[2].aperture
 					y: anchors[0].y + serifArc * serifHeight
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					typeIn: 'line'
 					typeOut: 'line'
 				6:
 					# x: parentAnchors[0].opposite.x - anchors[2].aperture
 					x: anchors[0].x + Math.abs( parentAnchors[0].opposite.x - parentAnchors[0].base.x ) - anchors[2].aperture
 					y: anchors[0].y + serifArc * serifHeight
-					dirIn: 180 + 'deg'
+					dirIn: Math.PI
 					typeOut: 'line'
 				7:
 					# x: parentAnchors[0].opposite.x

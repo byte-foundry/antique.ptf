@@ -5,7 +5,7 @@ exports.glyphs['quotedbl'] =
 	ot:
 		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 80
@@ -27,15 +27,15 @@ exports.glyphs['quotedbl'] =
 					typeOut: 'line'
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[0].y - 100 - Math.min( 80, ( 80 / 54 ) * thickness )
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		1:
 			skeleton: true
@@ -47,13 +47,13 @@ exports.glyphs['quotedbl'] =
 					typeOut: 'line'
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[1].nodes[0].x
 					y: contours[1].nodes[0].y - 100 - Math.min( 80, ( 80 / 54 ) * thickness )
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

@@ -6,7 +6,7 @@ exports.glyphs['cent'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 35
@@ -31,30 +31,30 @@ exports.glyphs['cent'] =
 						contours[0].nodes[1].expandedTo[0].y + 125,
 						xHeight / 2 - 10
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					typeOut: 'line'
 					type: 'smooth'
 					expand:
 						width: thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[3].expandedTo[0].y
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: thickness
-						angle: - 176 + 'deg'
+						angle:( - 176 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: contours[0].nodes[3].expandedTo[0].x + ( contours[0].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * ( 97 / 194 )
 					y: - overshoot
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: spacingLeft + (13/54) * thickness
@@ -62,12 +62,12 @@ exports.glyphs['cent'] =
 						98,
 						contours[0].nodes[2].y + ( 47 / 54 ) * thickness + 10
 					)
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					type: 'smooth'
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: - 3 + 'deg'
+						angle:( - 3 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[3].x
@@ -75,29 +75,29 @@ exports.glyphs['cent'] =
 						xHeight - 98,
 						contours[0].nodes[5].y - ( 47 / 54 ) * thickness - 10
 					)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: thickness
-						angle: 2 + 'deg'
+						angle:( 2 ) / 180 * Math.PI
 						distr: 0.25
 				5:
 					x: contours[0].nodes[2].x
 					y: xHeight + overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 47 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				6:
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[4].expandedTo[0].y
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 				7:
 					x: contours[0].nodes[6].x
@@ -107,7 +107,7 @@ exports.glyphs['cent'] =
 					)
 					expand:
 						width: thickness
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.25
 		1:
 			skeleton: true
@@ -119,7 +119,7 @@ exports.glyphs['cent'] =
 					typeOut: 'line'
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[1].nodes[0].x
@@ -127,5 +127,5 @@ exports.glyphs['cent'] =
 					typeOut: 'line'
 					expand:
 						width: ( 30 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

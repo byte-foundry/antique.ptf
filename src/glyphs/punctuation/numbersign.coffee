@@ -5,7 +5,7 @@ exports.glyphs['numbersign'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -27,7 +27,7 @@ exports.glyphs['numbersign'] =
 					typeOut: 'line'
 					expand:
 						width: ( 31 / 54 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 				1:
 					x: spacingLeft
@@ -35,7 +35,7 @@ exports.glyphs['numbersign'] =
 					typeIn: 'line'
 					expand:
 						width: ( 31 / 54 ) * thickness
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.5
 		1:
 			skeleton: true
@@ -47,7 +47,7 @@ exports.glyphs['numbersign'] =
 					typeOut: 'line'
 					expand:
 						width: ( 31 / 54 ) * thickness
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: contours[0].nodes[0].x + Math.min(
@@ -58,7 +58,7 @@ exports.glyphs['numbersign'] =
 					typeIn: 'line'
 					expand:
 						width: ( 31 / 54 ) * thickness
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 		2:
 			skeleton: true
@@ -70,7 +70,7 @@ exports.glyphs['numbersign'] =
 					typeOut: 'line'
 					expand:
 						width: Math.min( ( 26 / 54 ) * thickness * contrast, minThickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[2].nodes[0].expandedTo[0].x + Math.min(
@@ -84,7 +84,7 @@ exports.glyphs['numbersign'] =
 					typeIn: 'line'
 					expand:
 						width: Math.min( ( 26 / 54 ) * thickness * contrast, minThickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 		3:
 			skeleton: true
@@ -99,7 +99,7 @@ exports.glyphs['numbersign'] =
 					typeIn: 'line'
 					expand:
 						width: Math.min( ( 26 / 54 ) * thickness * contrast, minThickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				0:
 					x: contours[2].nodes[0].x + Math.max(85 * width + 7, 26 / 54 * thickness + 20)
@@ -107,5 +107,5 @@ exports.glyphs['numbersign'] =
 					typeOut: 'line'
 					expand:
 						width: Math.min( ( 26 / 54 ) * thickness * contrast, minThickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0

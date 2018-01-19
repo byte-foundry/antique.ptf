@@ -7,7 +7,7 @@ exports.glyphs['five_alt'] =
 	ot:
 		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 25
@@ -28,7 +28,7 @@ exports.glyphs['five_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -36,20 +36,20 @@ exports.glyphs['five_alt'] =
 						95 + (0),
 						contours[0].nodes[2].y + ( 50 / 54 ) * thickness + 55
 					)
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: - 8 + 'deg'
+						angle:( - 8 ) / 180 * Math.PI
 						distr: 0.25
 				2:
 					x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[3].expandedTo[0].x ) * ( 98 / 196 )
 					y: - overshoot
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: Math.max(
@@ -57,25 +57,25 @@ exports.glyphs['five_alt'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 58 / 54 ) * thickness + 10
 					)
 					y: contours[0].nodes[1].y
-					dirIn: - 90 + 'deg'
+					dirIn: - Math.PI / 2
 					typeOut: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: - 172 + 'deg'
+						angle:( - 172 ) / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[3].x
 					y: contours[0].nodes[6].y - (3)
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 170 + 'deg'
+						angle: 170
 						distr: 0.25
 				5:
 					x: ( contours[0].nodes[6].expandedTo[0].x + contours[0].nodes[4].expandedTo[0].x ) * ( 67 / 145 )
 					y: ( 422 / 700 ) * capHeight * crossbar - (0)
-					dirOut: 180 + 'deg'
+					dirOut: Math.PI
 					type: 'smooth'
 					expand:
 						width: ( 51 / 54 ) * thickness * contrast
@@ -94,10 +94,10 @@ exports.glyphs['five_alt'] =
 						#contours[0].nodes[5].y - Math.cos( contours[0].nodes[5].expand.angle + Math.PI / 2 ) * contours[0].nodes[5].expand.width - 10
 						contours[0].nodes[5].y - 10
 					)
-					dirIn: 90 + 'deg'
+					dirIn: Math.PI / 2
 					expand:
 						width: ( 6 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 		1:
 			skeleton: true
@@ -109,7 +109,7 @@ exports.glyphs['five_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: contours[1].nodes[2].expandedTo[0].x
@@ -117,7 +117,7 @@ exports.glyphs['five_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x + 11
@@ -125,7 +125,7 @@ exports.glyphs['five_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 46 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 		2:
 			skeleton: true
@@ -137,7 +137,7 @@ exports.glyphs['five_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 				1:
 					x: Math.max(
@@ -147,7 +147,7 @@ exports.glyphs['five_alt'] =
 					y: capHeight
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: - 90 + 'deg'
+						angle: - Math.PI / 2
 						distr: 0
 	components:
 		0:
@@ -162,7 +162,7 @@ exports.glyphs['five_alt'] =
 			transformOrigin: contours[2].nodes[1].expandedTo[0]
 			transforms: Array(
 				[ 'scaleY', -1 ],
-				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		1:
@@ -175,7 +175,7 @@ exports.glyphs['five_alt'] =
 					opposite: contours[2].nodes[1].expandedTo[0]
 			transformOrigin: contours[2].nodes[1].expandedTo[1]
 			transforms: Array(
-				# [ 'skewX', - 10 * serifRotate + 'deg' ],
+				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
 		2:

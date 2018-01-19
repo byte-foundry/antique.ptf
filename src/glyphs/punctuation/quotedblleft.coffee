@@ -5,7 +5,7 @@ exports.glyphs['quotedblleft'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 15
@@ -26,7 +26,7 @@ exports.glyphs['quotedblleft'] =
 					typeOut: 'line'
 					expand:
 						width: Math.max( 30, ( 62 / 54 ) * thickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['quotedblleft'] =
 					typeOut: 'line'
 					expand:
 						width: Math.max( 30, ( 62 / 54 ) * thickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[0].nodes[1].expandedTo[0].x
@@ -42,16 +42,16 @@ exports.glyphs['quotedblleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 34 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				3:
 					x: contours[0].nodes[1].expandedTo[0].x
 					y: contours[0].nodes[1].expandedTo[0].y + 10
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 34 / 54 ) * thickness / Math.cos( 18 / 180 * Math.PI )
-						angle: 18 + 'deg'
+						angle:( 18 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[0].nodes[1].expandedTo[1].x - 4
@@ -71,7 +71,7 @@ exports.glyphs['quotedblleft'] =
 					typeOut: 'line'
 					expand:
 						width: Math.max( 30, ( 62 / 54 ) * thickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: contours[1].nodes[0].x
@@ -79,7 +79,7 @@ exports.glyphs['quotedblleft'] =
 					typeOut: 'line'
 					expand:
 						width: Math.max( 30, ( 62 / 54 ) * thickness )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				2:
 					x: contours[1].nodes[1].expandedTo[0].x
@@ -87,16 +87,16 @@ exports.glyphs['quotedblleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 34 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				3:
 					x: contours[1].nodes[1].expandedTo[0].x
 					y: contours[1].nodes[1].expandedTo[0].y + 10
-					dirOut: 90 + 'deg'
+					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
 						width: ( 34 / 54 ) * thickness / Math.cos( 18 / 180 * Math.PI )
-						angle: 18 + 'deg'
+						angle:( 18 ) / 180 * Math.PI
 						distr: 0
 				4:
 					x: contours[1].nodes[1].expandedTo[1].x - 4

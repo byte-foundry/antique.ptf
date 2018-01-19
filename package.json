@@ -38,6 +38,7 @@
     "through2": "~0.6.1"
   },
   "dependencies": {
-    "karma": "^1.7.1"
+    "karma": "^1.7.1",
+    "prototypo-precursor": "^1.0.3"
   }
 }

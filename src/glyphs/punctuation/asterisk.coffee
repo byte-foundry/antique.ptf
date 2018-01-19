@@ -5,7 +5,7 @@ exports.glyphs['asterisk'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + 53 + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	tags: [
 		'all',
@@ -26,7 +26,7 @@ exports.glyphs['asterisk'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 31 / 54 )
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -34,7 +34,7 @@ exports.glyphs['asterisk'] =
 					typeOut: 'line'
 					expand:
 						width: thickness * ( 22 / 54 ) * contrast
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 		1:
 			skeleton: true
@@ -57,7 +57,7 @@ exports.glyphs['asterisk'] =
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
 			transformOrigin: Object( {x: contours[0].nodes[1].x, y: contours[0].nodes[1].y })
-			transforms: Array( [ 'rotate', 72 + 'deg' ] )
+			transforms: Array( [ 'rotate', (72 ) / 180 * Math.PI ] )
 		2:
 			skeleton: true
 			closed: false
@@ -79,7 +79,7 @@ exports.glyphs['asterisk'] =
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
 			transformOrigin: Object({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} )
-			transforms: Array( [ 'rotate', 144 + 'deg' ] )
+			transforms:Array( [ 'rotate', (144 ) / 180 * Math.PI ] )
 		3:
 			skeleton: true
 			closed: false
@@ -101,7 +101,7 @@ exports.glyphs['asterisk'] =
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
 			transformOrigin: Object({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y} )
-			transforms: Array( [ 'rotate', 216 + 'deg' ] )
+			transforms: Array( [ 'rotate', (216 ) / 180 * Math.PI ] )
 		4:
 			skeleton: true
 			closed: false
@@ -123,4 +123,4 @@ exports.glyphs['asterisk'] =
 						angle: contours[0].nodes[1].expand.angle
 						distr: contours[0].nodes[1].expand.distr
 			transformOrigin: Object({x: contours[0].nodes[1].x, y: contours[0].nodes[1].y})
-			transforms: Array( [ 'rotate', 288 + 'deg' ] )
+			transforms: Array( [ 'rotate', (288 ) / 180 * Math.PI ] )

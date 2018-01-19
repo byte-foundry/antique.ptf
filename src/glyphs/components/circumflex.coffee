@@ -23,7 +23,7 @@ exports.glyphs['circumflex'] =
 							( 57 / 54 ) * thickness,
 							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 20
 						)
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.5
 				1:
 					x: anchors[0].x - (24) - 15 * width - Math.max( 30, ( 30 / 54 ) * thickness )
@@ -34,7 +34,7 @@ exports.glyphs['circumflex'] =
 							( 36 / 54 ) * thickness * contrast * contrastExtremity,
 							anchors[0].x - contours[0].nodes[1].x
 						)
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.75
 		1:
 			skeleton: true
@@ -49,7 +49,7 @@ exports.glyphs['circumflex'] =
 							( 36 / 54 ) * thickness * contrast * contrastExtremity,
 							anchors[0].x - contours[0].nodes[1].x
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: anchors[0].x
@@ -60,5 +60,5 @@ exports.glyphs['circumflex'] =
 							( 57 / 54 ) * thickness,
 							contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x - 20
 						)
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5

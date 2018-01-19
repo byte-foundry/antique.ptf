@@ -26,7 +26,7 @@ exports.glyphs['guilsinglleft'] =
 					typeOut: 'line'
 					expand:
 						width: ( 42 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0
 				1:
 					x: spacingLeft + (10/54) * thickness
@@ -35,7 +35,7 @@ exports.glyphs['guilsinglleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 42 / 54 ) * thickness * Math.sqrt( width )
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0.75
 				2:
 					x: contours[0].nodes[0].expandedTo[0].x
@@ -43,5 +43,5 @@ exports.glyphs['guilsinglleft'] =
 					typeIn: 'line'
 					expand:
 						width: ( 42 / 54 ) * thickness * contrast * contrastExtremity * Math.sqrt( width )
-						angle: 180 + 'deg'
+						angle: Math.PI
 						distr: 0

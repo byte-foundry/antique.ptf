@@ -18,20 +18,20 @@ exports.glyphs['tilde'] =
 				0:
 					x: anchors[0].x - 44 * width - (7)
 					y: anchors[0].y
-					dirOut: 100 + 'deg'
+					dirOut: 100 / 180 * Math.PI
 					expand:
 						width: ( 27 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.75
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * ( 33 / 142 )
 					y: contours[0].nodes[4].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					tensionOut: 1.2
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: - 80 + 'deg'
+						angle: - 80 / 180 * Math.PI
 						distr: 0
 				2:
 					x: anchors[0].x
@@ -47,18 +47,18 @@ exports.glyphs['tilde'] =
 				3:
 					x: contours[0].nodes[4].expandedTo[1].x - ( contours[0].nodes[4].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * ( 33 / 142 )
 					y: contours[0].nodes[0].y
-					dirOut: 0 + 'deg'
+					dirOut: 0
 					type: 'smooth'
 					tensionIn: 1.2
 					expand:
 						width: ( 28 / 54 ) * thickness
-						angle: 180 + 100 + 'deg'
+						angle: 280 / 180 * Math.PI
 						distr: 1
 				4:
 					x: anchors[0].x + 44 * width + (7)
 					y: anchors[0].y + 60
-					dirIn: - 80 + 'deg'
+					dirIn: - 80 / 180 * Math.PI
 					expand:
 						width: ( 27 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25

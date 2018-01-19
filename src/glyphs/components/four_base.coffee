@@ -16,10 +16,10 @@ exports.glyphs['four_base'] =
 					x: ( spacingLeft + contours[1].nodes[2].x ) * ( 154 / 227 ) - (7/54) * thickness
 					y: capHeight
 					typeOut: 'line'
-					dirOut: - 90 + 'deg'
+					dirOut: - Math.PI / 2
 					expand:
 						width: ( 48 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.25
 				1:
 					x: spacingLeft
@@ -40,7 +40,7 @@ exports.glyphs['four_base'] =
 					typeOut: 'line'
 					expand:
 						width: contours[0].nodes[1].expandedTo[0].y - contours[1].nodes[1].expandedTo[0].y
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 1
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
@@ -51,14 +51,14 @@ exports.glyphs['four_base'] =
 					typeOut: 'line'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.75
 				2:
 					x: contours[0].nodes[1].x + 100 * width + 60 + Math.max( 67, ( 67 / 54 ) * thickness )
 					y: contours[1].nodes[1].y
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
-						angle: 90 + 'deg'
+						angle: Math.PI / 2
 						distr: 0.75
 		2:
 			skeleton: true
@@ -73,7 +73,7 @@ exports.glyphs['four_base'] =
 					typeOut: 'line'
 					expand:
 						width: ( 10 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0
 				1:
 					x: Utils.onLine({
@@ -87,7 +87,7 @@ exports.glyphs['four_base'] =
 					typeOut: 'line'
 					expand:
 						width: ( 56 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 				2:
 					x: contours[2].nodes[1].x
@@ -95,7 +95,7 @@ exports.glyphs['four_base'] =
 					typeOut: 'line'
 					expand:
 						width: ( 56 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 1
 	components:
 		0:

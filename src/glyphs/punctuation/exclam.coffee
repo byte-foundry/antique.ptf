@@ -5,7 +5,7 @@ exports.glyphs['exclam'] =
 	ot:
 		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 30
@@ -26,7 +26,7 @@ exports.glyphs['exclam'] =
 					typeOut: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				1:
 					x: contours[0].nodes[0].x
@@ -35,7 +35,7 @@ exports.glyphs['exclam'] =
 					typeIn: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 				2:
 					x: contours[0].nodes[0].x
@@ -49,7 +49,7 @@ exports.glyphs['exclam'] =
 					typeIn: 'line'
 					expand:
 						width: ( 27 / 54 ) * thickness * contrast * contrastExtremity
-						angle: 0 + 'deg'
+						angle: 0
 						distr: 0.5
 	components:
 		0:
