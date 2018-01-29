@@ -144,6 +144,7 @@ exports.glyphs['e'] =
 		0:
 			base: ['none', 'serif-vertical']
 			id: 'bottomright'
+			class: 'lowerCurveEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -157,6 +158,7 @@ exports.glyphs['e'] =
 		1:
 			base: ['none', 'serif-vertical']
 			id: 'bottomleft'
+			class: 'lowerCurveInsideEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -170,6 +172,7 @@ exports.glyphs['e'] =
 		2:
 			base: ['none', 'serif-vertical']
 			id: 'topright'
+			class: 'upperCurveEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[7].expandedTo[0]

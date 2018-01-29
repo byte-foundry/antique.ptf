@@ -100,3 +100,51 @@ exports.glyphs['t_alt'] =
 						width: thickness
 						angle: 0
 						distr: 0.25
+	components:
+		0:
+			base: ['none', 'serif-vertical']
+			id: 'bottomright'
+			class: 'lowerCurveEnd'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0]
+					opposite: contours[1].nodes[0].expandedTo[1]
+					noneAnchor: contours[1].nodes[0].expandedTo[0]
+			transformOrigin: contours[1].nodes[0].expandedTo[0]
+			transforms: Array(
+				[ 'scaleX', -1 ],
+				[ 'scaleY', -1 ]
+			)
+		1:
+			base: ['none', 'serif-vertical']
+			id: 'bottomleft'
+			class: 'lowerCurveInsideEnd'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1]
+					opposite: contours[1].nodes[0].expandedTo[0]
+					noneAnchor: contours[1].nodes[0].expandedTo[1]
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1]
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		2:
+			base: ['none', 'serif-curve-inside-auto']
+			id: 'bottom'
+			class: 'bottomRightCurveOutsideSerif'
+			parentAnchors:
+				0:
+					baseWidth: contours[1].nodes[1].expandedTo[0]
+					baseHeight: contours[1].nodes[1].expandedTo[0]
+					noneAnchor: contours[1].nodes[1].expandedTo[0]
+					opposite: contours[1].nodes[1].expandedTo[1]
+					curveEnd: contours[1].nodes[2].expandedTo[0]
+					rotationAngle: -15
+					down: true
+					rotationCenter: contours[1].nodes[1].expandedTo[0]
+			parameters:
+				serifWidth: Math.min(
+					serifWidth,
+					contours[1].nodes[1].expandedTo[0].y + overshoot
+				)

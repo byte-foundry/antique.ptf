@@ -89,6 +89,7 @@ exports.glyphs['r'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -97,6 +98,7 @@ exports.glyphs['r'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -110,6 +112,7 @@ exports.glyphs['r'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]
@@ -123,6 +126,7 @@ exports.glyphs['r'] =
 		3:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'topright'
+			class: 'topRightCurveOutsideSerif'
 			parentAnchors:
 				0:
 					baseWidth: contours[1].nodes[1].expandedTo[1]
@@ -133,3 +137,26 @@ exports.glyphs['r'] =
 					rotationAngle: -15
 					inverseOrder: true
 					rotationCenter: contours[1].nodes[1].expandedTo[1]
+		4:
+			base: ['none', 'serif-vertical']
+			id: 'topright2'
+			class: 'upperCurveEnd'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[1]
+					opposite: contours[1].nodes[0].expandedTo[0]
+					noneAnchor: contours[1].nodes[0].expandedTo[1]
+					reversed: true
+			transformOrigin: contours[1].nodes[0].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		5:
+			base: ['none', 'serif-vertical']
+			id: 'topleft'
+			class: 'upperCurveInsideEnd'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[0].expandedTo[0]
+					opposite: contours[1].nodes[0].expandedTo[1]
+					noneAnchor: contours[1].nodes[0].expandedTo[0]

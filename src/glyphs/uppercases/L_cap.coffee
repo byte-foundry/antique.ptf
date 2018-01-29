@@ -118,7 +118,7 @@ exports.glyphs['L_cap'] =
 				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[1].x - contours[1].nodes[0].x )
@@ -144,7 +144,7 @@ exports.glyphs['L_cap'] =
 				# [ 'skewX',( - 10 * serifRotate ) / 180 * Math.PI ],
 				# [ 'translateX', ( Math.tan( (10 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[1].x - contours[1].nodes[0].x )

@@ -93,6 +93,7 @@ exports.glyphs['u'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[0]
@@ -106,6 +107,7 @@ exports.glyphs['u'] =
 		1:
 			base: ['none', 'serif-vertical']
 			id: 'topright'
+			class: 'upperLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[1]
@@ -119,6 +121,7 @@ exports.glyphs['u'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topleft2'
+			class: 'upperRightInsideStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[0]
@@ -129,7 +132,7 @@ exports.glyphs['u'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[3].expandedTo[1].x - 10
@@ -137,6 +140,7 @@ exports.glyphs['u'] =
 		3:
 			base: ['none', 'serif-vertical']
 			id: 'topright2'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]
@@ -150,6 +154,7 @@ exports.glyphs['u'] =
 		4:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]

@@ -182,7 +182,7 @@ exports.glyphs['three'] =
 					left: true
 					# down: true
 					rotationCenter: contours[0].nodes[1].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[0].nodes[2].expandedTo[0].y - contours[0].nodes[1].expandedTo[0].y + overshoot
@@ -202,7 +202,7 @@ exports.glyphs['three'] =
 					down: true
 					inverseOrder: true
 					rotationCenter: contours[1].nodes[5].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[1].nodes[5].expandedTo[0].y - contours[1].nodes[4].expandedTo[0].y + overshoot

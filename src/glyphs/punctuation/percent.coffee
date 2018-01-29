@@ -19,7 +19,7 @@ exports.glyphs['percent'] =
 				[ 'translateY', 340 - overshoot],
 				[ 'translateX', 0.48 * (spacing * 50 + 10)],
 			)
-			parentParameters:
+			parameters:
 				thickness: 1.35 * thickness
 				width: 0.5 * width + 0.98
 		1:
@@ -30,6 +30,6 @@ exports.glyphs['percent'] =
 				[ 'scaleY', 0.52 ]
 				[ 'translateX', Math.max(90, thickness) + 49 + 72 * width],
 			)
-			parentParameters:
+			parameters:
 				thickness: 1.35 * thickness
 				width: 0.5 * width + 0.98

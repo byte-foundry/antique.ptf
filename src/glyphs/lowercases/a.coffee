@@ -153,6 +153,7 @@ exports.glyphs['a'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[4].expandedTo[0]

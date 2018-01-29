@@ -111,7 +111,7 @@ exports.glyphs['N_cap'] =
 					obliqueEndPoint: contours[0].nodes[1].expandedTo[1]
 					scaleX: -1
 					reversed: true
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
@@ -162,7 +162,7 @@ exports.glyphs['N_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[2].nodes[1].expandedTo[1].x ) - 10

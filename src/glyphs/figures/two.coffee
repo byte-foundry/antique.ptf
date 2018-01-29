@@ -151,7 +151,7 @@ exports.glyphs['two'] =
 					left: true
 					# down: true
 					rotationCenter: contours[0].nodes[1].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[0].nodes[2].expandedTo[0].y - contours[0].nodes[1].expandedTo[0].y + overshoot

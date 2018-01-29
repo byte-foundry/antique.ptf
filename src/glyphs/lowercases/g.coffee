@@ -149,6 +149,7 @@ exports.glyphs['g'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'topright'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0]
@@ -162,6 +163,7 @@ exports.glyphs['g'] =
 		1:
 			base: ['none', 'serif-vertical']
 			id: 'bottomright'
+			class: 'bottomLeftCurveInsideEnd'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[4].expandedTo[1]
@@ -172,7 +174,7 @@ exports.glyphs['g'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[1].nodes[4].expandedTo[1].x ) - 10
@@ -192,6 +194,7 @@ exports.glyphs['g'] =
 		2:
 			base: ['none', 'serif-vertical']
 			id: 'bottomleft'
+			class: 'bottomLeftCurveEnd'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[4].expandedTo[0]
@@ -202,7 +205,7 @@ exports.glyphs['g'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[4].y - contours[1].nodes[3].expandedTo[0].y )

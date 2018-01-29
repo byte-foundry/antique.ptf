@@ -119,6 +119,7 @@ exports.glyphs['C_cap'] =
 		0:
 			base: ['none', 'serif-vertical']
 			id: 'bottomright'
+			class: 'lowerCurveEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -132,6 +133,7 @@ exports.glyphs['C_cap'] =
 		1:
 			base: ['none', 'serif-vertical']
 			id: 'bottomleft'
+			class: 'lowerCurveInsideEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -145,6 +147,7 @@ exports.glyphs['C_cap'] =
 		2:
 			base: ['none', 'serif-vertical']
 			id: 'topright'
+			class: 'upperCurveEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[7].expandedTo[0]
@@ -158,6 +161,7 @@ exports.glyphs['C_cap'] =
 		3:
 			base: ['none', 'serif-vertical']
 			id: 'topleft'
+			class: 'upperCurveInsideEnd'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[7].expandedTo[1]
@@ -166,6 +170,7 @@ exports.glyphs['C_cap'] =
 		4:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'top'
+			class: 'topRightCurveOutsideSerif'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[6].expandedTo[0]
@@ -176,7 +181,7 @@ exports.glyphs['C_cap'] =
 					rotationAngle: -15
 					inverseOrder: true
 					rotationCenter: contours[0].nodes[6].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[0].nodes[5].expandedTo[0].y - contours[0].nodes[6].expandedTo[0].y + overshoot
@@ -184,6 +189,7 @@ exports.glyphs['C_cap'] =
 		5:
 			base: ['none', 'serif-curve-inside-auto']
 			id: 'bottom'
+			class: 'bottomRightCurveOutsideSerif'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[1].expandedTo[0]
@@ -194,7 +200,7 @@ exports.glyphs['C_cap'] =
 					rotationAngle: -15
 					down: true
 					rotationCenter: contours[0].nodes[1].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot

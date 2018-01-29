@@ -115,7 +115,7 @@ exports.glyphs['J_cap'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[0].nodes[4].y - contours[0].nodes[3].expandedTo[1].y )
@@ -141,7 +141,7 @@ exports.glyphs['J_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[0].nodes[4].y - contours[0].nodes[3].expandedTo[0].y )

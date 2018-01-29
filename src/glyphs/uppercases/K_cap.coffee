@@ -111,7 +111,7 @@ exports.glyphs['K_cap'] =
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[2].nodes[1].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
@@ -142,7 +142,7 @@ exports.glyphs['K_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) / 2 - 10
@@ -163,7 +163,7 @@ exports.glyphs['K_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[1].expandedTo[1].x ) / 2 - 10
@@ -202,7 +202,7 @@ exports.glyphs['K_cap'] =
 					noneAnchor: contours[2].nodes[1].expandedTo[1]
 					opposite: contours[2].nodes[1].expandedTo[0]
 					obliqueEndPoint: contours[2].nodes[0].expandedTo[1]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[2].nodes[1].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10

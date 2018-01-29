@@ -141,7 +141,7 @@ exports.glyphs['six'] =
 					rotationAngle: -15
 					inverseOrder: true
 					rotationCenter: contours[0].nodes[8].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[0].nodes[7].expandedTo[0].y - contours[0].nodes[8].expandedTo[0].y + overshoot

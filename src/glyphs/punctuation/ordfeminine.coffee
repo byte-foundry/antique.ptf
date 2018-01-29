@@ -27,5 +27,5 @@ exports.glyphs['ordfeminine'] =
 				0:
 					x: parentAnchors[0].x + 5
 					y: -80
-			parentParameters:
+			parameters:
 				width: 1.16 * width

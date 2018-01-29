@@ -103,7 +103,7 @@ exports.glyphs['U_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) / 2 - 10
@@ -121,7 +121,7 @@ exports.glyphs['U_cap'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[0].nodes[0].expandedTo[1].x - contours[0].nodes[4].expandedTo[1].x ) / 2 - 10

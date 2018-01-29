@@ -93,6 +93,7 @@ exports.glyphs['F_cap'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -101,6 +102,7 @@ exports.glyphs['F_cap'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -114,6 +116,7 @@ exports.glyphs['F_cap'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]
@@ -127,6 +130,7 @@ exports.glyphs['F_cap'] =
 		3:
 			base: ['serif-horizontal', 'none']
 			id: 'toprightbottom'
+			class: 'upperBottomHoriz'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]
@@ -137,7 +141,7 @@ exports.glyphs['F_cap'] =
 			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			# )
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[1].x - contours[1].nodes[0].x )
@@ -153,6 +157,7 @@ exports.glyphs['F_cap'] =
 		4:
 			base: ['none', 'serif-horizontal']
 			id: 'toprighttop'
+			class: 'upperTopHoriz'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[0]
@@ -165,7 +170,7 @@ exports.glyphs['F_cap'] =
 			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[1].x - contours[1].nodes[0].x )
@@ -181,6 +186,7 @@ exports.glyphs['F_cap'] =
 		5:
 			base: ['serif-horizontal', 'none']
 			id: 'middletop'
+			class: 'middleTopHoriz'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[1].expandedTo[1]
@@ -191,7 +197,7 @@ exports.glyphs['F_cap'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[2].nodes[1].x - contours[2].nodes[0].x )
@@ -207,13 +213,14 @@ exports.glyphs['F_cap'] =
 		6:
 			base: ['serif-horizontal', 'none']
 			id: 'middlebottom'
+			class: 'middleBottomHoriz'
 			parentAnchors:
 				0:
 					base: contours[2].nodes[1].expandedTo[0]
 					noneAnchor: contours[2].nodes[1].expandedTo[0]
 					opposite: contours[2].nodes[1].expandedTo[1]
 					scaleX: -1
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[2].nodes[1].x - contours[2].nodes[0].x )

@@ -100,6 +100,7 @@ exports.glyphs['x'] =
 		0:
 			base: ['serif-oblique-obtuse', 'none']
 			id: 'topleftleft'
+			class: 'obtuseLeftSerif'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -116,6 +117,7 @@ exports.glyphs['x'] =
 		1:
 			base: ['serif-oblique-acute', 'none']
 			id: 'topleftright'
+			class: 'acuteLeftSerif'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -127,7 +129,7 @@ exports.glyphs['x'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - 10
@@ -141,7 +143,7 @@ exports.glyphs['x'] =
 					noneAnchor: contours[0].nodes[1].expandedTo[1]
 					opposite: contours[0].nodes[1].expandedTo[0]
 					obliqueEndPoint: contours[0].nodes[0].expandedTo[1]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[0].nodes[1].expandedTo[1].x - contours[2].nodes[1].expandedTo[0].x ) / 2 - 10
@@ -177,7 +179,7 @@ exports.glyphs['x'] =
 					obliqueEndPoint: contours[2].nodes[0].expandedTo[0]
 					scaleX: -1
 					reversed: true
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[0].nodes[1].expandedTo[1].x - contours[2].nodes[1].expandedTo[0].x ) / 2 - 10
@@ -185,6 +187,7 @@ exports.glyphs['x'] =
 		6:
 			base: ['serif-oblique-acute', 'none']
 			id: 'toprightleft'
+			class: 'acuteRightSerif'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[0]
@@ -198,7 +201,7 @@ exports.glyphs['x'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) / 2 - 10
@@ -206,6 +209,7 @@ exports.glyphs['x'] =
 		7:
 			base: ['serif-oblique-obtuse', 'none']
 			id: 'toprightright'
+			class: 'obtuseRightSerif'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[1].expandedTo[1]

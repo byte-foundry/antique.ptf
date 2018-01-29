@@ -125,6 +125,7 @@ exports.glyphs['y'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[0]
@@ -138,6 +139,7 @@ exports.glyphs['y'] =
 		1:
 			base: ['none', 'serif-vertical']
 			id: 'topright'
+			class: 'upperLeftInsideStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[3].expandedTo[1]
@@ -148,7 +150,7 @@ exports.glyphs['y'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[3].expandedTo[1].x ) / 2 - 10
@@ -156,6 +158,7 @@ exports.glyphs['y'] =
 		2:
 			base: ['none', 'serif-vertical']
 			id: 'topright2'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0]
@@ -169,6 +172,7 @@ exports.glyphs['y'] =
 		3:
 			base: ['serif-vertical', 'none']
 			id: 'topleft2'
+			class: 'upperRightInsideStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]
@@ -179,7 +183,7 @@ exports.glyphs['y'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[3].expandedTo[1].x ) / 2 - 10
@@ -187,6 +191,7 @@ exports.glyphs['y'] =
 		4:
 			base: ['none', 'serif-vertical']
 			id: 'bottomright'
+			class: 'bottomLeftCurveInsideEnd'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[4].expandedTo[1]
@@ -197,7 +202,7 @@ exports.glyphs['y'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					contours[1].nodes[4].y - contours[1].nodes[3].y
@@ -206,21 +211,22 @@ exports.glyphs['y'] =
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[1].x - contours[1].nodes[4].expandedTo[1].x ) - 10
 				)
-		# 5:
-		# 	base: ['none', 'serif-vertical']
-		# 	id: 'bottomleft'
-		# 	parentAnchors:
-		# 		0:
-		# 			base: contours[1].nodes[4].expandedTo[0]
-		# 			opposite: contours[1].nodes[4].expandedTo[1]
-		# 			noneAnchor: contours[1].nodes[4].expandedTo[0]
-		# 			reversed: true
-		# 	transformOrigin: contours[1].nodes[4].expandedTo[0]
-		# 	transforms: Array(
-		# 		[ 'scaleY', -1 ]
-		# 	)
-		# 	parentParameters:
-		# 		serifHeight: Math.min(
-		# 			serifHeight,
-		# 			contours[1].nodes[4].y - contours[1].nodes[3].y
-		# 		)
+		5:
+			base: ['none', 'serif-vertical']
+			id: 'bottomleft'
+			class: 'bottomLeftCurveEnd'
+			parentAnchors:
+				0:
+					base: contours[1].nodes[4].expandedTo[0]
+					opposite: contours[1].nodes[4].expandedTo[1]
+					noneAnchor: contours[1].nodes[4].expandedTo[0]
+					reversed: true
+			transformOrigin: contours[1].nodes[4].expandedTo[0]
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+			parameters:
+				serifHeight: Math.min(
+					serifHeight,
+					contours[1].nodes[4].y - contours[1].nodes[3].y
+				)

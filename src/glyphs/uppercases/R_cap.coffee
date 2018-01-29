@@ -186,7 +186,7 @@ exports.glyphs['R_cap'] =
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[2].nodes[3].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
@@ -224,7 +224,7 @@ exports.glyphs['R_cap'] =
 					noneAnchor: contours[2].nodes[3].expandedTo[1]
 					opposite: contours[2].nodes[3].expandedTo[0]
 					obliqueEndPoint: contours[2].nodes[2].expandedTo[1]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[2].nodes[3].expandedTo[1].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10

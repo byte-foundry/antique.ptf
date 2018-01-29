@@ -51,6 +51,7 @@ exports.glyphs['i'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -59,6 +60,7 @@ exports.glyphs['i'] =
 		2:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -72,6 +74,7 @@ exports.glyphs['i'] =
 		3:
 			base: ['serif-vertical', 'none']
 			id: 'topleft'
+			class: 'upperLeftStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[0]
@@ -85,6 +88,7 @@ exports.glyphs['i'] =
 		4:
 			base: ['none', 'serif-vertical']
 			id: 'topright'
+			class: 'upperRightStump'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[1].expandedTo[1]

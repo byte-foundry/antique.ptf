@@ -100,7 +100,7 @@ exports.glyphs['T_cap'] =
 			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].x )
@@ -128,7 +128,7 @@ exports.glyphs['T_cap'] =
 			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].x )
@@ -149,7 +149,7 @@ exports.glyphs['T_cap'] =
 					base: contours[0].nodes[1].expandedTo[1]
 					noneAnchor: contours[0].nodes[1].expandedTo[1]
 					opposite: contours[0].nodes[1].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[0].nodes[1].x - contours[1].nodes[0].expandedTo[1].x )
@@ -177,7 +177,7 @@ exports.glyphs['T_cap'] =
 			# 	[ 'skewX',( - 15 * serifRotate ) / 180 * Math.PI ],
 			# 	[ 'translateX', ( Math.tan( (15 * serifRotate) / 180 * Math.PI ) * ( thickness * 0.5 ) ) ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					if serifHeight + serifCurve > ( contours[0].nodes[1].x - contours[1].nodes[0].expandedTo[1].x )

@@ -36,6 +36,7 @@ exports.glyphs['y_alt'] =
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
 					y: contours[1].nodes[1].expandedTo[0].y
+					typeIn: 'line'
 					expand:
 						width: ( 47 / 54 ) * thickness
 						angle: 0
@@ -62,6 +63,7 @@ exports.glyphs['y_alt'] =
 						thickness
 					)
 					typeOut: 'line'
+					typeIn: 'line'
 					expand:
 						width: ( 45 / 54 ) * thickness * contrast
 						angle: 0
@@ -72,6 +74,7 @@ exports.glyphs['y_alt'] =
 						on: [ contours[1].nodes[0].expandedTo[1], contours[1].nodes[1].expandedTo[1] ]
 					})
 					y: ( 110 / 90 ) * descender
+					typeIn: 'line'
 					expand:
 						width: ( 45 / 54 ) * thickness * contrast * contrastExtremity
 						angle: 0
@@ -80,6 +83,7 @@ exports.glyphs['y_alt'] =
 		0:
 			base: ['serif-oblique-obtuse', 'none']
 			id: 'topleft'
+			class: 'obtuseLeftSerif'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[0]
@@ -96,6 +100,7 @@ exports.glyphs['y_alt'] =
 		1:
 			base: ['none', 'serif-oblique-acute']
 			id: 'topright'
+			class: 'acuteLeftSerif'
 			parentAnchors:
 				0:
 					base: contours[0].nodes[0].expandedTo[1]
@@ -107,7 +112,7 @@ exports.glyphs['y_alt'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
@@ -115,6 +120,7 @@ exports.glyphs['y_alt'] =
 		2:
 			base: ['none', 'serif-oblique-obtuse']
 			id: 'topright2'
+			class: 'obtuseRightSerif'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]
@@ -129,6 +135,7 @@ exports.glyphs['y_alt'] =
 		3:
 			base: ['serif-oblique-acute', 'none']
 			id: 'topleft2'
+			class: 'acuteRightSerif'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0]
@@ -142,7 +149,7 @@ exports.glyphs['y_alt'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10

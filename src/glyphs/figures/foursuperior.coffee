@@ -29,6 +29,6 @@ exports.glyphs['foursuperior'] =
 				[ 'translateY', capHeight * 0.571],
 				[ 'translateX', 0.531 * (spacingLeft)],
 			)
-			parentParameters:
+			parameters:
 				thickness: 1.35 * thickness
 				width: 0.5 * width + 0.98

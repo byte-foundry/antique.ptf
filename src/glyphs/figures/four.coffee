@@ -142,7 +142,7 @@ exports.glyphs['four'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifHeight: Math.min(
 					serifHeight,
 					contours[1].nodes[2].expandedTo[0].x - contours[2].nodes[2].expandedTo[1].x - 10
@@ -156,7 +156,7 @@ exports.glyphs['four'] =
 					noneAnchor: contours[1].nodes[2].expandedTo[0]
 					opposite: contours[1].nodes[2].expandedTo[1]
 					scaleX: -1
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[1].nodes[2].expandedTo[0].y - serifHeight - 10

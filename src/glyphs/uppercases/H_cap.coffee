@@ -106,7 +106,7 @@ exports.glyphs['H_cap'] =
 			transforms: Array(
 				[ 'scaleX', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 4
@@ -137,7 +137,7 @@ exports.glyphs['H_cap'] =
 				[ 'scaleX', -1 ],
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[1].expandedTo[1].x ) / 2 - 4
@@ -150,7 +150,7 @@ exports.glyphs['H_cap'] =
 					base: contours[1].nodes[0].expandedTo[0]
 					opposite: contours[1].nodes[0].expandedTo[1]
 					noneAnchor: contours[1].nodes[0].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 4
@@ -181,7 +181,7 @@ exports.glyphs['H_cap'] =
 			transforms: Array(
 				[ 'scaleY', -1 ]
 			)
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[1].expandedTo[1].x ) / 2 - 4

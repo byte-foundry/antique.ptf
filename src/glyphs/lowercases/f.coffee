@@ -87,6 +87,7 @@ exports.glyphs['f'] =
 		0:
 			base: ['serif-vertical', 'none']
 			id: 'bottomright'
+			class: 'lowerRightStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[1]
@@ -100,6 +101,7 @@ exports.glyphs['f'] =
 		1:
 			base: ['serif-vertical', 'none']
 			id: 'bottomleft'
+			class: 'lowerLeftStump'
 			parentAnchors:
 				0:
 					base: contours[1].nodes[0].expandedTo[0]
@@ -113,7 +115,7 @@ exports.glyphs['f'] =
 					base: contours[1].nodes[3].expandedTo[1]
 					noneAnchor: contours[1].nodes[3].expandedTo[1]
 					opposite: contours[1].nodes[3].expandedTo[0]
-			parentParameters:
+			parameters:
 				serifWidth: Math.min(
 					serifWidth,
 					contours[1].nodes[3].expandedTo[1].y - contours[0].nodes[1].expandedTo[0].y - 10
