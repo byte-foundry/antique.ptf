@@ -147,6 +147,7 @@ exports.glyphs['s'] =
 		1:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'bottom'
+			class: 'bottomLeftCurveOutside'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[1].expandedTo[0]
@@ -163,3 +164,54 @@ exports.glyphs['s'] =
 					serifWidth,
 					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
 				)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperCurveEnd'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[8].expandedTo[1]
+					opposite: contours[0].nodes[8].expandedTo[0]
+					noneAnchor: contours[0].nodes[8].expandedTo[1]
+					reversed: true
+			transformOrigin: contours[0].nodes[8].expandedTo[1]
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		3:
+			base: ['none', 'serif-vertical']
+			id: 'topleft'
+			class: 'upperCurveInsideEnd'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[8].expandedTo[0]
+					opposite: contours[0].nodes[8].expandedTo[1]
+					noneAnchor: contours[0].nodes[8].expandedTo[0]
+		4:
+			base: ['none', 'serif-vertical']
+			id: 'bottomright'
+			class: 'lowerCurveEnd'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[0]
+					opposite: contours[0].nodes[0].expandedTo[1]
+					noneAnchor: contours[0].nodes[0].expandedTo[0]
+			transformOrigin: contours[0].nodes[0].expandedTo[0]
+			transforms: Array(
+				[ 'scaleY', -1 ]
+			)
+		5:
+			base: ['none', 'serif-vertical']
+			id: 'bottomleft'
+			class: 'lowerCurveInsideEnd'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[0].expandedTo[1]
+					opposite: contours[0].nodes[0].expandedTo[0]
+					noneAnchor: contours[0].nodes[0].expandedTo[1]
+					reversed: true
+			transformOrigin: contours[0].nodes[0].expandedTo[1]
+			transforms: Array(
+				[ 'scaleY', -1 ],
+				[ 'scaleX', -1 ]
+			)

@@ -159,6 +159,7 @@ exports.glyphs['G_cap'] =
 		0:
 			base: ['serif-curve-inside-auto', 'none']
 			id: 'top'
+			class: 'topRightCurveOutsideSerif'
 			parentAnchors:
 				0:
 					baseWidth: contours[0].nodes[6].expandedTo[0]
@@ -175,20 +176,25 @@ exports.glyphs['G_cap'] =
 					contours[0].nodes[5].expandedTo[0].y - contours[0].nodes[6].expandedTo[0].y + overshoot
 				)
 		1:
-			base: ['none', 'serif-curve-inside-auto']
-			id: 'bottom'
+			base: ['none', 'serif-vertical']
+			id: 'topright'
+			class: 'upperCurveEnd'
 			parentAnchors:
 				0:
-					baseWidth: contours[0].nodes[1].expandedTo[0]
-					baseHeight: contours[0].nodes[1].expandedTo[0]
-					noneAnchor: contours[0].nodes[1].expandedTo[0]
-					opposite: contours[0].nodes[1].expandedTo[1]
-					curveEnd: contours[0].nodes[2].expandedTo[0]
-					rotationAngle: -15
-					down: true
-					rotationCenter: contours[0].nodes[1].expandedTo[0]
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					contours[0].nodes[1].expandedTo[0].y - contours[0].nodes[2].expandedTo[0].y + overshoot
-				)
+					base: contours[0].nodes[7].expandedTo[0]
+					opposite: contours[0].nodes[7].expandedTo[1]
+					noneAnchor: contours[0].nodes[7].expandedTo[0]
+					reversed: true
+			transformOrigin: contours[0].nodes[7].expandedTo[0]
+			transforms: Array(
+				[ 'scaleX', -1 ]
+			)
+		2:
+			base: ['none', 'serif-vertical']
+			id: 'topleft'
+			class: 'upperCurveInsideEnd'
+			parentAnchors:
+				0:
+					base: contours[0].nodes[7].expandedTo[1]
+					opposite: contours[0].nodes[7].expandedTo[0]
+					noneAnchor: contours[0].nodes[7].expandedTo[1]
