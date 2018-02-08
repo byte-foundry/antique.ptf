@@ -161,7 +161,7 @@ exports.glyphs['M_cap'] =
 					typeOut: 'line'
 				4:
 					x: anchors[0].intersection[0]
-					y: anchors[0].intersection[1] + 2
+					y: anchors[0].intersection[1] + 4
 					typeOut: 'line'
 	components:
 		0:

@@ -46,7 +46,7 @@ exports.glyphs['K_cap'] =
 				0:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 124 - (14/54) * thickness * opticThickness,
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness * opticThickness + 15 + (15)
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness * opticThickness + 50 + (15)
 					)
 					y: capHeight
 					typeOut: 'line'
@@ -77,7 +77,7 @@ exports.glyphs['K_cap'] =
 					x: Utils.onLine({
 						y: ( 401 / 700 ) * capHeight * crossbar
 						on: [ contours[1].nodes[0].expandedTo[0].point, contours[1].nodes[1].expandedTo[0].point ]
-					})
+					}) - Math.min( 5, ( ( 5 / 54 ) * thickness ) )
 					y: ( 401 / 700 ) * capHeight * crossbar
 					typeOut: 'line'
 					expand: Object({
