@@ -1,5 +1,5 @@
 exports.glyphs['I_cap_breve'] =
-	unicode: '?'
+	unicode: 300
 	glyphName: 'Ibreve'
 	characterName: 'LATIN CAPITAL LETTER I WITH BREVE'
 	base: 'I_cap'
