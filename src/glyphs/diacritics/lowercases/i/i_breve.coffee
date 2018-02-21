@@ -1,5 +1,5 @@
 exports.glyphs['i_breve'] =
-	unicode: '?'
+	unicode: 301
 	glyphName: 'ibreve'
 	characterName: 'LATIN SMALL LETTER I WITH BREVE'
 	base: 'dotlessi'
