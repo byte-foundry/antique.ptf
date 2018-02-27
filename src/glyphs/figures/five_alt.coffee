@@ -70,7 +70,7 @@ exports.glyphs['five_alt'] =
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
-						angle: 170
+						angle: 170 / 180 * Math.PI
 						distr: 0.25
 				5:
 					x: ( contours[0].nodes[6].expandedTo[0].x + contours[0].nodes[4].expandedTo[0].x ) * ( 67 / 145 )

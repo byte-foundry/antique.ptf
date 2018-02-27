@@ -21,7 +21,7 @@ exports.glyphs['three_base'] =
 						contours[0].nodes[2].y - ( 50 / 54 ) * thickness - ( Math.sin( 4 / 180 * Math.PI ) * ( 0.75 * ( 58 / 54 ) * thickness ) ) - 10
 					)
 					dirOut: Math.PI / 2
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: 4 / 180 * Math.PI
@@ -30,7 +30,7 @@ exports.glyphs['three_base'] =
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 90 / 181 )
 					y: capHeight + overshoot
 					dirOut: 0
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: - Math.PI / 2
@@ -55,6 +55,7 @@ exports.glyphs['three_base'] =
 						contours[0].nodes[5].expandedTo[0].y + 10
 					)
 					dirOut: - Math.PI / 2
+					typeIn: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
 						angle: - 170 / 180 * Math.PI
@@ -95,6 +96,7 @@ exports.glyphs['three_base'] =
 					x: contours[0].nodes[5].x
 					y: contours[1].nodes[0].expandedTo[0].y
 					dirOut: 0
+					typeIn: 'smooth'
 					expand:
 						width: Math.min(
 							( 50 / 54 ) * thickness * contrast * contrastExtremity,
@@ -119,7 +121,7 @@ exports.glyphs['three_base'] =
 					x: contours[1].nodes[2].x
 					y: contours[1].nodes[5].y
 					dirOut: - Math.PI / 2
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness
 						angle:( - 171 ) / 180 * Math.PI
@@ -128,7 +130,7 @@ exports.glyphs['three_base'] =
 					x: contours[1].nodes[6].expandedTo[0].x + ( contours[1].nodes[3].expandedTo[0].x - contours[1].nodes[6].expandedTo[0].x ) * ( 97 / 194)
 					y: - overshoot
 					dirOut: Math.PI
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness * contrast
 						angle: Math.PI / 2
@@ -148,6 +150,7 @@ exports.glyphs['three_base'] =
 				6:
 					x: contours[0].nodes[0].x
 					y: contours[1].nodes[5].y + Math.min( 31, ( 31 / 700 ) * capHeight )
+					typeIn: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness
 						angle: 0

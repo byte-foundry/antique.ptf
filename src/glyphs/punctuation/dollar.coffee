@@ -36,7 +36,7 @@ exports.glyphs['dollar'] =
 						contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast + 10
 					)
 					dirOut: - Math.PI / 2
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 49 / 54 ) * thickness
 						angle: 0
@@ -45,7 +45,7 @@ exports.glyphs['dollar'] =
 					x: contours[0].nodes[1].expandedTo[0].x + ( contours[0].nodes[3].expandedTo[0].x - contours[0].nodes[1].expandedTo[0].x ) * ( 98 / 196 )
 					y: - overshoot
 					dirOut: 0
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 46 / 54 ) * thickness * contrast
 						angle: Math.PI / 2
@@ -61,7 +61,7 @@ exports.glyphs['dollar'] =
 					)
 					# y: contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast + ( contours[0].nodes[4].y - contours[0].nodes[2].y + ( 46 / 54 ) * thickness * contrast ) * ( ( 82 - (10) ) / 266 ) - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
 					dirIn: - Math.PI / 2
-					type: 'smooth'
+					typeOut: 'smooth'
 					expand:
 						width: ( 50 / 54 ) * thickness
 						angle: - 170 / 180 * Math.PI
@@ -70,7 +70,7 @@ exports.glyphs['dollar'] =
 					x: contours[0].nodes[0].x + ( contours[0].nodes[7].x - contours[0].nodes[0].x ) * 0.5
 					y: ( 350 / 700 ) * capHeight
 					dirOut: Utils.lineAngle({x: contours[0].nodes[3].expandedTo[0].x, y: contours[0].nodes[3].expandedTo[0].y}, {x: contours[0].nodes[5].expandedTo[0].x, y: contours[0].nodes[5].expandedTo[0].y}) + (Math.min(14, 14 * width) / 180 * Math.PI)
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
@@ -85,7 +85,7 @@ exports.glyphs['dollar'] =
 					)
 					# y: contours[0].nodes[4].y + ( ( contours[0].nodes[6].y - ( 46 / 54 ) * thickness * contrast ) - contours[0].nodes[4].y ) * ( 184 / 260 ) + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
 					dirOut: Math.PI / 2
-					type: 'smooth'
+					typeIn: 'smooth'
 					tensionIn: 1.1
 					expand:
 						width: ( 49 / 54 ) * thickness
@@ -95,10 +95,10 @@ exports.glyphs['dollar'] =
 					x: contours[0].nodes[5].expandedTo[1].x + ( contours[0].nodes[7].expandedTo[1].x - contours[0].nodes[5].expandedTo[1].x ) * ( 98 / 196 )
 					y: capHeight + overshoot
 					dirOut: 0
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
 						width: ( 46 / 54 ) * thickness * contrast
-						angle: 180 - Math.PI / 2
+						angle: Math.PI / 2
 						distr: 1
 				7:
 					x: contours[0].nodes[3].expandedTo[0].x - (12/54) * thickness

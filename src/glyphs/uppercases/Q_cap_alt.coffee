@@ -34,7 +34,7 @@ exports.glyphs['Q_alt'] =
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
-						angle: - 170
+						angle: - 170 /180 * Math.PI
 						distr: 0.25
 				1:
 					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 97 / 194 )
@@ -53,7 +53,7 @@ exports.glyphs['Q_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
-						angle: - 10
+						angle: - 10 / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].x
@@ -65,7 +65,7 @@ exports.glyphs['Q_alt'] =
 					type: 'smooth'
 					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
-						angle: 10
+						angle: 10 / 180 * Math.PI
 						distr: 0.25
 				4:
 					x: contours[0].nodes[1].x
@@ -84,7 +84,7 @@ exports.glyphs['Q_alt'] =
 					typeOut: 'line'
 					expand:
 						width: ( 58 / 54 ) * thickness * opticThickness
-						angle: 170
+						angle: 170 / 180 * Math.PI
 						distr: 0.25
 		1:
 			skeleton: true
