@@ -18,8 +18,8 @@ exports.glyphs['G_cap_alt'] =
 	]
 	anchors:
 		0:
-			x: ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[3].expandedTo[0].x ) * 0.5
-			y: capHeight + ( 45 / 80 ) * diacriticHeight
+			x: ( contours[0].nodes[0].expandedTo[0].x + contours[0].nodes[3].expandedTo[0].x ) * 0.5
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

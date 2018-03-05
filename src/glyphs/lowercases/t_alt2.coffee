@@ -18,8 +18,8 @@ exports.glyphs['t_alt2'] =
 	]
 	anchors:
 		0:
-			x: contours[1].nodes[3].expandedTo[0].x + 49
-			y: contours[1].nodes[3].expandedTo[0].y - 80 + diacriticHeight
+			x: contours[1].nodes[3].expandedTo[1].x + 32
+			y: contours[1].nodes[3].expandedTo[0].y + diacriticHeight
 	contours:
 		0:
 			skeleton: true
