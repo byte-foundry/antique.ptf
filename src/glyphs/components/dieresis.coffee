@@ -1,5 +1,6 @@
 # TODO: components switch does not work
 exports.glyphs['dieresis'] =
+	global: true
 	glyphName: 'dieresis'
 	characterName: 'DIAERESIS'
 	anchors:

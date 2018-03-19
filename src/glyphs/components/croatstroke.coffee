@@ -1,4 +1,5 @@
 exports.glyphs['croatstroke'] =
+	global: true
 	glyphName: 'croatstroke'
 	characterName: 'CROATSTROKE'
 	anchors:
