@@ -2602,9 +2602,9 @@ process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
 
-prototypo-precursor@^1.0.3:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/prototypo-precursor/-/prototypo-precursor-1.0.6.tgz#b1398f8170ee892ff7c32657dbd16ee10966e6f8"
+prototypo-precursor@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/prototypo-precursor/-/prototypo-precursor-1.0.7.tgz#4ac6dd0ff827cfeb0048566a35961c364d3a3607"
   dependencies:
     lodash "~4.14.0"
 

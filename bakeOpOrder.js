@@ -5,7 +5,6 @@ const util = require('util');
 const vm = require('vm');
 
 function bakeOpOrder() {
-
 	var stream = through.obj(function(file, enc, cb) {
 		const fontSrc = JSON.parse(file.contents);
 		const font = new FontPrecursor(fontSrc, {resolveOp: false});
@@ -14,6 +13,8 @@ function bakeOpOrder() {
 			fontSrc.glyphs[name].operationOrder = glyph.operationOrder;
 
 			for(let i = 0; i < glyph.operationOrder.length; i++) {
+
+
 				const opAddress = glyph.operationOrder[i];
 				if (!(typeof opAddress === 'object')) {
 					const operation = glyph.getFromXPath(opAddress);
@@ -41,5 +42,3 @@ function bakeOpOrder() {
 }
 
 module.exports = bakeOpOrder;
-
-
