@@ -1,5 +1,6 @@
 # TODO: create diacritics for all alt glyphs
 exports.glyphs['grave'] =
+	global: true
 	glyphName: 'grave'
 	characterName: 'GRAVE ACCENT'
 	anchors:
