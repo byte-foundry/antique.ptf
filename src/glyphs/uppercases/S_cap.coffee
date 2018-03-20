@@ -132,6 +132,7 @@ exports.glyphs['S_cap'] =
 			class: 'topRightCurveOutsideSerif'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[7].dirIn
 					baseWidth: contours[0].nodes[7].expandedTo[1]
 					baseHeight: contours[0].nodes[7].expandedTo[1]
 					noneAnchor: contours[0].nodes[7].expandedTo[1]
@@ -150,6 +151,7 @@ exports.glyphs['S_cap'] =
 			class: 'bottomLeftCurveOutside'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[1].dirOut
 					baseWidth: contours[0].nodes[1].expandedTo[0]
 					baseHeight: contours[0].nodes[1].expandedTo[0]
 					noneAnchor: contours[0].nodes[1].expandedTo[0]

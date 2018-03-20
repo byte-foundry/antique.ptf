@@ -173,6 +173,7 @@ exports.glyphs['c'] =
 			class: 'topRightCurveOutsideSerif'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[6].dirIn
 					baseWidth: contours[0].nodes[6].expandedTo[0]
 					baseHeight: contours[0].nodes[6].expandedTo[0]
 					noneAnchor: contours[0].nodes[6].expandedTo[0]
@@ -192,6 +193,7 @@ exports.glyphs['c'] =
 			class: 'bottomRightCurveOutsideSerif'
 			parentAnchors:
 				0:
+					baseDir: contours[0].nodes[1].dirOut
 					baseWidth: contours[0].nodes[1].expandedTo[0]
 					baseHeight: contours[0].nodes[1].expandedTo[0]
 					noneAnchor: contours[0].nodes[1].expandedTo[0]
