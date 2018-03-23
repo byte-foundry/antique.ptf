@@ -33,6 +33,7 @@ exports.glyphs['M_alt'] =
 				1:
 					x: contours[0].nodes[0].x
 					y: capHeight - Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness
 						angle: 0
@@ -56,6 +57,7 @@ exports.glyphs['M_alt'] =
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 30
 					)
 					y: Math.max( 0, serifHeight * serifArc )
+					typeIn: 'line'
 					expand:
 						width: ( 57 / 54 ) * thickness * opticThickness * contrast
 						angle: Math.PI
@@ -78,6 +80,7 @@ exports.glyphs['M_alt'] =
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
 					y: capHeight
+					typeIn: 'line'
 					expand:
 						width: (39 / 54) * thickness * opticThickness * contrast / Math.sin(Utils.lineAngle({x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}, {x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}))
 						angle: 0
@@ -103,6 +106,7 @@ exports.glyphs['M_alt'] =
 				1:
 					x: contours[1].nodes[0].expandedTo[1].x
 					y: capHeight
+					typeIn: 'line'
 					expand:
 						width: (39 / 54) * thickness * opticThickness / Math.sin(Utils.lineAngle({x: contours[3].nodes[0].x, y: contours[3].nodes[0].y}, {x: contours[3].nodes[1].x, y: contours[3].nodes[1].y}))
 						angle: 0
