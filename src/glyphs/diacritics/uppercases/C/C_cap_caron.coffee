@@ -18,7 +18,7 @@ exports.glyphs['C_cap_caron'] =
 				0:
 					x: parentAnchors[0].x
 					y: parentAnchors[0].y
-			transformOrigin: anchors[0].point
+			transformOrigin: Object({x: anchors[0].x, y: anchors[0].y})
 			transforms: Array(
 				['scaleY', 0.9 ]
 			)
