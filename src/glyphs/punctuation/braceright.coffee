@@ -5,9 +5,9 @@ exports.glyphs['braceright'] =
 	ot:
 		advanceWidth: contours[0].nodes[5].x + spacingRight
 	transforms: Array(
-		['skewX',( slant ) / 180 * Math.PI],
 		['scaleX', -1],
-		['translateX', contours[0].nodes[5].x + spacingRight]
+		['translateX', contours[0].nodes[5].x + spacingRight],
+		['skewX',( slant ) / 180 * Math.PI],
 	)
 	parameters:
 		spacingLeft: 50 * spacing + 10
