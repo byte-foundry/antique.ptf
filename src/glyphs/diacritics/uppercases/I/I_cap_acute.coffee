@@ -1,7 +1,7 @@
-exports.glyphs['I_cap_grave'] =
-	unicode: 'Ì'
-	glyphName: 'Igrave'
-	characterName: 'LATIN CAPITAL LETTER I WITH GRAVE'
+exports.glyphs['I_cap_acute'] =
+	unicode: 'Í'
+	glyphName: 'Iacute'
+	characterName: 'LATIN CAPITAL LETTER I WITH ACUTE'
 	base: 'I_cap'
 	advanceWidth: base.advanceWidth
 	tags: [
@@ -12,7 +12,7 @@ exports.glyphs['I_cap_grave'] =
 	]
 	components:
 		0:
-			base: 'grave'
+			base: 'acute'
 			copy: true
 			parentAnchors:
 				0:

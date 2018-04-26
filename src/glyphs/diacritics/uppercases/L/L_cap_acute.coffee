@@ -18,7 +18,7 @@ exports.glyphs['L_cap_acute'] =
 				0:
 					x: parentAnchors[0].x
 					y: parentAnchors[0].y
-			transformOrigin: anchors[0].point
-			transforms: Array(
-				['scaleY', 0.9 ]
-			)
+			# transformOrigin: anchors[0].point
+			# transforms: Array(
+			# 	['scaleY', 0.9 ]
+			# )

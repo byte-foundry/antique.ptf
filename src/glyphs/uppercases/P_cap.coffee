@@ -40,7 +40,7 @@ exports.glyphs['P_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].expandedTo[1].x
+					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].expandedTo[1].y
 					dirOut: 0
 					type: 'smooth'
@@ -105,7 +105,7 @@ exports.glyphs['P_cap'] =
 						angle: Math.PI / 2
 						distr: 0.25
 				5:
-					x: contours[0].nodes[1].expandedTo[1].x
+					x: contours[0].nodes[1].x
 					y: contours[1].nodes[4].y
 					expand:
 						width: ( 50 / 54 ) * thickness * opticThickness * contrast
