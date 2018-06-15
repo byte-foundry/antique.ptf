@@ -9,8 +9,8 @@ exports.controls = [
 		max: 3
 		step: 0.01
 		init: 0
-		minAdvised: 0
-		maxAdvised: 1.1
+		minAdvised: -0.25
+		maxAdvised: 2.50
 		disabled: false
 		advanced: false
 		group: ''
@@ -21,7 +21,7 @@ exports.controls = [
 		max: 150
 		step: 1
 		init: 40
-		minAdvised: 20
+		minAdvised: 15
 		maxAdvised: 80
 		disabled: false
 		advanced: false
@@ -33,8 +33,8 @@ exports.controls = [
 		max: 1.3
 		step: 0.01
 		init: 1
-		minAdvised: 0.9
-		maxAdvised: 1.1
+		minAdvised: 0.7
+		maxAdvised: 1.3
 		disabled: false
 		advanced: false
 		group: ''
@@ -46,9 +46,9 @@ exports.controls = [
 		step: 0.01
 		init: 1.2
 		minAdvised: 0
-		maxAdvised: 1.5
+		maxAdvised: 2.5
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	,
 		name: '_scThickness'
@@ -58,9 +58,9 @@ exports.controls = [
 		step: 0.05
 		init: 0.9
 		minAdvised: 0.85
-		maxAdvised: 1
+		maxAdvised: 1.5
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	,
 		name: '_scWidth'
@@ -69,10 +69,10 @@ exports.controls = [
 		max: 1.5
 		step: 0.05
 		init: 0.7
-		minAdvised: 0.65
-		maxAdvised: 0.75
+		minAdvised: 0.5
+		maxAdvised: 1.5
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	]
 ,
@@ -86,8 +86,8 @@ exports.controls = [
 		max: 900
 		step: 1
 		init: 600
-		minAdvised: 300
-		maxAdvised: 800
+		minAdvised: 500
+		maxAdvised: 900
 		disabled: false
 		advanced: false
 		group: ''
@@ -99,7 +99,7 @@ exports.controls = [
 		step: 1
 		init: 100
 		minAdvised: 0
-		maxAdvised: 350
+		maxAdvised: 400
 		disabled: false
 		advanced: false
 		group: ''
@@ -110,8 +110,8 @@ exports.controls = [
 		max: 800
 		step: 1
 		init: 100
-		minAdvised: 50
-		maxAdvised: 500
+		minAdvised: 100
+		maxAdvised: 400
 		disabled: false
 		advanced: false
 		group: ''
@@ -122,8 +122,8 @@ exports.controls = [
 		max: -50
 		step: 1
 		init: -90
-		minAdvised: -350
-		maxAdvised: -70
+		minAdvised: -400
+		maxAdvised: -95
 		disabled: false
 		advanced: false
 		group: ''
@@ -134,8 +134,8 @@ exports.controls = [
 		max: 1.1
 		step: 0.001
 		init: 1
-		minAdvised: 0.88
-		maxAdvised: 1.05
+		minAdvised: 0.8
+		maxAdvised: 1.1
 		disabled: false
 		advanced: false
 		group: ''
@@ -146,8 +146,8 @@ exports.controls = [
 		max: 5
 		step: 0.01
 		init: 1
-		minAdvised: 0.85
-		maxAdvised: 1.3
+		minAdvised: 0.8
+		maxAdvised: 3
 		disabled: false
 		advanced: false
 		group: ''
@@ -158,8 +158,8 @@ exports.controls = [
 		max: 30
 		step: 0.2
 		init: 0
-		minAdvised: -5
-		maxAdvised: 8
+		minAdvised: -15
+		maxAdvised: 25
 		disabled: false
 		advanced: false
 		group: ''
@@ -187,8 +187,8 @@ exports.controls = [
 		max: 180
 		step: 1
 		init: 54
-		minAdvised: 10
-		maxAdvised: 100
+		minAdvised: 4
+		maxAdvised: 150
 		disabled: false
 		advanced: false
 		group: ''
@@ -199,8 +199,8 @@ exports.controls = [
 		max: -0.15
 		step: 0.01
 		init: -1
-		minAdvised: -1
-		maxAdvised: -0.3
+		minAdvised: -1.3
+		maxAdvised: -0.15
 		disabled: false
 		advanced: false
 		group: ''
@@ -214,7 +214,7 @@ exports.controls = [
 		minAdvised: -1
 		maxAdvised: -0.5
 		disabled: false
-		advanced: false
+		advanced: true
 		child: true
 		group: ''
 	,
@@ -224,8 +224,8 @@ exports.controls = [
 		max: 2
 		step: 0.01
 		init: 1
-		minAdvised: 0.9
-		maxAdvised: 1.2
+		minAdvised: 0.3
+		maxAdvised: 2
 		disabled: false
 		advanced: false
 		group: ''
@@ -239,7 +239,7 @@ exports.controls = [
 		minAdvised: 0.1
 		maxAdvised: 1
 		disabled: false
-		advanced: false
+		advanced: true
 		child: true
 		group: ''
 	,
@@ -252,7 +252,7 @@ exports.controls = [
 		minAdvised: 0.1
 		maxAdvised: 1
 		disabled: false
-		advanced: false
+		advanced: true
 		child: true
 		group: ''
 	,
@@ -262,7 +262,7 @@ exports.controls = [
 		max: 1.4
 		step: 0.1
 		init: 0.6
-		minAdvised: 0.4
+		minAdvised: 0.1
 		maxAdvised: 0.8
 		disabled: false
 		advanced: false
@@ -301,8 +301,8 @@ exports.controls = [
 		max: 200
 		step: 1
 		init: 0.05 #temporary FIX (instead 0)
-		minAdvised: 0
-		maxAdvised: 80
+		minAdvised: 0.05
+		maxAdvised: 150
 		disabled: false
 		advanced: false
 		group: ''
@@ -313,7 +313,7 @@ exports.controls = [
 		max: 1.5
 		step: 0.01
 		init: 1
-		minAdvised: -0.8
+		minAdvised: 0.8
 		maxAdvised: 1.2
 		disabled: false
 		advanced: false
@@ -325,8 +325,8 @@ exports.controls = [
 		max: 100
 		step: 1
 		init: 5
-		minAdvised: 0
-		maxAdvised: 80
+		minAdvised: 0.001
+		maxAdvised: 100
 		disabled: false
 		advanced: false
 		group: ''
@@ -337,8 +337,8 @@ exports.controls = [
 		max: 1.5
 		step: 0.01
 		init: 1
-		minAdvised: 0
-		maxAdvised: 1.3
+		minAdvised: 0.2
+		maxAdvised: 1.2
 		disabled: false
 		advanced: false
 		group: ''
@@ -350,7 +350,7 @@ exports.controls = [
 		step: 1
 		init: 0
 		minAdvised: 0
-		maxAdvised: 80
+		maxAdvised: 100
 		disabled: false
 		advanced: false
 		group: ''
@@ -362,7 +362,7 @@ exports.controls = [
 		step: 0.01
 		init: 1
 		minAdvised: 0
-		maxAdvised: 1.5
+		maxAdvised: 1.8
 		disabled: false
 		advanced: false
 		group: ''
@@ -373,10 +373,10 @@ exports.controls = [
 		max: 0.6
 		step: 0.01
 		init: 0
-		minAdvised: -0.2
-		maxAdvised: 0.5
+		minAdvised: -0.5
+		maxAdvised: 0.6
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	,
 		name: 'serifTerminal'
@@ -385,10 +385,10 @@ exports.controls = [
 		max: 2
 		step: 0.01
 		init: 0
-		minAdvised: -0.2
-		maxAdvised: 0.8
+		minAdvised: -0.5
+		maxAdvised: 2
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	,
 		name: 'serifTerminalCurve'
@@ -398,9 +398,9 @@ exports.controls = [
 		step: 0.01
 		init: 1
 		minAdvised: 0
-		maxAdvised: 1.5
+		maxAdvised: 2
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	,
 		name: 'spurHeight'
@@ -409,8 +409,8 @@ exports.controls = [
 		max: 3
 		step: 1
 		init: 1.3
-		minAdvised: 1
-		maxAdvised: 1.5
+		minAdvised: 0
+		maxAdvised: 3
 		disabled: false
 		advanced: false
 		group: ''
@@ -422,7 +422,7 @@ exports.controls = [
 		step: 0.1
 		init: 0
 		minAdvised: 0
-		maxAdvised: 1
+		maxAdvised: 2
 		disabled: false
 		advanced: false
 		group: ''
@@ -434,7 +434,7 @@ exports.controls = [
 		step: 0.01
 		init: 2.5
 		minAdvised: 0
-		maxAdvised: 5
+		maxAdvised: 10
 		disabled: false
 		group: ''
 	,
@@ -444,10 +444,10 @@ exports.controls = [
 		max: 3
 		step: 0.01
 		init: 1
-		minAdvised: 0
-		maxAdvised: 1.1
+		minAdvised: 0.01
+		maxAdvised: 3
 		disabled: false
-		advanced: false
+		advanced: true
 		group: ''
 	]
 ]
