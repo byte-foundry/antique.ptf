@@ -58,14 +58,14 @@ exports.glyphs['c'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: spacingLeft + (13/54) * thickness
 					y: Math.max(
 						98,
-						contours[0].nodes[2].y + ( 47 / 54 ) * thickness + 10
+						contours[0].nodes[2].y + ( 47 / 73) * thickness + 10
 					)
 					dirIn: - Math.PI / 2
 					type: 'smooth'
@@ -78,7 +78,7 @@ exports.glyphs['c'] =
 					x: contours[0].nodes[3].x
 					y: Math.min(
 						xHeight - 98,
-						contours[0].nodes[5].y - ( 47 / 54 ) * thickness - 10
+						contours[0].nodes[5].y - ( 47 / 73) * thickness - 10
 					)
 					dirOut: Math.PI / 2
 					type: 'smooth'
@@ -92,7 +92,7 @@ exports.glyphs['c'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: - Math.PI / 2
 						distr: 0
 				6:

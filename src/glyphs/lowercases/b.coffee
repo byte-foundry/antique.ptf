@@ -3,13 +3,13 @@ exports.glyphs['b'] =
 	glyphName: 'b'
 	characterName: 'LATIN SMALL LETTER B'
 	ot:
-		advanceWidth: contours[1].nodes[2].expandedTo[1].x + spacingRight
+		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 35 + serifWidth
-		spacingRight: 50 * spacing + 35
+		spacingLeft: 50 * spacing + 70 + serifWidth
+		spacingRight: 50 * spacing + 41
 	tags: [
 		'all',
 		'latin',
@@ -21,123 +21,85 @@ exports.glyphs['b'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (13/54) * thickness
+					x: spacingLeft + (contours[0].nodes[0].expand.width * contours[0].nodes[0].expand.distr)
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: thickness
+						width: ( 71 / 73 * thickness )
 						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
-					y: ascenderHeight
-					typeOut: 'line'
+					y: xHeight + ascender
+					typeIn: 'line'
 					expand:
-						width: thickness
+						width: contours[0].nodes[0].expand.width
 						angle: 0
 						distr: 0.25
 		1:
 			skeleton: true
-			closed: false
+			closed: true
 			nodes:
 				0:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: Math.max(
-						111,
-						contours[1].nodes[1].y + Math.cos( 22 / 180 * Math.PI ) * ( 49 / 54 ) * thickness
-					)
-					dirOut: - Math.PI / 2
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[1].y + ( contours[1].nodes[3].y - contours[1].nodes[1].y ) * 0.5
+					dirIn: Math.PI / 2
+					typeOut: 'smooth'
 					expand:
-						width: ( 15 / 54 ) * thickness * contrast * contrastExtremity
-						angle: Math.PI
-						distr: 0
-				1:
-					x: contours[1].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[0].expandedTo[1].x ) * ( 73 / 150 )
-					y: - overshoot
-					dirOut: 0
-					type: 'smooth'
-					expand:
-						width: ( 49 / 54 ) * thickness * contrast
-						angle: 292 / 180 * Math.PI
+						width: ( 40 / 73 ) * thickness * contrast * contrastExtremity
+						angle: 0
 						distr: 1
+				1:
+					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * 0.5
+					y: xHeight + overshoot
+					dirIn: 0
+					typeOut: 'smooth'
+					expand:
+						width: ( 57 / 73 ) * thickness * contrast
+						angle: - Math.PI / 2 - Math.min(
+							Utils.lineAngle(
+					        { x: contours[1].nodes[0].x - contours[1].nodes[0].expand.width, y: contours[1].nodes[0].y },
+					        { x: contours[1].nodes[1].x, y: contours[1].nodes[1].y }
+					    ),
+							Math.asin(
+								Math.min( 0.99, Math.max( - 0.99, # we don't want asin(1)
+									(
+										( contours[1].nodes[1].x - contours[1].nodes[0].x ) -
+										( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[0].x ) / 2
+									) / contours[1].nodes[1].expand.width
+							))) # the bottom point of this node is always in the middle of the curve
+						)
+						distr: 0
 				2:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 100 * width + 94 - (13),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 55 / 54 ) * thickness + 10
-					)
-					y: contours[1].nodes[0].y - 12
+						contours[1].nodes[0].expandedTo[0].x + 238 + 200 * width - (16),
+						contours[1].nodes[0].x + minSpace + ( 1 - contours[1].nodes[2].expand.distr ) * contours[1].nodes[2].expand.width
+					) # 1 - contours[1].nodes[2].expand.distr ) * contours[1].nodes[2].expand.width (récupère la distr)
+					y: contours[1].nodes[1].y * 0.5 + contours[1].nodes[3].y * 0.5
 					dirIn: - Math.PI / 2
-					type: 'smooth'
-					typeOut: 'line'
+					typeOut: 'smooth'
 					expand:
-						width: ( 55 / 54 ) * thickness
-						angle: 346 / 180 * Math.PI
-						distr: 0.75
-				3:
-					x: contours[1].nodes[2].x
-					y: contours[1].nodes[5].y + 12
-					dirOut: Math.PI / 2
-					type: 'smooth'
-					expand:
-						width: ( 55 / 54 ) * thickness
-						angle: 13 / 180 * Math.PI
-						distr: 0.75
-				4:
-					x: contours[1].nodes[1].x
-					y: xHeight + overshoot
-					dirOut: Math.PI
-					type: 'smooth'
-					expand:
-						width: ( 51 / 54 ) * thickness * contrast
-						angle: 69 / 180 * Math.PI
-						distr: 1
-				5:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: Math.min(
-						xHeight - 110,
-						contours[1].nodes[4].y - Math.cos( 21 / 180 * Math.PI ) * ( 51 / 54 ) * thickness
-					)
-					dirIn: Math.PI / 2
-					expand:
-						width: ( 15 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 78 / 73 * thickness )
 						angle: Math.PI
+						distr: 0.2
+				3:
+					x: contours[1].nodes[0].expandedTo[0].x + ( contours[1].nodes[2].expandedTo[0].x - contours[1].nodes[0].expandedTo[0].x ) * 0.5
+					y: - 15
+					dirOut: Math.PI
+					typeIn: 'smooth'
+					expand:
+						width: ( 57 / 73 ) * thickness * contrast
+						angle: Math.PI / 2 + Math.max(
+							Utils.lineAngle(
+					        { x: contours[1].nodes[0].x - contours[1].nodes[0].expand.width, y: contours[1].nodes[0].y },
+					        { x: contours[1].nodes[3].x, y: contours[1].nodes[3].y }
+					    ),
+							Math.asin(
+								Math.max( - 0.99, Math.min( 0.99, # we don't want asin(1)
+									(
+										( contours[1].nodes[3].x - contours[1].nodes[0].x ) -
+										( contours[1].nodes[2].expandedTo[1].x - contours[1].nodes[0].x ) / 2
+									) / contours[1].nodes[3].expand.width
+							)))
+						) # the bottom point of this node is always in the middle of the curve
 						distr: 0
-	components:
-		0:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft'
-			class: 'lowerLeftStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0]
-					opposite: contours[0].nodes[0].expandedTo[1]
-					noneAnchor: contours[0].nodes[0].expandedTo[0]
-		1:
-			base: ['serif-vertical', 'none']
-			id: 'topleft'
-			class: 'upperLeftStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[0]
-					opposite: contours[0].nodes[1].expandedTo[1]
-					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[0]
-			transformOrigin: contours[0].nodes[1].expandedTo[0]
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
-		2:
-			base: ['none', 'serif-vertical']
-			id: 'topright'
-			class: 'upperLeftInsideStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[1]
-					opposite: contours[0].nodes[1].expandedTo[0]
-					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[1]
-			transformOrigin: contours[0].nodes[1].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)

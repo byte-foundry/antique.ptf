@@ -38,7 +38,7 @@ exports.glyphs['y_alt'] =
 					y: contours[1].nodes[1].expandedTo[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 73) * thickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -57,7 +57,7 @@ exports.glyphs['y_alt'] =
 						angle: 0
 						distr: 0.75
 				1:
-					x: contours[0].nodes[1].x + 0.75 * ( 47 / 54 ) * thickness
+					x: contours[0].nodes[1].x + 0.75 * ( 47 / 73) * thickness
 					y: Math.min(
 						( 60 / 600 ) * xHeight,
 						thickness
@@ -65,7 +65,7 @@ exports.glyphs['y_alt'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 45 / 54 ) * thickness * contrast
+						width: ( 45 / 73) * thickness * contrast
 						angle: 0
 						distr: 0.25
 				2:
@@ -76,7 +76,7 @@ exports.glyphs['y_alt'] =
 					y: ( 110 / 90 ) * descender
 					typeIn: 'line'
 					expand:
-						width: ( 45 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 45 / 73) * thickness * contrast * contrastExtremity
 						angle: 0
 						distr: 1
 	components:

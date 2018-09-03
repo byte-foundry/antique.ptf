@@ -3,13 +3,13 @@ exports.glyphs['h'] =
 	glyphName: 'h'
 	characterName: 'LATIN SMALL LETTER H'
 	ot:
-		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
+		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight + 31
 	transforms: Array(
 		['skewX', slant / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 35 + serifWidth
-		spacingRight: 50 * spacing + 35 + serifWidth
+		spacingLeft: 50 * spacing + 70 + serifWidth
+		spacingRight: 50 * spacing + 41 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -17,157 +17,64 @@ exports.glyphs['h'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: ascenderHeight + diacriticHeight
+			x: 0
+			y: 0
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (13/54) * thickness
+					x: 71 + (contours[0].nodes[0].expand.width * contours[0].nodes[0].expand.distr)
 					y: 0
 					typeOut: 'line'
 					expand:
 						width: thickness
 						angle: 0
-						distr: 0.25
+						distr: 0
 				1:
-					x: contours[0].nodes[0].x
-					y: ascenderHeight
+					x: 71
+					y: xHeight + ascender
 					typeOut: 'line'
 					expand:
 						width: thickness
 						angle: 0
-						distr: 0.25
+						distr: 0
 		1:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 100 * width + 94 - (13),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 55 / 54 ) * thickness + 10
-					)
-					y: 0
-					dirIn: - Math.PI / 2
+					x: contours[0].nodes[1].expandedTo[1].x
+					y: contours[1].nodes[1].y - 233
+					dirOut: Math.PI / 2
+					typeIn: 'smooth'
+					expand:
+						width: ( 25 / 73 * thickness )
+						angle: 0
+						distr: 1
+				1:
+					x: contours[1].nodes[0].expandedTo[0].x * 0.48 + contours[1].nodes[2].expandedTo[0].x * 0.52
+					y: xHeight + overshoot
+					dirOut: 0
+					typeIn: 'smooth'
+					expand:
+						width: ( 63 / 73 * thickness )
+						angle: - 105 / 180 * Math.PI
+						distr: 0
+				2:
+					x: contours[1].nodes[3].x
+					y: contours[1].nodes[1].y - 194
 					typeOut: 'line'
 					expand:
 						width: thickness
-						angle: 0
-						distr: 0.75
-				1:
-					x: contours[1].nodes[0].x
-					y: contours[1].nodes[3].y + 12
-					dirOut: Math.PI / 2
-					type: 'smooth'
-					expand:
-						width: ( 55 / 54 ) * thickness
-						angle: 13 / 180 * Math.PI
-						distr: 0.75
-				2:
-					x: contours[1].nodes[3].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[1].x - contours[1].nodes[3].expandedTo[1].x ) * ( 74 / 151 )
-					y: xHeight + overshoot
-					dirOut: Math.PI
-					type: 'smooth'
-					expand:
-						width: ( 51 / 54 ) * thickness * contrast
-						angle: 69 / 180 * Math.PI
-						distr: 1
+						angle: - 176.8 / 180 * Math.PI
+						distr: 0.25
 				3:
-					x: contours[0].nodes[0].expandedTo[1].x
-					y: Math.min(
-						xHeight - 110,
-						contours[1].nodes[2].y - Math.cos( 21 / 180 * Math.PI ) * ( 51 / 54 ) * thickness
-					)
-					dirIn: Math.PI / 2
+					x: contours[0].nodes[0].expandedTo[0].x + 229 + 189 * width
+					y: 0
+					typeOut: 'line'
 					expand:
-						width: ( 15 / 54 ) * thickness * contrast * contrastExtremity
+						width: thickness
 						angle: Math.PI
-						distr: 0
-	components:
-		0:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft'
-			class: 'lowerLeftStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0]
-					opposite: contours[0].nodes[0].expandedTo[1]
-					noneAnchor: contours[0].nodes[0].expandedTo[0]
-		1:
-			base: ['serif-vertical', 'none']
-			id: 'bottomright'
-			class: 'lowerLeftInsideStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[1]
-					opposite: contours[0].nodes[0].expandedTo[0]
-					noneAnchor: contours[0].nodes[0].expandedTo[1]
-					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
-				)
-		2:
-			base: ['serif-vertical', 'none']
-			id: 'topleft'
-			class: 'upperLeftStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[0]
-					opposite: contours[0].nodes[1].expandedTo[1]
-					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[0]
-			transformOrigin: contours[0].nodes[1].expandedTo[0]
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
-		3:
-			base: ['none', 'serif-vertical']
-			id: 'topright'
-			class: 'upperLeftInsideStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[1]
-					opposite: contours[0].nodes[1].expandedTo[0]
-					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[1]
-			transformOrigin: contours[0].nodes[1].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
-		4:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft2'
-			class: 'lowerRightInsideStump'
-			parentAnchors:
-				0:
-					base: contours[1].nodes[0].expandedTo[0]
-					opposite: contours[1].nodes[0].expandedTo[1]
-					noneAnchor: contours[1].nodes[0].expandedTo[0]
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 10
-				)
-		5:
-			base: ['serif-vertical', 'none']
-			id: 'bottomright2'
-			class: 'lowerRightStump'
-			parentAnchors:
-				0:
-					base: contours[1].nodes[0].expandedTo[1]
-					opposite: contours[1].nodes[0].expandedTo[0]
-					noneAnchor: contours[1].nodes[0].expandedTo[1]
-					reversed: true
-			transformOrigin: contours[1].nodes[0].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
+						distr: 0.25

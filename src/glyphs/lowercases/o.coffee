@@ -3,13 +3,13 @@ exports.glyphs['o'] =
 	glyphName: 'o'
 	characterName: 'LATIN SMALL LETTER O'
 	ot:
-		advanceWidth: contours[0].nodes[0].expandedTo[0].x + spacingRight
+		advanceWidth: contours[0].nodes[2].expandedTo[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant / 180 * Math.PI]
+		['skewX', ( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 35
-		spacingRight: 50 * spacing + 35
+		spacingLeft: 50 * spacing + 41
+		spacingRight: 50 * spacing + 41
 	tags: [
 		'all',
 		'latin',
@@ -17,77 +17,46 @@ exports.glyphs['o'] =
 	]
 	anchors:
 		0:
-			x: contours[0].nodes[0].expandedTo[0].x + ( contours[0].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[0].x ) * 0.5
-			y: xHeight + diacriticHeight
-			left: contours[0].nodes[2].expandedTo[0].x
-			right: contours[0].nodes[0].expandedTo[0].x
+			x: 0
+			y: 0
 	contours:
 		0:
 			skeleton: true
 			closed: true
 			nodes:
 				0:
-					x: Math.max(
-						contours[0].nodes[2].expandedTo[0].x + 100 * width + 94 - (13),
-						contours[0].nodes[2].expandedTo[1].x + 0.75 * thickness * Math.sin( ( Math.PI / 2 ) - ( 3 / 180 * Math.PI ) ) + 10 + (5)
-					)
-					y: Math.max(
-						98,
-						contours[0].nodes[1].y + ( 47 / 54 ) * thickness + 10
-					)
-					dirOut: - Math.PI / 2
-					type: 'smooth'
-					expand:
-						width: thickness
-						angle: - 170 / 180 * Math.PI
-						distr: 0.25
-				1:
-					x: contours[0].nodes[2].expandedTo[0].x + ( contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[2].expandedTo[0].x ) * ( 97 / 194 )
-					y: - overshoot
-					dirOut: Math.PI
-					type: 'smooth'
-					expand:
-						width: ( 47 / 54 ) * thickness * contrast
-						angle: Math.PI / 2
-						distr: 0
-				2:
-					x: spacingLeft + (13/54) * thickness
-					y: contours[0].nodes[0].y
-					dirIn: - Math.PI / 2
-					type: 'smooth'
-					typeOut: 'line'
-					expand:
-						width: thickness
-						angle: - 10 / 180 * Math.PI
-						distr: 0.25
-				3:
-					x: contours[0].nodes[2].x
-					y: Math.min(
-						xHeight - 98,
-						contours[0].nodes[4].y - ( 47 / 54 ) * thickness - 10
-					)
+					x: 41
+					y: contours[0].nodes[1].y * 0.50 + contours[0].nodes[3].y * 0.50
 					dirOut: Math.PI / 2
-					type: 'smooth'
+					typeIn: 'smooth'
 					expand:
-						width: thickness
-						angle: 10 / 180 * Math.PI
-						distr: 0.25
-				4:
-					x: contours[0].nodes[1].x
+						width: (78 / 73 * thickness)
+						angle: Math.PI
+						distr: 1
+				1:
+					x: contours[0].nodes[0].x * 0.50 + contours[0].nodes[2].x * 0.50
 					y: xHeight + overshoot
-					dirOut: 0
-					type: 'smooth'
+					dirIn: 0
+					typeOut: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 57 / 73 )  * thickness * contrast * contrastExtremity
+						angle: Math.PI / 2
+						distr: 1
+				2:
+					x: 332 + 189 * width
+					y: contours[0].nodes[1].y * 0.50 + contours[0].nodes[3].y * 0.50
+					dirIn: - Math.PI / 2
+					typeOut: 'smooth'
+					expand:
+						width: (78 / 73 * thickness)
+						angle: 0
+						distr: 1
+				3:
+					x: contours[0].nodes[0].x * 0.50 + contours[0].nodes[2].x * 0.50
+					y: - 15
+					dirOut: Math.PI
+					typeIn: 'smooth'
+					expand:
+						width: contours[0].nodes[1].expand.width
 						angle: - Math.PI / 2
-						distr: 0
-				5:
-					x: contours[0].nodes[0].x
-					y: contours[0].nodes[3].y
-					dirIn: Math.PI / 2
-					type: 'smooth'
-					typeOut: 'line'
-					expand:
-						width: thickness
-						angle: 170 / 180 * Math.PI
-						distr: 0.25
+						distr: 1

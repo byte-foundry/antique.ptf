@@ -59,14 +59,14 @@ exports.glyphs['e'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: spacingLeft + (13/54) * thickness
 					y: Math.max(
 						98,
-						contours[0].nodes[2].y + ( 47 / 54 ) * thickness + 10
+						contours[0].nodes[2].y + ( 47 / 73) * thickness + 10
 					)
 					dirIn: - Math.PI / 2
 					type: 'smooth'
@@ -79,7 +79,7 @@ exports.glyphs['e'] =
 					x: contours[0].nodes[3].x
 					y: Math.min(
 						xHeight - 98,
-						contours[0].nodes[5].y - ( 47 / 54 ) * thickness - 10
+						contours[0].nodes[5].y - ( 47 / 73) * thickness - 10
 					)
 					dirOut: Math.PI / 2
 					type: 'smooth'
@@ -93,7 +93,7 @@ exports.glyphs['e'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: - Math.PI / 2
 						distr: 0
 				6:
@@ -119,13 +119,13 @@ exports.glyphs['e'] =
 				8:
 					x: contours[0].nodes[7].expandedTo[0].x
 					y: contours[0].nodes[7].expandedTo[0].y + 0.25 * Math.min(
-						( 47 / 54 ) * thickness * contrast,
+						( 47 / 73) * thickness * contrast,
 						contours[0].nodes[6].expandedTo[0].y - contours[0].nodes[7].expandedTo[0].y - ( 50 / 600 ) * xHeight
 					)
 					typeOut: 'line'
 					expand:
 						width: Math.min(
-							( 47 / 54 ) * thickness * contrast,
+							( 47 / 73) * thickness * contrast,
 							contours[0].nodes[6].expandedTo[0].y - contours[0].nodes[7].expandedTo[0].y - ( 50 / 600 ) * xHeight
 						)
 						angle: Math.PI / 2
@@ -135,7 +135,7 @@ exports.glyphs['e'] =
 					y: contours[0].nodes[8].expandedTo[0].y
 					expand:
 						width: Math.min(
-							( 47 / 54 ) * thickness * contrast,
+							( 47 / 73) * thickness * contrast,
 							contours[0].nodes[6].expandedTo[0].y - contours[0].nodes[7].expandedTo[0].y - ( 50 / 600 ) * xHeight
 						) * contrastExtremity
 						angle: Math.PI / 2

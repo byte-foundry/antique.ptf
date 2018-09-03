@@ -49,7 +49,7 @@ exports.glyphs['k'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: (( 51 / 54 ) * thickness * contrast) / Math.sin( Math.PI - Utils.lineAngle( {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y}, {x: contours[1].nodes[0].x, y: contours[1].nodes[0].y} ) )
+						width: (( 51 / 73) * thickness * contrast) / Math.sin( Math.PI - Utils.lineAngle( {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y}, {x: contours[1].nodes[0].x, y: contours[1].nodes[0].y} ) )
 						angle: Math.PI
 						distr: 0.25
 				1:
@@ -58,12 +58,12 @@ exports.glyphs['k'] =
 						0,
 						( 250 / 600 ) * xHeight * crossbar - Math.max(
 							40,
-							( 40 / 54 ) * thickness
+							( 40 / 73) * thickness
 						)
 					)
 					typeIn: 'line'
 					expand:
-						width: ( 45 / 54 ) * thickness * contrast
+						width: ( 45 / 73) * thickness * contrast
 						angle: Utils.lineAngle({x: contours[1].nodes[1].x, y: contours[1].nodes[1].y}, {x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}) + Math.PI / 2
 						distr: 0
 		2:
@@ -78,7 +78,7 @@ exports.glyphs['k'] =
 					y: ( 344 / 600 ) * xHeight * crossbar
 					typeOut: 'line'
 					expand:
-						width: ( 51 / 54 ) * thickness * opticThickness / -Math.cos(contours[2].nodes[0].expand.angle - Utils.lineAngle({x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}, {x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}) + Math.PI / 2)
+						width: ( 51 / 73) * thickness * opticThickness / -Math.cos(contours[2].nodes[0].expand.angle - Utils.lineAngle({x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}, {x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}) + Math.PI / 2)
 						angle: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[0].x, y: contours[1].nodes[0].expandedTo[0].y}, {x: contours[1].nodes[1].expandedTo[0].x, y: contours[1].nodes[1].expandedTo[0].y})
 						distr: 0
 				1:

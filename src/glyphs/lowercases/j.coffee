@@ -36,7 +36,7 @@ exports.glyphs['j'] =
 					)
 					dirOut: - Math.PI / 2
 					expand:
-						width: ( 55 / 54 ) * thickness
+						width: ( 55 / 73) * thickness
 						angle: 9 / 180 * Math.PI
 						distr: 0.25
 				2:
@@ -45,7 +45,7 @@ exports.glyphs['j'] =
 					typeOut: 'line'
 					expand:
 						width: Math.min(
-							( 48 / 54 ) * thickness * contrast * contrastExtremity,
+							( 48 / 73) * thickness * contrast * contrastExtremity,
 							- ( ( 53 / 90 ) * descender + 10 ) - 10
 						)
 						angle: - 82 / 180 * Math.PI
@@ -57,7 +57,7 @@ exports.glyphs['j'] =
 					type: 'smooth'
 					expand:
 						width: Math.min(
-							( 47 / 54 ) * thickness * contrast * contrastExtremity,
+							( 47 / 73) * thickness * contrast * contrastExtremity,
 							- ( ( 53 / 90 ) * descender + 10 ) - 10
 						)
 						angle: 270 / 180 * Math.PI

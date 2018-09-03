@@ -30,7 +30,7 @@ exports.glyphs['z'] =
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				1:
@@ -39,18 +39,18 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				2:
 					x: Utils.onLine({
-						y: ( 35 / 54 ) * thickness * contrast
+						y: ( 35 / 73) * thickness * contrast
 						on: [ contours[2].nodes[0].expandedTo[0], contours[2].nodes[1].expandedTo[0] ]
 					})
-					y: ( 35 / 54 ) * thickness * contrast
+					y: ( 35 / 73) * thickness * contrast
 					typeIn: 'line'
 					expand:
-						width: ( 35 / 54 ) * thickness * contrast
+						width: ( 35 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 1
 		1:
@@ -62,7 +62,7 @@ exports.glyphs['z'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: - Math.PI / 2
 						distr: 0
 				1:
@@ -71,7 +71,7 @@ exports.glyphs['z'] =
 					typeOut: 'line'
 					typeIn: 'line'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: - Math.PI / 2
 						distr: 0
 				2:
@@ -97,10 +97,10 @@ exports.glyphs['z'] =
 					y: contours[0].nodes[1].expandedTo[1].y
 					typeOut: 'line'
 					expand:
-						width: ( 52 / 54 ) * thickness
+						width: ( 52 / 73) * thickness
 						angle: Math.max(
 							Utils.lineAngle({x: contours[0].nodes[1].expandedTo[1].x, y: contours[0].nodes[1].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y}) - Math.PI / 2,
-							- Math.asin( Math.min( 1, (( 47 / 54 ) * thickness * contrast) / (( 52 / 54 ) * thickness)))
+							- Math.asin( Math.min( 1, (( 47 / 73) * thickness * contrast) / (( 52 / 73) * thickness)))
 						)
 						distr: 0
 				1:
@@ -108,10 +108,10 @@ exports.glyphs['z'] =
 					y: contours[1].nodes[1].expandedTo[1].y
 					typeIn: 'line'
 					expand:
-						width: ( 52 / 54 ) * thickness
+						width: ( 52 / 73) * thickness
 						angle: Math.max(
 							Utils.lineAngle({x: contours[0].nodes[1].expandedTo[1].x, y: contours[0].nodes[1].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y}) - Math.PI / 2,
-							- Math.asin( Math.min( 1, (( 47 / 54 ) * thickness * contrast) / (( 52 / 54 ) * thickness)))
+							- Math.asin( Math.min( 1, (( 47 / 73) * thickness * contrast) / (( 52 / 73) * thickness)))
 						)
 						distr: 1
 	components:

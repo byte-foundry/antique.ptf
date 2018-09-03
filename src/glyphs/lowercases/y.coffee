@@ -33,7 +33,7 @@ exports.glyphs['y'] =
 					)
 					dirOut: - Math.PI / 2
 					expand:
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 12 / 73) * thickness * contrast * contrastExtremity
 						angle:( 180 + 31 ) / 180 * Math.PI
 						distr: 1
 				1:
@@ -42,19 +42,19 @@ exports.glyphs['y'] =
 					dirOut: Math.PI
 					typeIn: 'smooth'
 					expand:
-						width: ( 51 / 54 ) * thickness * contrast
+						width: ( 51 / 73) * thickness * contrast
 						angle:( 68 ) / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (13/54) * thickness
 					y: Math.max(
 						156,
-						contours[0].nodes[1].y + ( Math.cos( ( Math.PI / 2 ) - ( 68 / 180 * Math.PI ) ) * ( 51 / 54 ) * thickness ) + 10
+						contours[0].nodes[1].y + ( Math.cos( ( Math.PI / 2 ) - ( 68 / 180 * Math.PI ) ) * ( 51 / 73) * thickness ) + 10
 					)
 					dirIn: - Math.PI / 2
 					typeIn: 'smooth'
 					expand:
-						width: ( 55 / 54 ) * thickness
+						width: ( 55 / 73) * thickness
 						angle:( 13 ) / 180 * Math.PI
 						distr: 0.25
 				3:
@@ -74,13 +74,13 @@ exports.glyphs['y'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 55 / 54 ) * thickness
+						width: ( 55 / 73) * thickness
 						angle: Math.PI
 						distr: 0.25
 				1:
 					x: Math.max(
 						contours[0].nodes[2].expandedTo[0].x + 100 * width + 94 - (13),
-						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( ( 55 / 54 ) * thickness ) * Math.cos( 13 / 180 * Math.PI ) + 20
+						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( ( 55 / 73) * thickness ) * Math.cos( 13 / 180 * Math.PI ) + 20
 					)
 					y: contours[1].nodes[3].expandedTo[0].y
 					dirOut: - Math.PI / 2
@@ -96,7 +96,7 @@ exports.glyphs['y'] =
 					typeIn: 'smooth'
 					expand:
 						width: Math.min(
-							( 47 / 54 ) * thickness * contrast,
+							( 47 / 73) * thickness * contrast,
 							- descender - overshoot - 10
 						)
 						angle: Math.PI / 2
@@ -105,12 +105,12 @@ exports.glyphs['y'] =
 					x: contours[1].nodes[4].x
 					y: Math.min(
 						contours[0].nodes[1].y - 20,
-						contours[1].nodes[2].y + ( 47 / 54 ) * thickness * contrast + 56
+						contours[1].nodes[2].y + ( 47 / 73) * thickness * contrast + 56
 					)
 					typeOut: 'line'
 					dirIn: - Math.PI / 2
 					expand:
-						width: ( 55 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 55 / 73) * thickness * contrast * contrastExtremity
 						angle:( - 9 ) / 180 * Math.PI
 						distr: 0
 				4:

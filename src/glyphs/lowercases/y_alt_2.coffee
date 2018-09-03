@@ -39,7 +39,7 @@ exports.glyphs['y_alt_2'] =
 					y: contours[1].nodes[1].expandedTo[0].y
 					typeIn: 'line'
 					expand:
-						width: ( 47 / 54 ) * thickness
+						width: ( 47 / 73) * thickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -58,7 +58,7 @@ exports.glyphs['y_alt_2'] =
 						angle: 0
 						distr: 0.75
 				1:
-					x: contours[0].nodes[1].x + 0.75 * ( 47 / 54 ) * thickness
+					x: contours[0].nodes[1].x + 0.75 * ( 47 / 73) * thickness
 					y: Math.min(
 						( 60 / 600 ) * xHeight,
 						thickness
@@ -66,7 +66,7 @@ exports.glyphs['y_alt_2'] =
 					dirOut: Utils.lineAngle({x: contours[1].nodes[0].expandedTo[1].x, y: contours[1].nodes[0].expandedTo[1].y}, {x: contours[1].nodes[1].expandedTo[1].x, y: contours[1].nodes[1].expandedTo[1].y})
 					typeIn: 'smooth'
 					expand:
-						width: ( 45 / 54 ) * thickness * contrast
+						width: ( 45 / 73) * thickness * contrast
 						angle: 0
 						distr: 0.25
 				2:
@@ -75,7 +75,7 @@ exports.glyphs['y_alt_2'] =
 					dirIn: 0
 					expand:
 						width: Math.min(
-							( 47 / 54 ) * thickness,
+							( 47 / 73) * thickness,
 							( contours[1].nodes[1].y + Math.abs( contours[1].nodes[2].y ) ) - 15
 						) * contrast * contrastExtremity
 						angle: 3 * Math.PI / 2

@@ -18,7 +18,7 @@ exports.glyphs['w'] =
 	anchors:
 		0:
 			thickness: Math.min(
-				( 43 / 54 ) * thickness,
+				( 43 / 73) * thickness,
 				Math.max(
 					( contours[3].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 3,
 					30
@@ -26,7 +26,7 @@ exports.glyphs['w'] =
 			)
 		1:
 			thickness: Math.min(
-				( 43 / 54 ) * thickness,
+				( 43 / 73) * thickness,
 				(( contours[3].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) - 40 * 2) / 3.5 - 5 * width
 			)
 		2:
@@ -99,7 +99,7 @@ exports.glyphs['w'] =
 			nodes:
 				0:
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 100 * width + 200 + ( 38 / 54 ) * thickness - (12),
+						contours[0].nodes[0].expandedTo[0].x + 100 * width + 200 + ( 38 / 73) * thickness - (12),
 						contours[0].nodes[0].expandedTo[1].x + 0.75 * thickness + 15
 					)
 					y: xHeight

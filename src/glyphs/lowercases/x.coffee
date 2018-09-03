@@ -46,10 +46,10 @@ exports.glyphs['x'] =
 			nodes:
 				0:
 					# x: Utils.onLine({
-					# 	y: xHeight / 2 - ( 8 / 54 ) * thickness
+					# 	y: xHeight / 2 - ( 8 / 73) * thickness
 					# 	on: [ contours[0].nodes[0].expandedTo[1], contours[0].nodes[1].expandedTo[0] ]
 					# })
-					# y: xHeight / 2 - ( 8 / 54 ) * thickness
+					# y: xHeight / 2 - ( 8 / 73) * thickness
 					x: Utils.onLine({
 						y: xHeight / 2
 						on: [ contours[0].nodes[0].expandedTo[0], contours[0].nodes[1].expandedTo[0] ]
@@ -57,7 +57,7 @@ exports.glyphs['x'] =
 					y: xHeight / 2
 					typeOut: 'line'
 					expand:
-						width: ( 38 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 38 / 73) * thickness * contrast * contrastExtremity
 						angle: Utils.lineAngle({x: contours[1].nodes[0].x, y: contours[1].nodes[0].y}, {x: contours[1].nodes[1].x, y: contours[1].nodes[1].y}) - Math.PI / 2
 						distr: 1
 				1:
@@ -74,10 +74,10 @@ exports.glyphs['x'] =
 			nodes:
 				0:
 					# x: Utils.onLine({
-					# 	y: xHeight / 2 + ( 11 / 54 ) * thickness
+					# 	y: xHeight / 2 + ( 11 / 73) * thickness
 					# 	on: [ contours[0].nodes[0].expandedTo[1], contours[0].nodes[1].expandedTo[0] ]
 					# })
-					# y: xHeight / 2 + ( 11 / 54 ) * thickness
+					# y: xHeight / 2 + ( 11 / 73) * thickness
 					x: Utils.onLine({
 						y: xHeight / 2
 						on: [ contours[0].nodes[0].expandedTo[1], contours[0].nodes[1].expandedTo[1] ]
@@ -85,7 +85,7 @@ exports.glyphs['x'] =
 					y: xHeight / 2
 					typeOut: 'line'
 					expand:
-						width: ( 40 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 40 / 73) * thickness * contrast * contrastExtremity
 						angle: Utils.lineAngle({x: contours[2].nodes[0].x, y: contours[2].nodes[0].y}, {x: contours[2].nodes[1].x, y: contours[2].nodes[1].y}) - Math.PI / 2
 						distr: 1
 				1:

@@ -9,8 +9,8 @@ exports.glyphs['H_cap'] =
 		['skewX',( slant ) / 180 * Math.PI]
 	)
 	parameters:
-		spacingLeft: 50 * spacing + 40 + serifWidth
-		spacingRight: 50 * spacing + 40 + serifWidth
+		spacingLeft: 50 * spacing + 75 + serifWidth
+		spacingRight: 50 * spacing + 75 + serifWidth
 	tags: [
 		'all',
 		'latin',
@@ -18,26 +18,27 @@ exports.glyphs['H_cap'] =
 	]
 	anchors:
 		0:
-			x: (contours[1].nodes[0].expandedTo[1].x + contours[0].nodes[0].expandedTo[0].x) / 2
-			y: capHeight + diacriticHeight
+			x: 0
+			y: 0
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (14/54) * thickness * opticThickness
+					x: 71 + (contours[0].nodes[0].expand.width * contours[0].nodes[0].expand.distr)
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: thickness
 						angle: 0
 						distr: 0.25
 				1:
 					x: contours[0].nodes[0].x
-					y: capHeight
+					y: capHeight + 50
+					typeOut: 'line'
 					expand:
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: thickness
 						angle: 0
 						distr: 0.25
 		1:
@@ -45,21 +46,23 @@ exports.glyphs['H_cap'] =
 			closed: false
 			nodes:
 				0:
+					x: contours[0].nodes[0].expandedTo[0].x + 240 * width + 249 - (15) # -(15) réprésente la distribution à rattraper sur le spacingleft
 					x: Math.max(
-						contours[0].nodes[0].expandedTo[0].x + 100 * width + 105 - (14),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 57 / 54 ) * thickness * opticThickness + 10
-					)
+						contours[0].nodes[0].expandedTo[0].x + 240 * width + 249 - (15),
+						contours[0].nodes[0].expandedTo[1].x + minSpace + contours[1].nodes[0].expand.width * contours[1].nodes[0].expand.distr
+					) # minSpace est le raccourci de thickness / 3, ici l'espace blanc minimum
 					y: 0
 					typeOut: 'line'
 					expand:
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: thickness
 						angle: 0
 						distr: 0.75
 				1:
 					x: contours[1].nodes[0].x
-					y: capHeight
+					y: capHeight + 50
+					typeOut: 'line'
 					expand:
-						width: ( 57 / 54 ) * thickness * opticThickness
+						width: thickness
 						angle: 0
 						distr: 0.75
 		2:
@@ -67,143 +70,25 @@ exports.glyphs['H_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[1].nodes[0].x
-					y: ( 364 / 700 ) * capHeight * crossbar
-					dirOut: 0
-					type: 'smooth'
-					expand:
-						width: ( 50 / 54 ) * thickness * opticThickness * contrast
-						angle: Math.PI / 2
-						distr: 0.5
-				1:
 					x: contours[0].nodes[0].x
-					y: contours[2].nodes[0].y
-					dirOut: 0
-					type: 'smooth'
+					y: crossbar * (30 + capHeight / 2)
+					y: Math.min(
+							capHeight * 0.75, # ne remonte plus après 0.75 * la capHeight
+							Math.max(
+								crossbar * (30 + capHeight / 2),
+								capHeight * 0.25 # ne descend plus après 0.25 * la capHeight
+							)
+					)
+					typeOut: 'line'
 					expand:
-						width: ( 50 / 54 ) * thickness * opticThickness * contrast
+						width: thickness - 5
 						angle: Math.PI / 2
-						distr: 0.5
-	components:
-		0:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft'
-			class: 'lowerLeftStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[0]
-					opposite: contours[0].nodes[0].expandedTo[1]
-					noneAnchor: contours[0].nodes[0].expandedTo[0]
-		1:
-			base: ['serif-vertical', 'none']
-			id: 'bottomright'
-			class: 'lowerLeftInsideStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[0].expandedTo[1]
-					opposite: contours[0].nodes[0].expandedTo[0]
-					noneAnchor: contours[0].nodes[0].expandedTo[1]
-					reversed: true
-			transformOrigin: contours[0].nodes[0].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 4
-				)
-		2:
-			base: ['serif-vertical', 'none']
-			id: 'topleft'
-			class: 'upperLeftStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[0]
-					opposite: contours[0].nodes[1].expandedTo[1]
-					reversed: true
-					noneAnchor: contours[0].nodes[1].expandedTo[0]
-			transformOrigin: contours[0].nodes[1].expandedTo[0]
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
-		3:
-			base: ['serif-vertical', 'none']
-			id: 'topright'
-			class: 'upperLeftInsideStump'
-			parentAnchors:
-				0:
-					base: contours[0].nodes[1].expandedTo[1]
-					opposite: contours[0].nodes[1].expandedTo[0]
-					noneAnchor: contours[0].nodes[1].expandedTo[1]
-			transformOrigin: contours[0].nodes[1].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[1].expandedTo[1].x ) / 2 - 4
-				)
-		4:
-			base: ['serif-vertical', 'none']
-			id: 'bottomleft2'
-			class: 'lowerRightInsideStump'
-			parentAnchors:
-				0:
-					base: contours[1].nodes[0].expandedTo[0]
-					opposite: contours[1].nodes[0].expandedTo[1]
-					noneAnchor: contours[1].nodes[0].expandedTo[0]
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					( contours[1].nodes[0].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) / 2 - 4
-				)
-		5:
-			base: ['serif-vertical', 'none']
-			id: 'bottomright2'
-			class: 'lowerRightStump'
-			parentAnchors:
-				0:
-					base: contours[1].nodes[0].expandedTo[1]
-					opposite: contours[1].nodes[0].expandedTo[0]
-					noneAnchor: contours[1].nodes[0].expandedTo[1]
-					reversed: true
-			transformOrigin: contours[1].nodes[0].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ]
-			)
-		6:
-			base: ['serif-vertical', 'none']
-			id: 'topleft2'
-			class: 'upperRightInsideStump'
-			parentAnchors:
-				0:
-					base: contours[1].nodes[1].expandedTo[0]
-					opposite: contours[1].nodes[1].expandedTo[1]
-					reversed: true
-					noneAnchor: contours[1].nodes[1].expandedTo[0]
-			transformOrigin: contours[1].nodes[1].expandedTo[0]
-			transforms: Array(
-				[ 'scaleY', -1 ]
-			)
-			parameters:
-				serifWidth: Math.min(
-					serifWidth,
-					( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[1].expandedTo[1].x ) / 2 - 4
-				)
-		7:
-			base: ['serif-vertical', 'none']
-			id: 'topright2'
-			class: 'upperRightStump'
-			parentAnchors:
-				0:
-					base: contours[1].nodes[1].expandedTo[1]
-					opposite: contours[1].nodes[1].expandedTo[0]
-					noneAnchor: contours[1].nodes[1].expandedTo[1]
-			transformOrigin: contours[1].nodes[1].expandedTo[1]
-			transforms: Array(
-				[ 'scaleX', -1 ],
-				[ 'scaleY', -1 ]
-			)
+						distr: 0.45
+				1:
+					x: contours[1].nodes[0].x
+					y: contours[2].nodes[0].y
+					typeOut: 'line'
+					expand:
+						width: thickness - 5
+						angle: Math.PI / 2
+						distr: 0.45

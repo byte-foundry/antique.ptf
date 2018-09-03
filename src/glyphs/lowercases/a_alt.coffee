@@ -36,7 +36,7 @@ exports.glyphs['a_alt'] =
 					)
 					dirOut: - Math.PI / 2
 					expand:
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 12 / 73) * thickness * contrast * contrastExtremity
 						angle: 215 / 180 * Math.PI
 						distr: 1
 				1:
@@ -45,26 +45,26 @@ exports.glyphs['a_alt'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 51 / 54 ) * thickness * contrast
+						width: ( 51 / 73) * thickness * contrast
 						angle: 68 / 180 * Math.PI
 						distr: 0
 				2:
 					x: spacingLeft + (13/54) * thickness
 					y: Math.max(
 						98,
-						contours[0].nodes[1].y + ( Math.cos( ( Math.PI / 2 ) - ( 68 / 180 * Math.PI ) ) * ( 51 / 54 ) * thickness ) + 10
+						contours[0].nodes[1].y + ( Math.cos( ( Math.PI / 2 ) - ( 68 / 180 * Math.PI ) ) * ( 51 / 73) * thickness ) + 10
 					)
 					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 55 / 54 ) * thickness
+						width: ( 55 / 73) * thickness
 						angle: 13 / 180 * Math.PI
 						distr: 0.25
 				3:
 					x: contours[0].nodes[2].x
 					y: Math.min(
 						xHeight - 98,
-						contours[0].nodes[4].y - ( 47 / 54 ) * thickness - 10
+						contours[0].nodes[4].y - ( 47 / 73) * thickness - 10
 					)
 					dirOut: Math.PI / 2
 					type: 'smooth'
@@ -78,19 +78,19 @@ exports.glyphs['a_alt'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 51 / 54 ) * thickness * contrast
+						width: ( 51 / 73) * thickness * contrast
 						angle: - 67 / 180 * Math.PI
 						distr: 0
 				5:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: Math.max(
-						# contours[0].nodes[4].y - ( Math.sin( ( 68 / 180 * Math.PI ) ) * ( 51 / 54 ) * thickness ) - 10,
+						# contours[0].nodes[4].y - ( Math.sin( ( 68 / 180 * Math.PI ) ) * ( 51 / 73) * thickness ) - 10,
 						contours[0].nodes[3].expandedTo[1].y,
 						xHeight / 2 + 10
 					)
 					dirIn: Math.PI / 2
 					expand:
-						width: ( 12 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 12 / 73) * thickness * contrast * contrastExtremity
 						angle: 208 / 180 * Math.PI
 						distr: 1
 		1:
@@ -100,7 +100,7 @@ exports.glyphs['a_alt'] =
 				0:
 					x: Math.max(
 						contours[0].nodes[2].expandedTo[0].x + 100 * width + 94 - (13),
-						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( ( 55 / 54 ) * thickness ) * Math.cos( 13 / 180 * Math.PI ) + 20
+						contours[0].nodes[2].expandedTo[1].x + 0.75 * ( ( 55 / 73) * thickness ) * Math.cos( 13 / 180 * Math.PI ) + 20
 					)
 					y: 0
 					typeOut: 'line'

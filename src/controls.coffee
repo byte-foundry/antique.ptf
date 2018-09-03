@@ -73,7 +73,7 @@ exports.controls = [
 		min: 300
 		max: 900
 		step: 1
-		init: 600
+		init: 490
 		minAdvised: 300
 		maxAdvised: 800
 		disabled: false
@@ -95,7 +95,7 @@ exports.controls = [
 		min: 50
 		max: 800
 		step: 1
-		init: 100
+		init: 200
 		minAdvised: 50
 		maxAdvised: 500
 		disabled: false
@@ -106,7 +106,7 @@ exports.controls = [
 		min: -850
 		max: -50
 		step: 1
-		init: -90
+		init: -250
 		minAdvised: -350
 		maxAdvised: -70
 		disabled: false
@@ -148,9 +148,9 @@ exports.controls = [
 		name: 'overshoot'
 		label: 'Overshoot'
 		min: 0
-		max: 20
+		max: 30
 		step: 1
-		init: 10
+		init: 15
 		minAdvised: 0
 		maxAdvised: 20
 		disabled: false
@@ -166,7 +166,7 @@ exports.controls = [
 		min: 4
 		max: 180
 		step: 1
-		init: 54
+		init: 73
 		minAdvised: 10
 		maxAdvised: 100
 		disabled: false

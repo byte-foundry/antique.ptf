@@ -30,7 +30,7 @@ exports.glyphs['t_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 50 / 54 ) * thickness * contrast
+						width: ( 50 / 73) * thickness * contrast
 						angle: - Math.PI / 2
 						distr: 0
 				1:
@@ -38,7 +38,7 @@ exports.glyphs['t_alt'] =
 					y: xHeight
 					typeOut: 'line'
 					expand:
-						width: ( 50 / 54 ) * thickness * contrast
+						width: ( 50 / 73) * thickness * contrast
 						angle: - Math.PI / 2
 						distr: 0
 		1:
@@ -76,14 +76,14 @@ exports.glyphs['t_alt'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				3:
 					x: contours[0].nodes[0].x + 45 * width + (13/54) * thickness
 					y: Math.max(
 						98,
-						contours[1].nodes[2].y + ( 47 / 54 ) * thickness + 10
+						contours[1].nodes[2].y + ( 47 / 73) * thickness + 10
 					)
 					dirIn: - Math.PI / 2
 					type: 'smooth'

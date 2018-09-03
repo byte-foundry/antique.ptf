@@ -48,7 +48,7 @@ exports.glyphs['r'] =
 				0:
 					x: Math.max(
 						contours[0].nodes[0].expandedTo[0].x + 100 * width + 85 - (13),
-						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 55 / 54 ) * thickness + 10
+						contours[0].nodes[0].expandedTo[1].x + 0.75 * ( 55 / 73) * thickness + 10
 					)
 					y: contours[1].nodes[1].expandedTo[1].y - 96
 					typeOut: 'line'
@@ -62,7 +62,7 @@ exports.glyphs['r'] =
 					dirOut: Math.PI / 2
 					type: 'smooth'
 					expand:
-						width: ( 55 / 54 ) * thickness
+						width: ( 55 / 73) * thickness
 						angle: 13 / 180 * Math.PI
 						distr: 0.75
 				2:
@@ -71,18 +71,18 @@ exports.glyphs['r'] =
 					dirOut: Math.PI
 					type: 'smooth'
 					expand:
-						width: ( 51 / 54 ) * thickness * contrast
+						width: ( 51 / 73) * thickness * contrast
 						angle: 69 / 180 * Math.PI
 						distr: 1
 				3:
 					x: contours[0].nodes[0].expandedTo[1].x
 					y: Math.min(
 						xHeight - 110,
-						contours[1].nodes[2].y - Math.cos( 21 / 180 * Math.PI ) * ( 51 / 54 ) * thickness
+						contours[1].nodes[2].y - Math.cos( 21 / 180 * Math.PI ) * ( 51 / 73) * thickness
 					)
 					dirIn: Math.PI / 2
 					expand:
-						width: ( 15 / 54 ) * thickness * contrast * contrastExtremity
+						width: ( 15 / 73) * thickness * contrast * contrastExtremity
 						angle: Math.PI
 						distr: 0
 	components:

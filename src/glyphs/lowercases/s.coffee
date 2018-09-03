@@ -40,7 +40,7 @@ exports.glyphs['s'] =
 					x: contours[0].nodes[0].x
 					y: Math.max(
 						Math.min( 93, ( 93 / 600 ) * xHeight ),
-						contours[0].nodes[2].y + ( 47 / 54 ) * thickness * contrast + 10
+						contours[0].nodes[2].y + ( 47 / 73) * thickness * contrast + 10
 					)
 					dirOut: - Math.PI / 2
 					type: 'smooth'
@@ -54,7 +54,7 @@ exports.glyphs['s'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 0
 				3:
@@ -64,9 +64,9 @@ exports.glyphs['s'] =
 					)
 					y: Math.max(
 						( 119 / 600 ) * xHeight - (2),
-						contours[0].nodes[2].y + ( 47 / 54 ) * thickness * contrast + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
+						contours[0].nodes[2].y + ( 47 / 73) * thickness * contrast + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
 					)
-					# y: contours[0].nodes[2].y + ( 47 / 54 ) * thickness * contrast + ( contours[0].nodes[4].y - contours[0].nodes[2].y + ( 47 / 54 ) * thickness * contrast ) * ( ( 82 - (10) ) / 266 ) - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
+					# y: contours[0].nodes[2].y + ( 47 / 73) * thickness * contrast + ( contours[0].nodes[4].y - contours[0].nodes[2].y + ( 47 / 73) * thickness * contrast ) * ( ( 82 - (10) ) / 266 ) - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
 					dirIn: - Math.PI / 2
 					type: 'smooth'
 					expand:
@@ -81,21 +81,21 @@ exports.glyphs['s'] =
 					tensionIn: 1.1
 					tensionOut: 1.1
 					expand:
-						width: ( 56 / 54 ) * thickness
+						width: ( 56 / 73) * thickness
 						angle: contours[0].nodes[4].dirOut + Math.PI / 2 + ( 2 / 180 * Math.PI )
 						distr: 0.5
 				5:
 					x: contours[0].nodes[1].x + (1)
 					y: Math.min(
 						xHeight - ( 113 / 600 ) * xHeight - (0),
-						contours[0].nodes[6].y - ( 47 / 54 ) * thickness * contrast - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
+						contours[0].nodes[6].y - ( 47 / 73) * thickness * contrast - Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75 + 10
 					)
-					# y: contours[0].nodes[4].y + ( ( contours[0].nodes[6].y - ( 47 / 54 ) * thickness * contrast ) - contours[0].nodes[4].y ) * ( 184 / 260 ) + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
+					# y: contours[0].nodes[4].y + ( ( contours[0].nodes[6].y - ( 47 / 73) * thickness * contrast ) - contours[0].nodes[4].y ) * ( 184 / 260 ) + Math.cos( 80 / 180 * Math.PI ) * thickness * 0.75
 					dirOut: Math.PI / 2
 					type: 'smooth'
 					tensionIn: 1.1
 					expand:
-						width: ( 55 / 54 ) * thickness
+						width: ( 55 / 73) * thickness
 						angle: 189 / 180 * Math.PI
 						distr: 0.75
 				6:
@@ -104,14 +104,14 @@ exports.glyphs['s'] =
 					dirOut: 0
 					type: 'smooth'
 					expand:
-						width: ( 47 / 54 ) * thickness * contrast
+						width: ( 47 / 73) * thickness * contrast
 						angle: Math.PI / 2
 						distr: 1
 				7:
 					x: contours[0].nodes[3].expandedTo[0].x - (13/54) * thickness
 					y: Math.min(
 						xHeight - Math.min( 93, ( 93 / 600 ) * xHeight ),
-						contours[0].nodes[6].y - ( 47 / 54 ) * thickness * contrast - 10
+						contours[0].nodes[6].y - ( 47 / 73) * thickness * contrast - 10
 					)
 					typeOut: 'line'
 					expand:
